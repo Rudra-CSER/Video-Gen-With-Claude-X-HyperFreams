@@ -1,0 +1,100 @@
+{
+ "scores": [
+  {
+   "draft": "A-tutorial",
+   "accuracy": 9,
+   "clarity": 9,
+   "pacing": 8,
+   "motion": 8,
+   "audience": 7,
+   "compliance": 9,
+   "total": 50,
+   "violations": [
+    "Sora is specified for the rupee prices in the hook menu, in the S07 'Masala Dosa ₹80' / 'Ghee Roast Dosa ₹110' kinetic lines and in the S08 ₹150 number flight. Sora-Variable.ttf has no U+20B9 glyph (I checked its cmap), so ₹ would render in a fallback font. Set prices in Plus Jakarta Sans or Space Mono.",
+    "The 4.5 s hook packs in the outline draw-on, five dish lines, the logo tile, 'SETU Food' and two captions. That breaks one-idea-at-a-time, and the owner's opening line has to compete with the menu.",
+    "S06 chips: there are taps at 48.70, 48.95 and 49.20, but nothing changes until a single crossfade at 49.25, so action and result are out of sync.",
+    "S04 opens with a 'back' push from signed-in Home to the sign-in screen. That reads as in-app navigation that does not exist; a chapter wipe would be more honest.",
+    "S07 coffee: one ADD tap cuts straight to the '2' state. The caption says 'Tap plus', but + only gets a ring.",
+    "The narration reads like a manual: eight 'Tap …' instructions. Captions are on screen almost continuously (95.6 s at 2.45 words/s on average) with little breathing room, and no line welcomes faculty or staff.",
+    "'Adjust the pin' is captioned, but no pin move is shown; the map only gets 'Use this location'."
+   ],
+   "bestIdeas": [
+    "Story-style 8-segment progress rail with numbered chapters. Gen Z already knows this pattern, and it also shows faculty where they are.",
+    "The 'View cart' pill grows (#0033DA mask) into the real cart screen: a clean action-to-result cut.",
+    "The cart's ₹150 lifts, arcs and docks onto the Confirm order amount card.",
+    "A TIME-LAPSE tag over the status run is honest about the roughly 20-minute wait and avoids implying delivery speed.",
+    "A cropped inset of the app's own location explainer, labelled OPTIONAL, while the phone stays on step 2. It shows that GPS is optional without a detour.",
+    "The map push to 1.8x, focused at y 575, keeps the app's 'SETU delivers…' subtitle out of frame while the Google attribution stays visible.",
+    "The QR second phone starts on 'Waiting for the stall to accept your order', so the accept-first order is visible.",
+    "The end-card disclaimer is held 7.7 s, comfortable for 29 words.",
+    "Light trails from the email digits to the code boxes, synced to the 7-frame typing sequence."
+   ]
+  },
+  {
+   "draft": "B-story",
+   "accuracy": 9,
+   "clarity": 8.5,
+   "pacing": 8,
+   "motion": 9,
+   "audience": 9,
+   "compliance": 8.5,
+   "total": 52,
+   "violations": [
+    "The cart-math numerals (Sora 800 96 px) and the ₹150 number flight (Sora 800) include ₹, which Sora does not have, so a fallback glyph would render.",
+    "Several objects fly into the phone at once: three cuisine chips into the tabs (57.3–57.9) and two order-line chips into the cart (68.6–69.0). The project STYLE.md forbids this, and both scene seams get busy.",
+    "The left column collides: the motion-graphic stepper at (140,260) overlaps the cuisine chips parked at y 250 in s06, and the docked 'Home · B-212' chip at y 860 touches the top of a two-line caption plate.",
+    "Cause comes after effect: Home is tapped at 45.7 on 14-type-room/f0000, where it is already selected, and '+' is tapped at 66.35 after 05-coffee-two has shown 2 since 66.2.",
+    "End card: the 29-word disclaimer is fully legible for only 4.7 s. That meets the 4 s minimum with little margin, and 'Dinner, sorted.' overlaps the tagline's entrance.",
+    "About 23 minutes of real order time (7:02 to 7:25 pm) are compressed into roughly 11 s with no TIME-LAPSE label.",
+    "No real UI appears until 6.5 s, and the phone only at 15.1 s. The hook also recreates the Food / Commute SOON / Utilities SOON pills as motion graphics outside the phone, which is borderline fake UI.",
+    "The map push at 1.35x leaves the app's 'SETU delivers inside…' sheet subtitle in frame. It is not featured, but it could be framed out. 'Fine-tune the pin' is captioned, but no pin move is shown."
+   ],
+   "bestIdeas": [
+    "A web-to-phone match cut on the shared 'SIGNING IN AS Customer' form; the desktop form at 0.81x equals the phone screen width.",
+    "The pin unfolds into a 'Home · B-212' address card, docks as a chip, and later lands in the real Home header. This carries one action across three scenes.",
+    "The picked cuisine chips park in the left column, then land on the real Home tabs (preference, then result).",
+    "One persona (Aarav, Nehru Hall, dinner time) plus one explicit line, 'students, faculty, staff'. It feels warm for Gen Z and includes faculty; 'Tonight: dosa.' and 'Dinner, sorted.' are light without being hype.",
+    "The quote 'You will see a status timeline, not a rider on a map.' sits beside the status rail, and the rail dissolves into the real progress card.",
+    "A 'Live on Home' beat using the real live order card (05-home-live-card).",
+    "'Something off? Report it from the order.' with 'Food quality or hygiene' quoted, a trust beat that faculty will value.",
+    "A campus outline with the real nehruHall data point bookends the hook, the zone check and the end card.",
+    "It avoids the review placeholder 'Hot, on time…' (a delivery-time risk) and skips 11-review-note.",
+    "An editorial hairline 'or' wipe from the permission explainer to search, and a band wipe for the new-customer chapter instead of a fake in-app back.",
+    "It is built on the real kit.js helpers, so it is the easiest to build in the existing HyperFrames setup."
+   ]
+  },
+  {
+   "draft": "C-value",
+   "accuracy": 8.5,
+   "clarity": 7.5,
+   "pacing": 7,
+   "motion": 8.5,
+   "audience": 7.5,
+   "compliance": 7,
+   "total": 46,
+   "violations": [
+    "Four 'PROVEN · …' stamps. The word is close to hype and overclaims: a label or a cart total cannot 'prove' approval or no commission. Faculty will read it as spin, and it undercuts the honest tone.",
+    "'DEMO ENVIRONMENT · SAMPLE STALLS' stays on screen continuously from 15.0 to 105.2 s. The brief asks to say it once. A permanent DEMO tag clutters every frame and blurs the moment where the OTP DEMO label drops.",
+    "The slowest start: 16.8 s pass before the walkthrough begins. The runtime is 113.8 s, inside the range but off the 112 s target.",
+    "S05 is overloaded: the GPS route, the search route and the map all fit in 13.6 s, with holds of 0.5–0.7 s on the GPS reading, the picker, the results and the return to confirm. Showing a GPS fix and then searching anyway muddles the 'optional' message.",
+    "The frame gets busy: chapter label, 4-dot indicator, demo note, callouts, stamps and kinetic type are often on screen together.",
+    "The hook shows the post-onboarding Home with sample stalls before any demo disclosure. The grey initial tiles make a weak food hook.",
+    "It rings the step-1 line 'Stakeholders see your first name…', which is not in the verified facts."
+   ],
+   "bestIdeas": [
+    "Local state changes play as circular reveals centred on the tap (ADD to stepper, chips, toggle, stars), never as a full-screen crossfade.",
+    "A focus mask keeps fact 3's licence text and the 'Recorded against your account…' sub-line dark. Compliance is built into the design.",
+    "Promise chips are lifted straight off the real web stats into a persistent 4-dot indicator. Keep this system and drop 'PROVEN', for example by using a plain check.",
+    "A type rule that sets ₹ in Plus Jakarta Sans because Sora lacks the glyph; I confirmed this against the font file.",
+    "Dish lines turn into order lines and fly into the 'View cart' pill, which then morphs into the cart.",
+    "A blue fill from 'Start ordering' and a circular wipe from 'Place order · ₹150' are consistent action-to-result transitions.",
+    "Correct cause and effect: go back to 13-confirm-search and tap Home before cutting to 14-type-room/f0000; for coffee, ADD, then +, then reveal 2.",
+    "A silent end card gives the disclaimer 6 s of clean reading, and the fine print adds 'Demo QR is not a real payment code'.",
+    "Grain seeded by frame number keeps the seekable render deterministic.",
+    "The real Home scroll clip is on the phone by 2.2 s."
+   ]
+  }
+ ],
+ "winner": "B-story",
+ "rationale": "From a motion and audience angle, B-story is the strongest film.\n\nB has the most cinematic connections that are still motivated, and each one ties an action to its result: the web-to-phone match cut, the pin becoming the address card and then the Home header, the cuisine chips landing on the Home tabs, the dish chips becoming cart lines, the ₹150 flight, and the campus/Nehru Hall motif opening and closing the film. It also has the best tone. One warm student story plus an explicit 'students, faculty, staff' line gives Gen Z energy without shutting out faculty, and a 'Report it' beat builds trust.\n\nI checked B against the final captures and found no errors: prep time 7:24 pm, timeline 7:02 to 7:25 pm, separate demo order IDs (VGKQ for QR, BCQK for cash), every mark coordinate, and the nehruHall point. It meets every hard rule.\n\nA-tutorial is the safest and clearest, and is close to B on compliance (50 vs 52). Its coordinates and copy are exact, it has a TIME-LAPSE tag and a 7.7 s disclaimer. But it plays like a manual (eight 'Tap …' lines), its hook is overloaded, and a few taps are out of sync with their results.\n\nC-value has the most rigorous motion principles (circular local reveals, a focus mask, the ₹ font rule). Its four 'PROVEN' stamps and a demo tag held for 90 s hurt tone and compliance, and it starts slowly (16.8 s before the walkthrough begins, 113.8 s total).\n\nBefore building B, apply these fixes and additions:\n1. Set every ₹ in Plus Jakarta Sans or Space Mono. Sora-Variable.ttf has no ₹ glyph, which affects B's cart math and number flight and A's prices; C already handles this.\n2. Stagger the chip flights instead of flying several objects into the phone at once, and fix the clash between the left-column stepper and the parked chips.\n3. Take C's tap order: return to 13-confirm-search and tap Home before cutting to f0000, and tap coffee ADD, then +, then reveal 2.\n4. Add A's TIME-LAPSE tag over the status run.\n5. Start the end card about 1.5 s earlier so the disclaimer is readable for at least 6 s.\n6. Frame the map like A (1.8x at y 575) so 'SETU delivers…' is off screen.\n7. Optionally add C's circular reveals and focus mask.\n\nThe contact sheets come from an earlier capture run (code 243208, a live order card on Home). The final captures used by all drafts show code 686713 and match the drafts' claims."
+}

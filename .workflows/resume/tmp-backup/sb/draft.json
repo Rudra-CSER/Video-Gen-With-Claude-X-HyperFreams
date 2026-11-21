@@ -1,0 +1,1879 @@
+{
+ "_total": 117.6,
+ "_words": 234,
+ "scenes": [
+  {
+   "id": "s01",
+   "compositionName": "hook",
+   "title": "Hook — your campus, your food",
+   "chapter": null,
+   "start": 0.0,
+   "end": 5.4,
+   "narration": "Your campus. Your food. A simpler way to order. Meet Aarav, Nehru Hall.",
+   "captions": [
+    {
+     "start": 0.2,
+     "end": 3.7,
+     "text": "Your campus. Your food.\nA simpler way to order."
+    },
+    {
+     "start": 3.8,
+     "end": 5.35,
+     "text": "Meet Aarav, Nehru Hall."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "SETU Food",
+     "start": 2.6,
+     "end": 5.35,
+     "role": "title (Sora 800, 84 px, white, centred under the lockup tile; no rupee sign)"
+    },
+    {
+     "text": "ON SETU SERVICES · IIT KHARAGPUR",
+     "start": 3.0,
+     "end": 5.35,
+     "role": "subline (Space Mono 700, 18 px caps, #B8C7FF, centred)"
+    },
+    {
+     "text": "Aarav · Room B-212",
+     "start": 3.85,
+     "end": 5.35,
+     "role": "persona chip beside the Nehru Hall pin (Space Mono 700, 20 px)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "graphic:real campus boundary outline (assets/data/campus-boundary.json) with the Nehru Hall pin",
+     "start": 0.0,
+     "end": 5.4,
+     "treatment": "Motion graphic from real data: the 78-point Main Campus Boundary path drawn 1000×516.4 at canvas (460,150); orange outline map-pin on the file's nehruHall point."
+    },
+    {
+     "file": "graphic:official SETU lockup on a white rounded tile (assets/brand/setu-logo.png)",
+     "start": 2.2,
+     "end": 5.4,
+     "treatment": "Tile 260×206 centred at (960,360); lockup 216 px wide, downscaled only, never recoloured."
+    },
+    {
+     "file": "graphic:hook type (SETU Food title, subline, persona chip)",
+     "start": 2.6,
+     "end": 5.4,
+     "treatment": "Kinetic type only."
+    }
+   ],
+   "uiState": "No app UI: motion graphics built from real data (campus boundary polygon and its Nehru Hall point) plus the official SETU lockup.",
+   "animation": "Local times. Full-screen motion graphic, no phone. Captions are CENTRED in this scene (layout.json), so keep y 880–1050 empty across the width.\nOutline group (#s01-map): the real 'Main Campus Boundary' path from assets/data/campus-boundary.json (viewBox 0 0 1000 516.4) as an inline SVG 1000×516.4 at left 460, top 150 (x 460–1460, y 150–666). Stroke #B8C7FF 3 px, round joins, filter drop-shadow(0 0 10px rgba(130,160,255,.55)); fill rgba(46,91,238,.06) (starts at fill-opacity 0).\n0.10–2.10 K.drawPath on the outline (2.0 s, power2.inOut). 1.60–2.30 the fill fades in.\n1.70 Nehru Hall marker at the file's nehruHall point (114.2, 98.8) → canvas (574.2, 248.8): a Lucide map-pin (OUTLINE, stroke 2.5 px #EC5A2A, 40 px tall, tip on the point) fromTo y −60/opacity 0 → 0/1 (expo.out 0.45 s), plus an 8 px orange dot exactly on the point; 1.95–2.65 one 2 px orange ripple ring grows 0→80 px and fades.\n2.20–2.90 the outline group tweens to opacity 0.30 (power2.out); the pin and dot stay at 100%.\n2.20 white tile (kit .white-tile, 260×206, radius 32) centred at (960,360) → x 830–1090, y 257–463, holding assets/brand/setu-logo.png at 216 px wide (≈170 px tall), centred: fromTo scale 0.94/opacity 0 → 1/1 (expo.out 0.7 s).\n2.60 title 'SETU Food' (Sora 800, 84 px, white, letter-spacing −.03em, centred, top 492) K.revealWords (stagger 0.08).\n3.00 subline 'ON SETU SERVICES · IIT KHARAGPUR' (Space Mono 700 18 px caps, letter-spacing .2em, #B8C7FF, centred, top 600) K.fadeUp.\n3.85 persona chip 'Aarav · Room B-212' (Space Mono 700 20 px, white on rgba(12,18,51,.88), 1 px rgba(255,255,255,.18) border, radius 12, padding 10/16; ≈300×42) at left 604, top 196 (right of the pin head, clear of the tile): fromTo x −16/opacity 0 → 0/1 (expo.out 0.5 s).\n4.95–5.35 exit: tile, title, subline and chip rise −16 px and fade (power2.in 0.4 s); outline, pin and dot fade (0.4 s). The frame at 5.35–5.40 is the empty shared background.",
+   "transitionIn": "Cold open on the shared indigo background; the outline starts drawing at 0.10 s.",
+   "transitionOut": "Every hook element exits 4.95–5.35; the last frame is the empty background (hard cut; s02 starts empty).",
+   "handoffIn": {
+    "phone": "none",
+    "screen": null,
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Cold open: only the shared background (index.html) is visible."
+   },
+   "handoffOut": {
+    "phone": "none",
+    "screen": null,
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "All hook graphics are gone by 5.35; empty background at the cut."
+   },
+   "demoBadge": [],
+   "soundCues": [
+    {
+     "at": 0.0,
+     "cue": "Placeholder bed: low warm pad fades in (owner replaces)"
+    },
+    {
+     "at": 0.1,
+     "cue": "Fine line-draw shimmer following the outline (2.0 s)"
+    },
+    {
+     "at": 1.7,
+     "cue": "Pin drop: short wooden tick"
+    },
+    {
+     "at": 2.2,
+     "cue": "Soft paper tick as the white logo tile lands"
+    },
+    {
+     "at": 3.85,
+     "cue": "Two-note soft chime for the Aarav chip"
+    },
+    {
+     "at": 4.95,
+     "cue": "Air whoosh out"
+    }
+   ],
+   "accuracyNotes": "- The outline is the real 78-point 'Main Campus Boundary' (server campus-zone config, via assets/data/campus-boundary.json) and its nehruHall point; it is a motion graphic, never presented as a map screenshot.\n- The lockup is the official raster on a WHITE rounded tile, downscaled only, never recoloured; the 75-years mark is not used.\n- 'SETU Food' is the walkthrough's name for the Food service of SETU Services (the app's on-screen brand is 'SETU Services'; 'SETU Food' is the email brand and the CTA). It is set as plain title type under the tile, never fused into a logo, and the subline says 'on SETU Services'.\n- No app UI is recreated (the Food / Commute / Utilities pills are not redrawn).\n- The opening line is the owner's. 'Room B-212' is the demo persona's room (it appears later in the Home header)."
+  },
+  {
+   "id": "s02",
+   "compositionName": "what-setu-does",
+   "title": "What SETU does",
+   "chapter": "What SETU does",
+   "start": 5.4,
+   "end": 12.0,
+   "narration": "SETU Food lists approved campus stalls. They cook and deliver. You pay the stall directly. No commission.",
+   "captions": [
+    {
+     "start": 5.55,
+     "end": 9.05,
+     "text": "SETU Food lists approved campus stalls.\nThey cook and deliver."
+    },
+    {
+     "start": 9.15,
+     "end": 11.9,
+     "text": "You pay the stall directly.\nNo commission."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "What SETU does",
+     "start": 5.55,
+     "end": 10.8,
+     "role": "kicker (kit .kicker)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "desktop/01-signin-wide.png",
+     "start": 5.4,
+     "end": 11.6,
+     "treatment": "Kit .laptop frame (--lk .7, no browser/OS chrome) at left 760, top 150. Camera on the laptop rig: lede, then the stats row; rings; then a match move that lays the desktop sign-in form over the phone's screen rectangle."
+    },
+    {
+     "file": "signin/01-signin.png",
+     "start": 11.15,
+     "end": 12.0,
+     "treatment": "Phone at the default spec fades in over the matched desktop form (web → phone match cut) and holds."
+    }
+   ],
+   "uiState": "Signed-out web sign-in page (desktop wide layout, Customer selected): art panel 'The campus, and only the campus.', the lede 'Approved local stakeholders, delivered to your hall. …' and the stats DELIVERY Campus only · COMMISSION None · PAYMENT Direct; then the phone's own sign-in screen ('SIGNING IN AS Customer', 'IIT KHARAGPUR CAMPUS ACCOUNTS ONLY').",
+   "animation": "Local times. Two layers: #s02-rig-desk (a full-canvas .rig) holds the laptop; the phone is OUTSIDE it at the default spec and only appears at the end.\nLaptop at rest: kit .laptop with --lk .7 at left 760, top 150 → lid x 760–1804, y 150–824; screen x 778–1786, y 168–798; base y 824–846. Desktop CSS (1440×900) → canvas at rest: X = 778 + 0.7·x, Y = 168 + 0.7·y. Rings below are drawn inside the laptop screen in desktop CSS px, so they scale with the camera.\n0.00–0.80 the laptop fromTo y +90/opacity 0 → 0/1 (expo.out 0.8 s). 0.15 kicker 'What SETU does' K.fadeUp at (140,200).\n0.70–1.70 camera: K.focus(desk rig, P=(1052.4,497) [desktop (392,470)], s 1.3, 0.70, 1.0, {to:{x:1110,y:420}}) — headline and lede fill the frame; the lid's bottom edge lands at y≈845, above the caption zone.\n0.90–2.30 pale-indigo ring (2.5 px #B8C7FF, radius 10, no fill) around the first sentence only: desktop box {x:60,y:500,w:464,h:34} 'Approved local stakeholders, delivered to your hall.'\n2.10–3.10 camera: K.focus(desk rig, P=(1026.5,736.4) [desktop (355,812)], s 1.35, 2.10, 1.0, {to:{x:1080,y:520}}) — the stats row lands at y≈495–546.\n2.60–3.80 orange ring (kit .ring look, inside the laptop screen) on 'DELIVERY · Campus only' desktop {x:58,y:778,w:216,h:68}; one ring scale pulse 1→1.04→1 (the UI is never recoloured).\n3.80–5.00 orange ring on 'COMMISSION · None' desktop {x:318,y:778,w:110,h:68}.\n4.10–5.20 orange ring on 'PAYMENT · Direct' desktop {x:543,y:778,w:110,h:68}.\n5.10–5.90 match move: K.focus(desk rig, P=(1405.2,240.8) [desktop (896,104), the form's 'SIGNING IN AS' line], s 1.0, 5.10, 0.8, {to:{x:1181.3,y:206}}) — the desktop sign-in form now lies over the phone's screen rectangle (lid x 536–1580, y 115–789). 5.10–5.40 the kicker fades out.\n5.75–6.15 the phone (default spec {left:1150,top:70,k:1.08}, outside the desk rig) fromTo scale 0.97/opacity 0 → 1/1 (transform-origin centre, expo.out 0.4 s) showing signin/01-signin.png; 5.85–6.20 the laptop fades out (power1.in 0.35 s). The shared 'SIGNING IN AS · Customer' heading and form make the web → phone match cut.\n6.20–6.60 hold: phone at the default spec on signin/01-signin.png; the laptop is invisible (reset the desk rig to identity once it is at opacity 0); left column empty.",
+   "transitionIn": "Starts on the empty background; the laptop rises 0.00–0.80.",
+   "transitionOut": "Web → phone match cut on the shared sign-in form (5.10–6.20), then a 0.4 s settled hold on the phone.",
+   "handoffIn": {
+    "phone": "none",
+    "screen": null,
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Empty shared background (s01 has fully exited)."
+   },
+   "handoffOut": {
+    "phone": "default",
+    "screen": "signin/01-signin.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Laptop fully gone; phone at the default spec, no camera move, nothing else on canvas."
+   },
+   "demoBadge": [],
+   "soundCues": [
+    {
+     "at": 5.4,
+     "cue": "Card settle: soft low thud as the laptop rises"
+    },
+    {
+     "at": 6.3,
+     "cue": "Highlight swish (lede ring)"
+    },
+    {
+     "at": 8.0,
+     "cue": "Tiny tick (Campus only)"
+    },
+    {
+     "at": 9.2,
+     "cue": "Tiny tick (None)"
+    },
+    {
+     "at": 9.5,
+     "cue": "Tiny tick (Direct)"
+    },
+    {
+     "at": 10.5,
+     "cue": "Glassy whoosh on the web → phone match cut"
+    }
+   ],
+   "accuracyNotes": "- desktop/01-signin-wide.png is real UI shown in the kit's neutral laptop frame: no browser chrome, URL bar or OS UI.\n- Ring only 'Approved local stakeholders, delivered to your hall.' and the three stats. Never ring, zoom on or caption 'SETU checks the licence and holds the record.' (it reads as 'every stall is licence-checked').\n- desktop/02-home-web.png is not used ('Every stall is licence-checked by SETU').\n- 'They cook and deliver' = the stalls (app: 'The seller brings the order themselves'); never 'SETU delivers'. 'No commission' = the stat 'COMMISSION None'.\n- The panel's crest / 75-years row is never featured: both push-ins centre below it."
+  },
+  {
+   "id": "s03",
+   "compositionName": "sign-in",
+   "title": "Have an account? Sign in — password, or an emailed code",
+   "chapter": "01 · Sign in",
+   "start": 12.0,
+   "end": 23.6,
+   "narration": "For IIT Kharagpur campus accounts: students, faculty, staff. Have an account? Sign in with your password. Or get a one-time code by email. Six digits, and Aarav's in.",
+   "captions": [
+    {
+     "start": 12.1,
+     "end": 15.4,
+     "text": "For IIT Kharagpur campus accounts:\nstudents, faculty, staff."
+    },
+    {
+     "start": 15.5,
+     "end": 18.6,
+     "text": "Have an account? Sign in\nwith your password."
+    },
+    {
+     "start": 18.7,
+     "end": 21.4,
+     "text": "Or get a one-time code by email."
+    },
+    {
+     "start": 21.5,
+     "end": 23.5,
+     "text": "Six digits, and Aarav's in."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "01 · Sign in",
+     "start": 12.1,
+     "end": 23.5,
+     "role": "kicker (kit .kicker)"
+    },
+    {
+     "text": "Password, or a code.",
+     "start": 12.3,
+     "end": 19.3,
+     "role": "headline (.headline--md, Sora 800 68 px, two lines 'Password,' / 'or a code.' with 'or a code.' in #B8C7FF; no rupee sign)"
+    },
+    {
+     "text": "MAIN WAY IN",
+     "start": 15.6,
+     "end": 17.35,
+     "role": "label (short caps, Space Mono 700 20 px, callout lane)"
+    },
+    {
+     "text": "OR EMAIL A CODE",
+     "start": 17.2,
+     "end": 19.25,
+     "role": "label (short caps, Space Mono 700 20 px, callout lane)"
+    },
+    {
+     "text": "Demo environment",
+     "start": 18.75,
+     "end": 23.4,
+     "role": "DEMO badge (kit .demo-badge, tag row at (140,112))"
+    },
+    {
+     "text": "DEMO · Local test inbox",
+     "start": 19.6,
+     "end": 22.85,
+     "role": "mail-card head strip (orange-outline DEMO tag + Space Mono 700 16 px)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "signin/01-signin.png",
+     "start": 12.0,
+     "end": 13.55,
+     "treatment": "Phone at the default spec; camera F1 from 0.30; ring on the campus pill; tap id at 1.20."
+    },
+    {
+     "file": "signin/02-type-email/",
+     "start": 13.55,
+     "end": 15.11,
+     "treatment": "Typing clip, clipSeconds 1.56: 'aarav.demo@kgpian.iitkgp.ac.in' into the id field.",
+     "clipSeconds": 1.56
+    },
+    {
+     "file": "signin/03-email-typed.png",
+     "start": 15.11,
+     "end": 19.7,
+     "treatment": "Still under the clip, then held: ring password + MAIN WAY IN; ring--blue + tap otpLink (6.80); pushes out 7.15–7.70."
+    },
+    {
+     "file": "signin/04-enter-code.png",
+     "start": 19.15,
+     "end": 20.8,
+     "treatment": "swapPush in; ring sentTo ('We emailed a six-digit code to aa***@kgpian.iitkgp.ac.in. It expires in 10 minutes.')."
+    },
+    {
+     "file": "signin/email-otp.png",
+     "start": 19.6,
+     "end": 22.85,
+     "treatment": "DEMO mail card in the left column: the real email render cropped to email CSS x12–378, y24–420 inside a white card under a DEMO head strip; code-box glow; light trails to the phone."
+    },
+    {
+     "file": "signin/05-type-code/",
+     "start": 20.8,
+     "end": 22.0,
+     "treatment": "Typing clip, clipSeconds 1.2 (7 frames × 0.1714 s): the six digits, synced to the light trails.",
+     "clipSeconds": 1.2
+    },
+    {
+     "file": "signin/06-code-entered.png",
+     "start": 22.0,
+     "end": 23.1,
+     "treatment": "Still under the clip, then held; ring--blue + tap 'Verify and continue' (10.45)."
+    },
+    {
+     "file": "signin/07-home.png",
+     "start": 22.8,
+     "end": 23.6,
+     "treatment": "swapFade in ('Good evening, Aarav', 'Set your delivery location'); camera back to identity."
+    }
+   ],
+   "uiState": "Signed-out phone sign-in (Customer selected, 'IIT KHARAGPUR CAMPUS ACCOUNTS ONLY') → email typed → 'Enter the code' (sent to aa***@kgpian.iitkgp.ac.in, 'It expires in 10 minutes.') → six digits entered → Home on a fresh device ('Set your delivery location · Tap to pick it on the map', 'Good evening, Aarav').",
+   "animation": "Local times. Phone at the default spec from frame 0 (handoffIn). Camera framing F1 = {s 1.4, P [195,236], T [1420,200]}: header logos (screen y<100) stay off-frame, so the crest and the 75-years mark are never magnified; visible screen y≈104–818; canvas of a screen point = (1125.16 + 1.512·x, −156.86 + 1.512·y).\n0.10 kicker '01 · Sign in' K.fadeUp at (140,200). 0.30 headline 'Password,' / 'or a code.' (.headline--md, top 250, width 680; 'or a code.' in #B8C7FF) K.revealWords.\n0.30–1.30 K.focus F1 (1.0 s).\n0.60–2.20 orange ring (radius 14) on the campus pill, measured box {x:52,y:164,w:286,h:27} 'IIT KHARAGPUR CAMPUS ACCOUNTS ONLY' → canvas (1203.8,91.1)–(1636.2,132).\n1.20 K.tap signin/01-signin.id → 1.55 clip layer signin/02-type-email/ (clipSeconds 1.56) plays 1.55–3.11; signin/03-email-typed.png sits underneath and holds from 3.11.\n3.60–5.00 orange ring on signin/01-signin.password (same layout in 03; canvas (1149.4,557.7)–(1690.6,630.3)) + label 'MAIN WAY IN' (≈206×40) at x 910–1116, y 574–614; 2 px leader (1116,594)→(1149,594). 5.00–5.35 the label fades.\n5.10 ring--blue on signin/03-email-typed.otpLink (canvas (1239.6,718)–(1600.4,778.5)) until 6.80. 5.20 label 'OR EMAIL A CODE' (≈260×40) at x 856–1116, y 728–768; leader (1116,748)→(1239,748).\n6.75–7.00 DEMO badge (kit .demo-badge 'Demo environment') fades up at the tag row (140,112) — on from the code request until Home is reached.\n6.80 K.tap signin/03-email-typed.otpLink ('Email me a one-time code instead') → 7.15 K.swapPush → signin/04-enter-code.png (0.55 s). 6.90–7.30 the headline fades out; 6.90–7.25 the label fades out.\n7.70–9.00 orange ring on signin/04-enter-code.sentTo (canvas (1149.4,154.8)–(1690.6,215.3)).\n7.60–8.20 DEMO mail card (kit .mailcard, width 480) at left 590, top 200: head strip 52 px = orange-outline 'DEMO' tag + 'Local test inbox' (Space Mono 700 16 px; no sender, no time, no OS or mail-app chrome); body = signin/email-otp.png cropped to email CSS x12–378, y24–420 at 1.3115× (480×519; card bottom ≈771). Entrance fromTo x −40/opacity 0/rotate 1.5° → 0/1/0 (expo.out 0.6 s). Email CSS → canvas: X = 590 + (x−12)·1.3115, Y = 252 + (y−24)·1.3115.\n8.30–9.00 pale-blue glow ring around the email's code box (canvas x 621.5–1038.5, y 495.9–587.7).\n8.80 clip layer signin/05-type-code/ (clipSeconds 1.2; 7 frames × 0.1714 s; f0000 = the empty boxes of 04). Digits appear at 8.971, 9.143, 9.314, 9.486, 9.657, 9.829; the clip ends at 10.00 and signin/06-code-entered.png holds underneath.\nLight trails: one per digit, a 1.5 px pale-blue line drawn with K.drawPath (0.16 s, power2.out) from the card digit to its phone box (F1 canvas), finishing exactly as that digit appears, then fading in 0.2 s; never two drawing at once. Start → end points: 1: (727.3,541.8)→(1193.5,302.8) starts 8.811; 2: (765.7,541.8)→(1284.1,302.8) starts 8.983; 3: (804.2,541.8)→(1374.8,302.8) starts 9.154; 4: (842.2,541.8)→(1465.4,302.8) starts 9.326; 5: (881.2,541.8)→(1556.1,302.8) starts 9.497; 6: (919.6,541.8)→(1646.6,302.8) starts 9.668. As each trail leaves, that digit on the card brightens.\n10.10 ring--blue on signin/06-code-entered.verify. 10.45 K.tap verify ('Verify and continue') → 10.80 K.swapFade → signin/07-home.png (0.3 s). 10.45–10.85 the mail card exits left (x −60, fade, power2.in 0.4 s).\n10.80–11.70 K.unfocus (0.9 s): the camera returns to identity as Home settles (header 'Set your delivery location' comes into frame).\n11.10–11.40 the DEMO badge fades out (Home is fully shown at 11.10). 11.20–11.50 the kicker fades out. 11.50–11.60 hold.",
+   "transitionIn": "Continuous from the web → phone match cut: the phone is already at its default spec on the sign-in screen.",
+   "transitionOut": "Settles on fresh-device Home at identity with the left column empty; s04's rewind band opens on this frame.",
+   "handoffIn": {
+    "phone": "default",
+    "screen": "signin/01-signin.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Same frame as s02 ends: phone at the default spec, nothing else."
+   },
+   "handoffOut": {
+    "phone": "default",
+    "screen": "signin/07-home.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Camera back at identity; DEMO badge, mail card, kicker and labels gone. Home reads 'Set your delivery location' (fresh device)."
+   },
+   "demoBadge": [
+    {
+     "start": 19.0,
+     "end": 23.1
+    }
+   ],
+   "soundCues": [
+    {
+     "at": 12.6,
+     "cue": "Ring swish (campus accounts)"
+    },
+    {
+     "at": 13.55,
+     "cue": "Quiet keyboard ticks for 1.5 s"
+    },
+    {
+     "at": 18.8,
+     "cue": "UI tap"
+    },
+    {
+     "at": 19.15,
+     "cue": "Page push swish"
+    },
+    {
+     "at": 19.6,
+     "cue": "Gentle chime: DEMO mail card (not an OS notification sound)"
+    },
+    {
+     "at": 20.97,
+     "cue": "Six soft digit ticks, 0.17 s apart"
+    },
+    {
+     "at": 22.45,
+     "cue": "UI tap (Verify and continue)"
+    },
+    {
+     "at": 22.8,
+     "cue": "Success: soft two-note rise"
+    }
+   ],
+   "accuracyNotes": "- Password sign-in is the main method; the emailed one-time code is the alternative ('Email me a one-time code instead'). Labels say exactly that.\n- The code really was emailed, by the isolated demo stack to a local test inbox (Mailpit). The DEMO badge is on from the code request (6.75–7.00 fade-in) until Home is shown (11.10), and the card's head strip says 'Local test inbox'. Nothing implies a real inbox received it: no sender, timestamp, app icon or OS notification styling.\n- The card shows the real email render (header 'SETU Food', 'Your sign-in code', the code, 'It expires in 10 minutes … and works once.', 'Never share this code. SETU staff will never ask you for it.'). Digits 686713 match in signin/email-otp.png and signin/06-code-entered.png; never retype or invent digits; keep the masked address as captured.\n- 'For IIT Kharagpur campus accounts: students, faculty, staff.' is the approved audience line; the UI pill reads 'IIT KHARAGPUR CAMPUS ACCOUNTS ONLY' (no UI string names faculty or staff, so the line is anchored to campus accounts).\n- F1 keeps the crest row off-frame; the 75-years mark is never enlarged.\n- signin/07-home.png ('Set your delivery location') is the real fresh-device state; the story returns to it in s07."
+  },
+  {
+   "id": "s04",
+   "compositionName": "new-here",
+   "title": "New here? Create a customer account",
+   "chapter": "02 · New here?",
+   "start": 23.6,
+   "end": 33.5,
+   "narration": "New here? Rewind to Aarav's day one. Tap “Create a Customer account”: name, institute email, phone, password. Then four quick steps.",
+   "captions": [
+    {
+     "start": 23.7,
+     "end": 26.4,
+     "text": "New here? Rewind to Aarav's day one."
+    },
+    {
+     "start": 26.5,
+     "end": 30.45,
+     "text": "Tap “Create a Customer account”:\nname, institute email, phone, password."
+    },
+    {
+     "start": 30.55,
+     "end": 32.5,
+     "text": "Then four quick steps."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "DAY ONE",
+     "start": 24.0,
+     "end": 26.8,
+     "role": "tag (tag row at (140,112): Lucide rotate-ccw + Space Mono 700 18 px caps)"
+    },
+    {
+     "text": "02 · New here?",
+     "start": 24.05,
+     "end": 33.4,
+     "role": "kicker (kit .kicker)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "signin/07-home.png",
+     "start": 23.6,
+     "end": 24.01,
+     "treatment": "Frame 0 (from s03), covered by the rewind band at 0.41."
+    },
+    {
+     "file": "graphic:editorial rewind band (full-height indigo band, orange leading edge)",
+     "start": 23.6,
+     "end": 24.3,
+     "treatment": "Sweeps left → right; the screen changes under it."
+    },
+    {
+     "file": "onboarding/01-signin.png",
+     "start": 24.01,
+     "end": 26.0,
+     "treatment": "Swapped in under the band; camera Fcreate; ring--blue + tap 'Create a Customer account' (1.50)."
+    },
+    {
+     "file": "onboarding/02-signup-empty.png",
+     "start": 25.45,
+     "end": 26.95,
+     "treatment": "swapPush in ('Create your Customer account'); tap Name (3.00)."
+    },
+    {
+     "file": "onboarding/03-type-name/",
+     "start": 26.95,
+     "end": 27.57,
+     "treatment": "Typing clip, clipSeconds 0.62: 'Aarav Mehta'.",
+     "clipSeconds": 0.62
+    },
+    {
+     "file": "onboarding/04-type-email/",
+     "start": 27.57,
+     "end": 29.13,
+     "treatment": "Typing clip, clipSeconds 1.56: 'aarav.demo@kgpian.iitkgp.ac.in'.",
+     "clipSeconds": 1.56
+    },
+    {
+     "file": "onboarding/05-type-phone/",
+     "start": 29.13,
+     "end": 29.69,
+     "treatment": "Typing clip, clipSeconds 0.56: '9000012345'; ring on the helper line.",
+     "clipSeconds": 0.56
+    },
+    {
+     "file": "onboarding/06-type-password/",
+     "start": 29.69,
+     "end": 30.4,
+     "treatment": "Typing clip, clipSeconds 0.71: masked dots.",
+     "clipSeconds": 0.71
+    },
+    {
+     "file": "onboarding/07-signup-filled.png",
+     "start": 30.4,
+     "end": 31.6,
+     "treatment": "Still under the clips ('Strong enough.'); ring--blue + tap 'Create account' (7.10)."
+    },
+    {
+     "file": "onboarding/10-step1-identity.png",
+     "start": 31.05,
+     "end": 33.45,
+     "treatment": "swapPush in (Step 1 of 4 'Confirm your campus identity'); ring the app's stepper; tap 'Continue' (8.95)."
+    },
+    {
+     "file": "onboarding/21-step2-prompt.png",
+     "start": 32.9,
+     "end": 33.5,
+     "treatment": "swapPush in (Step 2 of 4 'Where should orders arrive?') and settle."
+    }
+   ],
+   "uiState": "Rewind to day one: sign-in page with the card 'New here? Create a customer account — it takes a moment…' → 'Create your Customer account' (empty → filled: Aarav Mehta, aarav.demo@kgpian.iitkgp.ac.in, 9000012345, masked password, 'Strong enough.') → onboarding Step 1 of 4 'Confirm your campus identity' → Step 2 of 4 'Where should orders arrive?'.",
+   "animation": "Local times. Frame 0 = s03's last frame (signin/07-home.png at identity). Camera framing Fcreate = {s 1.4, P [195,734], T [1420,700]}: canvas of a screen point = (1125.16 + 1.512·x, −409.8 + 1.512·y); the header logos stay off-frame.\n0.00–0.70 rewind band: a full-height band 760 px wide (linear-gradient(90deg,#151E4D,#22307A)) with a 3 px #EC5A2A leading edge on its right side, x −760 → 1920 (power2.inOut 0.7 s), above the phone and the left column (the caption track stays on top). It fully covers the phone between ≈0.39 and 0.43 s.\n0.41 instant swap under the band: signin/07-home.png → onboarding/01-signin.png (set the new layer visible, hide the old one; verify the frame in a snapshot).\n0.40–0.70 tag 'DAY ONE' (Lucide rotate-ccw 20 px + Space Mono 700 18 px caps, #B8C7FF, pill padding 10/16) fades in at the tag row (140,112); 2.90–3.20 it fades out. 0.45 kicker '02 · New here?' K.fadeUp at (140,200).\n0.45–1.45 K.focus Fcreate (1.0 s): the 'New here?' card and 'Create a Customer account' fill the lower frame.\n1.25 ring--blue on onboarding/01-signin.createAccount (canvas (1170.5,663.4)–(1669.5,736)). 1.50 K.tap createAccount → 1.85 K.swapPush → onboarding/02-signup-empty.png (0.55 s).\n3.00 K.tap onboarding/02-signup-empty.name → 3.35 the typing clips play back-to-back in one non-timed layer stack, each starting on the frame where the previous one ends (the field-to-field focus changes are in the captures, so no extra taps are drawn): onboarding/03-type-name/ 3.35–3.97 (0.62), 04-type-email/ 3.97–5.53 (1.56), 05-type-phone/ 5.53–6.09 (0.56), 06-type-password/ 6.09–6.80 (0.71); onboarding/07-signup-filled.png holds underneath from 6.80. Fields on canvas: name (1149.4,94.4)–(1690.6,167), submit (1149.4,614.6)–(1690.6,687.1).\n5.55–6.75 orange ring on the phone helper line, measured box {x:16,y:546,w:234,h:17} 'The seller calls this number at handover.' (canvas (1149.4,415.7)–(1503.2,441.4)).\n6.85 ring--blue on onboarding/07-signup-filled.submit. 7.10 K.tap submit ('Create account') → 7.45 K.swapPush → onboarding/10-step1-identity.png (0.55 s). 7.45–8.35 K.unfocus (0.9 s).\n8.00–9.20 orange ring (radius 15) on the app's own stepper, measured box {x:16,y:58,w:358,h:30} (canvas at identity (1181.3,146.6)–(1567.9,179)).\n8.70 ring--blue on onboarding/10-step1-identity.cont. 8.95 K.tap cont ('Continue') → 9.30 K.swapPush → onboarding/21-step2-prompt.png (0.55 s), settled at 9.85.\n9.40–9.80 the kicker fades out. 9.85–9.90 hold.",
+   "transitionIn": "Editorial rewind band (left → right) wipes from tonight's Home to the sign-in page of day one — a chapter wipe, not in-app navigation.",
+   "transitionOut": "Tap 'Continue' on Step 1; Step 2 pushes in and settles at identity before the cut.",
+   "handoffIn": {
+    "phone": "default",
+    "screen": "signin/07-home.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Same frame as s03 ends."
+   },
+   "handoffOut": {
+    "phone": "default",
+    "screen": "onboarding/21-step2-prompt.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Step 2 fully settled at identity; tag, kicker and rings gone."
+   },
+   "demoBadge": [],
+   "soundCues": [
+    {
+     "at": 23.6,
+     "cue": "Band wipe whoosh (rewind)"
+    },
+    {
+     "at": 25.1,
+     "cue": "UI tap"
+    },
+    {
+     "at": 25.45,
+     "cue": "Page push"
+    },
+    {
+     "at": 26.95,
+     "cue": "Fast keyboard ticks through 6.8 s"
+    },
+    {
+     "at": 30.7,
+     "cue": "UI tap (Create account)"
+    },
+    {
+     "at": 31.05,
+     "cue": "Page push + soft step chime"
+    },
+    {
+     "at": 32.55,
+     "cue": "UI tap (Continue)"
+    },
+    {
+     "at": 32.9,
+     "cue": "Page push"
+    }
+   ],
+   "accuracyNotes": "- The band is an editorial 'rewind' to the day Aarav set up his account (it makes the second path explicit), not an in-app back navigation.\n- The fields are exactly Name / Institute email / Phone / Password; the helper 'The seller calls this number at handover.' is the form's own copy. 'Create a Customer account' is the card's exact button text.\n- Onboarding has four steps ('Step N of 4'); the ring is on the app's own stepper.\n- Typing is real (four clips at 0.75× of base length; no keyboard is added); the password shows masked dots only.\n- Step 1's line about what stakeholders see is visible but not featured (not in the verified facts).\n- Demo persona data only (Aarav Mehta, aarav.demo@kgpian.iitkgp.ac.in, 9000012345)."
+  },
+  {
+   "id": "s05",
+   "compositionName": "delivery-spot",
+   "title": "Where should orders arrive?",
+   "chapter": "03 · Delivery spot",
+   "start": 33.5,
+   "end": 49.7,
+   "narration": "Next: where should orders arrive? Location access is optional. Search works too. Nehru Hall: inside the delivery area. Check the pin on the map. Save it as Home, add B-212.",
+   "captions": [
+    {
+     "start": 33.6,
+     "end": 35.7,
+     "text": "Next: where should orders arrive?"
+    },
+    {
+     "start": 35.8,
+     "end": 38.5,
+     "text": "Location access is optional.\nSearch works too."
+    },
+    {
+     "start": 39.6,
+     "end": 42.0,
+     "text": "Nehru Hall: inside the delivery area."
+    },
+    {
+     "start": 42.1,
+     "end": 44.5,
+     "text": "Check the pin on the map."
+    },
+    {
+     "start": 44.6,
+     "end": 47.0,
+     "text": "Save it as Home, add B-212."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "03 · Delivery spot",
+     "start": 33.6,
+     "end": 49.55,
+     "role": "kicker (kit .kicker)"
+    },
+    {
+     "text": "OPTIONAL",
+     "start": 34.1,
+     "end": 35.7,
+     "role": "label chip on the explainer inset (Space Mono 700 20 px caps, orange outline)"
+    },
+    {
+     "text": "CAMPUS ONLY",
+     "start": 40.05,
+     "end": 41.35,
+     "role": "label (short caps, callout lane)"
+    },
+    {
+     "text": "CAMPUS BOUNDARY",
+     "start": 42.1,
+     "end": 43.45,
+     "role": "label (short caps, callout lane)"
+    },
+    {
+     "text": "Home · B-212",
+     "start": 48.05,
+     "end": 49.55,
+     "role": "address card title (Plus Jakarta Sans 700 32 px)"
+    },
+    {
+     "text": "Nehru Hall of Residence",
+     "start": 48.05,
+     "end": 49.55,
+     "role": "address card subline (Plus Jakarta Sans 500 22 px, #B8C7FF)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "onboarding/21-step2-prompt.png",
+     "start": 33.5,
+     "end": 36.4,
+     "treatment": "Identity; ring on the Delivery location box; ring--blue on \"Use my current location\" (no tap) beside the explainer inset; tap the box (2.05)."
+    },
+    {
+     "file": "location/01-allow-dialog.png",
+     "start": 34.1,
+     "end": 35.7,
+     "treatment": "INSET outside the phone: crop CSS {x:20,y:276,w:350,h:293} (SETU's own 'Allow location for SETU?' explainer) at 1.15× in a white card at x 420–823, y 300–637; labelled OPTIONAL; no tap; dashed leader to the GPS row."
+    },
+    {
+     "file": "location/10-picker-select.png",
+     "start": 35.9,
+     "end": 37.35,
+     "treatment": "swapSheet (sheetTop 537) — 'Select a location'; identity framing keeps the sheet subtitle tiny; tap search (3.50)."
+    },
+    {
+     "file": "location/11-type-search/",
+     "start": 37.35,
+     "end": 38.15,
+     "treatment": "Typing clip, clipSeconds 0.8: the expanded sheet, 'Nehru Hall' typed.",
+     "clipSeconds": 0.8
+    },
+    {
+     "file": "location/12-search-results.png",
+     "start": 38.15,
+     "end": 39.55,
+     "treatment": "Ring + tap the first result 'Nehru Hall of Residence · Pan Loop, IIT Kharagpur…' (5.40)."
+    },
+    {
+     "file": "location/13-confirm-search.png",
+     "start": 39.25,
+     "end": 41.95,
+     "treatment": "'Confirm delivery location'; camera Fconf; green ring on 'Location is within the IIT Kharagpur delivery area.'; tap 'Adjust on the map' (7.75)."
+    },
+    {
+     "file": "location/20-map.png",
+     "start": 41.6,
+     "end": 44.25,
+     "treatment": "'Select delivery location' map at Fconf (s 1.8 at screen y 575): the sheet subtitle is off-frame; pin halo; boundary label; tap 'Use this location' (10.05)."
+    },
+    {
+     "file": "location/13-confirm-search.png",
+     "start": 43.9,
+     "end": 45.2,
+     "treatment": "Back on Confirm (the map hands the same pin back); tap the 'Home' chip (11.35)."
+    },
+    {
+     "file": "location/14-type-room/",
+     "start": 45.2,
+     "end": 46.0,
+     "treatment": "Typing clip, clipSeconds 0.8: f0000 has Home selected (sheet 25 px lower), then 'B-212' into Address details.",
+     "clipSeconds": 0.8
+    },
+    {
+     "file": "location/15-confirm-home.png",
+     "start": 46.0,
+     "end": 47.7,
+     "treatment": "Still under the clip (identical to its last frame); rings; tap 'Confirm location' (13.40); slides down."
+    },
+    {
+     "file": "onboarding/23-step2-done.png",
+     "start": 47.25,
+     "end": 49.7,
+     "treatment": "Revealed as the sheet slides down; pin → address card; rings on the filled box and room; camera back to identity."
+    },
+    {
+     "file": "graphic:pin → address card (Lucide outline map-pin, dotted path, glass card)",
+     "start": 47.75,
+     "end": 49.55,
+     "treatment": "Action → result: the field's pin flies out and unfolds into the saved-address card."
+    }
+   ],
+   "uiState": "Onboarding Step 2 of 4 'Where should orders arrive?' (inset: SETU's own explainer 'Allow location for SETU?' … 'It is only read when you ask for it.') → 'Select a location' picker → search 'Nehru Hall' → 'Confirm delivery location' ('Location is within the IIT Kharagpur delivery area.') → map 'Select delivery location' (red pin, faint blue campus-boundary line, Google attribution) → back to Confirm → SAVE AS Home + ADDRESS DETAILS 'B-212' → 'Confirm location' → Step 2 filled ('Nehru Hall of Residence, Cricket Groun…', 22.319759, 87.298041, Room B-212, Home).",
+   "animation": "Local times. Frame 0 = onboarding/21-step2-prompt.png at identity. Camera framing Fconf = {s 1.8, P [195,575], T [1500,560]} (A's map framing): visible screen y≈287–842; canvas of a screen point = (1120.92 + 1.944·x, −557.8 + 1.944·y). It keeps every 'SETU delivers inside the IIT Kharagpur campus boundary' subtitle (map: screen y 226–258) and the Confirm sheet title off-frame. The picker and search shots stay at identity, where their subtitle is tiny.\n0.10 kicker '03 · Delivery spot' K.fadeUp at (140,200).\n0.30–1.10 orange ring on onboarding/21-step2-prompt.box.\n0.50–1.95 ring--blue on onboarding/21-step2-prompt.gps ('Use my current location') — NOT tapped.\n0.60–1.00 explainer inset: a white card (radius 24, shadow 0 30px 80px rgba(0,0,0,.45)) holding location/01-allow-dialog.png cropped to CSS {x:20,y:276,w:350,h:293} at 1.15× (402.5×337) at left 420, top 300: fromTo scale 0.94/opacity 0 → 1/1 (back.out(1.4) 0.4 s). Label chip 'OPTIONAL' (orange 2 px outline, Space Mono 700 20 px caps, ≈165×40) at (420,250). Dashed leader (2 px rgba(184,199,255,.7), 6/6 dash) from (822.5,468) to the GPS row's left edge (1181.3,596.7).\n1.10–1.80 a 3 px orange underline sweeps left → right under 'It is only read when you ask for it.' inside the inset (canvas x 473–717, y 504).\n1.90–2.20 inset, label and leader fade out (0.3 s).\n1.85 ring--blue on onboarding/21-step2-prompt.box. 2.05 K.tap box (centre (195,361.7)) → 2.40 K.swapSheet → location/10-picker-select.png (sheetTop 537, 0.5 s).\n3.30 ring--blue on location/10-picker-select.search (pad 12). 3.50 K.tap search → 3.85 swapFade (0.2 s) → clip layer location/11-type-search/ (clipSeconds 0.8; f0000 = the sheet expanded to the top with the field focused) 3.85–4.65; 4.65 swapFade (0.15 s) → location/12-search-results.png.\n4.80–5.80 orange ring on location/12-search-results.first. 5.40 K.tap first → 5.75 swapFade (0.3 s; the new layer settles from +12 px) → location/13-confirm-search.png.\n5.80–6.80 K.focus Fconf (1.0 s).\n6.45–7.75 green ring (border #19B36B + green glow) on location/13-confirm-search.zoneOk (canvas (1227.8,353.9)–(1795.5,387)) + label 'CAMPUS ONLY' (≈206×40) at x 900–1106, y 350–390 from 6.55 to 7.85; leader (1106,370)→(1227.8,370).\n7.55 ring--blue on the 'Adjust on the map' row, measured box {x:18,y:684,w:354,h:66}. 7.75 K.tap location/13-confirm-search.adjust (centre (205.5,708)) → 8.10 sheet morph → location/20-map.png: the 20 layer crossfades in over 0.35 s while rising from +57 px to 0 (its sheet top is 186 vs 243).\n8.50–9.70 pin halo: two 2 px orange rings grow from the map pin's tip (screen (195,456); pin head (195,433); canvas tip (1500,328.7)) to r 36 CSS px, 0.6 s each, 0.3 s apart.\n8.60–9.95 label 'CAMPUS BOUNDARY' (≈260×40) at x 860–1120, y 278–318; leader (1120,298)→(1298.4,297.6) — the faint blue boundary line on the map passes through screen (91.3,440) (it runs ≈(164.7,330)→(18.6,549)). The Google logo and 'Map data ©2026' strip (screen y 566–588) stay unobstructed.\n9.85 ring--blue on location/20-map.useThis (canvas (1477.6,962.4)–(1844.1,1055.7)). 10.05 K.tap useThis ('Use this location') → 10.40 sheet morph back → location/13-confirm-search.png (crossfade 0.35 s while the layer settles from −57 px).\n11.35 K.tap location/13-confirm-search.home (the 'Home' chip, centre (63,538)) → 11.70 swapFade (0.2 s) → clip layer location/14-type-room/ (clipSeconds 0.8: f0000 Home selected and the sheet 25 px lower because the 'Choose one…' line disappears; then 'B-212' typed) 11.70–12.50; location/15-confirm-home.png holds underneath from 12.50 (identical to the clip's last frame).\n12.55–13.35 orange rings on location/15-confirm-home.home and location/15-confirm-home.details.\n13.20 ring--blue on location/15-confirm-home.confirm. 13.40 K.tap confirm ('Confirm location') → 13.75 the 15 layer slides down (y 0 → +576, expo.in 0.45 s) revealing onboarding/23-step2-done.png underneath.\n14.25–14.95 pin → address card: a Lucide map-pin (OUTLINE, stroke 2.5 px #EC5A2A, 36 px) pops (scale 0→1, back.out(2) 0.25 s) at the Delivery-location field's pin icon — 23's screen (346,363) → canvas (1793.5,147.9) under Fconf — then travels left along a 2 px dotted pale path (K.drawPath) to (300,470) and unfolds into a glass card (kit .glass-card, left 140, top 420, 420×110): Lucide house icon + 'Home · B-212' (Plus Jakarta Sans 700 32 px, white) over 'Nehru Hall of Residence' (Plus Jakarta Sans 500 22 px, #B8C7FF) (expo.out 0.7 s). The card is canvas-level (outside the rig).\n14.40–15.40 orange rings on onboarding/23-step2-done.box (canvas (1152,44.3)–(1848,246.4)) and onboarding/23-step2-done.room.\n14.95–15.85 K.unfocus (0.9 s).\n15.70–16.05 card, dotted path and kicker fade out. 16.05–16.20 hold at identity.",
+   "transitionIn": "Continuous: Step 2 is already on screen at identity.",
+   "transitionOut": "The saved address becomes a card in the left column, then everything clears; Step 2 (filled) holds at identity for the cut.",
+   "handoffIn": {
+    "phone": "default",
+    "screen": "onboarding/21-step2-prompt.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Same frame as s04 ends."
+   },
+   "handoffOut": {
+    "phone": "default",
+    "screen": "onboarding/23-step2-done.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Step 2 filled (Nehru Hall of Residence, Room B-212, Home) at identity; card, path, rings and kicker gone."
+   },
+   "demoBadge": [],
+   "soundCues": [
+    {
+     "at": 34.1,
+     "cue": "Soft card pop (explainer inset)"
+    },
+    {
+     "at": 35.55,
+     "cue": "UI tap"
+    },
+    {
+     "at": 35.9,
+     "cue": "Sheet slide up"
+    },
+    {
+     "at": 37.0,
+     "cue": "UI tap"
+    },
+    {
+     "at": 37.35,
+     "cue": "Keyboard ticks (10)"
+    },
+    {
+     "at": 38.9,
+     "cue": "UI tap"
+    },
+    {
+     "at": 39.95,
+     "cue": "Positive ping (inside the delivery area)"
+    },
+    {
+     "at": 41.25,
+     "cue": "UI tap"
+    },
+    {
+     "at": 41.6,
+     "cue": "Map slide + soft pin settle"
+    },
+    {
+     "at": 43.55,
+     "cue": "UI tap"
+    },
+    {
+     "at": 44.85,
+     "cue": "UI tap (Home chip)"
+    },
+    {
+     "at": 45.2,
+     "cue": "Keyboard ticks (5)"
+    },
+    {
+     "at": 46.9,
+     "cue": "UI tap (Confirm location)"
+    },
+    {
+     "at": 47.75,
+     "cue": "Card lock-in: soft click + shimmer"
+    }
+   ],
+   "accuracyNotes": "- Location access is optional: SETU's own explainer ('Allow location for SETU?' … 'It is only read when you ask for it.') is shown as a labelled inset beside the phone; 'Use my current location' is ringed but never tapped and no detection result is claimed. Search is the path demonstrated. Do not push in on location/10-picker-select.png: its dimmed background carries a blurred GPS reading from the capture run, an unreadable smudge at identity.\n- Search result and zone check are the app's own: 'Nehru Hall of Residence · Pan Loop, IIT Kharagpur…' and 'Location is within the IIT Kharagpur delivery area.' The off-campus refusal is not shown or faked.\n- The map shows the real red pin, the faint blue campus-boundary polygon (#0033DA at 0.5 opacity) and the Google attribution; nothing covers them. 'Check the pin' = viewing it; no pin move is claimed or shown.\n- Never ring, zoom on or caption 'SETU delivers inside the IIT Kharagpur campus boundary' (picker and map subtitles) or Step 2's lede '…SETU delivers inside the campus area only.' Fconf keeps the map subtitle off-frame; the picker shots stay at identity.\n- 'Use this location' returns the unchanged pin to Confirm, so location/13-confirm-search.png is reused honestly. 'Home' is tapped on 13 before the cut to 14-type-room/f0000.\n- 'Nehru Hall of Residence, Cricket Ground', 22.319759, 87.298041 and 'B-212' are the real saved values."
+  },
+  {
+   "id": "s06",
+   "compositionName": "your-picks",
+   "title": "Your picks — and three things SETU does not do",
+   "chapter": "04 · Your picks",
+   "start": 49.7,
+   "end": 59.2,
+   "narration": "Pick cuisines you like. They show up first. Then three things SETU does not do. Confirm, then “Start ordering”.",
+   "captions": [
+    {
+     "start": 50.15,
+     "end": 53.25,
+     "text": "Pick cuisines you like.\nThey show up first."
+    },
+    {
+     "start": 53.35,
+     "end": 56.15,
+     "text": "Then three things SETU does not do."
+    },
+    {
+     "start": 56.25,
+     "end": 58.05,
+     "text": "Confirm, then “Start ordering”."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "04 · Your picks",
+     "start": 49.8,
+     "end": 59.05,
+     "role": "kicker (kit .kicker)"
+    },
+    {
+     "text": "SETU never takes your money",
+     "start": 54.45,
+     "end": 57.0,
+     "role": "kinetic list line (Sora 700 40 px; exact app title; no rupee sign)"
+    },
+    {
+     "text": "SETU does not deliver",
+     "start": 54.95,
+     "end": 57.0,
+     "role": "kinetic list line (Sora 700 40 px; exact app title)"
+    },
+    {
+     "text": "SETU approves and records",
+     "start": 55.45,
+     "end": 57.0,
+     "role": "kinetic list line (Sora 700 40 px; exact app title)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "onboarding/23-step2-done.png",
+     "start": 49.7,
+     "end": 51.0,
+     "treatment": "Frame 0; ring--blue + tap 'Continue' (0.40)."
+    },
+    {
+     "file": "onboarding/30-step3.png",
+     "start": 50.45,
+     "end": 51.85,
+     "treatment": "swapPush in: Step 3 of 4 'What should we show first?'."
+    },
+    {
+     "file": "onboarding/31-step3-picked.png",
+     "start": 51.85,
+     "end": 54.3,
+     "treatment": "Pixel-aligned; revealed through circular masks at each tapped chip (only those chip rows differ from 30)."
+    },
+    {
+     "file": "onboarding/40-step4.png",
+     "start": 53.75,
+     "end": 57.35,
+     "treatment": "swapPush in (no tap: Step 3's Continue sits below the captured viewport); focus mask on the three titles; rings; kinetic list."
+    },
+    {
+     "file": "onboarding/41-step4-ack.png",
+     "start": 57.0,
+     "end": 58.75,
+     "treatment": "Circular reveal from the tapped switch (toggle on, 'Start ordering' enabled); ring--blue + tap 'Start ordering' (8.25)."
+    },
+    {
+     "file": "home/01-first-home.png",
+     "start": 58.75,
+     "end": 59.2,
+     "treatment": "Revealed by the 'Start ordering' commit wipe: Home with 'Home · Room B-212 · Nehru Hall of Residence'."
+    },
+    {
+     "file": "graphic:commit wipe (#0033DA circle from the Start ordering button)",
+     "start": 58.3,
+     "end": 59.05,
+     "treatment": "Action → result transition."
+    }
+   ],
+   "uiState": "Onboarding Step 3 of 4 'What should we show first?' (South Indian, Street Food, Chinese selected) → Step 4 of 4 'Three things SETU does not do' → switch 'I understand SETU is a directory and approval gate' on → 'Start ordering' → Home ('Home · Room B-212 · Nehru Hall of Residence', 'Good evening, Aarav').",
+   "animation": "Local times. Frame 0 = onboarding/23-step2-done.png at identity; the whole scene stays at identity.\n0.10 kicker '04 · Your picks' K.fadeUp at (140,200).\n0.15 ring--blue on onboarding/23-step2-done.cont. 0.40 K.tap cont ('Continue') → 0.75 K.swapPush → onboarding/30-step3.png (0.55 s).\nChip taps in the capture's order; each 'result' is a layer of onboarding/31-step3-picked.png revealed by clip-path circle(r at x y) growing 0 → 70 px (0.25 s, power2.out) around the tapped chip:\n- 1.80 K.tap onboarding/31-step3-picked.southIndian (centre (148.4,584.7)) → 2.15 reveal.\n- 2.45 K.tap 'Street Food', measured box {x:209,y:568,w:100,h:34} (centre (259,585)) → 2.80 reveal.\n- 3.10 K.tap 'Chinese', measured box {x:90,y:396,w:77,h:34} (centre (128.5,413)) → 3.45 reveal.\n3.70 set the 31 layer fully visible (no visible change: only those chip rows differ).\n4.05 K.swapPush → onboarding/40-step4.png (0.55 s; no tap is drawn because Step 3's Continue is below the captured viewport).\n4.65–5.00 focus mask fades in: an SVG (390×844, inside the screen) filled rgba(8,12,32,.55) with three feathered rounded holes around onboarding/40-step4.fact1, .fact2 and .fact3 (each padded 8 px). It keeps every card's sub-line — including fact 3's licence sentence — and the switch's 'Required. Recorded…' line dim. 7.30–7.65 it fades out.\nKinetic list in the left column (Sora 700 40 px white, each line led by a Lucide icon 34 px stroke 2 #B8C7FF: wallet / bike / shield-check; fromTo y 24/opacity 0 → 0/1, expo.out 0.5 s), each with an orange ring on its title in the phone:\n- 4.75 'SETU never takes your money' at (140,330); ring onboarding/40-step4.fact1 4.75–6.95.\n- 5.25 'SETU does not deliver' at (140,400); ring .fact2 5.25–6.95.\n- 5.75 'SETU approves and records' at (140,470); ring .fact3 5.75–6.95.\n6.95–7.30 the three lines fade out (each held ≥1.2 s).\n6.75 ring--blue on the switch, measured box {x:313,y:622,w:46,h:27}. 6.95 K.tap the switch (centre (336,635)) → 7.30 circular reveal of onboarding/41-step4-ack.png from (336,635), r 0 → 280 (0.35 s): the switch turns on and 'Start ordering' becomes active.\n7.70 ring--blue on onboarding/41-step4-ack.start. 8.25 K.tap start ('Start ordering') → 8.60 commit wipe: a #0033DA circle (inside the screen) grows from the button centre (255.8,742.7) to cover the whole screen (0.45 s, power2.in); 9.05 home/01-first-home.png is set underneath and the circle fades (0.3 s, done 9.35).\n9.00–9.35 the kicker fades out. 9.35–9.50 hold on Home.",
+   "transitionIn": "Continuous: Step 2 (filled) is on screen at identity.",
+   "transitionOut": "'Start ordering' → blue commit wipe → Home, settled at identity.",
+   "handoffIn": {
+    "phone": "default",
+    "screen": "onboarding/23-step2-done.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Same frame as s05 ends."
+   },
+   "handoffOut": {
+    "phone": "default",
+    "screen": "home/01-first-home.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Home (day one, address set) at identity; wipe circle, mask, list and kicker gone."
+   },
+   "demoBadge": [],
+   "soundCues": [
+    {
+     "at": 50.1,
+     "cue": "UI tap"
+    },
+    {
+     "at": 50.45,
+     "cue": "Page push"
+    },
+    {
+     "at": 51.5,
+     "cue": "Chip tap (pitch 1)"
+    },
+    {
+     "at": 52.15,
+     "cue": "Chip tap (pitch 2)"
+    },
+    {
+     "at": 52.8,
+     "cue": "Chip tap (pitch 3)"
+    },
+    {
+     "at": 53.75,
+     "cue": "Page push"
+    },
+    {
+     "at": 54.45,
+     "cue": "Low tick"
+    },
+    {
+     "at": 54.95,
+     "cue": "Low tick"
+    },
+    {
+     "at": 55.45,
+     "cue": "Low tick"
+    },
+    {
+     "at": 56.65,
+     "cue": "Toggle click"
+    },
+    {
+     "at": 57.95,
+     "cue": "UI tap (Start ordering)"
+    },
+    {
+     "at": 58.3,
+     "cue": "Blue wipe swoosh into Home"
+    }
+   ],
+   "accuracyNotes": "- Chips are tapped in the capture's order (South Indian, Street Food, Chinese); 30-step3 and 31-step3-picked differ only in those chip rows, so the circular reveals composite two real captures. The taps are a quick multi-select (0.65 s apart); the beat after the last chip is 0.6 s.\n- Step 4's three titles are quoted exactly. The focus mask keeps 'Every seller listed here cleared a licence check…' and 'Required. Recorded against your account with today's date.' dim; never ring, zoom on or caption them (the acknowledgement is not stored; not every stall is licence-gated). Fact 1's body ('no checkout … UPI to the seller's own handle') is likewise never featured.\n- 'They show up first' = 'Stalls serving these move to the top of the home page'; the liked cuisines also lead the Home tabs (s07).\n- No tap is drawn on Step 3's Continue: it is below the captured viewport."
+  },
+  {
+   "id": "s07",
+   "compositionName": "find-and-add",
+   "title": "Back to tonight — dosa from Southside Tiffins",
+   "chapter": "05 · Find & add",
+   "start": 59.2,
+   "end": 69.3,
+   "narration": "Good evening, Aarav. Tonight: dosa. Southside Tiffins: approved by SETU. Tap ADD: one Masala Dosa, two filter coffees.",
+   "captions": [
+    {
+     "start": 59.4,
+     "end": 61.8,
+     "text": "Good evening, Aarav.\nTonight: dosa."
+    },
+    {
+     "start": 63.2,
+     "end": 65.5,
+     "text": "Southside Tiffins: approved by SETU."
+    },
+    {
+     "start": 65.6,
+     "end": 68.7,
+     "text": "Tap ADD: one Masala Dosa,\ntwo filter coffees."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "TONIGHT",
+     "start": 59.6,
+     "end": 61.2,
+     "role": "tag (tag row at (140,112): Lucide moon + Space Mono 700 18 px caps)"
+    },
+    {
+     "text": "05 · Find & add",
+     "start": 59.65,
+     "end": 69.15,
+     "role": "kicker (kit .kicker)"
+    },
+    {
+     "text": "YOUR PICKS FIRST",
+     "start": 60.05,
+     "end": 61.35,
+     "role": "label (short caps, callout lane)"
+    },
+    {
+     "text": "Demo environment · sample stalls",
+     "start": 61.2,
+     "end": 66.5,
+     "role": "honesty note (tag row; Space Mono 700 18 px caps, shown once in the body)"
+    },
+    {
+     "text": "Masala Dosa ₹80",
+     "start": 62.95,
+     "end": 66.85,
+     "role": "dish chip (kit .dish-chip: name Plus Jakarta Sans 700 28 px, price Space Mono 700 26 px #B8C7FF; exact menu line)"
+    },
+    {
+     "text": "Ghee Roast Dosa ₹110",
+     "start": 63.1,
+     "end": 65.5,
+     "role": "dish chip (kit .dish-chip: Plus Jakarta Sans name, Space Mono price; exact menu line)"
+    },
+    {
+     "text": "1 × Masala Dosa ₹80",
+     "start": 66.85,
+     "end": 69.3,
+     "role": "order-slip row (kit .dish-chip; '1 ×' Space Mono 700 26 px #EC5A2A, name Plus Jakarta Sans, price Space Mono; exact cart line)"
+    },
+    {
+     "text": "2 × Filter Coffee ₹60",
+     "start": 68.45,
+     "end": 69.3,
+     "role": "order-slip row (kit .dish-chip; '2 ×' Space Mono, name Plus Jakarta Sans, price Space Mono; exact cart line)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "home/01-first-home.png",
+     "start": 59.2,
+     "end": 61.5,
+     "treatment": "Frame 0; 'back to tonight' band; ring on the cuisine tabs + YOUR PICKS FIRST; ring--blue + tap search (1.95)."
+    },
+    {
+     "file": "graphic:editorial return band (right → left)",
+     "start": 59.2,
+     "end": 59.9,
+     "treatment": "Marks the jump back to tonight (no screen change under it)."
+    },
+    {
+     "file": "search/01-search-empty.png",
+     "start": 61.5,
+     "end": 62.15,
+     "treatment": "swapPush in; the box is auto-focused."
+    },
+    {
+     "file": "search/02-type-dosa/",
+     "start": 62.15,
+     "end": 62.65,
+     "treatment": "Typing clip, clipSeconds 0.5: 'dosa'.",
+     "clipSeconds": 0.5
+    },
+    {
+     "file": "search/03-results.png",
+     "start": 62.65,
+     "end": 64.55,
+     "treatment": "Southside Tiffins with 'Masala Dosa ₹80' / 'Ghee Roast Dosa ₹110'; dish chips rise out; tap the stall card (5.00)."
+    },
+    {
+     "file": "stall/01-stall.png",
+     "start": 64.55,
+     "end": 66.8,
+     "treatment": "swapPush in; ring on 'Approved by SETU · you pay the seller directly'; tap Masala Dosa ADD (7.25)."
+    },
+    {
+     "file": "stall/02-dosa-added.png",
+     "start": 66.8,
+     "end": 68.15,
+     "treatment": "Circular reveal at the ADD button (ADD → '− 1 +') + bottom wipe revealing 'View cart'."
+    },
+    {
+     "file": "stall/04-coffee.png",
+     "start": 66.8,
+     "end": 68.15,
+     "treatment": "Pixel-identical to 02 (no swap needed): Filter Coffee ADD (8.25) then '+' (8.60) are tapped on this state."
+    },
+    {
+     "file": "stall/05-coffee-two.png",
+     "start": 68.15,
+     "end": 69.3,
+     "treatment": "Circular reveal at the coffee stepper: '− 2 +'."
+    }
+   ],
+   "uiState": "Back to tonight: Home ('Home · Room B-212 · Nehru Hall of Residence', 'Good evening, Aarav', tabs All · Chinese · South Indian · Street Food · Amer…, 'Approved sellers · 13 open now') → Search 'dosa' → Southside Tiffins ('Masala Dosa ₹80', 'Ghee Roast Dosa ₹110') → stall page ('Approved by SETU · you pay the seller directly') → Masala Dosa 1, Filter Coffee 2, 'View cart'.",
+   "animation": "Local times. Frame 0 = home/01-first-home.png at identity; the whole scene stays at identity.\n0.00–0.70 return band: the s04 band style (760 px, linear-gradient(270deg,#151E4D,#22307A), 3 px orange leading edge on its LEFT side) sweeps right → left, x 1920 → −760 (power2.inOut 0.7 s); nothing changes under it.\n0.40–0.70 tag 'TONIGHT' (Lucide moon 20 px + Space Mono 700 18 px caps) fades in at the tag row (140,112); 1.70–2.00 it fades out. 0.45 kicker '05 · Find & add' K.fadeUp at (140,200).\n0.80–2.10 orange ring on the cuisine tabs, measured box {x:6,y:233,w:378,h:40} (canvas (1170.5,335.6)–(1578.7,378.8)) + label 'YOUR PICKS FIRST' (≈274×40) at x 846–1120, y 337–377 from 0.85 to 2.15; leader (1120,357)→(1170,357).\n2.00–2.30 note 'Demo environment · sample stalls' (Space Mono 700 18 px caps, #B8C7FF at 80%, a 6 px orange dot first) fades in at the tag row; 7.00–7.30 it fades out.\n1.70 ring--blue on home/01-first-home.search. 1.95 K.tap search → 2.30 K.swapPush → search/01-search-empty.png (0.55 s; the box is auto-focused, no tap needed).\n2.95 clip layer search/02-type-dosa/ (clipSeconds 0.5; f0000 = 01-search-empty) types 'dosa' 2.95–3.45; 3.45 swapFade (0.15 s) → search/03-results.png.\n3.65–4.85 orange ring on the Southside Tiffins dish lines, measured box {x:128,y:256,w:236,h:46} ('Masala Dosa ₹80' / 'Ghee Roast Dosa ₹110').\n3.75 dish chip 'Masala Dosa ₹80' (kit .dish-chip with .veg mark; name Plus Jakarta Sans 700 28 px, price in <b> Space Mono 700 26 px #B8C7FF) rises at left 140, top 340: fromTo y +30/opacity 0 → 0/1 (expo.out 0.5 s). 3.90 'Ghee Roast Dosa ₹110' the same at left 140, top 412. They move OUT of the phone; nothing flies in.\n4.80 ring--blue on search/03-results.stall. 5.00 K.tap the stall card (centre (195,220.5)) → 5.35 K.swapPush → stall/01-stall.png (0.55 s).\n5.95–7.15 orange ring on stall/01-stall.trust ('Approved by SETU · you pay the seller directly'). 6.00–6.30 the 'Ghee Roast Dosa ₹110' chip fades out.\n7.00 ring--blue on stall/01-stall.dosaAdd. 7.25 K.tap dosaAdd ('ADD') → 7.60 circular reveal of a stall/02-dosa-added.png layer from (299,611), r 0 → 90 (0.25 s): ADD becomes '− 1 +' (stall/02-dosa-added.stepper); 7.60–7.90 a second 02 layer clipped to the bottom strip (screen y ≥ 790) wipes up from the bottom, revealing 'View cart'; 7.95 set one full 02 layer visible (stall/04-coffee.png is pixel-identical, so it stands for both).\n7.65 the Masala Dosa chip gains an orange '1 ×' prefix (Space Mono 700 26 px #EC5A2A, slides in from the left 0.25 s): it now reads '1 × Masala Dosa ₹80', the cart's line.\n8.25 K.tap stall/04-coffee.coffeeAdd (Filter Coffee 'ADD', centre (299,362)); 8.60 K.tap stall/05-coffee-two.plus ('+', centre (327,362)); nothing changes between the two taps (there is no capture of the '1' state). 8.95 circular reveal of stall/05-coffee-two.png from (299,362), r 0 → 80 (0.25 s): '− 2 +'.\n9.25 slip row 2 '2 × Filter Coffee ₹60' (same chip style) fromTo y +20/opacity 0 → 0/1 at left 140, top 412 (expo.out 0.4 s). The two chips now form the order slip: wrap them in one element #s07-slip (left 140, top 340, 600×132) so s08 can move them as ONE object.\n9.60–9.95 the kicker fades out. 9.95–10.10 hold (slip visible, phone on 05-coffee-two at identity).",
+   "transitionIn": "Editorial return band (right → left) from day one back to tonight; Home looks the same because Aarav's saved Home is set.",
+   "transitionOut": "Holds on the stall with both items added and the order slip (two cart lines) in the left column — carried into s08.",
+   "handoffIn": {
+    "phone": "default",
+    "screen": "home/01-first-home.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Same frame as s06 ends."
+   },
+   "handoffOut": {
+    "phone": "default",
+    "screen": "stall/05-coffee-two.png",
+    "rig": "identity",
+    "leftColumn": "1 × Masala Dosa ₹80 / 2 × Filter Coffee ₹60 (order slip; no kicker, no tag)",
+    "overlays": "Order slip #sNN-slip: two kit .dish-chip rows in one wrapper at left 140, top 340 (600×132), fully opaque, at rest: row 1 at top 340 '[veg] 1 × Masala Dosa ₹80', row 2 at top 412 '[veg] 2 × Filter Coffee ₹60' ('1 ×'/'2 ×' Space Mono 700 26 px #EC5A2A; names Plus Jakarta Sans 700 28 px white; prices Space Mono 700 26 px #B8C7FF; kit .dish-chip padding 16/24, radius 22).",
+    "notes": "Phone at identity on stall/05-coffee-two.png; the only canvas element is the order slip."
+   },
+   "demoBadge": [],
+   "soundCues": [
+    {
+     "at": 59.2,
+     "cue": "Band whoosh (back to tonight) + light evening swell"
+    },
+    {
+     "at": 61.15,
+     "cue": "UI tap"
+    },
+    {
+     "at": 61.5,
+     "cue": "Page push"
+    },
+    {
+     "at": 62.15,
+     "cue": "Four keyboard ticks"
+    },
+    {
+     "at": 62.95,
+     "cue": "Two soft pops (dish chips)"
+    },
+    {
+     "at": 64.2,
+     "cue": "UI tap"
+    },
+    {
+     "at": 64.55,
+     "cue": "Page push"
+    },
+    {
+     "at": 66.45,
+     "cue": "ADD tap + soft pop"
+    },
+    {
+     "at": 67.45,
+     "cue": "UI tap"
+    },
+    {
+     "at": 67.8,
+     "cue": "UI tap + tick (× 2)"
+    }
+   ],
+   "accuracyNotes": "- Home's header shows the address saved on day one ('Home · Room B-212 · Nehru Hall of Residence'); the liked cuisines lead the tabs (capture order: All, Chinese, South Indian, Street Food…).\n- 'Demo environment · sample stalls' appears here once, at the first sight of stalls (repeated only in the end-card fine print).\n- Search 'dosa' → Southside Tiffins with 'Masala Dosa ₹80' and 'Ghee Roast Dosa ₹110' (exact). Never ring or zoom on the result rows' '20–20 min' or the stall's '20 min'; no delivery-time claim.\n- The stall line is quoted: 'Approved by SETU · you pay the seller directly'. The stall shows 'New' (fresh demo data).\n- Coffee: ADD, then '+', then the 2 appears (no capture of the '1' state). stall/04-coffee.png is pixel-identical to 02-dosa-added. stall/03-scroll-menu/ is not used (it snaps back).\n- Dish chips and slip rows quote the real menu and cart lines; prices are never set in Sora."
+  },
+  {
+   "id": "s08",
+   "compositionName": "cart",
+   "title": "Cart — ₹150, payable to the seller",
+   "chapter": "06 · Cart",
+   "start": 69.3,
+   "end": 79.0,
+   "narration": "One stall per order. Then tap “View cart”. Items ₹140, plus the stall's own delivery charge: ₹10. ₹150, payable to the seller. No platform fee.",
+   "captions": [
+    {
+     "start": 69.4,
+     "end": 72.5,
+     "text": "One stall per order.\nThen tap “View cart”."
+    },
+    {
+     "start": 72.6,
+     "end": 76.1,
+     "text": "Items ₹140, plus the stall's own\ndelivery charge: ₹10."
+    },
+    {
+     "start": 76.2,
+     "end": 78.9,
+     "text": "₹150, payable to the seller.\nNo platform fee."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "1 × Masala Dosa ₹80",
+     "start": 69.3,
+     "end": 71.2,
+     "role": "order-slip row carried from s07 (Space Mono count/price, Plus Jakarta Sans name); flies into the cart as one object"
+    },
+    {
+     "text": "2 × Filter Coffee ₹60",
+     "start": 69.3,
+     "end": 71.2,
+     "role": "order-slip row carried from s07 (Space Mono count/price, Plus Jakarta Sans name)"
+    },
+    {
+     "text": "06 · Cart",
+     "start": 69.4,
+     "end": 78.85,
+     "role": "kicker (kit .kicker)"
+    },
+    {
+     "text": "ITEM TOTAL ₹140",
+     "start": 72.7,
+     "end": 77.6,
+     "role": "math row: label Space Mono 700 18 px caps + value '₹140' Plus Jakarta Sans 800 64 px (never Sora)"
+    },
+    {
+     "text": "+ SELLER DELIVERY CHARGE ₹10",
+     "start": 73.9,
+     "end": 77.6,
+     "role": "math row: label Space Mono 700 18 px caps + value '₹10' Plus Jakarta Sans 800 64 px (never Sora)"
+    },
+    {
+     "text": "SET BY THE STALL",
+     "start": 74.0,
+     "end": 75.4,
+     "role": "label (short caps, Space Mono 700 20 px, callout lane)"
+    },
+    {
+     "text": "= PAYABLE TO SELLER ₹150",
+     "start": 75.55,
+     "end": 77.6,
+     "role": "math result: label Space Mono 700 18 px caps + value '₹150' Plus Jakarta Sans 800 64 px white (never Sora)"
+    },
+    {
+     "text": "₹150",
+     "start": 77.5,
+     "end": 78.55,
+     "role": "number flight (Plus Jakarta Sans 800, white; never Sora) from the cart total onto the Confirm card amount"
+    }
+   ],
+   "shots": [
+    {
+     "file": "stall/05-coffee-two.png",
+     "start": 69.3,
+     "end": 70.9,
+     "treatment": "Frame 0 with the order slip; ring--blue + tap 'View cart' (0.70)."
+    },
+    {
+     "file": "cart/01-cart.png",
+     "start": 70.35,
+     "end": 78.0,
+     "treatment": "swapPush in; the slip flies into the item block and dissolves; camera Ftotals; rings on the three total rows; tap 'Review order' (7.80)."
+    },
+    {
+     "file": "checkout/01-confirm-cash.png",
+     "start": 77.45,
+     "end": 79.0,
+     "treatment": "swapPush in ('Confirm order'); camera Ftotals → Fcard; the ₹150 number flight lands on 'AMOUNT PAYABLE TO THE SELLER ₹150'."
+    }
+   ],
+   "uiState": "Stall with both items → cart 'Your order · Southside Tiffins' (Masala Dosa ₹80 each × 1 = ₹80; Filter Coffee ₹30 each × 2 = ₹60; DELIVER TO Home · Room B-212 · Aarav Mehta; Item total ₹140; Seller delivery charge ₹10 'Set by the seller, collected by the seller'; Payable to seller ₹150) → 'Confirm order' with 'AMOUNT PAYABLE TO THE SELLER ₹150' and Cash on delivery selected.",
+   "animation": "Local times. Frame 0 = stall/05-coffee-two.png at identity with the order slip from s07 (handoffIn). Framings: Ftotals = {s 1.5, P [195,560], T [1440,520]} (canvas of a screen point = (1124.1 + 1.62·x, −387.2 + 1.62·y)); Fcard = {s 1.4, P [195,142], T [1420,300]} (canvas = (1125.16 + 1.512·x, 85.24 + 1.512·y)).\n0.10 kicker '06 · Cart' K.fadeUp at (140,200).\n0.40 ring--blue on stall/05-coffee-two.viewCart. 0.70 K.tap viewCart ('View cart') → 1.05 K.swapPush → cart/01-cart.png (0.55 s).\n1.10–1.70 the order slip flies as ONE object (the #sNN-slip wrapper) into the cart's item block cart/01-cart.lines (canvas at identity (1183.4,155.6)–(1565.8,414.8)): translate + scale to ≈0.64 along a gentle arc (expo.inOut 0.6 s), then 1.70–1.90 it dissolves (opacity → 0) as it lands.\n1.80–2.70 orange ring on cart/01-cart.lines.\n2.40–3.40 K.focus Ftotals (1.0 s).\nLeft-column math (canvas-level, x 140–700; labels Space Mono 700 18 px caps #B8C7FF; values Plus Jakarta Sans 800 64 px white — never Sora; each value fromTo y 18/opacity 0 → 0/1, expo.out 0.4 s):\n- 3.40 'ITEM TOTAL' (top 300) + '₹140' (top 322); orange ring on the Item total row, measured box {x:26,y:462,w:338,h:30} (canvas (1166.2,361.2)–(1713.8,409.8)) 3.40–4.60.\n- 4.60 '+ SELLER DELIVERY CHARGE' (top 410) + '₹10' (top 432); orange ring on the fee row, measured box {x:26,y:518,w:338,h:56} (label, sub-label and ₹10; canvas (1166.2,452)–(1713.8,542.7)) 4.60–6.00; label 'SET BY THE STALL' (≈274×40) at x 846–1120, y 477–517 from 4.70 to 6.10; leader (1120,497)→(1166.2,497).\n- 6.10 a 2 px rule draws (x 140–600, y 524, 0.25 s). 6.25 '= PAYABLE TO SELLER' (top 540) + '₹150' (top 562; the two rows above dim to 70%); orange ring on the payable row, measured box {x:26,y:603,w:338,h:32} (canvas (1166.2,589.7)–(1713.8,641.5)) 6.25–7.55.\n7.55 ring--blue on cart/01-cart.review (canvas (1357.1,879.6)–(1726.7,957.4)). 7.80 K.tap review ('Review order') → 8.15 K.swapPush → checkout/01-confirm-cash.png (0.55 s). 7.95–8.30 the math fades out.\n8.15–9.05 K.focus Fcard (0.9 s).\n8.20–9.05 number flight (canvas-level): a '₹150' (Plus Jakarta Sans 800, white) lifts from the cart's payable value — canvas box (1637.6,601.0)–(1702.4,630.2) under Ftotals — and arcs onto the Confirm card's big amount, landing exactly over its box under Fcard, measured screen {x:33,y:105,w:108,h:40} → canvas (1175.1,244.1)–(1338.4,304.5), at 9.05 (font size grows ≈30 → 60 px; expo.inOut, timed with the camera); 9.05–9.25 it dissolves into the real UI.\n9.20–9.55 the kicker fades out. 9.25–9.70 hold on checkout/01-confirm-cash.png at Fcard.",
+   "transitionIn": "Continuous from s07: the order slip is on canvas; the 'View cart' tap starts the chapter.",
+   "transitionOut": "The ₹150 lands on the Confirm card; the camera holds at Fcard for s09.",
+   "handoffIn": {
+    "phone": "default",
+    "screen": "stall/05-coffee-two.png",
+    "rig": "identity",
+    "leftColumn": "1 × Masala Dosa ₹80 / 2 × Filter Coffee ₹60 (order slip; no kicker, no tag)",
+    "overlays": "Order slip #sNN-slip: two kit .dish-chip rows in one wrapper at left 140, top 340 (600×132), fully opaque, at rest: row 1 at top 340 '[veg] 1 × Masala Dosa ₹80', row 2 at top 412 '[veg] 2 × Filter Coffee ₹60' ('1 ×'/'2 ×' Space Mono 700 26 px #EC5A2A; names Plus Jakarta Sans 700 28 px white; prices Space Mono 700 26 px #B8C7FF; kit .dish-chip padding 16/24, radius 22).",
+    "notes": "Phone at identity on stall/05-coffee-two.png; the only canvas element is the order slip."
+   },
+   "handoffOut": {
+    "phone": "default",
+    "screen": "checkout/01-confirm-cash.png",
+    "rig": {
+     "s": 1.4,
+     "P": [
+      195,
+      142
+     ],
+     "T": [
+      1420,
+      300
+     ]
+    },
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Camera held at Fcard (dark amount card, HOW WILL YOU PAY?, Cash on delivery and Pay by QR in frame); number flight dissolved; math and kicker gone."
+   },
+   "demoBadge": [],
+   "soundCues": [
+    {
+     "at": 70.0,
+     "cue": "UI tap (View cart)"
+    },
+    {
+     "at": 70.35,
+     "cue": "Page push + soft whoosh (slip into the cart)"
+    },
+    {
+     "at": 72.7,
+     "cue": "Number tick"
+    },
+    {
+     "at": 73.9,
+     "cue": "Number tick"
+    },
+    {
+     "at": 75.55,
+     "cue": "Soft resolve tone (= ₹150)"
+    },
+    {
+     "at": 77.1,
+     "cue": "UI tap (Review order)"
+    },
+    {
+     "at": 77.5,
+     "cue": "Number-flight swish"
+    },
+    {
+     "at": 78.35,
+     "cue": "Soft lock-in"
+    }
+   ],
+   "accuracyNotes": "- Cart values are exact: items ₹140, 'Seller delivery charge' ₹10 'Set by the seller, collected by the seller', 'Payable to seller' ₹150.\n- Each stall sets its own delivery charge (₹0–₹500; the row is hidden at ₹0) — 'the stall's own' covers that. Never 'free', 'zero cost' or 'minimal'.\n- No platform fee or commission exists: payable = items + the stall's own charge.\n- One order goes to one stall (adding from another stall replaces the cart).\n- The slip and the ₹150 flight link real values and land exactly on the real UI; they never cover app text after landing.\n- checkout/03-scroll-summary/ and checkout/04-summary.png are not used (captured with Pay by QR selected; Aarav pays cash)."
+  },
+  {
+   "id": "s09",
+   "compositionName": "pay",
+   "title": "Pay the stall directly — cash, or the stall's QR",
+   "chapter": "07 · Pay",
+   "start": 79.0,
+   "end": 90.7,
+   "narration": "Pay cash at your door, or scan the stall's QR. With QR, the stall accepts first, then you pay. Aarav picks cash: “Place order”.",
+   "captions": [
+    {
+     "start": 79.1,
+     "end": 83.0,
+     "text": "Pay cash at your door,\nor scan the stall's QR."
+    },
+    {
+     "start": 83.1,
+     "end": 86.6,
+     "text": "With QR, the stall accepts first,\nthen you pay."
+    },
+    {
+     "start": 88.6,
+     "end": 90.6,
+     "text": "Aarav picks cash: “Place order”."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "07 · Pay",
+     "start": 79.1,
+     "end": 90.55,
+     "role": "kicker (kit .kicker; hidden 3.10–9.35 while the QR branch is up)"
+    },
+    {
+     "text": "IF YOU PICK QR",
+     "start": 82.3,
+     "end": 88.45,
+     "role": "kicker-style heading for the side branch (Space Mono 700 22 px caps)"
+    },
+    {
+     "text": "DEMO QR · NOT A REAL PAYMENT CODE",
+     "start": 82.4,
+     "end": 88.45,
+     "role": "demo tag (orange outline pill, Space Mono 700 18 px caps)"
+    },
+    {
+     "text": "1 · Stall accepts",
+     "start": 82.9,
+     "end": 88.45,
+     "role": "step list (Space Mono 700 22 px)"
+    },
+    {
+     "text": "2 · You pay · five minutes",
+     "start": 83.8,
+     "end": 88.45,
+     "role": "step list (Space Mono 700 22 px)"
+    },
+    {
+     "text": "3 · Stall confirms",
+     "start": 86.7,
+     "end": 88.45,
+     "role": "step list (Space Mono 700 22 px)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "checkout/01-confirm-cash.png",
+     "start": 79.0,
+     "end": 87.95,
+     "treatment": "Main phone at Fcard: rings on 'SETU does not collect this…', Cash on delivery and Pay by QR; then shrinks left and dims for the QR branch."
+    },
+    {
+     "file": "order-qr/02-pay-qr.png",
+     "start": 81.95,
+     "end": 85.8,
+     "treatment": "Second phone (default spec, slides in from the right): a separate demo QR order after the stall accepted — 'Pay to continue', countdown, the stall's labelled DEMO QR; tap 'I've paid' (6.25)."
+    },
+    {
+     "file": "order-qr/04-payment-review.png",
+     "start": 85.6,
+     "end": 86.85,
+     "treatment": "swapFade: 'Seller is checking your payment'."
+    },
+    {
+     "file": "order-qr/05-payment-confirmed.png",
+     "start": 86.6,
+     "end": 88.4,
+     "treatment": "swapFade (the stall's confirmation): 'Order confirmed', 'The stall confirmed your payment.'; the second phone exits right."
+    },
+    {
+     "file": "order-cash/00-confirm.png",
+     "start": 87.95,
+     "end": 90.35,
+     "treatment": "Main phone back at the default spec (identical to checkout/01 except the button shade); ring Cash; tap 'Place order · ₹150' (10.55)."
+    },
+    {
+     "file": "order-cash/01-placed.png",
+     "start": 90.35,
+     "end": 90.7,
+     "treatment": "Revealed by the 'Place order' commit wipe: 'Waiting for the seller'."
+    },
+    {
+     "file": "graphic:commit wipe (#0033DA circle from the Place order button)",
+     "start": 89.9,
+     "end": 90.65,
+     "treatment": "Action → result transition."
+    }
+   ],
+   "uiState": "'Confirm order': AMOUNT PAYABLE TO THE SELLER ₹150 · 'SETU does not collect this. Southside Tiffins receives it directly.'; HOW WILL YOU PAY? Cash on delivery 'Hand ₹150 to the seller at your door.' / Pay by QR 'Southside Tiffins's QR appears here once they accept. You will have five minutes to pay…'. Side branch on a second phone (separate demo QR order CE1013-VGKQ): accepted → 'Pay to continue' with the stall's DEMO QR and countdown → 'Seller is checking your payment' → 'Order confirmed' / 'The stall confirmed your payment.'. Back on Aarav's phone: Cash on delivery → 'Place order · ₹150' → 'Waiting for the seller'.",
+   "animation": "Local times. Frame 0 = checkout/01-confirm-cash.png with the main rig at Fcard = {s 1.4, P [195,142], T [1420,300]} (canvas of a screen point = (1125.16 + 1.512·x, 85.24 + 1.512·y)). Fsplit = {s 0.7407, P [195,422], T [346.4,497.9]} puts the main phone at x 180–513, y 150–846 (= spec {left:180, top:150, k:0.8}).\n0.10 kicker '07 · Pay' K.fadeUp at (140,200).\n0.20–1.20 orange ring on 'SETU does not collect this. Southside Tiffins receives it directly.', measured box {x:33,y:162,w:270,h:36} (canvas (1175.1,330.2)–(1583.3,384.7)).\n1.00–2.10 orange ring on checkout/01-confirm-cash.cash (canvas (1152.4,478.4)–(1687.6,584.3)).\n1.90–3.00 orange ring on checkout/01-confirm-cash.qr (canvas (1152.4,599.4)–(1687.6,753.6)).\n2.90–3.70 split: K.focus main rig Fcard → Fsplit (0.8 s, expo.inOut); a kit .dim layer inside the main screen fades to opacity 1 (rgba(8,12,32,.55)). 3.10–3.40 the kicker fades out.\n2.95–3.65 the QR phone — a second kit .phone at the default spec {left:1150,top:70,k:1.08} with its own screen, outside the main rig — fromTo x +800/opacity 1 → 0 (expo.out 0.7 s) showing order-qr/02-pay-qr.png.\nBranch type in the middle column (x 560–1110, canvas-level): 3.30 'IF YOU PICK QR' (kit .kicker) at (560,250); 3.40 tag 'DEMO QR · NOT A REAL PAYMENT CODE' (orange 2 px outline pill, Space Mono 700 18 px caps, ≈450×38) at (560,296).\nStep list (Space Mono 700 22 px white, numerals #EC5A2A; a Lucide check (#19B36B, 22 px) appears at a row's left when it is reached):\n- 3.90 '1 · Stall accepts' at (560,390), checked at once; orange ring on the QR phone's thread line 'Order confirmed by Southside Tiffins', measured box {x:40,y:74,w:310,h:22}, 3.90–5.10.\n- 4.80 '2 · You pay · five minutes' at (560,450); orange rings on order-qr/02-pay-qr.timer 4.80–5.80 and order-qr/02-pay-qr.qrImg 5.10–6.10 (its own 'DEMO QR · Not a real payment code' label stays legible).\n6.00 ring--blue on order-qr/02-pay-qr.paid. 6.25 K.tap paid ('I've paid') → 6.60 K.swapFade → order-qr/04-payment-review.png (0.25 s); row 2 gets its check; 6.90–7.70 orange ring on order-qr/04-payment-review.headline ('Seller is checking your payment').\n7.60 K.swapFade → order-qr/05-payment-confirmed.png (0.25 s; the stall's confirmation, no customer tap). 7.70 '3 · Stall confirms' at (560,510) with its check; 7.90–8.90 green ring on order-qr/05-payment-confirmed.qrCard ('The stall confirmed your payment.').\n8.90–9.40 the QR phone exits right (x → +800, expo.in 0.5 s); 9.00–9.40 heading, tag and step list fade out.\n8.95–9.75 K.focus main rig Fsplit → identity (0.8 s, expo.inOut); the dim fades out; at 8.95 the main screen's still is swapped to order-cash/00-confirm.png under the dim (identical layout; only the button shade differs). 9.35 the kicker fades back in.\n9.80–10.60 orange ring on the Cash on delivery card (same box as checkout/01-confirm-cash.cash; canvas at identity (1183.4,364.8)–(1565.8,440.4)).\n10.30 ring--blue on order-cash/00-confirm.place (canvas (1183.4,928.6)–(1565.8,980.4)). 10.55 K.tap place ('Place order · ₹150') → 10.90 commit wipe: a #0033DA circle grows from the button centre (195,806) to cover the screen (0.45 s, power2.in); 11.35 order-cash/01-placed.png is set underneath and the circle fades (0.3 s, done 11.65).\n11.25–11.55 the kicker fades out. 11.65–11.70 hold.",
+   "transitionIn": "Continuous from s08: the camera is already framing the amount card and the payment options (Fcard).",
+   "transitionOut": "'Place order · ₹150' → blue commit wipe → 'Waiting for the seller', settled at identity.",
+   "handoffIn": {
+    "phone": "default",
+    "screen": "checkout/01-confirm-cash.png",
+    "rig": {
+     "s": 1.4,
+     "P": [
+      195,
+      142
+     ],
+     "T": [
+      1420,
+      300
+     ]
+    },
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Same frame as s08 ends: camera at Fcard, nothing on canvas."
+   },
+   "handoffOut": {
+    "phone": "default",
+    "screen": "order-cash/01-placed.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Order thread 'Waiting for the seller' at identity; the second phone, branch type, wipe and kicker are gone."
+   },
+   "demoBadge": [],
+   "soundCues": [
+    {
+     "at": 80.0,
+     "cue": "Ring swish (cash)"
+    },
+    {
+     "at": 80.9,
+     "cue": "Ring swish (QR)"
+    },
+    {
+     "at": 81.9,
+     "cue": "Dual-phone slide whoosh"
+    },
+    {
+     "at": 83.8,
+     "cue": "Soft timer tick"
+    },
+    {
+     "at": 85.25,
+     "cue": "UI tap (I've paid)"
+    },
+    {
+     "at": 86.6,
+     "cue": "Soft confirm ping (stall confirms)"
+    },
+    {
+     "at": 87.9,
+     "cue": "Whoosh out"
+    },
+    {
+     "at": 89.55,
+     "cue": "UI tap (Place order)"
+    },
+    {
+     "at": 89.9,
+     "cue": "Warm confirm swell into the order"
+    }
+   ],
+   "accuracyNotes": "- Cash copy is quoted ('Hand ₹150 to the seller at your door.'); the dark card line 'SETU does not collect this. Southside Tiffins receives it directly.' is the app's.\n- QR order of events: the stall accepts first, then its own QR appears in the order thread with a five-minute window; 'I've paid' → 'Seller is checking your payment' → the stall confirms ('The stall confirmed your payment.'). Never 'pay first' or 'QR at checkout'. Order status and payment status stay separate in copy.\n- The QR is the labelled demo QR (it encodes a plain sentence, not a UPI address); its in-capture 'DEMO QR · Not a real payment code' stays legible and our tag repeats it; nothing implies money moved.\n- The QR phone is a separate demo order (CE1013-VGKQ), framed as 'if you pick QR'; Aarav's order (CE1013-BCQK) continues with cash.\n- No pickup option exists and nothing suggests one."
+  },
+  {
+   "id": "s10",
+   "compositionName": "track-handover",
+   "title": "Track it, then hand over cash and the code",
+   "chapter": "08 · Track & hand over",
+   "start": 90.7,
+   "end": 102.3,
+   "narration": "Now follow along: confirmed, cooking, on the way. At the door, Aarav pays ₹150 in cash. Then he tells them his code. Order complete.",
+   "captions": [
+    {
+     "start": 90.9,
+     "end": 94.1,
+     "text": "Now follow along:\nconfirmed, cooking, on the way."
+    },
+    {
+     "start": 95.7,
+     "end": 98.9,
+     "text": "At the door, Aarav pays ₹150 in cash."
+    },
+    {
+     "start": 99.0,
+     "end": 102.1,
+     "text": "Then he tells them his code.\nOrder complete."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "08 · Track & hand over",
+     "start": 90.8,
+     "end": 102.2,
+     "role": "kicker (kit .kicker)"
+    },
+    {
+     "text": "TIME-LAPSE",
+     "start": 90.9,
+     "end": 95.7,
+     "role": "tag (tag row at (140,112): Lucide fast-forward + Space Mono 700 18 px caps)"
+    },
+    {
+     "text": "STATUS TIMELINE · NOT A MAP",
+     "start": 90.9,
+     "end": 102.2,
+     "role": "rail header (Space Mono 700 18 px caps, #B8C7FF)"
+    },
+    {
+     "text": "Placed · Confirmed · Preparing · Ready · Out for delivery · Delivered",
+     "start": 90.9,
+     "end": 102.2,
+     "role": "status rail rows (Plus Jakarta Sans 600 28 px; the progress view's exact labels)"
+    },
+    {
+     "text": "HANDOVER CODE",
+     "start": 97.4,
+     "end": 98.6,
+     "role": "label (short caps, Space Mono 700 20 px, callout lane)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "order-cash/01-placed.png",
+     "start": 90.7,
+     "end": 92.05,
+     "treatment": "Frame 0 ('Waiting for the seller')."
+    },
+    {
+     "file": "order-cash/02-accepted.png",
+     "start": 91.8,
+     "end": 93.15,
+     "treatment": "swapFade: 'Order confirmed' (the prep time is not featured)."
+    },
+    {
+     "file": "order-cash/04-preparing.png",
+     "start": 92.9,
+     "end": 94.25,
+     "treatment": "swapFade: 'Being cooked now'."
+    },
+    {
+     "file": "order-cash/06-ready.png",
+     "start": 94.0,
+     "end": 95.35,
+     "treatment": "swapFade: 'Ready'."
+    },
+    {
+     "file": "order-cash/07-on-the-way-code.png",
+     "start": 95.1,
+     "end": 98.85,
+     "treatment": "swapFade: 'On the way' + handover panel; camera Fhand; rings on 'Please pay ₹150 in cash' and the six-digit code."
+    },
+    {
+     "file": "order-cash/08-cash-confirmed.png",
+     "start": 98.6,
+     "end": 102.15,
+     "treatment": "swapFade (the stall confirmed the cash): green 'The stall has confirmed your ₹150 cash payment'; code + 'Now tell them this code — that completes your order.'"
+    },
+    {
+     "file": "order-cash/09-delivered-review.png",
+     "start": 101.6,
+     "end": 102.3,
+     "treatment": "swapSheet (sheetTop 412): 'Delivered' with the review sheet rising; camera back to identity."
+    },
+    {
+     "file": "graphic:status rail (the app's six progress labels)",
+     "start": 90.9,
+     "end": 102.2,
+     "treatment": "Left-column motion graphic lit in sync with each status change."
+    }
+   ],
+   "uiState": "Aarav's cash order thread: 'Waiting for the seller' → 'Order confirmed' ('Being prepared · usually ready by 7:24 pm') → 'Being cooked now' → 'Ready' → 'On the way' with the handover panel ('Please pay ₹150 in cash', six-digit code, 'Then tell this code to the stall owner or the delivery partner — that completes your order. SETU staff will never ask for it.') → 'The stall has confirmed your ₹150 cash payment' / 'Now tell them this code — that completes your order.' → 'Delivered' (review sheet rises).",
+   "animation": "Local times. Frame 0 = order-cash/01-placed.png at identity. Camera framing Fhand = {s 1.7, P [195,532], T [1480,500]} (canvas of a screen point = (1121.98 + 1.836·x, −476.75 + 1.836·y)).\n0.10 kicker '08 · Track & hand over' K.fadeUp at (140,200).\n0.20–0.50 tag 'TIME-LAPSE' (Lucide fast-forward 20 px + Space Mono 700 18 px caps, #B8C7FF pill) fades in at the tag row (140,112); 4.70–5.00 it fades out. It covers the whole status run (the real order spanned 7:02 → 7:25 pm).\n0.20–0.80 status rail (canvas-level, left column): header 'STATUS TIMELINE · NOT A MAP' (Space Mono 700 18 px caps, #B8C7FF) at (150,290); a 2 px rgba(255,255,255,.35) line from (162,352) to (162,667) drawn top → bottom (K.drawPath 0.6 s); six rows, 14 px dots at x 162 and labels (Plus Jakarta Sans 600 28 px) at x 192: Placed (y 352), Confirmed (415), Preparing (478), Ready (541), Out for delivery (604), Delivered (667). Future rows 35% white; the current row has an orange dot and a white label; done rows white with a filled pale dot.\nStatus run (in-place K.swapFade 0.25 s; each change is the stall's action, so no taps), with a 0.6 s orange ring flash on that capture's .headline and the matching rail row lighting:\n- 0.40 'Placed' current (01-placed).\n- 1.10 → order-cash/02-accepted.png, 'Confirmed'.\n- 2.20 → order-cash/04-preparing.png, 'Preparing'.\n- 3.30 → order-cash/06-ready.png, 'Ready'.\n- 4.40 → order-cash/07-on-the-way-code.png, 'Out for delivery'.\n4.70–5.70 K.focus Fhand (1.0 s): the handover panel fills the frame.\n5.70–6.90 orange ring on 'Please pay ₹150 in cash', measured box {x:25,y:455,w:340,h:34} (canvas (1167.9,358.6)–(1792.1,421.1)).\n6.60–7.80 ring--blue on order-cash/07-on-the-way-code.code (canvas (1167.9,439)–(1792.1,527.2)) + label 'HANDOVER CODE' (≈233×40) at x 880–1113, y 463–503 from 6.70 to 7.90; leader (1113,483)→(1167.9,483).\n7.90 K.swapFade → order-cash/08-cash-confirmed.png (0.25 s; the stall tapped 'Yes, cash received'; its panel sits 18 px lower, the camera stays).\n8.20–9.40 green ring on 'The stall has confirmed your ₹150 cash payment', measured box {x:25,y:473,w:340,h:34} (canvas (1167.9,391.7)–(1792.1,454.1)).\n9.20–10.70 orange ring on order-cash/08-cash-confirmed.code (canvas (1167.9,472.5)–(1792.1,560.6)) and on 'Now tell them this code — that completes your order.', measured box {x:25,y:576,w:310,h:18}. 9.40–10.70 three concentric 2 px pale arcs (radii 20/34/48 px, opening left) ripple once each, 0.35 s apart, at canvas (1100,516) just left of the code: the code is said out loud.\n10.70–11.50 K.unfocus (0.8 s).\n10.90 K.swapSheet → order-cash/09-delivered-review.png (sheetTop 412, 0.55 s; the stall entered the right code — no customer tap); the rail's 'Delivered' row lights with a soft orange flash.\n11.15–11.50 the rail and the kicker fade out. 11.50–11.60 hold at identity.",
+   "transitionIn": "Continuous from s09's commit wipe: 'Waiting for the seller' at identity.",
+   "transitionOut": "The review sheet rises over 'Delivered'; settled at identity for the cut.",
+   "handoffIn": {
+    "phone": "default",
+    "screen": "order-cash/01-placed.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Same frame as s09 ends."
+   },
+   "handoffOut": {
+    "phone": "default",
+    "screen": "order-cash/09-delivered-review.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "'Delivered' with the review sheet up ('How was Southside Tiffins?') at identity; rail, tag, label and kicker gone."
+   },
+   "demoBadge": [],
+   "soundCues": [
+    {
+     "at": 91.1,
+     "cue": "Status tick (Placed)"
+    },
+    {
+     "at": 91.8,
+     "cue": "Tick + soft chime (Confirmed)"
+    },
+    {
+     "at": 92.9,
+     "cue": "Tick (Preparing)"
+    },
+    {
+     "at": 94.0,
+     "cue": "Tick (Ready)"
+    },
+    {
+     "at": 95.1,
+     "cue": "Tick (Out for delivery) + light whoosh"
+    },
+    {
+     "at": 97.3,
+     "cue": "Code shimmer"
+    },
+    {
+     "at": 98.6,
+     "cue": "Soft ping (cash confirmed)"
+    },
+    {
+     "at": 100.1,
+     "cue": "Two soft voice-arc pulses"
+    },
+    {
+     "at": 101.6,
+     "cue": "Sheet slide + gentle success chord (Delivered)"
+    }
+   ],
+   "accuracyNotes": "- Status headlines are the app's own ('Waiting for the seller', 'Order confirmed', 'Being cooked now', 'Ready', 'On the way'); the rail uses the progress view's labels (Placed, Confirmed, Preparing, Ready, Out for delivery, Delivered).\n- The TIME-LAPSE tag is on for the whole status run: the real order took 7:02 → 7:25 pm. 'Being prepared · usually ready by 7:24 pm' is a prep target — shown in the capture, never featured or narrated; no delivery-time promise.\n- Tracking is a status timeline in the order thread, not a map ('STATUS TIMELINE · NOT A MAP' paraphrases Step 4's 'You will see a status timeline, not a rider on a map.'). No live map or location tracking anywhere.\n- Handover order is real: cash first ('Please pay ₹150 in cash' → 'The stall has confirmed your ₹150 cash payment'), then the code completes it ('Now tell them this code — that completes your order.'). 'Them' = the stall owner or the delivery partner, as the app says.\n- The handover code in 07/08 is 806688 as captured; never type it into captions or overlays; don't alter the captured times."
+  },
+  {
+   "id": "s11",
+   "compositionName": "rate-report",
+   "title": "Delivered, rated — and reportable",
+   "chapter": "09 · Rate & report",
+   "start": 102.3,
+   "end": 109.4,
+   "narration": "Delivered. Five stars for Southside Tiffins. Something off? Report it from the order. Dinner, sorted.",
+   "captions": [
+    {
+     "start": 102.4,
+     "end": 104.8,
+     "text": "Delivered. Five stars\nfor Southside Tiffins."
+    },
+    {
+     "start": 104.9,
+     "end": 107.7,
+     "text": "Something off? Report it\nfrom the order."
+    },
+    {
+     "start": 107.9,
+     "end": 109.25,
+     "text": "Dinner, sorted."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "09 · Rate & report",
+     "start": 102.4,
+     "end": 109.35,
+     "role": "kicker (kit .kicker)"
+    },
+    {
+     "text": "TO CAMPUS STAFF",
+     "start": 106.6,
+     "end": 107.8,
+     "role": "label (short caps, Space Mono 700 20 px, callout lane)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "order-cash/09-delivered-review.png",
+     "start": 102.3,
+     "end": 103.6,
+     "treatment": "Frame 0: 'How was Southside Tiffins?'; tap the 5th star (0.60)."
+    },
+    {
+     "file": "order-cash/10-review-5.png",
+     "start": 103.25,
+     "end": 105.55,
+     "treatment": "Circular reveal from the 5th star: five stars, 'Excellent'; tap 'Submit review' (2.45)."
+    },
+    {
+     "file": "order-cash/12-review-sent.png",
+     "start": 105.1,
+     "end": 108.5,
+     "treatment": "The sheet slides down: thread ends 'Delivered · handover code verified · ₹150 paid in cash'; ring 'Report'; tap the progress icon (5.55)."
+    },
+    {
+     "file": "order-cash/13-progress-delivered.png",
+     "start": 108.2,
+     "end": 109.4,
+     "treatment": "swapFade: the progress view with all six steps and their real times; green ring."
+    }
+   ],
+   "uiState": "Delivered order: review sheet 'How was Southside Tiffins?' (1 × Masala Dosa · 2 × Filter Coffee) → 5 stars 'Excellent' → 'Submit review' → thread ends 'Delivered · handover code verified · ₹150 paid in cash' with 'Report' / 'Order again' → progress view (Placed 7:02 pm … Delivered 7:25 pm).",
+   "animation": "Local times. Frame 0 = order-cash/09-delivered-review.png at identity; the scene stays at identity (no push on the review sheet, so its note placeholder is never featured).\n0.10 kicker '09 · Rate & report' K.fadeUp at (140,200).\n0.35 ring--blue on the 5th star, measured box {x:292,y:514,w:36,h:36} (inside order-cash/09-delivered-review.stars). 0.60 K.tap the 5th star (centre (310,532)) → 0.95 circular reveal of order-cash/10-review-5.png from (310,532), r 0 → 330 (0.35 s): five stars fill and 'Excellent' appears.\n1.35–2.35 orange ring on order-cash/10-review-5.word ('Excellent').\n2.20 ring--blue on order-cash/09-delivered-review.submit. 2.45 K.tap submit ('Submit review') → 2.80 the sheet slides down: the review layer translates y 0 → +432 (expo.in 0.45 s) revealing order-cash/12-review-sent.png underneath.\n3.30–4.40 orange ring on 'Delivered · handover code verified · ₹150 paid in cash', measured box {x:14,y:484,w:362,h:32}.\n4.20–5.40 orange ring on the 'Report' button, measured box {x:18,y:720,w:170,h:48} (canvas (1183.4,861.6)–(1367,913.4)) + label 'TO CAMPUS STAFF' (≈260×40) at x 860–1120, y 794–834 from 4.30 to 5.50; leader (1120,814)→(1183.4,880) — the label stays above the caption zone.\n5.35 ring--blue on order-cash/12-review-sent.progress (the clipboard icon). 5.55 K.tap progress → 5.90 K.swapFade → order-cash/13-progress-delivered.png (0.3 s).\n6.25–6.70 green ring on order-cash/13-progress-delivered.card (fades by 7.05).\n6.75–7.05 the kicker fades out. 7.05–7.10 hold.",
+   "transitionIn": "Continuous: the review sheet is already up.",
+   "transitionOut": "The completed progress view holds at identity; s12 opens by pulling the phone back.",
+   "handoffIn": {
+    "phone": "default",
+    "screen": "order-cash/09-delivered-review.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Same frame as s10 ends."
+   },
+   "handoffOut": {
+    "phone": "default",
+    "screen": "order-cash/13-progress-delivered.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Progress view (six steps with real times) at identity; rings, label and kicker gone."
+   },
+   "demoBadge": [],
+   "soundCues": [
+    {
+     "at": 102.9,
+     "cue": "Star tap: rising five-note arpeggio"
+    },
+    {
+     "at": 104.75,
+     "cue": "UI tap (Submit review)"
+    },
+    {
+     "at": 105.1,
+     "cue": "Sheet slides down"
+    },
+    {
+     "at": 105.6,
+     "cue": "Soft confirm ping"
+    },
+    {
+     "at": 106.5,
+     "cue": "Ring swish (Report)"
+    },
+    {
+     "at": 107.85,
+     "cue": "UI tap"
+    },
+    {
+     "at": 108.2,
+     "cue": "Page fade"
+    }
+   ],
+   "accuracyNotes": "- Review copy: 'How was Southside Tiffins?'; five stars → 'Excellent'; 'Submit review'. The note is optional, 'Don't ask again' exists, and a rating can be given later from Orders.\n- 11-review-note.png is not used (its note says 'On time.'); the camera never features the note placeholder ('Hot, on time…'): the scene stays at identity.\n- 'Delivered · handover code verified · ₹150 paid in cash' is the app's own line.\n- 'Report' exists on ended orders; reports go to SETU campus staff as a record against the stall (not a refund claim against SETU) — the label says only 'TO CAMPUS STAFF'.\n- The progress view's 'Delivered' row shows a clock icon in the app; nothing redraws it.\n- 'Dinner, sorted.' is story copy, not a product claim."
+  },
+  {
+   "id": "s12",
+   "compositionName": "end-card",
+   "title": "End card",
+   "chapter": null,
+   "start": 109.4,
+   "end": 117.6,
+   "narration": "",
+   "captions": [],
+   "onScreenText": [
+    {
+     "text": "Your campus. Your food. Your SETU.",
+     "start": 110.2,
+     "end": 117.6,
+     "role": "tagline (Sora 800 64 px, centred; 'Your SETU.' in #B8C7FF; no rupee sign)"
+    },
+    {
+     "text": "Explore SETU Food",
+     "start": 110.6,
+     "end": 117.6,
+     "role": "CTA pill (Plus Jakarta Sans 700 30 px #0033DA on white, Lucide arrow-right)"
+    },
+    {
+     "text": "SETU connects customers with approved campus food providers. Food preparation, delivery and payment are handled by the respective provider. SETU does not collect payments or independently guarantee food hygiene.",
+     "start": 110.9,
+     "end": 117.6,
+     "role": "disclaimer (verbatim; Plus Jakarta Sans 500 26 px; fully legible 1.95–8.20 = 6.25 s)"
+    },
+    {
+     "text": "Demo environment · sample stalls · demo QR, not a real payment code",
+     "start": 111.1,
+     "end": 117.6,
+     "role": "fine print (Space Mono 400 18 px, 60% white)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "order-cash/13-progress-delivered.png",
+     "start": 109.4,
+     "end": 110.2,
+     "treatment": "The phone pulls back (scale 1 → 0.72, sinks 60 px) and fades out."
+    },
+    {
+     "file": "graphic:real campus boundary outline, faint (assets/data/campus-boundary.json)",
+     "start": 109.6,
+     "end": 117.6,
+     "treatment": "Redraws at 18% opacity behind the type; the Nehru Hall point glows once."
+    },
+    {
+     "file": "graphic:official SETU lockup on a white rounded tile (assets/brand/setu-logo.png)",
+     "start": 109.8,
+     "end": 117.6,
+     "treatment": "Tile 240×190 centred at (960,215); lockup 200 px wide, never recoloured."
+    },
+    {
+     "file": "graphic:end-card type (tagline, CTA, disclaimer, fine print)",
+     "start": 110.2,
+     "end": 117.6,
+     "treatment": "Kinetic type only."
+    }
+   ],
+   "uiState": "No app UI after 0.80 s: end-card motion graphics.",
+   "animation": "Local times. Frame 0 = order-cash/13-progress-delivered.png at identity. No captions in this scene (layout.json lists it as centred anyway); keep y 880–1050 empty.\n0.00–0.80 the phone recedes: fromTo scale 1 → 0.72 (transform-origin its centre, canvas (1374.6,539.8)), y 0 → +60, opacity 1 → 0 (expo.in 0.8 s).\n0.20–1.20 the real campus outline (assets/data/campus-boundary.json path) redraws centred, 960 px wide: x 480–1440, y 260–756; stroke #B8C7FF 2 px at 18% opacity (K.drawPath 1.0 s). 1.00–1.60 the Nehru Hall point (canvas (589.6,354.8)) glows once (8 px orange dot, opacity 0 → 1 → 0.6).\n0.40–1.00 white tile (kit .white-tile, 240×190, radius 32) centred at (960,215) → x 840–1080, y 120–310, with assets/brand/setu-logo.png at 200 px wide, centred: fromTo scale 0.94/opacity 0 → 1/1 (expo.out 0.6 s).\n0.80 tagline 'Your campus. Your food. Your SETU.' (Sora 800 64 px, white, centred, top 350; 'Your SETU.' in #B8C7FF) K.revealWords (stagger 0.06).\n1.20 CTA pill 'Explore SETU Food' (white, radius 999, padding 16/30, Plus Jakarta Sans 700 30 px #0033DA, Lucide arrow-right 26 px) centred, top 460: fromTo scale 0.9/opacity 0 → 1/1 (back.out(1.6) 0.5 s).\n1.50–1.95 the disclaimer (verbatim) fades up: Plus Jakarta Sans 500 26 px / 1.45, rgba(255,255,255,.88), centred, max-width 1200 px (3 lines), top 580 (≈ y 580–693).\n1.70–2.00 fine print 'Demo environment · sample stalls · demo QR, not a real payment code' (Space Mono 400 18 px, rgba(255,255,255,.6), centred, top 760) fades in.\nAfter 2.00 nothing moves. Hold the complete card to 8.20 (no fade to black).",
+   "transitionIn": "The phone recedes into the indigo as the campus outline redraws faintly.",
+   "transitionOut": "Hold to the last frame (no fade) so the owner can add sound or an outro.",
+   "handoffIn": {
+    "phone": "default",
+    "screen": "order-cash/13-progress-delivered.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Same frame as s11 ends."
+   },
+   "handoffOut": {
+    "phone": "none",
+    "screen": null,
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "End card (final frame): faint campus outline with the Nehru Hall dot, lockup tile, tagline, CTA pill, disclaimer and fine print.",
+    "notes": "Last frame of the film."
+   },
+   "demoBadge": [],
+   "soundCues": [
+    {
+     "at": 109.4,
+     "cue": "Pad swell resolves"
+    },
+    {
+     "at": 109.8,
+     "cue": "Brand sting placeholder (owner's choice)"
+    },
+    {
+     "at": 110.6,
+     "cue": "Soft pop (CTA)"
+    },
+    {
+     "at": 117.4,
+     "cue": "Pad tail out"
+    }
+   ],
+   "accuracyNotes": "- The disclaimer is verbatim: 'SETU connects customers with approved campus food providers. Food preparation, delivery and payment are handled by the respective provider. SETU does not collect payments or independently guarantee food hygiene.' It is fully legible from 1.95 s to the end (6.25 s), with no caption competing.\n- Tagline 'Your campus. Your food. Your SETU.' and CTA 'Explore SETU Food' are exactly as briefed; the CTA is type in a pill, not a store badge or link.\n- The lockup is the official raster on a white rounded tile, downscaled only, never recoloured; the 75-years mark is not used.\n- The fine print repeats the demo-environment note (shown once in the body, s07) and the demo-QR note.\n- No 'free', no claims about other platforms."
+  }
+ ]
+}

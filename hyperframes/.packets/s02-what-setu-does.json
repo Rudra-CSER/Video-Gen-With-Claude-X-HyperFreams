@@ -1,0 +1,191 @@
+{
+  "sceneId": "s02-what-setu-does",
+  "file": "compositions/s02-what-setu-does.html",
+  "duration": 6.6,
+  "globalStart": 5.4,
+  "globalEnd": 12,
+  "title": "What SETU does",
+  "chapter": "What SETU does",
+  "phoneSpec": {
+    "left": 1150,
+    "top": 70,
+    "k": 1.08
+  },
+  "captionPlacement": "left (keep x 120-1140, y 880-1050 clear)",
+  "narration": "SETU Food lists approved stalls. They cook and deliver. You pay the stall directly. No commission.",
+  "captionsLocal": [
+    {
+      "start": 0.15,
+      "end": 3.65,
+      "text": "SETU Food lists approved stalls.\nThey cook and deliver."
+    },
+    {
+      "start": 3.75,
+      "end": 6.5,
+      "text": "You pay the stall directly.\nNo commission."
+    }
+  ],
+  "onScreenText": [
+    {
+      "text": "What SETU does",
+      "start": 0.15,
+      "end": 5.4,
+      "role": "kicker (kit .kicker)"
+    }
+  ],
+  "shots": [
+    {
+      "file": "desktop/01-signin-wide.png",
+      "start": 0,
+      "end": 6.2,
+      "treatment": "Kit .laptop frame (--lk .7, no browser/OS chrome) at left 760, top 150. Camera on the laptop rig: lede, then the stats row; rings; then a move that centres the desktop's selected Customer card over the phone's Customer card for the dissolve.",
+      "asset": {
+        "kind": "desktop-still",
+        "file": "desktop/01-signin-wide.png",
+        "src": "assets/ui/desktop/01-signin-wide.png",
+        "marks": {
+          "lede": {
+            "x": 65.8,
+            "y": 348.6,
+            "w": 673.9,
+            "h": 245.4
+          },
+          "stats": {
+            "x": 65.8,
+            "y": 756.8,
+            "w": 673.9,
+            "h": 86
+          },
+          "form": {
+            "x": 855.8,
+            "y": 177.7,
+            "w": 520,
+            "h": 790
+          }
+        },
+        "size": "1440x900 CSS px (2x PNG)"
+      }
+    },
+    {
+      "file": "signin/01-signin.png",
+      "start": 5.75,
+      "end": 6.6,
+      "treatment": "Phone at the default spec fades in over the aligned desktop form (web → phone dissolve) and holds.",
+      "asset": {
+        "kind": "still",
+        "file": "signin/01-signin.png",
+        "src": "assets/ui/signin/01-signin.png",
+        "marks": {
+          "customer": {
+            "x": 16,
+            "y": 206.4,
+            "w": 358,
+            "h": 60
+          },
+          "id": {
+            "x": 16,
+            "y": 371.6,
+            "w": 358,
+            "h": 48
+          },
+          "password": {
+            "x": 16,
+            "y": 472.6,
+            "w": 358,
+            "h": 48
+          },
+          "otpLink": {
+            "x": 75.7,
+            "y": 578.6,
+            "w": 238.6,
+            "h": 40
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    }
+  ],
+  "demoBadgeLocal": [],
+  "uiState": "Signed-out web sign-in page (desktop wide layout, Customer selected): art panel 'The campus, and only the campus.', the lede 'Approved local stakeholders, delivered to your hall. …' and the stats 'DELIVERY' over 'Campus only', 'COMMISSION' over 'None', 'PAYMENT' over 'Direct'; then the phone's own sign-in screen ('SIGNING IN AS' over 'Customer', 'IIT KHARAGPUR CAMPUS ACCOUNTS ONLY').",
+  "animationLocal": "Local times. Two layers: #s02-rig-desk (a full-canvas .rig) holds the laptop; the phone is OUTSIDE it at the default spec and only appears at the end.\nLaptop at rest: kit .laptop with --lk .7 showing desktop/01-signin-wide.png (an <img> filling .lscreen) at left 760, top 150 → lid x 760–1804, y 150–824; screen x 778–1786, y 168–798; base y 824–846. Desktop CSS (1440×900) → canvas at rest: X = 778 + 0.7·x, Y = 168 + 0.7·y. Rings below are drawn inside the laptop screen in desktop CSS px, so they scale with the camera.\n0.00–0.80 the laptop fromTo y +90/opacity 0 → 0/1 (expo.out 0.8 s). 0.15 kicker 'What SETU does' K.fadeUp at (140,200).\n0.70–1.70 camera: K.focus(desk rig, P=(1052.4,497) [desktop (392,470)], s 1.3, 0.70, 1.0, {to:{x:1110,y:420}}) — headline and lede fill the frame; the lid's bottom edge lands at y≈845, above the caption zone.\n0.90–2.30 pale-indigo ring (2.5 px #B8C7FF, radius 10, no fill) around the first sentence only: desktop box {x:60,y:500,w:464,h:34} 'Approved local stakeholders, delivered to your hall.'\n2.10–3.10 camera: K.focus(desk rig, P=(1026.5,736.4) [desktop (355,812)], s 1.35, 2.10, 1.0, {to:{x:1080,y:520}}) — the stats row lands at y≈495–546.\n2.60–3.80 orange ring (kit .ring look, inside the laptop screen) on the stat 'DELIVERY' over 'Campus only', desktop {x:58,y:778,w:216,h:68}; one ring scale pulse 1→1.04→1 (the UI is never recoloured).\n3.80–5.00 orange ring on the stat 'COMMISSION' over 'None', desktop {x:318,y:778,w:110,h:68}.\n4.10–5.20 orange ring on the stat 'PAYMENT' over 'Direct', desktop {x:543,y:778,w:110,h:68}.\n5.10–5.90 dissolve set-up: K.focus(desk rig, P=(1559.2,334.6) [desktop (1116,238): the top-centre of the selected Customer card, measured box {x:896,y:238,w:440,h:84}], s 1.1, 5.10, 0.8, {to:{x:1374.6,y:306.5}}) — the desktop Customer card now sits centred on the phone's Customer card (signin/01-signin.customer, top at screen y 206) with the top edges aligned and the same height (64.7 vs 64.8 px; widths 338.8 vs 386.6 px). Lid x 495.5–1643.7, y 103.4–844.8, base bottom y 869 (s 1.1 is the largest scale that keeps the laptop above the caption zone). 5.10–5.40 the kicker fades out.\n5.75–6.15 the phone (default spec {left:1150,top:70,k:1.08}, outside the desk rig) fromTo scale 0.97/opacity 0 → 1/1 (transform-origin centre, expo.out 0.4 s) showing signin/01-signin.png; 5.85–6.20 the laptop fades out (power1.in 0.35 s). This is a near-size DISSOLVE, not a pixel match: the Customer cards coincide, while the headings differ (left-aligned on the web, centred on the phone).\n6.20–6.60 hold: phone at the default spec on signin/01-signin.png; the laptop is invisible (reset the desk rig to identity once it is at opacity 0); left column empty.",
+  "transitionIn": "Starts on the empty background; the laptop rises 0.00–0.80.",
+  "transitionOut": "Web → phone dissolve on the shared sign-in form (Customer cards centred and top-aligned, 5.10–6.20), then a 0.4 s settled hold on the phone.",
+  "handoffIn": {
+    "phone": "none",
+    "screen": null,
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "All hook graphics are gone by 5.35; empty background at the cut."
+  },
+  "handoffOut": {
+    "phone": "default",
+    "screen": "signin/01-signin.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Laptop fully gone; phone at the default spec, no camera move, nothing else on canvas."
+  },
+  "soundCuesLocal": [
+    {
+      "at": 0,
+      "cue": "Card settle: soft low thud as the laptop rises"
+    },
+    {
+      "at": 0.9,
+      "cue": "Highlight swish (lede ring)"
+    },
+    {
+      "at": 2.6,
+      "cue": "Tiny tick (Campus only)"
+    },
+    {
+      "at": 3.8,
+      "cue": "Tiny tick (None)"
+    },
+    {
+      "at": 4.1,
+      "cue": "Tiny tick (Direct)"
+    },
+    {
+      "at": 5.1,
+      "cue": "Glassy whoosh on the web → phone dissolve"
+    }
+  ],
+  "accuracyNotes": "- desktop/01-signin-wide.png is real UI shown in the kit's neutral laptop frame: no browser chrome, URL bar or OS UI.\n- Ring only 'Approved local stakeholders, delivered to your hall.' and the three stats. Never ring, zoom on or caption 'SETU checks the licence and holds the record.' (it reads as 'every stall is licence-checked').\n- desktop/02-home-web.png is not used ('Every stall is licence-checked by SETU').\n- 'They cook and deliver' = the stalls (app: 'The seller brings the order themselves'); never 'SETU delivers'. 'No commission' = the stat 'COMMISSION' over 'None'.\n- The panel's crest / 75-years row is never featured: both push-ins centre below it.",
+  "globalSystem": "STORY-FIRST ('Dinner at B-212'): one evening with Aarav (Nehru Hall of Residence, Room B-212). Tonight he signs in on a new phone with an emailed one-time code (DEMO-labelled; the password stays the main way in). A band wipe rewinds to his day one to show how a first-timer creates an account and runs the four onboarding steps — that is how his Home (Room B-212) was saved inside the campus boundary. A second band wipe returns to tonight: the new phone's Home first reads 'Set your delivery location' (the delivery choice is stored per device; the saved addresses belong to the account), so he picks his saved Home with three real taps (Deliver-to row → 'Home' under SAVED LOCATIONS → 'Confirm location'); then 1 × Masala Dosa + 2 × Filter Coffee from Southside Tiffins; items ₹140 + the stall's own delivery charge ₹10 = ₹150 payable to the seller. The QR route is a labelled side branch for stalls that offer it (the stall accepts first, then you pay, then it confirms). Aarav pays cash at the door, his six-digit handover code completes the order, he rates it five stars, and the Report path is pointed out. Nine numbered chapters (01 Sign in … 09 Rate & report) keep first-timers oriented, and captions name the exact button where it helps. Tone: warm, plain, lightly playful ('Tonight: dosa.', 'Dinner, sorted.'), never hype; 'students, faculty, staff' is said once. Motif: the real campus-boundary polygon opens the film, returns as the delivery-area check and closes the end card.\nGLOBAL SYSTEM (every scene):\n- Frame: 1920×1080, 60 fps, silent. One HyperFrames sub-composition per scene with one paused GSAP timeline; kit.js helpers plus plain GSAP only. Scene roots are transparent over the shared indigo background from index.html (it already carries a faint drifting campus outline; never paint a background).\n- Boundaries are HARD CUTS: frame 0 must equal handoffIn and the last frame must equal handoffOut. Unless a handoff says otherwise: phone at the default spec, rig identity, left column empty, no overlays, the named capture fully visible and settled.\n- Phone: kit .phone at phoneSpec {left:1150, top:70, k:1.08}; screen origin canvas (1164,84), 421.2×911.5. At identity a screen point (x,y) is canvas (1164 + 1.08·x, 84 + 1.08·y). The phone, its capture layers and every in-screen overlay (rings, taps, reveals, halos, masks) live inside the scene rig (.rig, transform-origin 0 0). Camera = K.focus(tl, rig, K.toCanvas(spec, P[0], P[1]), s, t, dur, {to:{x:T[0], y:T[1]}}), expo.inOut, 0.8–1.2 s; framings are given as {s, P (screen px), T (canvas px)} and K.unfocus returns to identity. Canvas-level type, labels, leader lines, chips and tags sit OUTSIDE the rig; every canvas position in a spec already accounts for the rig state at that moment.\n- Grid: text column x140–820 (kicker at (140,200), headline top 250, nothing below y 860); callout lane x840–1130 (label right edge ≤1120); right margin x1620–1880 (unused); one tag row at (140,112) for ONE tag at a time (DEMO badge, DAY ONE, TONIGHT, the sample-stalls note, TIME-LAPSE); caption zone x120–1140, y880–1050 stays empty (captions centred only in s01; s12 has none). A pushed phone's bezel never reaches left of x 1095, and left caption plates end at x ≈ 900. At most 4 floating labels/chips/tags at once, never overlapping the phone, each other, the text column or the caption zone. Never fly several objects into the phone at once: when chips travel into the phone they go one at a time.\n- Type: kicker = kit .kicker showing the scene's `chapter`, K.fadeUp at 0.10; its fade-out (0.3 s) ends at least 0.05 s before the scene's last frame, and its onScreenText end time is the end of that fade. Headline = .headline--md (Sora 800, 68 px), words only. Sora has no ₹ glyph: every string containing ₹ is set in Plus Jakarta Sans (names, amounts) or Space Mono (labels, prices, counts). Labels = short caps tags: .callout.callout--dark with font 700 18px/1 Space Mono, letter-spacing .08em, uppercase, padding 10px 16px (≈ 12.24 px × chars + 50 px wide, 38 px tall), plus a 2 px rgba(184,199,255,.7) straight leader from the label's right edge to the element; a label's right edge stays ≥8 px left of the phone's bezel for the framing in use (identity ≤1140; s 1.4 ≤1097; Ftotals ≤1095; Fhand ≤1090; Fconf ≤1087). Tag-row items: Space Mono 700 18 px caps, letter-spacing .16em, pill padding 10/16; the DEMO badge is kit .demo-badge with the text 'Demo environment'.\n- Overlays on real UI: K.tap at the centre of the named box, always 0.35 s before the screen change it causes (inside the 0.25–0.45 s rule). K.ring orange = look here; {blue:true} = the next tap target only (≥0.2 s before its tap; never on something that is not tapped); green = a kit ring with border-color #19B36B and a green glow, used only for 'inside the delivery area', 'cash confirmed' and 'payment confirmed'; pale = a kit ring with border-color #B8C7FF and box-shadow 0 0 0 6px rgba(184,199,255,.16), 0 0 22px rgba(184,199,255,.3): context that is never tapped (s03's code-box glow, s05's 'Use my current location' row). Boxes are CSS px of the 390×844 screen: named marks from marks.json written <group>/<shot>.<mark>, or explicit {x,y,w,h} measured on the final PNGs. Nothing opaque over app text; UI is never recoloured.\n- Screen changes: K.swapPush = forward navigation (0.55 s); K.swapSheet = sheets (sheetTop given); K.swapFade = in-place state change (0.15–0.35 s); circular reveal = a local state change caused by a tap (the 'after' capture as a new layer whose clip-path circle(r at x y) grows from 0 at the tap point, 0.25–0.35 s, power2.out); commit wipe = for 'Start ordering' and 'Place order · ₹150' a #0033DA circle grows from the button centre to cover the screen (0.45 s, power2.in), the next capture is set underneath, then the circle fades (0.3 s).\n- Clips: play inside a non-timed .layer in the screen (data-hf-media-start-basis=\"local\"); never animate the <video>; the next still sits underneath to hold the last frame; chained clips start exactly where the previous ends. clipSeconds = the length used (a speed variant is pre-rendered; each captured frame gets clipSeconds / frames). Where a clip's last frame differs from the still under it only by input focus, the cut is a deliberate focus-loss cut (named in the scene).\n- Shot windows: a shot starts when its layer first becomes visible and ends when it is fully covered or hidden, i.e. at the END of the transition that removes it.\n- Rhythm: tap → result → ≥0.6 s beat; text that matters is held ≥1.2 s; exits 0.3–0.5 s; nothing is visible before its entrance (fromTo with opacity 0); no drifting, spinning, particles or glitch.\n- Icons: Lucide line icons only (stroke 1.85–2.5); no emoji, food photos, clip-art or filled pins.\n- Honesty: only real captures for app screens; DEMO badge across the whole OTP portion (code request → Home); the sample-stalls note once (s07) plus the end-card fine print; the demo QR stays labelled; no 'SETU delivers', pickup, map or location tracking, delivery-time promise, free/zero-cost/minimal-charge wording or competitor names anywhere. Never ring, zoom on or caption the app's own 'SETU delivers inside…' lines, the location dialog's body sentences ('…to find nearby stalls…', 'It is only read when you ask for it.' — the code contradicts both), Step 4's licence and 'Recorded…' sub-lines, search rows' '20–20 min', the stall's '20 min', the prep time, the QR thread pill 'Order confirmed by …' (shown before payment), 33-home-set's hover-blue 'Orders' tab or the review note placeholder.",
+  "previousScene": {
+    "id": "s01-hook",
+    "title": "Hook — your campus, your food",
+    "transitionOut": "Every hook element exits 4.95–5.35; the last frame is the empty background (hard cut; s02 starts empty).",
+    "handoffOut": {
+      "phone": "none",
+      "screen": null,
+      "rig": "identity",
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "All hook graphics are gone by 5.35; empty background at the cut."
+    },
+    "lastShots": [
+      "graphic:official SETU lockup on a white rounded tile (assets/brand/setu-logo.png)",
+      "graphic:hook type (SETU Food title, subline, persona chip)"
+    ]
+  },
+  "nextScene": {
+    "id": "s03-sign-in",
+    "title": "Have an account? Sign in — password, or an emailed code",
+    "transitionIn": "Continuous from the web → phone dissolve: the phone is already at its default spec on the sign-in screen.",
+    "handoffIn": {
+      "phone": "default",
+      "screen": "signin/01-signin.png",
+      "rig": "identity",
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "Laptop fully gone; phone at the default spec, no camera move, nothing else on canvas."
+    },
+    "firstShots": [
+      "signin/01-signin.png",
+      "signin/02-type-email/"
+    ]
+  }
+}

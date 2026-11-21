@@ -1,0 +1,1582 @@
+{
+ "title": "SETU Food — Your First Order, Tap by Tap",
+ "angle": "Tutorial-first: after a 13-second promise opener, the walkthrough runs as eight numbered chapters (01 Sign in → 08 Track & hand over) tracked by a story-style progress rail. Every caption names the exact button to tap; every tap is a ripple at the real element's mark followed by the real resulting screen, with transitions that tie action to result (ADD → stepper, View cart pill → cart, cart ₹150 → checkout amount, map pin → saved address). The promise comes from the app's own web panel (Campus only · Commission None · Payment Direct); honesty beats are explicit (DEMO labels during the code sign-in, one sample-stalls note, a time-lapse tag, the labelled demo QR); the end card carries the verbatim disclaimer.",
+ "totalSeconds": 112,
+ "wordCount": 234,
+ "scenes": [
+  {
+   "id": "s01-hook",
+   "title": "Hook · Your campus. Your food.",
+   "start": 0,
+   "end": 4.5,
+   "narration": "Your campus. Your food. A simpler way to order.",
+   "captions": [
+    {
+     "start": 0.4,
+     "end": 2.15,
+     "text": "Your campus. Your food."
+    },
+    {
+     "start": 2.35,
+     "end": 4.4,
+     "text": "A simpler way to order."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "IIT KHARAGPUR",
+     "start": 1.2,
+     "end": 4.3,
+     "role": "label (Space Mono, on the campus outline)"
+    },
+    {
+     "text": "Masala Dosa ₹80",
+     "start": 1.4,
+     "end": 3.5,
+     "role": "kinetic-menu (real sample menu item)"
+    },
+    {
+     "text": "Filter Coffee ₹30",
+     "start": 1.75,
+     "end": 3.7,
+     "role": "kinetic-menu (real sample menu item)"
+    },
+    {
+     "text": "Ghee Roast Dosa ₹110",
+     "start": 2.1,
+     "end": 3.9,
+     "role": "kinetic-menu (real sample menu item)"
+    },
+    {
+     "text": "Onion Uttapam ₹90",
+     "start": 2.45,
+     "end": 4.1,
+     "role": "kinetic-menu (real sample menu item)"
+    },
+    {
+     "text": "Fresh Mosambi Juice ₹60",
+     "start": 2.8,
+     "end": 4.3,
+     "role": "kinetic-menu (real sample menu item)"
+    },
+    {
+     "text": "SETU Food",
+     "start": 3.2,
+     "end": 4.5,
+     "role": "headline (Sora, under the logo tile)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "MG: campus boundary outline (real 78-point polygon) — motion graphic",
+     "start": 0.3,
+     "end": 4.5,
+     "treatment": "Draw-on from the central orange dot 0.30–2.10 (stroke-dashoffset, power2.inOut), 2 px white 85% + #0033DA glow; dims to 35% behind the tile from 3.00; scales to 0.6 and drifts top-left 4.10–4.50."
+    },
+    {
+     "file": "MG: kinetic menu type — real dish names and prices from the captured sample menus",
+     "start": 1.4,
+     "end": 4.3,
+     "treatment": "Sora 600, dish white / price #EC5A2A, blur-in + upward parallax drift, max four lines visible, kept in the outline's left/right zones (centre reserved for the tile)."
+    },
+    {
+     "file": "../brand/setu-logo.png — official lockup on a white rounded tile (brand asset)",
+     "start": 3,
+     "end": 4.5,
+     "treatment": "White tile radius 28, 248×196 px, lockup ≈210 px wide; scale 0.92→1.0 + fade 3.00–3.60; never recoloured or upscaled."
+    }
+   ],
+   "uiState": "No app UI — motion graphics only (real campus boundary, real sample dish names and prices, official lockup).",
+   "animation": "GLOBAL SPEC (all scenes) — 1920×1080, 60 fps. Background: 135° gradient #0C1233→#151E4D→#22307A, a soft #0033DA radial glow (≈18%) behind the phone, a faint #EC5A2A glow (≈8%) top-left, 2% grain. Type: Sora (headlines), Plus Jakarta Sans (captions, UI quotes), Space Mono (labels, numbers). Caption band: centred, y 930–1040, max-width 1320 px, Plus Jakarta Sans 600 40/50 px white, 2 lines max, 0.15 s fades; when a push-in brings the phone under the band, put a #0C1233 72% pill scrim behind the caption. PHONE-R: generic phone frame (graphite #0B1030 bezel 12 px, 1 px #2B3A8C rim, radius 52, soft shadow; no status bar, notch or OS chrome), anchor (1310, 502), scale s = 0.92 (s = canvas px per CSS px; captures are 3x, keep s ≤ 2.2). 'Focus (x, y)' = the CSS point placed on the phone anchor. Left column x 120–880: chapter tag (Space Mono 20 px, orange '0N' + white '/ 08 · LABEL'), Sora 700 headline 64–76 px, callouts. Progress rail top-left at (120, 72): 8 segments 64×4 px, gap 8; done white 90%, current #EC5A2A filling across the chapter, upcoming white 20%. TAP = 0.12 s press dot (scale 0.85→1) + ripple ring 0→64 px over 0.5 s power2.out at the mark centre (#0033DA 3 px ring + 22% fill on light UI; white on blue/dark UI). RING = #EC5A2A 3 px rounded rect = mark box + 8 px pad, drawn on 0.35 s (stroke-dashoffset, power2.out), held, faded 0.25 s; optional spotlight dims the rest of the screen to 60%. CALLOUT = UI quote in Plus Jakarta Sans 600 26 px inside curly quotes, or Space Mono 18 px caps label on a #151E4D pill (1 px #2B3A8C), 1.5 px white-60% leader to its ring; enters x+24→0 + fade 0.3 s power3.out. Screen changes: forward 0.32 s push-left (incoming slides 30% + crossfade), back = push-right, bottom sheet = vertical wipe, in-place state change = 0.18 s crossfade. Camera moves power3.inOut 0.7–1.0 s. Frame sequences: frames evenly spaced over the stated window, last frame held. HOOK: 0.00–0.30 fade up from #0C1233; a 14 px #EC5A2A dot blooms at (960, 470). 0.30–2.10 the real campus boundary (78-point polygon, ≈640 px tall, centred (960, 470)) draws on from the dot — 2 px white 85% + 10 px #0033DA glow at 35%, stroke-dashoffset, power2.inOut. 1.20 'IIT KHARAGPUR' (Space Mono 18 px, tracking .2em, 70% white) fades in on the outline's upper-left edge. 1.40–4.30 kinetic menu: five real dish+price lines (Sora 600 at 56/44/38/34/30 px for depth; dish white, price #EC5A2A) enter with blur 10→0 + y 30→0 (0.6 s power3.out), stagger 0.35 s, drift up 30–60 px (bigger = faster), placed in the outline's left/right zones, max four visible. 3.00–3.60 white rounded tile with the official lockup scales 0.92→1.0 + fades in at (960, 450); outline dims to 35%. 3.20–3.70 'SETU Food' (Sora 700 52 px) rises 20 px into place at y 600. 4.10–4.50 tile + outline scale to 0.6 and drift top-left (power2.in).",
+   "transitionIn": "Cold open: frame 0 is the empty #0C1233 canvas; an orange dot blooms at centre.",
+   "transitionOut": "Tile and outline shrink to 0.6 and drift to the top-left while the web panel rises from below (4.10–4.50 overlap).",
+   "soundCues": [
+    {
+     "at": 0,
+     "cue": "Ambient pad swell begins (placeholder)"
+    },
+    {
+     "at": 0.3,
+     "cue": "Soft shimmer tracking the outline draw-on"
+    },
+    {
+     "at": 1.4,
+     "cue": "Light pluck on each dish line (×5, placeholder)"
+    },
+    {
+     "at": 3,
+     "cue": "Soft logo sting"
+    },
+    {
+     "at": 4.2,
+     "cue": "Short whoosh out"
+    }
+   ],
+   "accuracyNotes": "Dish names and prices are the app's own sample-menu items exactly as captured (Southside Tiffins: Masala Dosa ₹80, Filter Coffee ₹30, Ghee Roast Dosa ₹110, Onion Uttapam ₹90; Fresh Press Juicery: Fresh Mosambi Juice ₹60) — no food photos, emoji or clip-art. The outline is the real 78-point campus boundary. The lockup sits only on a white rounded tile, never recoloured or upscaled past its 1031 px source; the 75-years mark is not used as a standalone element. The opening line is the owner's."
+  },
+  {
+   "id": "s02-what",
+   "title": "What SETU Food does",
+   "start": 4.5,
+   "end": 13,
+   "narration": "SETU Food lists approved campus stalls. They cook and deliver. You pay them directly. Here's how, tap by tap.",
+   "captions": [
+    {
+     "start": 4.75,
+     "end": 7.25,
+     "text": "SETU Food lists approved campus stalls."
+    },
+    {
+     "start": 7.45,
+     "end": 10.65,
+     "text": "They cook and deliver.\nYou pay them directly."
+    },
+    {
+     "start": 10.85,
+     "end": 12.9,
+     "text": "Here's how, tap by tap."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "SETU SERVICES · WEB SIGN-IN PAGE",
+     "start": 5,
+     "end": 10.6,
+     "role": "source label (Space Mono, 60% white, above the panel)"
+    },
+    {
+     "text": "01  02  03  04  05  06  07  08",
+     "start": 10.9,
+     "end": 13,
+     "role": "chapter rail numbers (Space Mono)"
+    },
+    {
+     "text": "From sign-in to handover",
+     "start": 11,
+     "end": 12.95,
+     "role": "headline (Sora 700)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "desktop/01-signin-wide.png",
+     "start": 4.5,
+     "end": 11.25,
+     "treatment": "Crop to the left hero panel only (desktop CSS x14–792, y14–886; 2x source) as a floating rounded card — no browser chrome. s 0.90→1.02 drift on the headline, then push to s 1.6 on the stats mark; exits left."
+    },
+    {
+     "file": "MG: progress rail (8 segments, Space Mono 01–08) + kinetic headline — motion graphic",
+     "start": 10.85,
+     "end": 13,
+     "treatment": "Segments draw in left→right (0.07 s stagger); headline builds word by word; segment 01 begins filling orange."
+    }
+   ],
+   "uiState": "Web sign-in page, signed out — left hero panel: 'The campus, and only the campus.' with stats DELIVERY Campus only · COMMISSION None · PAYMENT Direct.",
+   "animation": "4.50–5.30 the web hero panel (desktop/01-signin-wide.png cropped to its left panel) rises y+120→0 + fade, expo.out 0.8 s, as a floating card at s = 0.90 (≈700×784 px) centred (960, 500), radius 28, deep shadow; source tag above its top-left. 4.75–7.25 slow drift s 0.90→1.02 toward the headline 'The campus, and only the campus.' (top of the lede mark). 7.25–8.05 camera tilts down and pushes to s = 1.6, focus = stats mark centre (402.8, 799.8 desktop CSS), power3.inOut. Orange 3 px underlines sweep (0.35 s each, power2.out) under the three stats while the other two dim to 70%: 7.90 'DELIVERY · Campus only' (≈ x 66–264), 8.70 'COMMISSION · None' (≈ x 326–414), 9.50 'PAYMENT · Direct' (≈ x 551–644). 10.65–11.25 card exits left (x −160 + fade, power2.in). 10.85–12.20 the progress rail draws in at top-left (segments stagger 0.07 s, Space Mono numbers 01–08 under them); 'From sign-in to handover' (Sora 700 64 px) builds word by word (0.12 s stagger) at (120, 420). 12.40–13.00 headline lifts and fades; segment 01 starts filling orange; the background glow migrates to the right third to receive the phone.",
+   "transitionIn": "The web panel rises as the hook elements leave (expo.out 0.8 s).",
+   "transitionOut": "Panel exits left; the progress rail builds and segment 01 starts filling; the glow moves right to receive the phone.",
+   "soundCues": [
+    {
+     "at": 4.5,
+     "cue": "Soft whoosh up (panel rises)"
+    },
+    {
+     "at": 7.9,
+     "cue": "Tick (Campus only)"
+    },
+    {
+     "at": 8.7,
+     "cue": "Tick (None)"
+    },
+    {
+     "at": 9.5,
+     "cue": "Tick (Direct)"
+    },
+    {
+     "at": 10.65,
+     "cue": "Whoosh out"
+    },
+    {
+     "at": 10.9,
+     "cue": "Eight micro-clicks as the rail builds"
+    },
+    {
+     "at": 12.6,
+     "cue": "Beat/pulse starts for the walkthrough (placeholder)"
+    }
+   ],
+   "accuracyNotes": "Real web sign-in page from the isolated demo, shown as a cropped card with no fake browser chrome; 'Campus only / None / Direct' are the page's own stats. Caption claims map to facts: approved stalls (UI 'Approved sellers'); the stall cooks and delivers (seller brings the order; food prep by the provider); you pay the stall directly. Delivery is always attributed to the stall, never to SETU. Don't push into the lede paragraph; the drift keeps the crest row near native size."
+  },
+  {
+   "id": "s03-signin",
+   "title": "01 · Sign in (password, or a one-time code)",
+   "start": 13,
+   "end": 26,
+   "narration": "Sign in with your institute email or mobile, plus your password. Or tap “Email me a one-time code instead”. Enter the code from your email, then tap “Verify and continue”.",
+   "captions": [
+    {
+     "start": 13.3,
+     "end": 17.7,
+     "text": "Sign in with your institute email\nor mobile, plus your password."
+    },
+    {
+     "start": 17.9,
+     "end": 21.2,
+     "text": "Or tap “Email me a one-time\ncode instead”."
+    },
+    {
+     "start": 21.4,
+     "end": 25.9,
+     "text": "Enter the code from your email,\nthen tap “Verify and continue”."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "01 / 08 · SIGN IN",
+     "start": 13,
+     "end": 26,
+     "role": "chapter tag"
+    },
+    {
+     "text": "Sign in",
+     "start": 13.1,
+     "end": 19,
+     "role": "headline"
+    },
+    {
+     "text": "“IIT KHARAGPUR CAMPUS ACCOUNTS ONLY”",
+     "start": 13.65,
+     "end": 15,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "MAIN WAY: PASSWORD",
+     "start": 16,
+     "end": 17.5,
+     "role": "callout label"
+    },
+    {
+     "text": "OR: A ONE-TIME CODE",
+     "start": 17.9,
+     "end": 19,
+     "role": "callout label"
+    },
+    {
+     "text": "DEMO · CODE SENT TO A LOCAL TEST INBOX",
+     "start": 18.7,
+     "end": 24.3,
+     "role": "demo label (corner tag, top-right)"
+    },
+    {
+     "text": "Check your email",
+     "start": 19,
+     "end": 23.9,
+     "role": "headline"
+    },
+    {
+     "text": "DEMO",
+     "start": 19.6,
+     "end": 24.1,
+     "role": "demo label (pill on the inbox card)"
+    },
+    {
+     "text": "“Set your delivery location”",
+     "start": 24.6,
+     "end": 25.95,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "UNTIL YOU PICK A SAVED ADDRESS",
+     "start": 24.8,
+     "end": 25.95,
+     "role": "callout label"
+    }
+   ],
+   "shots": [
+    {
+     "file": "signin/01-signin.png",
+     "start": 13,
+     "end": 14.65,
+     "treatment": "PHONE-R, s 0.92; ring on the campus-accounts pill; tap on id."
+    },
+    {
+     "file": "signin/02-type-email/",
+     "start": 14.65,
+     "end": 15.75,
+     "treatment": "31-frame typing sequence, evenly spaced."
+    },
+    {
+     "file": "signin/03-email-typed.png",
+     "start": 15.75,
+     "end": 18.7,
+     "treatment": "Hold; ring on Password (left empty); ring + tap on otpLink."
+    },
+    {
+     "file": "signin/04-enter-code.png",
+     "start": 18.7,
+     "end": 22,
+     "treatment": "Push-left in; ring on sentTo; DEMO corner tag on."
+    },
+    {
+     "file": "signin/email-otp.png",
+     "start": 19.6,
+     "end": 24.1,
+     "treatment": "MG DEMO inbox card built from the real email capture: crop CSS x12–378, y24–405 inside a white radius-24 card at ≈1.15×, left column; orange DEMO pill; no OS chrome; digits glow, then light-trails to the boxes; flies out left at 23.75."
+    },
+    {
+     "file": "signin/05-type-code/",
+     "start": 22,
+     "end": 23.1,
+     "treatment": "7-frame sequence (~0.16 s per digit), synced to the light-trails."
+    },
+    {
+     "file": "signin/06-code-entered.png",
+     "start": 23.1,
+     "end": 23.75,
+     "treatment": "Hold; ring on boxes; tap verify."
+    },
+    {
+     "file": "signin/07-home.png",
+     "start": 23.75,
+     "end": 26,
+     "treatment": "Push-left in; push s 0.92→1.25, focus (195, 300); rings on greeting and deliverTo."
+    }
+   ],
+   "uiState": "Signed out (Customer selected, IIT KHARAGPUR CAMPUS ACCOUNTS ONLY) → institute email typed → 'Enter the code' (sent to aa***@kgpian.iitkgp.ac.in, expires in 10 minutes) → six digits → signed in on a fresh device: Home 'Good evening, Aarav' with 'Set your delivery location · Tap to pick it on the map'.",
+   "animation": "PHONE-R. 13.00–13.60 phone slides in from the right (x+240→0, s 0.86→0.92, expo.out) on signin/01-signin; chapter tag + 'Sign in' headline reveal (y-mask, 0.5 s). 13.60–14.90 RING on the 'IIT KHARAGPUR CAMPUS ACCOUNTS ONLY' pill (unmarked: ≈ CSS x52–337, y165–190 — verify) + quote callout. 14.50 TAP id (195, 395.6) → 14.65–15.75 play signin/02-type-email (31 frames) → hold signin/03-email-typed. 15.95–17.40 RING on the Password field (signin/01-signin mark password: 16, 472.6, 358×48; same layout) + label — the field stays empty, no fake typing. 17.90–18.50 RING on otpLink (195, 598.6) + label; 18.55 TAP otpLink → 18.70–19.02 push-left to signin/04-enter-code; DEMO corner tag on (top-right, Space Mono 16 px, #EC5A2A 1.5 px outline pill). 19.10–20.40 RING on sentTo (195, 226.1); headline swaps to 'Check your email'. 19.60–20.30 DEMO inbox card slides in from the left (x−80→0 + fade, power3.out 0.6 s): a white radius-24 card with soft shadow framing the real email capture signin/email-otp.png cropped to CSS x12–378, y24–405 ('SETU Food' header → 'Never share this code. SETU staff will never ask you for it.'), shown at ≈1.15× in the left column (≈ x 160–580, y 330–770), orange 'DEMO' pill on its top-right corner; no OS notification chrome, no app icon. 21.40–22.00 a #0033DA glow passes left→right over the six digits on the card (code box ≈ email CSS y210–280). 22.00–23.10 play signin/05-type-code (7 frames ≈ 0.16 s each); as each box fills, a 1 px white light-trail arcs from the matching card digit to that box (0.25 s, power2.out). 23.10 hold signin/06-code-entered; RING on boxes (195, 304.1). 23.55 TAP verify (195, 392.1) → 23.75–24.10 push-left to signin/07-home; inbox card flies out left + fades (0.4 s); DEMO tag fades out by 24.30 (no DEMO label after this). 24.20–25.90 push s 0.92→1.25, focus (195, 300); RING on greeting (195, 92.4), then RING on deliverTo (170, 38.6) with quote + label. Keep the crest row of the sign-in screens at s ≤ 1.0.",
+   "transitionIn": "Phone slides in from the right on the sign-in screen; rail segment 01 fills.",
+   "transitionOut": "Holds on the fresh-device Home header; S4 goes back to the sign-in screen with a push-right.",
+   "soundCues": [
+    {
+     "at": 13,
+     "cue": "Whoosh in (phone)"
+    },
+    {
+     "at": 14.5,
+     "cue": "UI tap"
+    },
+    {
+     "at": 14.65,
+     "cue": "Light keyboard ticks (1.1 s)"
+    },
+    {
+     "at": 18.55,
+     "cue": "UI tap"
+    },
+    {
+     "at": 19.6,
+     "cue": "Soft notification ping (placeholder; not an OS sound)"
+    },
+    {
+     "at": 22,
+     "cue": "Six digit ticks"
+    },
+    {
+     "at": 23.55,
+     "cue": "UI tap"
+    },
+    {
+     "at": 23.8,
+     "cue": "Soft success chime"
+    }
+   ],
+   "accuracyNotes": "Password sign-in is the primary method and is said first; the emailed one-time code is the alternative. The code really was emailed to a local test inbox in the isolated demo, so DEMO labels stay on from 18.70 to 24.30 (corner tag + pill on the card) and are dropped after. The inbox card is a motion-graphic frame around signin/email-otp.png — no OS notification UI, no mail-app chrome. The card's digits and the typed digits come from the same final run (final run shows 686713) — never retype them. Keep the masked address as captured. Fresh-device Home reads 'Set your delivery location' until a saved address is picked. Keep the crest row of sign-in screens at s ≤ 1.0 and never isolate or enlarge the 75-years mark."
+  },
+  {
+   "id": "s04-new-account",
+   "title": "02 · New here? Create an account",
+   "start": 26,
+   "end": 34,
+   "narration": "New here? Tap “Create a Customer account” and fill in four fields. Then confirm your campus identity.",
+   "captions": [
+    {
+     "start": 26.25,
+     "end": 31.1,
+     "text": "New here? Tap “Create a Customer account”\nand fill in four fields."
+    },
+    {
+     "start": 31.3,
+     "end": 33.8,
+     "text": "Then confirm your campus identity."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "02 / 08 · NEW ACCOUNT",
+     "start": 26,
+     "end": 34,
+     "role": "chapter tag"
+    },
+    {
+     "text": "New here?",
+     "start": 26.1,
+     "end": 30.9,
+     "role": "headline"
+    },
+    {
+     "text": "“Create a Customer account”",
+     "start": 26.5,
+     "end": 27.4,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "“The seller calls this number at handover.”",
+     "start": 29.2,
+     "end": 30.8,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "Confirm your campus identity",
+     "start": 31,
+     "end": 33.9,
+     "role": "headline (UI quote)"
+    },
+    {
+     "text": "4 QUICK STEPS",
+     "start": 31.3,
+     "end": 32.6,
+     "role": "callout label"
+    }
+   ],
+   "shots": [
+    {
+     "file": "onboarding/01-signin.png",
+     "start": 26,
+     "end": 27.4,
+     "treatment": "Push-right (back) in; push s 1.35, focus (195, 600); ring + tap on createAccount."
+    },
+    {
+     "file": "onboarding/02-signup-empty.png",
+     "start": 27.4,
+     "end": 27.85,
+     "treatment": "Push-left in; s 1.3, focus (195, 480); tap name."
+    },
+    {
+     "file": "onboarding/03-type-name/",
+     "start": 27.85,
+     "end": 28.3,
+     "treatment": "12-frame typing."
+    },
+    {
+     "file": "onboarding/04-type-email/",
+     "start": 28.3,
+     "end": 29.1,
+     "treatment": "31-frame typing."
+    },
+    {
+     "file": "onboarding/05-type-phone/",
+     "start": 29.1,
+     "end": 29.55,
+     "treatment": "11-frame typing; handover-phone callout."
+    },
+    {
+     "file": "onboarding/06-type-password/",
+     "start": 29.55,
+     "end": 30.1,
+     "treatment": "14-frame typing (masked dots)."
+    },
+    {
+     "file": "onboarding/07-signup-filled.png",
+     "start": 30.1,
+     "end": 30.9,
+     "treatment": "Hold; ring + tap on submit."
+    },
+    {
+     "file": "onboarding/10-step1-identity.png",
+     "start": 30.9,
+     "end": 33.6,
+     "treatment": "Push-left in, ease back to s 0.92; rings on stepper and prefilled fields; tap cont."
+    },
+    {
+     "file": "onboarding/21-step2-prompt.png",
+     "start": 33.6,
+     "end": 34,
+     "treatment": "Push-left in (continues into S5)."
+    }
+   ],
+   "uiState": "New customer: sign-in screen with the create-account card → 'Create your Customer account' (Name, Institute email, Phone, Password) → account created → onboarding Step 1 of 4 'Confirm your campus identity' with details prefilled.",
+   "animation": "PHONE-R. 26.00–26.35 push-right ('back') from signin/07-home to onboarding/01-signin while s eases 1.25→0.92; rail → 02; chapter tag + 'New here?' headline. 26.40–27.20 push s 0.92→1.35, focus (195, 600); RING on createAccount (195, 733.8) + quote callout. 27.25 TAP createAccount → 27.40 push-left to onboarding/02-signup-empty; camera to s 1.3, focus (195, 480). 27.75 TAP name (195, 357.5) → 27.85–28.30 onboarding/03-type-name (12 frames) → 28.30–29.10 onboarding/04-type-email (31 frames) → 29.10–29.55 onboarding/05-type-phone (11 frames) → 29.55–30.10 onboarding/06-type-password (14 frames, masked dots). 29.20–30.80 quote callout with a leader to the helper line under Phone (unmarked, ≈ CSS y 553). 30.10 hold onboarding/07-signup-filled; 30.20–30.75 RING on submit (195, 701.5); 30.75 TAP → 30.90–31.25 push-left to onboarding/10-step1-identity while the camera eases back to s 0.92, focus (195, 422). 31.30–32.60 RING on the 1-2-3-4 stepper (unmarked, ≈ CSS x16–372, y58–88) + '4 QUICK STEPS'; headline swaps to 'Confirm your campus identity' (Sora 56 px, two lines). 32.60–33.40 soft RING around the three prefilled fields (≈ CSS y300–600). 33.45 TAP cont (195, 778.7) → 33.60–33.92 push-left to onboarding/21-step2-prompt.",
+   "transitionIn": "Push-right (back) from Home to the sign-in screen; rail → 02; 'New here?' headline.",
+   "transitionOut": "Tap Continue on Step 1 → push-left into Step 2, which carries straight into S5.",
+   "soundCues": [
+    {
+     "at": 26,
+     "cue": "Whoosh (back)"
+    },
+    {
+     "at": 27.25,
+     "cue": "UI tap"
+    },
+    {
+     "at": 27.85,
+     "cue": "Keyboard ticks (2.25 s)"
+    },
+    {
+     "at": 30.75,
+     "cue": "UI tap"
+    },
+    {
+     "at": 33.45,
+     "cue": "UI tap"
+    }
+   ],
+   "accuracyNotes": "Exactly four fields — Name, Institute email, Phone, Password — then 'Create account'. 'The seller calls this number at handover.' is the form's own helper text. The persona (Aarav Mehta, aarav.demo@kgpian.iitkgp.ac.in, 9000012345) is demo data, not a real person. Onboarding has four steps ('Step 1 of 4'). Password typing shows masked dots only."
+  },
+  {
+   "id": "s05-location",
+   "title": "03 · Set your delivery spot",
+   "start": 34,
+   "end": 48,
+   "narration": "Set your delivery spot: search a hall or area, or use your location. SETU checks it's inside the campus delivery area. Adjust the pin, save it as Home, add your room, and confirm.",
+   "captions": [
+    {
+     "start": 34.25,
+     "end": 39.45,
+     "text": "Set your delivery spot: search a hall\nor area, or use your location."
+    },
+    {
+     "start": 39.65,
+     "end": 42.9,
+     "text": "SETU checks it's inside the\ncampus delivery area."
+    },
+    {
+     "start": 43.1,
+     "end": 47.9,
+     "text": "Adjust the pin, save it as Home,\nadd your room, and confirm."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "03 / 08 · DELIVERY SPOT",
+     "start": 34,
+     "end": 48,
+     "role": "chapter tag"
+    },
+    {
+     "text": "Where should orders arrive?",
+     "start": 34.1,
+     "end": 47.9,
+     "role": "headline (UI quote)"
+    },
+    {
+     "text": "OPTIONAL",
+     "start": 35.3,
+     "end": 36.8,
+     "role": "callout label (on the inset)"
+    },
+    {
+     "text": "“It is only read when you ask for it.”",
+     "start": 35.5,
+     "end": 36.8,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "“Location is within the IIT Kharagpur delivery area.”",
+     "start": 40.1,
+     "end": 42.85,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "INSIDE THE CAMPUS BOUNDARY",
+     "start": 40.6,
+     "end": 42.85,
+     "role": "label (on the MG outline)"
+    },
+    {
+     "text": "OFF-CAMPUS POINTS ARE REFUSED",
+     "start": 41.4,
+     "end": 42.85,
+     "role": "label (small, 60% white)"
+    },
+    {
+     "text": "“Move the pin to the exact spot”",
+     "start": 43.2,
+     "end": 44.7,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "SAVE AS HOME",
+     "start": 45.1,
+     "end": 46.1,
+     "role": "callout label"
+    },
+    {
+     "text": "SAVED: HOME · B-212",
+     "start": 47.05,
+     "end": 48,
+     "role": "callout label"
+    }
+   ],
+   "shots": [
+    {
+     "file": "onboarding/21-step2-prompt.png",
+     "start": 34,
+     "end": 36.95,
+     "treatment": "PHONE-R s 0.92; rings on box and gps; tap box."
+    },
+    {
+     "file": "location/01-allow-dialog.png",
+     "start": 35.3,
+     "end": 36.8,
+     "treatment": "INSET: crop to the white dialog card only (≈ CSS x20–370, y276–568) at ≈0.85× in the left column, labelled OPTIONAL; no tap."
+    },
+    {
+     "file": "location/10-picker-select.png",
+     "start": 36.95,
+     "end": 37.55,
+     "treatment": "Bottom-up wipe in; tap search."
+    },
+    {
+     "file": "location/11-type-search/",
+     "start": 37.55,
+     "end": 38.8,
+     "treatment": "11 frames ('Nehru Hall'); f0000 enters with crossfade + 40 px upward slide (sheet expands)."
+    },
+    {
+     "file": "location/12-search-results.png",
+     "start": 38.8,
+     "end": 39.65,
+     "treatment": "Ring + tap on first."
+    },
+    {
+     "file": "location/13-confirm-search.png",
+     "start": 39.65,
+     "end": 43.25,
+     "treatment": "Crossfade in; push s 1.5, focus (201, 470); ring on zoneOk; pull back; tap adjust."
+    },
+    {
+     "file": "MG: campus boundary outline (real polygon) + chosen-spot dot at the on-screen coordinates 22.319759, 87.298041 — motion graphic",
+     "start": 40.2,
+     "end": 45.2,
+     "treatment": "Left column, ≈380 px tall; draw-on 0.5 s; orange dot drop + one green pulse; glows in sync with the map pin."
+    },
+    {
+     "file": "location/20-map.png",
+     "start": 43.25,
+     "end": 44.8,
+     "treatment": "Push-left in; push s 1.8, focus (195, 575) (pin, Use my location, selected-location card, Use this location; Google attribution in frame); pulse rings on the pin; tap useThis."
+    },
+    {
+     "file": "location/14-type-room/",
+     "start": 44.8,
+     "end": 46.05,
+     "treatment": "Push-right in on f0000 (Home already selected — ring, no tap), hold to 45.55, then frames 1–5 ('B-212')."
+    },
+    {
+     "file": "location/15-confirm-home.png",
+     "start": 46.05,
+     "end": 46.65,
+     "treatment": "Hold; ring on details; tap confirm."
+    },
+    {
+     "file": "onboarding/23-step2-done.png",
+     "start": 46.65,
+     "end": 48,
+     "treatment": "Top-down wipe in (sheet dismisses); rings on box and room."
+    }
+   ],
+   "uiState": "Onboarding Step 2 of 4 'Where should orders arrive?' → 'Select a location' picker → search 'Nehru Hall' → 'Confirm delivery location' (within the IIT Kharagpur delivery area) → map 'Select delivery location' → saved as Home with 'B-212' → step 2 complete.",
+   "animation": "PHONE-R. 34.00–34.40 rail → 03; headline 'Where should orders arrive?' (Sora 64 px, two lines, y-mask reveal), held through the scene. 34.40–35.40 RINGs on box (16, 309.7, 358×104) then gps (16, 441.7, 358×66). 35.30–36.80 INSET under the headline: crop of location/01-allow-dialog.png — the white dialog card only (≈ CSS x20–370, y276–568; verify) — at ≈0.85× (scale 0.94→1, back.out(1.2), 0.35 s) with an 'OPTIONAL' label and an orange underline under its line 'It is only read when you ask for it.'; exits 36.60–36.80 (fade + 12 px drop); no tap on the inset. 36.85 TAP box (195, 361.7) → 36.95–37.30 bottom-up wipe to location/10-picker-select. 37.45 TAP search (208.5, 659) → 37.55–37.85 crossfade + 40 px upward slide into location/11-type-search (f0000 = sheet expanded, field focused); frames continue to 38.80 ('Nehru Hall'). 38.80 location/12-search-results; RING on first (195, 240.6). 39.55 TAP first → 39.65–39.95 crossfade to location/13-confirm-search. 40.00–40.90 push s 0.92→1.5, focus (201, 470); RING on zoneOk (201, 477.5) + a Lucide check badge (#16A34A) at its left + quote callout. 40.20–42.80 MG in the left column: the campus outline (real polygon, ≈380 px tall) draws on in 0.5 s; a #EC5A2A dot drops onto the chosen spot's real projected position (22.319759, 87.298041) with one soft green pulse; labels fade in. 42.90–43.15 pull back to s 0.92. 43.15 TAP adjust (205.5, 708) → 43.25–43.55 push-left to location/20-map. 43.60–44.60 push s 0.92→1.8, focus (195, 575) — frames the map's lower half with the red pin (unmarked, ≈ CSS (195, 438)), 'Use my location', the selected-location card and 'Use this location', and keeps the sheet subtitle out of frame; two concentric pulse rings around the pin (1.0 s); the left MG outline glows in sync; Google attribution stays in frame. 44.70 TAP useThis (277.8, 806) → 44.80–45.15 pull back to s 0.92 + push-right to location/14-type-room (f0000 already shows Home selected: RING on the Home chip ≈ CSS (63, 563), no tap). 45.55–46.05 remaining 14-type-room frames ('B-212' into Address details, mark details (195, 644)). 46.05 hold location/15-confirm-home; RING on details. 46.55 TAP confirm (276.8, 806) → 46.65–47.00 top-down wipe (sheet dismisses) to onboarding/23-step2-done. 47.05–48.00 RINGs on box (195, 361.7) and room (195, 576.7) + label.",
+   "transitionIn": "Continuous with S4's push-left into Step 2; rail → 03.",
+   "transitionOut": "Step 2 shows the saved Home address; S6 opens with the Continue tap.",
+   "soundCues": [
+    {
+     "at": 36.85,
+     "cue": "UI tap"
+    },
+    {
+     "at": 36.95,
+     "cue": "Sheet swoosh"
+    },
+    {
+     "at": 37.45,
+     "cue": "UI tap"
+    },
+    {
+     "at": 37.85,
+     "cue": "Keyboard ticks"
+    },
+    {
+     "at": 39.55,
+     "cue": "UI tap"
+    },
+    {
+     "at": 40.2,
+     "cue": "Soft map ping"
+    },
+    {
+     "at": 43.15,
+     "cue": "UI tap"
+    },
+    {
+     "at": 44.7,
+     "cue": "UI tap"
+    },
+    {
+     "at": 45.55,
+     "cue": "Keyboard ticks"
+    },
+    {
+     "at": 46.55,
+     "cue": "UI tap"
+    },
+    {
+     "at": 47.05,
+     "cue": "Soft success tick"
+    }
+   ],
+   "accuracyNotes": "GPS is optional: the inset is the app's own permission explainer (not the OS prompt) and is labelled OPTIONAL; search is the path demonstrated, so never imply location detection always works. The in-zone line is real app output; the off-campus refusal is only stated as a label (not captured, never faked). Don't highlight or push into the app's own 'delivers inside the campus' wording in the step-2 body and the picker/map subtitles — the map push-in (focus y 575 at s 1.8) keeps that subtitle out of frame. Google attribution stays visible whenever the map is on screen. The MG dot uses the coordinates shown on screen (22.319759, 87.298041)."
+  },
+  {
+   "id": "s06-picks",
+   "title": "04 · Your picks, and what SETU doesn't do",
+   "start": 48,
+   "end": 56.5,
+   "narration": "Pick cuisines you like. Those stalls show up first. Read what SETU doesn't do, confirm, and tap “Start ordering”.",
+   "captions": [
+    {
+     "start": 48.25,
+     "end": 51.9,
+     "text": "Pick cuisines you like.\nThose stalls show up first."
+    },
+    {
+     "start": 52.1,
+     "end": 56.3,
+     "text": "Read what SETU doesn't do, confirm,\nand tap “Start ordering”."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "04 / 08 · YOUR PICKS",
+     "start": 48,
+     "end": 56.5,
+     "role": "chapter tag"
+    },
+    {
+     "text": "What should we show first?",
+     "start": 48.2,
+     "end": 51.9,
+     "role": "headline (UI quote)"
+    },
+    {
+     "text": "“Stalls serving these move to the top of the home page.”",
+     "start": 49.6,
+     "end": 51.8,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "Three things SETU does not do",
+     "start": 52.2,
+     "end": 55.3,
+     "role": "headline (UI quote)"
+    },
+    {
+     "text": "“SETU never takes your money”",
+     "start": 52.4,
+     "end": 55.3,
+     "role": "kinetic list (UI quote)"
+    },
+    {
+     "text": "“SETU does not deliver”",
+     "start": 53.1,
+     "end": 55.3,
+     "role": "kinetic list (UI quote)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "onboarding/23-step2-done.png",
+     "start": 48,
+     "end": 48.15,
+     "treatment": "Tap cont."
+    },
+    {
+     "file": "onboarding/30-step3.png",
+     "start": 48.15,
+     "end": 49.25,
+     "treatment": "Push-left in; three chip taps."
+    },
+    {
+     "file": "onboarding/31-step3-picked.png",
+     "start": 49.25,
+     "end": 52,
+     "treatment": "Crossfade in; push s 1.3, focus (195, 470); pull back."
+    },
+    {
+     "file": "onboarding/40-step4.png",
+     "start": 52,
+     "end": 54.35,
+     "treatment": "Push-left in; rings on fact1, fact2 and fact3's heading only; tap the ack label."
+    },
+    {
+     "file": "onboarding/41-step4-ack.png",
+     "start": 54.35,
+     "end": 55.3,
+     "treatment": "Crossfade in; ring on the label + switch row; tap start."
+    },
+    {
+     "file": "home/01-first-home.png",
+     "start": 55.3,
+     "end": 56.5,
+     "treatment": "Push-left in; ring on deliverTo."
+    }
+   ],
+   "uiState": "Step 3 of 4 (South Indian, Street Food, Chinese picked) → Step 4 of 4 'Three things SETU does not do' with the acknowledgement toggle on → 'Start ordering' → Home showing 'Home · Room B-212 · Nehru Hall of Residence'.",
+   "animation": "PHONE-R. 48.05 TAP cont (255.8, 757.7) on onboarding/23-step2-done → 48.15–48.45 push-left to onboarding/30-step3; rail → 04; headline 'What should we show first?'. 48.70 / 48.95 / 49.20 TAPs on chips: South Indian (mark southIndian 148.4, 584.7), Street Food (unmarked ≈ 259, 585), Chinese (unmarked ≈ 128, 413); 49.25 crossfade to onboarding/31-step3-picked (the three chips turn dark); RING on southIndian. 49.50–51.80 push s 0.92→1.3, focus (195, 470) over the chip cloud; quote callout of the step's subtitle. 51.80–52.15 pull back + push-left to onboarding/40-step4 (step 3's Continue is below the captured viewport, so cut on the chip result — no fake tap). 52.20 headline swaps to 'Three things SETU does not do'. Kinetic list in the left column (Sora 600 40 px; each line x+24→0 + fade 0.35 s): 52.40 'SETU never takes your money' with RING on fact1 (221, 280.2); 53.10 'SETU does not deliver' with RING on fact2 (221, 395.2); 53.80 RING on fact3's heading line only (221, 493.2) — no kinetic copy, no push-in. 54.25 TAP the ack label (191, 616.7) → 54.35 crossfade to onboarding/41-step4-ack; RING hugging only the label + switch row (≈ CSS x16–372, y598–652; switch ≈ (336, 635)). 55.15 TAP start (255.8, 742.7) → 55.30–55.65 push-left to home/01-first-home. 55.70–56.50 RING on deliverTo (170, 38.6).",
+   "transitionIn": "Tap Continue → push-left to Step 3; rail → 04.",
+   "transitionOut": "Tap 'Start ordering' → push-left to Home, which carries into S7.",
+   "soundCues": [
+    {
+     "at": 48.05,
+     "cue": "UI tap"
+    },
+    {
+     "at": 48.7,
+     "cue": "Three quick chip taps"
+    },
+    {
+     "at": 52.4,
+     "cue": "Soft low hit per fact line (×2)"
+    },
+    {
+     "at": 54.25,
+     "cue": "Toggle click"
+    },
+    {
+     "at": 55.15,
+     "cue": "UI tap"
+    },
+    {
+     "at": 55.7,
+     "cue": "Soft success tick"
+    }
+   ],
+   "accuracyNotes": "Don't push into or highlight fact 3's body text (about licence checks) or the small-print line under the acknowledgement toggle; the video must not claim the acknowledgement is stored or make any blanket licence claim. Kinetic lines quote the two fact headings exactly. Step 3's Continue is below the captured viewport, so no tap is shown on it. Don't draw attention to the notifications toggle."
+  },
+  {
+   "id": "s07-find-add",
+   "title": "05 · Find a dish and add it",
+   "start": 56.5,
+   "end": 69,
+   "narration": "Home shows approved sellers open now. Craving dosa? Search it, open the stall, and tap ADD. ADD becomes a counter. Want two coffees? Tap plus. Ready? Tap “View cart”.",
+   "captions": [
+    {
+     "start": 56.75,
+     "end": 59.15,
+     "text": "Home shows approved sellers open now."
+    },
+    {
+     "start": 59.35,
+     "end": 63.35,
+     "text": "Craving dosa? Search it,\nopen the stall, and tap ADD."
+    },
+    {
+     "start": 63.55,
+     "end": 67.15,
+     "text": "ADD becomes a counter.\nWant two coffees? Tap plus."
+    },
+    {
+     "start": 67.35,
+     "end": 68.95,
+     "text": "Ready? Tap “View cart”."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "05 / 08 · FIND & ADD",
+     "start": 56.5,
+     "end": 69,
+     "role": "chapter tag"
+    },
+    {
+     "text": "“13 open now”",
+     "start": 56.95,
+     "end": 58.2,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "DEMO ENVIRONMENT · SAMPLE STALLS",
+     "start": 57.2,
+     "end": 61.4,
+     "role": "demo note (Space Mono, top-right)"
+    },
+    {
+     "text": "PURE VEG ON · 5 OPEN NOW",
+     "start": 58.45,
+     "end": 59.5,
+     "role": "callout label"
+    },
+    {
+     "text": "Masala Dosa ₹80",
+     "start": 60.5,
+     "end": 62.4,
+     "role": "kinetic dish (real menu item)"
+    },
+    {
+     "text": "Ghee Roast Dosa ₹110",
+     "start": 60.75,
+     "end": 62.4,
+     "role": "kinetic dish (real menu item)"
+    },
+    {
+     "text": "“Approved by SETU · you pay the seller directly”",
+     "start": 62,
+     "end": 63.4,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "× 2",
+     "start": 64.65,
+     "end": 65.6,
+     "role": "kinetic"
+    },
+    {
+     "text": "ONE ORDER · ONE STALL",
+     "start": 65.5,
+     "end": 67.3,
+     "role": "callout label"
+    }
+   ],
+   "shots": [
+    {
+     "file": "home/02-home.png",
+     "start": 56.5,
+     "end": 58.35,
+     "treatment": "Crossfade in from first-home; ring on the heading row; tap Pure veg."
+    },
+    {
+     "file": "home/05-pure-veg.png",
+     "start": 58.35,
+     "end": 59.5,
+     "treatment": "Crossfade in; ring on the heading row ('5 open now'); tap search."
+    },
+    {
+     "file": "search/01-search-empty.png",
+     "start": 59.5,
+     "end": 59.85,
+     "treatment": "Push-left in; ring on field."
+    },
+    {
+     "file": "search/02-type-dosa/",
+     "start": 59.85,
+     "end": 60.3,
+     "treatment": "5-frame typing ('dosa')."
+    },
+    {
+     "file": "search/03-results.png",
+     "start": 60.3,
+     "end": 61.65,
+     "treatment": "Push s 1.35, focus (195, 240); ring on hit; kinetic dish lines lift out; tap stall."
+    },
+    {
+     "file": "stall/01-stall.png",
+     "start": 61.65,
+     "end": 62.95,
+     "treatment": "Push-left in, back to s 0.92; ring on trust; tap dosaAdd."
+    },
+    {
+     "file": "stall/02-dosa-added.png",
+     "start": 62.95,
+     "end": 64.1,
+     "treatment": "Crossfade in; push s 1.5, focus (250, 560); ring on stepper."
+    },
+    {
+     "file": "stall/04-coffee.png",
+     "start": 64.1,
+     "end": 64.55,
+     "treatment": "Invisible crossfade (same state) at s 1.25, focus (220, 480); tap coffeeAdd."
+    },
+    {
+     "file": "stall/05-coffee-two.png",
+     "start": 64.55,
+     "end": 69,
+     "treatment": "Crossfade in; ring on plus + '× 2'; back to s 0.92; ring + tap on viewCart; the pill-expand mask opens over it from 68.35."
+    },
+    {
+     "file": "cart/01-cart.png",
+     "start": 68.35,
+     "end": 69,
+     "treatment": "Revealed inside the #0033DA rounded rect that grows from the View cart pill to full screen (power3.inOut 0.55 s)."
+    }
+   ],
+   "uiState": "Home ('Approved sellers · 13 open now') → Pure veg filter ('5 open now') → search 'dosa' → Southside Tiffins (Approved by SETU · you pay the seller directly) → Masala Dosa ×1 and Filter Coffee ×2 added; 'View cart' pill showing.",
+   "animation": "PHONE-R. 56.50–56.70 crossfade home/01-first-home → home/02-home; rail → 05. 56.90–58.10 RING on the heading row (heading mark widened to x 372 to include '13 open now') + quote callout. 57.20 DEMO note (Space Mono 16 px, 70% white) fades in at top-right; holds to 61.40. 58.20 TAP the Pure veg chip (home/05-pure-veg mark chip: 67.3, 345.4) → 58.35 crossfade to home/05-pure-veg; RING on the heading row ('5 open now') + label. 59.40 TAP search (195, 152.1) → 59.50–59.80 push-left to search/01-search-empty; RING on field (234, 38). 59.85–60.30 search/02-type-dosa (5 frames). 60.30 search/03-results: push s 0.92→1.35, focus (195, 240); RING on hit (238.7, 268.5); kinetic 'Masala Dosa ₹80' (Sora 700 64 px) and 'Ghee Roast Dosa ₹110' (48 px) lift out of the result rows toward the left column (blur 6→0, 0.5 s power3.out; prices #EC5A2A), hold, fade by 62.40. 61.55 TAP stall (195, 220.5) → 61.65–62.00 push-left to stall/01-stall, camera back to s 0.92. 62.00–63.40 RING on trust (195, 180) + quote callout. 62.85 TAP dosaAdd (299, 611) → 62.95 crossfade to stall/02-dosa-added. 63.15–64.00 push s 0.92→1.5, focus (250, 560); RING on stepper (299, 611). 64.00–64.20 ease to s 1.25, focus (220, 480); invisible crossfade to stall/04-coffee (same state). 64.30 TAP coffeeAdd (299, 362) → 64.55 crossfade to stall/05-coffee-two; 64.70 RING on plus (327, 362) — a highlight, not a tap (no capture of the '1' state) — with kinetic '× 2' (Sora 600 40 px, #EC5A2A) popping beside it (back.out(1.4), 0.3 s). 65.40 camera back to s 0.92. 65.50–67.30 label beside the View cart pill. 67.35–68.20 RING on viewCart (195, 817); 68.20 TAP → 68.35–69.00 MG transition: a #0033DA rounded rect grows from the pill's bounds to the full screen (power3.inOut 0.55 s), revealing cart/01-cart inside it as it opens.",
+   "transitionIn": "Crossfade from the first Home to Home; rail → 05.",
+   "transitionOut": "The 'View cart' pill expands into the cart (action → result).",
+   "soundCues": [
+    {
+     "at": 58.2,
+     "cue": "UI tap"
+    },
+    {
+     "at": 59.4,
+     "cue": "UI tap"
+    },
+    {
+     "at": 59.85,
+     "cue": "Keyboard ticks"
+    },
+    {
+     "at": 60.5,
+     "cue": "Warm swell under the dish names"
+    },
+    {
+     "at": 61.55,
+     "cue": "UI tap"
+    },
+    {
+     "at": 62.85,
+     "cue": "UI tap + soft pop (stepper)"
+    },
+    {
+     "at": 64.3,
+     "cue": "UI tap"
+    },
+    {
+     "at": 64.65,
+     "cue": "Pop (× 2)"
+    },
+    {
+     "at": 68.2,
+     "cue": "UI tap + whoosh (pill expands)"
+    }
+   ],
+   "accuracyNotes": "'13 open now' and '5 open now' are the counts in the final captures (verify on the files). 'DEMO ENVIRONMENT · SAMPLE STALLS' is the walkthrough's one honest disclosure (repeated in the end-card fine print). The cards' '20 min' gets no callout and is never presented as a delivery time. One order = one stall (adding from another stall replaces the cart) — shown as a label only. There is no capture of the coffee stepper at 1, so the + gets a ring after the cut rather than a staged tap."
+  },
+  {
+   "id": "s08-cart",
+   "title": "06 · Check the cart",
+   "start": 69,
+   "end": 77,
+   "narration": "Check the total: food, plus the stall's own delivery charge. No SETU fee, no commission. Tap “Review order”.",
+   "captions": [
+    {
+     "start": 69.25,
+     "end": 73.25,
+     "text": "Check the total: food, plus the\nstall's own delivery charge."
+    },
+    {
+     "start": 73.45,
+     "end": 76.85,
+     "text": "No SETU fee, no commission.\nTap “Review order”."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "06 / 08 · CART",
+     "start": 69,
+     "end": 77,
+     "role": "chapter tag"
+    },
+    {
+     "text": "₹80 + ₹60 = ₹140",
+     "start": 70.6,
+     "end": 76.2,
+     "role": "kinetic math (values from the screen)"
+    },
+    {
+     "text": "+ ₹10 seller delivery charge",
+     "start": 71.4,
+     "end": 76.2,
+     "role": "kinetic math"
+    },
+    {
+     "text": "= ₹150 payable to the seller",
+     "start": 72.2,
+     "end": 76.2,
+     "role": "kinetic math"
+    },
+    {
+     "text": "“Set by the seller, collected by the seller”",
+     "start": 71.45,
+     "end": 72.6,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "EACH STALL SETS ITS OWN",
+     "start": 71.6,
+     "end": 72.8,
+     "role": "callout label"
+    },
+    {
+     "text": "“SETU does not process this payment and is not the merchant of record.”",
+     "start": 73.5,
+     "end": 75.2,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "₹150",
+     "start": 76.45,
+     "end": 77,
+     "role": "kinetic transition number"
+    }
+   ],
+   "shots": [
+    {
+     "file": "cart/01-cart.png",
+     "start": 69,
+     "end": 76.85,
+     "treatment": "PHONE-R; ring on lines; push s 1.55, focus (195, 560) on totals; rings on fee and payable; focus (195, 690) at s 1.4 for the payment note; pull back; ring + tap on review."
+    },
+    {
+     "file": "checkout/01-confirm-cash.png",
+     "start": 76.7,
+     "end": 77,
+     "treatment": "Push-left incoming as the kinetic ₹150 arcs toward it."
+    }
+   ],
+   "uiState": "Cart 'Your order · Southside Tiffins': Masala Dosa ×1 ₹80, Filter Coffee ×2 ₹60; Deliver to Home · Room B-212 · Aarav Mehta; Item total ₹140; Seller delivery charge ₹10 (set by the seller, collected by the seller); Payable to seller ₹150.",
+   "animation": "PHONE-R. 69.00–69.35 the pill mask completes and cart/01-cart settles; rail → 06. 69.40–70.30 RING on lines (195, 186.3). 70.30–71.10 camera tilts down + push s 0.92→1.55, focus (195, 560) on the totals. Kinetic math in the left column (Space Mono 34 px white, each line types on in 0.35 s; values exactly as on screen): 70.60 '₹80 + ₹60 = ₹140', 71.40 '+ ₹10 seller delivery charge', 72.20 '= ₹150 payable to the seller' (₹150 in #EC5A2A). 71.40–72.60 RING on fee (175.9, 531.8) + quote callout + label (callouts at x 520–980, leader to the row). 72.30–73.40 RING on payable (167.2, 619.3). 73.45–75.20 ease focus to (195, 690), s 1.4; RING on the payment note (unmarked, ≈ CSS x18–372, y690–785; verify) + quote callout. 75.20–75.70 pull back to s 0.92. 75.80 RING on review (257.9, 806); 76.30 TAP → 76.45–77.00 the '₹150' of the payable row lifts as a Sora 700 kinetic number (white → #EC5A2A) and arcs up-left; push-left to checkout/01-confirm-cash starts at 76.70.",
+   "transitionIn": "The expanding pill mask reveals the cart; rail → 06.",
+   "transitionOut": "The ₹150 payable lifts and arcs into the Confirm order screen's amount card (cart total → checkout amount).",
+   "soundCues": [
+    {
+     "at": 69,
+     "cue": "Soft land"
+    },
+    {
+     "at": 70.6,
+     "cue": "Type tick (math line 1)"
+    },
+    {
+     "at": 71.4,
+     "cue": "Type tick (math line 2)"
+    },
+    {
+     "at": 72.2,
+     "cue": "Type tick + soft chime (= ₹150)"
+    },
+    {
+     "at": 76.3,
+     "cue": "UI tap"
+    },
+    {
+     "at": 76.45,
+     "cue": "Swoosh (number flies)"
+    }
+   ],
+   "accuracyNotes": "Total = items + the stall's own delivery charge (₹140 + ₹10 = ₹150); SETU adds no platform fee or commission. The delivery charge is set by each stall (0–500; the row is hidden when 0), so ₹10 must not be presented as standard, and no wording may suggest the order costs nothing or that the charge is small. No comparisons with other platforms."
+  },
+  {
+   "id": "s09-pay",
+   "title": "07 · Pay the stall directly (cash or the stall's QR)",
+   "start": 77,
+   "end": 89,
+   "narration": "Cash on delivery, or the stall's own QR once it accepts. For QR: scan, pay, tap “I've paid”. The stall confirms. Either way, you pay the stall directly.",
+   "captions": [
+    {
+     "start": 77.25,
+     "end": 81.65,
+     "text": "Cash on delivery, or the stall's\nown QR once it accepts."
+    },
+    {
+     "start": 81.85,
+     "end": 85.85,
+     "text": "For QR: scan, pay, tap “I've paid”.\nThe stall confirms."
+    },
+    {
+     "start": 86.05,
+     "end": 88.9,
+     "text": "Either way, you pay the stall directly."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "07 / 08 · PAY",
+     "start": 77,
+     "end": 89,
+     "role": "chapter tag"
+    },
+    {
+     "text": "How will you pay?",
+     "start": 77.1,
+     "end": 81,
+     "role": "headline (UI quote)"
+    },
+    {
+     "text": "“SETU does not collect this.”",
+     "start": 77.35,
+     "end": 78.4,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "“Hand ₹150 to the seller at your door.”",
+     "start": 78.45,
+     "end": 79.5,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "“Southside Tiffins's QR appears here once they accept.”",
+     "start": 79.75,
+     "end": 80.95,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "IF YOU PICK QR",
+     "start": 81.1,
+     "end": 85.9,
+     "role": "label (above the second phone)"
+    },
+    {
+     "text": "DEMO QR · NOT A REAL PAYMENT CODE",
+     "start": 81.9,
+     "end": 85.9,
+     "role": "demo label"
+    },
+    {
+     "text": "5-MINUTE WINDOW",
+     "start": 82.3,
+     "end": 83.4,
+     "role": "callout label"
+    },
+    {
+     "text": "PAYMENT: DIRECT",
+     "start": 86.6,
+     "end": 88.9,
+     "role": "kinetic label (callback to the web panel stat)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "checkout/01-confirm-cash.png",
+     "start": 77,
+     "end": 79.65,
+     "treatment": "PHONE-R; ₹150 docks onto the amount card; rings on the dark card and cash; tap qr."
+    },
+    {
+     "file": "checkout/02-confirm-qr.png",
+     "start": 79.65,
+     "end": 86.4,
+     "treatment": "Crossfade in; ring on qr; slides to PHONE-L (s 0.80) during the split; returns to PHONE-R; tap cash."
+    },
+    {
+     "file": "order-qr/01-placed.png",
+     "start": 81.1,
+     "end": 81.8,
+     "treatment": "Second phone (PHONE-R2, s 0.80) enters from the right; ring on qrCard."
+    },
+    {
+     "file": "order-qr/02-pay-qr.png",
+     "start": 81.8,
+     "end": 83.45,
+     "treatment": "Crossfade in; rings on qrImg (+ DEMO QR tag) and timer; tap paid."
+    },
+    {
+     "file": "order-qr/04-payment-review.png",
+     "start": 83.45,
+     "end": 84.75,
+     "treatment": "Crossfade in; ring on headline."
+    },
+    {
+     "file": "order-qr/05-payment-confirmed.png",
+     "start": 84.75,
+     "end": 86.3,
+     "treatment": "Crossfade in; ring on qrCard + soft green glow; second phone exits right."
+    },
+    {
+     "file": "order-cash/00-confirm.png",
+     "start": 86.4,
+     "end": 89,
+     "treatment": "Crossfade in (cash selected); ring on the amount card; glow on Place order."
+    }
+   ],
+   "uiState": "'Confirm order' — 'Amount payable to the seller ₹150' — Cash on delivery selected → Pay by QR selected → QR path on a second phone (separate demo order): waiting for the stall → 'Pay to continue' with DEMO QR and countdown → 'Seller is checking your payment' → 'Order confirmed', payment confirmed → main phone back on Cash on delivery.",
+   "animation": "PHONE-R. 77.00–77.30 checkout/01-confirm-cash lands; the flying ₹150 docks onto the big ₹150 in the dark amount card (≈ CSS x40–150, y105–150) and dissolves into it; rail → 07; headline 'How will you pay?'. 77.30–78.40 RING on the dark card (≈ CSS x18–372, y66–218; anchor = amount mark (195, 91)) + quote callout. 78.40–79.50 RING on cash (195, 295) + quote callout. 79.55 TAP qr (195, 391) → 79.65 crossfade to checkout/02-confirm-qr; 79.75–80.95 RING on qr (195, 399.5) + quote callout. 81.00–81.70 SPLIT: the main phone slides to PHONE-L (anchor (650, 502), s 0.80); a second identical phone enters from the right to PHONE-R2 (anchor (1300, 502), s 0.80; x+300→0, power3.out) on order-qr/01-placed, RING on qrCard (195, 172.3) ('Waiting for the stall to accept your order.'); 'IF YOU PICK QR' label above it; this phone's callouts sit to its right (x 1490–1800). 81.80 crossfade to order-qr/02-pay-qr ('Pay to continue'): 81.90–83.25 RING on qrImg (195, 287.3) + DEMO QR tag; 82.30–83.40 RING on timer (338.9, 142.8) + label. 83.30 TAP paid (290.4, 508.3) → 83.45 crossfade to order-qr/04-payment-review; RING on headline (195, 37.2). 84.75 crossfade to order-qr/05-payment-confirmed; RING on qrCard (195, 561.8) ('The stall confirmed your payment.') with a soft green glow. 85.90–86.30 second phone exits right (x+300 + fade, power2.in); main phone returns to PHONE-R (s 0.92). 86.30 TAP cash (195, 295) → 86.40 crossfade to order-cash/00-confirm (cash selected). 86.60–88.90 RING on the dark amount card; 'PAYMENT: DIRECT' (Space Mono 28 px) types on in the left column. 88.50–89.00 soft glow pulse on 'Place order · ₹150' (mark place (195, 806)). Use each order-qr file's own marks from its final JSON.",
+   "transitionIn": "The ₹150 docks onto the dark 'Amount payable to the seller' card; rail → 07.",
+   "transitionOut": "Back on cash; 'Place order · ₹150' glows, and S10 opens with the tap.",
+   "soundCues": [
+    {
+     "at": 77,
+     "cue": "Soft dock thud"
+    },
+    {
+     "at": 79.55,
+     "cue": "UI tap"
+    },
+    {
+     "at": 81,
+     "cue": "Whoosh (split screen)"
+    },
+    {
+     "at": 83.3,
+     "cue": "UI tap"
+    },
+    {
+     "at": 84.75,
+     "cue": "Soft confirm chime"
+    },
+    {
+     "at": 85.9,
+     "cue": "Whoosh out"
+    },
+    {
+     "at": 86.3,
+     "cue": "UI tap"
+    }
+   ],
+   "accuracyNotes": "QR order of events is fixed: the stall accepts first, then its own QR appears with a five-minute window; the customer taps 'I've paid', the seller checks, and the stall confirms. Payment status is separate from order status. The QR is the labelled DEMO QR ('Not a real payment code'); never imply that money moved in the demo. The QR screens are a separate demo order, shown as the alternative path. 'SETU does not collect this.' is the screen's own copy."
+  },
+  {
+   "id": "s10-track",
+   "title": "08 · Place, track, hand over, review",
+   "start": 89,
+   "end": 103,
+   "narration": "Tap “Place order”, then watch each step update. At your door, pay ₹150 in cash, then tell the stall your handover code. That completes the order. Rate the stall, and you're done.",
+   "captions": [
+    {
+     "start": 89.25,
+     "end": 92.55,
+     "text": "Tap “Place order”, then watch\neach step update."
+    },
+    {
+     "start": 92.75,
+     "end": 98.35,
+     "text": "At your door, pay ₹150 in cash, then\ntell the stall your handover code."
+    },
+    {
+     "start": 98.55,
+     "end": 102.75,
+     "text": "That completes the order.\nRate the stall, and you're done."
+    }
+   ],
+   "onScreenText": [
+    {
+     "text": "08 / 08 · TRACK & HAND OVER",
+     "start": 89,
+     "end": 102.9,
+     "role": "chapter tag"
+    },
+    {
+     "text": "Placed · Confirmed · Preparing · Ready · Out for delivery · Delivered",
+     "start": 89,
+     "end": 102.9,
+     "role": "status rail (the app's progress labels, vertical list)"
+    },
+    {
+     "text": "TIME-LAPSE",
+     "start": 89.6,
+     "end": 96,
+     "role": "label (Space Mono, top-right)"
+    },
+    {
+     "text": "“Please pay ₹150 in cash”",
+     "start": 92.85,
+     "end": 93.85,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "“SETU staff will never ask for it.”",
+     "start": 93.9,
+     "end": 95.25,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "“The stall has confirmed your ₹150 cash payment”",
+     "start": 95.35,
+     "end": 96.6,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "“Now tell them this code — that completes your order.”",
+     "start": 96.65,
+     "end": 97.95,
+     "role": "callout (UI quote)"
+    },
+    {
+     "text": "“Delivered · handover code verified · ₹150 paid in cash”",
+     "start": 100.5,
+     "end": 101.5,
+     "role": "callout (UI quote)"
+    }
+   ],
+   "shots": [
+    {
+     "file": "order-cash/00-confirm.png",
+     "start": 89,
+     "end": 89.5,
+     "treatment": "Tap place."
+    },
+    {
+     "file": "order-cash/01-placed.png",
+     "start": 89.5,
+     "end": 90.3,
+     "treatment": "Push-left in; ring on headline."
+    },
+    {
+     "file": "order-cash/02-accepted.png",
+     "start": 90.3,
+     "end": 91.1,
+     "treatment": "In-place crossfade; ring flash on headline + prep."
+    },
+    {
+     "file": "order-cash/04-preparing.png",
+     "start": 91.1,
+     "end": 91.8,
+     "treatment": "In-place crossfade; ring flash on headline."
+    },
+    {
+     "file": "order-cash/06-ready.png",
+     "start": 91.8,
+     "end": 92.4,
+     "treatment": "In-place crossfade; ring flash on headline."
+    },
+    {
+     "file": "order-cash/07-on-the-way-code.png",
+     "start": 92.4,
+     "end": 95.3,
+     "treatment": "In-place crossfade; push s 1.7, focus = this file's handover mark centre; rings on the cash row and code."
+    },
+    {
+     "file": "order-cash/08-cash-confirmed.png",
+     "start": 95.3,
+     "end": 98.1,
+     "treatment": "In-place crossfade at s 1.7 (retarget focus to this file's handover centre); rings on the green row and code; pull back."
+    },
+    {
+     "file": "order-cash/09-delivered-review.png",
+     "start": 98.1,
+     "end": 99.3,
+     "treatment": "Crossfade in; ring on the sheet title; tap the 5th star."
+    },
+    {
+     "file": "order-cash/10-review-5.png",
+     "start": 99.3,
+     "end": 100.45,
+     "treatment": "Crossfade in; ring on word; tap submit."
+    },
+    {
+     "file": "order-cash/12-review-sent.png",
+     "start": 100.45,
+     "end": 101.55,
+     "treatment": "Crossfade in; ring on the 'Delivered · handover code verified…' line; tap progress."
+    },
+    {
+     "file": "order-cash/13-progress-delivered.png",
+     "start": 101.55,
+     "end": 103,
+     "treatment": "Crossfade in; ring on card; pull back to s 0.85; dissolve begins at 102.9."
+    },
+    {
+     "file": "MG: status rail — the app's six progress labels (motion graphic)",
+     "start": 89,
+     "end": 102.9,
+     "treatment": "Left column, Space Mono 22 px; labels light in sync with each status crossfade; completes at 98.10."
+    }
+   ],
+   "uiState": "Cash order: Waiting for the seller → Order confirmed → Being cooked now → Ready → On the way with the handover code → the stall confirms the ₹150 cash → Delivered (handover code verified) → review 5 stars 'Excellent' submitted → progress view with all six steps done.",
+   "animation": "PHONE-R. Left column: MG status rail with the app's six progress labels (Space Mono 22 px, 44 px apart, hollow dots, 30% white) at x 160, y 330–550. 89.35 TAP place (195, 806) → 89.50–89.80 push-left to order-cash/01-placed; 'Placed' lights (dot fills #EC5A2A, label → white, 0.25 s); RING on headline (195, 26.6). 89.60 'TIME-LAPSE' tag (Space Mono 14 px, 60% white, top-right) until 96.00. Status updates are 0.18 s in-place crossfades, each with a 0.3 s RING flash on the headline mark: 90.30 order-cash/02-accepted ('Confirmed' lights; also RING on prep (195, 84)), 91.10 order-cash/04-preparing ('Preparing'), 91.80 order-cash/06-ready ('Ready'), 92.40 order-cash/07-on-the-way-code ('Out for delivery'). 92.80–93.70 push s 0.92→1.7, focus = this file's handover mark centre (rehearsal (195, 532.6)); RING on the 'Please pay ₹150 in cash' row (unmarked: ≈ handover.y + 40…65) + quote callout (callouts sit between the status rail and the phone, x 520–960). 93.90–95.25 RING on code (this file's code mark); the boxes pulse once (scale 1→1.04→1, 0.3 s) + quote callout. 95.30 crossfade to order-cash/08-cash-confirmed (use its own marks); 95.35–96.60 RING on the green row 'The stall has confirmed your ₹150 cash payment' (≈ handover.y + 40…68) + quote callout. 96.65–97.95 RING on code + quote callout. 97.90–98.10 pull back to s 0.92. 98.10 crossfade to order-cash/09-delivered-review: 'Delivered' lights and the rail completes with an orange underline sweep. 98.30–99.00 RING on the sheet title 'How was Southside Tiffins?' (≈ CSS y372–396). 99.15 TAP the 5th star (≈ CSS (311, 532), inside the stars mark) → 99.30 crossfade to order-cash/10-review-5; RING on word (195, 574) ('Excellent'). 100.30 TAP submit (286.5, 806) → 100.45 crossfade to order-cash/12-review-sent; 100.50–101.50 RING on the thread's last line 'Delivered · handover code verified · ₹150 paid in cash' (unmarked; just above the message bar — verify) + quote callout. 101.40 TAP progress (353, 35.1) → 101.55 crossfade to order-cash/13-progress-delivered; RING on card (195, 292.3); the MG status rail pulses once in sync. 101.80–103.00 camera pulls back s 0.92→0.85 and drifts toward frame centre; all overlays fade out by 102.90.",
+   "transitionIn": "Tap 'Place order' → push-left to 'Waiting for the seller'; rail → 08.",
+   "transitionOut": "The progress card pulls back and dissolves while the campus outline returns for the end card.",
+   "soundCues": [
+    {
+     "at": 89.35,
+     "cue": "UI tap"
+    },
+    {
+     "at": 89.5,
+     "cue": "Rising step ticks, one per status, through 92.40"
+    },
+    {
+     "at": 93.9,
+     "cue": "Soft pulse (code)"
+    },
+    {
+     "at": 95.3,
+     "cue": "Soft confirm (cash confirmed)"
+    },
+    {
+     "at": 98.1,
+     "cue": "Success chime (Delivered)"
+    },
+    {
+     "at": 99.15,
+     "cue": "Star tap"
+    },
+    {
+     "at": 100.3,
+     "cue": "UI tap"
+    },
+    {
+     "at": 101.4,
+     "cue": "UI tap"
+    },
+    {
+     "at": 102.4,
+     "cue": "Riser into the end card"
+    }
+   ],
+   "accuracyNotes": "Status headlines and progress labels as captured (Placed, Confirmed, Preparing, Ready, Out for delivery, Delivered). The stall delivers — no rider tracking or map view, and no delivery-time promise (the 'usually ready by …' line is a prep target; never quote its time). Real waits spanned about 20 minutes, hence the TIME-LAPSE tag. Handover order: pay cash → the stall confirms the cash → the customer tells the code → 'Delivered · handover code verified · ₹150 paid in cash'. Code digits exactly as captured. Use each capture's own marks — panel positions move with thread length. Review: 5 stars → 'Excellent' → 'Submit review' (rating can also be done later from Orders)."
+  },
+  {
+   "id": "s11-end",
+   "title": "End card",
+   "start": 103,
+   "end": 112,
+   "narration": "",
+   "captions": [],
+   "onScreenText": [
+    {
+     "text": "Your campus. Your food. Your SETU.",
+     "start": 104,
+     "end": 112,
+     "role": "tagline"
+    },
+    {
+     "text": "Explore SETU Food",
+     "start": 104.8,
+     "end": 112,
+     "role": "cta"
+    },
+    {
+     "text": "SETU connects customers with approved campus food providers. Food preparation, delivery and payment are handled by the respective provider. SETU does not collect payments or independently guarantee food hygiene.",
+     "start": 104.3,
+     "end": 112,
+     "role": "disclaimer (verbatim)"
+    },
+    {
+     "text": "DEMO ENVIRONMENT · SAMPLE STALLS · TEST ACCOUNT",
+     "start": 104.6,
+     "end": 112,
+     "role": "fine print"
+    }
+   ],
+   "shots": [
+    {
+     "file": "MG: campus boundary outline (real polygon) — bookend motion graphic",
+     "start": 103,
+     "end": 112,
+     "treatment": "Redraws large and faint (white 18%, ≈900 px) behind centre; slow 1.5° rotation."
+    },
+    {
+     "file": "../brand/setu-logo.png — official lockup on a white rounded tile (brand asset)",
+     "start": 103.4,
+     "end": 112,
+     "treatment": "Tile radius 32, 300×236 px, lockup ≈256 px wide; scale 0.94→1.0 + fade 103.40–104.10; never recoloured or upscaled."
+    }
+   ],
+   "uiState": "No app UI — brand end card.",
+   "animation": "103.00–103.60 phone and overlays dissolve (blur 0→10 px + fade); the real campus outline redraws large and faint behind centre (white 18%, ≈900 px tall) — bookend to the hook — with a slow 1.5° rotation across the card. 103.40–104.10 white rounded tile (radius 32, 300×236 px, soft shadow) with the official lockup (≈256 px wide) scales 0.94→1.0 + fades in at (960, 330). 104.00–104.90 tagline (Sora 700 60 px, white) at (960, 560), phrase by phrase (0.25 s stagger, y+20→0, power3.out); 104.90 orange underline sweeps under 'Your SETU.'. 104.80–105.30 CTA pill (Plus Jakarta Sans 600 28 px white on #0033DA, 64 px tall, radius 32, Lucide arrow-right icon) at (960, 680); one gentle sheen pass at 105.60. 104.30–104.80 disclaimer fades in at the bottom safe area (Plus Jakarta Sans 500 22/32 px, white 88%, centred, max-width 1440 px → two lines at y ≈ 905–970) and holds to 112.00. 104.60 fine print (Space Mono 14 px, 60% white) at y ≈ 1000. No caption band in this scene. Hold to 112.00 — no fade to black (sound is added later).",
+   "transitionIn": "The campus outline redraws behind the dissolving phone; the lockup tile scales in.",
+   "transitionOut": "Hold on the end card to 112.0 s (no fade to black; sound is added later).",
+   "soundCues": [
+    {
+     "at": 103,
+     "cue": "Riser resolves"
+    },
+    {
+     "at": 103.4,
+     "cue": "Logo sting"
+    },
+    {
+     "at": 104.8,
+     "cue": "Soft click (CTA)"
+    },
+    {
+     "at": 111.5,
+     "cue": "Music tail ends by 112.0 (placeholder)"
+    }
+   ],
+   "accuracyNotes": "Disclaimer verbatim and on screen 7.7 s (≥ 4 s). Tagline and CTA verbatim. Lockup only on a white rounded tile, never recoloured or upscaled; the 75-years mark is not used. Fine print discloses the demo environment, sample stalls and test account."
+  }
+ ]
+}

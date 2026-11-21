@@ -1,0 +1,107 @@
+
+=== stall setup (₹10 delivery charge, labelled demo QR) ===
+delivery fee -> 10
+payment QR -> 200 Payment QR saved http://127.0.0.1:5991/campus-eats/payment-qr/6ace3267650d4da1c1f7cb04/1791898220944-54gtpdj.png
+QR publicly readable by the capture browser: 200 image/png
+
+=== new customer + onboarding ===
+  shot onboarding/01-signin (createAccount, customerCard)
+  shot onboarding/02-signup-empty (name, email, phone, password)
+  seq onboarding/03-type-name (12 frames)
+  seq onboarding/04-type-email (31 frames)
+  seq onboarding/05-type-phone (11 frames)
+  seq onboarding/06-type-password (14 frames)
+  shot onboarding/07-signup-filled (submit)
+  shot onboarding/10-step1-identity (cont)
+  shot onboarding/20-step2-empty (room)
+step 2 reached: http://127.0.0.1:4990/onboarding
+  shot onboarding/21-step2-prompt (gps, box)
+  shot location/01-allow-dialog (allow, notNow)
+  shot onboarding/22-step2-gps (box, room)
+  shot location/10-picker-select (search, gps, another)
+  seq location/11-type-search (11 frames)
+  shot location/12-search-results (first)
+  shot location/13-confirm-search (zoneOk, home, details, adjust, confirm)
+  shot location/20-map (useThis, card)
+  seq location/14-type-room (6 frames)
+  shot location/15-confirm-home (home, details, confirm, zoneOk)
+  shot onboarding/23-step2-done (box, room, cont)
+  shot onboarding/30-step3 (cont, veg, notify)
+  shot onboarding/31-step3-picked (southIndian, cont)
+  shot onboarding/40-step4 (fact1, fact2, fact3, ack)
+  shot onboarding/41-step4-ack (ack, start)
+  shot home/01-first-home (deliverTo, greeting, search, firstCard)
+
+=== returning customer: one-time code ===
+  shot signin/01-signin (customer, id, password, otpLink)
+  seq signin/02-type-email (31 frames)
+  shot signin/03-email-typed (id, otpLink)
+  shot signin/04-enter-code (title, sentTo, boxes, verify)
+code arrived in 1600 ms
+  shot signin/06-code-entered (boxes, verify)
+  shot signin/07-home (deliverTo, greeting)
+
+=== saved delivery address ===
+  shot location/30-home-unset (deliverTo)
+  shot location/31-picker-saved (saved, homeRow, gps, search)
+  shot location/32-confirm-saved (zoneOk, confirm)
+  shot location/33-home-set (deliverTo, greeting)
+
+=== browse, stall, cart, checkout ===
+  shot home/02-home (deliverTo, greeting, search, services, tabs, heading, chips, card1, card2)
+  seq home/03-scroll (55 frames)
+  shot home/04-scrolled (deliverTo, search)
+  shot home/05-pure-veg (chip, heading, card1, stall)
+  shot search/01-search-empty (field)
+  seq search/02-type-dosa (5 frames)
+  shot search/03-results (field, stall, hit)
+  shot stall/01-stall (back, name, facts, trust, tabs, dosa, dosaAdd)
+  shot stall/02-dosa-added (stepper, viewCart)
+  seq stall/03-scroll-menu (31 frames)
+  shot stall/04-coffee (coffee, coffeeAdd, viewCart)
+  shot stall/05-coffee-two (stepper, plus, viewCart)
+  shot cart/01-cart (lines, deliverTo, fee, payable, review)
+  shot checkout/01-confirm-cash (amount, cash, qr, place)
+  shot checkout/02-confirm-qr (qr, place)
+  seq checkout/03-scroll-summary (37 frames)
+  shot checkout/04-summary (feeRow, payable, note, place)
+browse captured; cart holds the demo order
+
+=== cash order with realistic gaps (about 20 minutes) ===
+  shot order-cash/00-confirm (place)
+order 6ace3308a0c008a6a1bb7fc2
+  shot order-cash/01-placed (headline, sub, progress, stream, bar)
+  waiting 60 s (stall reads the order)
+  shot order-cash/02-accepted (headline, sub, progress, stream, prep, bar)
+  shot order-cash/03-progress-accepted (card)
+  waiting 70 s (stall starts cooking)
+  shot order-cash/04-preparing (headline, sub, progress, stream, prep, bar)
+  shot order-cash/05-home-live-card (live, deliverTo)
+  waiting 780 s (cooking)
+  shot order-cash/06-ready (headline, sub, progress, stream, bar)
+  waiting 90 s (packing)
+  shot order-cash/07-on-the-way-code (headline, sub, progress, stream, handover, code, bar)
+  waiting 270 s (walk to Nehru Hall)
+  shot order-cash/08-cash-confirmed (headline, sub, progress, stream, handover, code, bar)
+  shot order-cash/09-delivered-review (headline, sub, progress, stream, bar, sheet, stars, submit)
+  shot order-cash/10-review-5 (stars, word)
+  shot order-cash/11-review-note (note, submit)
+  shot order-cash/12-review-sent (headline, sub, progress, stream, bar)
+  shot order-cash/13-progress-delivered (card)
+cash order complete: 6ace3308a0c008a6a1bb7fc2
+
+=== QR order ===
+  shot order-qr/00-confirm-qr (qr, place)
+  shot order-qr/01-placed (headline, sub, qrCard, bar)
+  shot order-qr/02-pay-qr (headline, sub, qrCard, qrImg, timer, paid, attach, bar)
+  shot order-qr/03-pay-qr-focus (headline, sub, qrCard, qrImg, timer, paid, attach, bar)
+  shot order-qr/04-payment-review (headline, sub, qrCard, bar)
+  shot order-qr/05-payment-confirmed (headline, sub, qrCard, bar)
+QR order captured: 6ace386ba0c008a6a1bb81ec
+
+=== desktop ===
+  shot desktop/01-signin-wide (lede, stats, form)
+  shot desktop/02-home-web (band, grid)
+
+=== done ===
+exit 0

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /><!-- Generated (burned-in narration captions). Edit storyboard/scene-timing.json, then rebuild. --></head>
+<body>
+  <template id="captions-template">
+    <link rel="stylesheet" href="assets/css/kit.css" />
+    <style>
+      #root { position: absolute; inset: 0; pointer-events: none; }
+    </style>
+    <div id="root" data-composition-id="captions" data-width="1920" data-height="1080">
+    <div id="cap-001" class="clip" data-start="0.1" data-duration="3.1" data-track-index="5">
+      <div class="cap cap--left" id="cap-001-t"><span class="cap-line"><span class="cap-in">Tap “View cart”:</span></span><span class="cap-line"><span class="cap-in">one stall per order.</span></span></div>
+    </div>
+    <div id="cap-002" class="clip" data-start="3.3" data-duration="3.1" data-track-index="5">
+      <div class="cap cap--left" id="cap-002-t"><span class="cap-line"><span class="cap-in">Items ₹140, plus the stall's</span></span><span class="cap-line"><span class="cap-in">delivery charge: ₹10.</span></span></div>
+    </div>
+    <div id="cap-003" class="clip" data-start="6.5" data-duration="2.7" data-track-index="5">
+      <div class="cap cap--left" id="cap-003-t"><span class="cap-line"><span class="cap-in">₹150 to the seller.</span></span><span class="cap-line"><span class="cap-in">No platform fee.</span></span></div>
+    </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo('#cap-001-t', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.22, ease: 'power2.out' }, 0.1);
+      tl.to('#cap-001-t', { opacity: 0, duration: 0.18, ease: 'power1.in' }, 3.02);
+      tl.fromTo('#cap-002-t', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.22, ease: 'power2.out' }, 3.3);
+      tl.to('#cap-002-t', { opacity: 0, duration: 0.18, ease: 'power1.in' }, 6.22);
+      tl.fromTo('#cap-003-t', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.22, ease: 'power2.out' }, 6.5);
+      tl.to('#cap-003-t', { opacity: 0, duration: 0.18, ease: 'power1.in' }, 9.02);
+      window.__timelines['captions'] = tl;
+    </script>
+  </template>
+</body>
+</html>

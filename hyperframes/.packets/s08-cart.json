@@ -1,0 +1,318 @@
+{
+  "sceneId": "s08-cart",
+  "file": "compositions/s08-cart.html",
+  "duration": 9.3,
+  "globalStart": 71.75,
+  "globalEnd": 81.05,
+  "title": "Cart — ₹150, payable to the seller",
+  "chapter": "06 · Cart",
+  "phoneSpec": {
+    "left": 1150,
+    "top": 70,
+    "k": 1.08
+  },
+  "captionPlacement": "left (keep x 120-1140, y 880-1050 clear)",
+  "narration": "Tap “View cart”: one stall per order. Items ₹140, plus the stall's delivery charge: ₹10. ₹150 to the seller. No platform fee.",
+  "captionsLocal": [
+    {
+      "start": 0.1,
+      "end": 3.2,
+      "text": "Tap “View cart”:\none stall per order."
+    },
+    {
+      "start": 3.3,
+      "end": 6.4,
+      "text": "Items ₹140, plus the stall's\ndelivery charge: ₹10."
+    },
+    {
+      "start": 6.5,
+      "end": 9.2,
+      "text": "₹150 to the seller.\nNo platform fee."
+    }
+  ],
+  "onScreenText": [
+    {
+      "text": "1 × Masala Dosa ₹80",
+      "start": 0,
+      "end": 1.6,
+      "role": "order-slip row carried from s07 (Space Mono count/price, Plus Jakarta Sans name); flies first, onto the cart's Masala Dosa line"
+    },
+    {
+      "text": "2 × Filter Coffee ₹60",
+      "start": 0,
+      "end": 1.95,
+      "role": "order-slip row carried from s07 (Space Mono count/price, Plus Jakarta Sans name); flies second, onto the cart's Filter Coffee line"
+    },
+    {
+      "text": "06 · Cart",
+      "start": 0.1,
+      "end": 9.15,
+      "role": "kicker (kit .kicker)"
+    },
+    {
+      "text": "ITEM TOTAL ₹140",
+      "start": 3.4,
+      "end": 7.65,
+      "role": "math row: label Space Mono 700 18 px caps + value '₹140' Plus Jakarta Sans 800 64 px"
+    },
+    {
+      "text": "+ SELLER DELIVERY CHARGE ₹10",
+      "start": 4.6,
+      "end": 7.65,
+      "role": "math row: label Space Mono 700 18 px caps + value '₹10' Plus Jakarta Sans 800 64 px"
+    },
+    {
+      "text": "SET BY THE STALL",
+      "start": 4.7,
+      "end": 5.9,
+      "role": "label (short caps, Space Mono 700 18 px, callout lane)"
+    },
+    {
+      "text": "= PAYABLE TO SELLER ₹150",
+      "start": 5.85,
+      "end": 7.65,
+      "role": "math result: label Space Mono 700 18 px caps + value '₹150' Plus Jakarta Sans 800 64 px white"
+    },
+    {
+      "text": "₹150",
+      "start": 7.8,
+      "end": 8.85,
+      "role": "number flight (Plus Jakarta Sans 800, white) from the cart total onto the Confirm card amount"
+    }
+  ],
+  "shots": [
+    {
+      "file": "stall/05-coffee-two.png",
+      "start": 0,
+      "end": 1.6,
+      "treatment": "Frame 0 with the order slip; ring--blue + tap 'View cart' (0.70).",
+      "asset": {
+        "kind": "still",
+        "file": "stall/05-coffee-two.png",
+        "src": "assets/ui/stall/05-coffee-two.png",
+        "marks": {
+          "stepper": {
+            "x": 254,
+            "y": 345,
+            "w": 90,
+            "h": 34
+          },
+          "plus": {
+            "x": 310,
+            "y": 345,
+            "w": 34,
+            "h": 34
+          },
+          "viewCart": {
+            "x": 132.9,
+            "y": 798,
+            "w": 124.2,
+            "h": 38
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "cart/01-cart.png",
+      "start": 1.05,
+      "end": 8.3,
+      "treatment": "swapPush in; the two slip rows fly in one after the other, each onto its own cart line, and dissolve; camera Ftotals; rings on the three total rows; tap 'Review order' (7.40).",
+      "asset": {
+        "kind": "still",
+        "file": "cart/01-cart.png",
+        "src": "assets/ui/cart/01-cart.png",
+        "marks": {
+          "lines": {
+            "x": 18,
+            "y": 66.3,
+            "w": 354,
+            "h": 240
+          },
+          "deliverTo": {
+            "x": 18,
+            "y": 328.3,
+            "w": 354,
+            "h": 12
+          },
+          "fee": {
+            "x": 33,
+            "y": 523.8,
+            "w": 285.8,
+            "h": 16
+          },
+          "payable": {
+            "x": 33,
+            "y": 610.3,
+            "w": 268.5,
+            "h": 18
+          },
+          "review": {
+            "x": 143.8,
+            "y": 782,
+            "w": 228.2,
+            "h": 48
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "checkout/01-confirm-cash.png",
+      "start": 7.75,
+      "end": 9.3,
+      "treatment": "swapPush in ('Confirm order'); camera Ftotals → Fcard; the ₹150 number flight lands on 'AMOUNT PAYABLE TO THE SELLER ₹150'.",
+      "asset": {
+        "kind": "still",
+        "file": "checkout/01-confirm-cash.png",
+        "src": "assets/ui/checkout/01-confirm-cash.png",
+        "marks": {
+          "amount": {
+            "x": 33,
+            "y": 85,
+            "w": 324,
+            "h": 12
+          },
+          "cash": {
+            "x": 18,
+            "y": 260,
+            "w": 354,
+            "h": 70
+          },
+          "qr": {
+            "x": 18,
+            "y": 340,
+            "w": 354,
+            "h": 102
+          },
+          "place": {
+            "x": 18,
+            "y": 782,
+            "w": 354,
+            "h": 48
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    }
+  ],
+  "demoBadgeLocal": [],
+  "uiState": "Stall with both items → cart 'Your order' over 'Southside Tiffins' (Masala Dosa '₹80 each' × 1 = ₹80; Filter Coffee '₹30 each' × 2 = ₹60; DELIVER TO 'Home' over 'Room B-212 · Aarav Mehta'; 'Item total' ₹140; 'Seller delivery charge' ₹10 with 'Set by the seller, collected by the seller'; 'Payable to seller' ₹150) → 'Confirm order' with 'AMOUNT PAYABLE TO THE SELLER' ₹150 and Cash on delivery selected.",
+  "animationLocal": "Local times. Frame 0 = stall/05-coffee-two.png at identity with the order slip from s07 (handoffIn). Framings: Ftotals = {s 1.5, P [195,560], T [1440,520]} (canvas of a screen point = (1124.1 + 1.62·x, −387.2 + 1.62·y)); Fcard = {s 1.4, P [195,142], T [1420,300]} (canvas = (1125.16 + 1.512·x, 85.24 + 1.512·y)).\n0.10 kicker '06 · Cart' K.fadeUp at (140,200).\n0.40 ring--blue on stall/05-coffee-two.viewCart. 0.70 K.tap viewCart ('View cart') → 1.05 K.swapPush → cart/01-cart.png (0.55 s).\nOrder-slip rows fly ONE AT A TIME (never together), each onto its own cart line, and dissolve as they land. Each row is a kit .dish-chip 62 px tall; give each row transform-origin 0% 50%, so its anchor is its left-middle point:\n- 1.10–1.50 row 1 '1 × Masala Dosa ₹80' (anchor at rest (140,371)): translate x +1059.6, y −139.2 and scale 1 → 0.64 (expo.inOut 0.4 s), landing its anchor on canvas (1199.6,231.8) = cart/01-cart.png screen (33,136.9), the veg mark's left edge on the Masala Dosa line's centre line (the line's ink spans screen y 116.7–157.0); 1.40–1.60 it dissolves (opacity → 0).\n- 1.45–1.85 row 2 '2 × Filter Coffee ₹60' (anchor at rest (140,443)): translate x +1059.6, y −101.3 and scale 1 → 0.64 (expo.inOut 0.4 s), landing on (1199.6,341.7) = screen (33,238.7) on the Filter Coffee line (ink y 218.3–259.0); 1.75–1.95 it dissolves.\nThe cart has settled by 1.60; the rows never cover app text after they land.\n2.30–3.30 K.focus Ftotals (1.0 s).\nLeft-column math (canvas-level, x 140–700; labels Space Mono 700 18 px caps #B8C7FF; values Plus Jakarta Sans 800 64 px white — never Sora; each value fromTo y 18/opacity 0 → 0/1, expo.out 0.4 s):\n- 3.40 'ITEM TOTAL' (top 300) + '₹140' (top 322); orange ring on the Item total row, measured box {x:26,y:462,w:338,h:30} (canvas (1166.2,361.2)–(1713.8,409.8)) 3.40–4.60.\n- 4.60 '+ SELLER DELIVERY CHARGE' (top 410) + '₹10' (top 432); orange ring on the fee row, measured box {x:26,y:518,w:338,h:56} (label, sub-label and ₹10; canvas (1166.2,452)–(1713.8,542.7)) 4.60–5.80; label 'SET BY THE STALL' (≈246×38) at x 846–1092, y 478–516 from 4.70 to 5.90; leader (1092,497)→(1166.2,497).\n- 5.70 a 2 px rule draws (x 140–600, y 524, 0.25 s). 5.85 '= PAYABLE TO SELLER' (top 540) + '₹150' (top 562; the two rows above dim to 70%); orange ring on the payable row, measured box {x:26,y:603,w:338,h:32} (canvas (1166.2,589.7)–(1713.8,641.5)) 5.85–7.15.\n7.15 ring--blue on cart/01-cart.review (canvas (1357.1,879.6)–(1726.7,957.4)). 7.40 K.tap review ('Review order') → 7.75 K.swapPush → checkout/01-confirm-cash.png (0.55 s). 7.30–7.65 the math fades out.\n7.75–8.65 K.focus Fcard (0.9 s).\n7.80–8.65 number flight (canvas-level): a '₹150' (Plus Jakarta Sans 800, white) lifts from the cart's payable value — canvas box (1637.6,601.0)–(1702.4,630.2) under Ftotals — and arcs onto the Confirm card's big amount, landing exactly over its box under Fcard, measured screen {x:33,y:105,w:108,h:40} → canvas (1175.1,244.1)–(1338.4,304.5), at 8.65 (font size grows ≈30 → 60 px; expo.inOut, timed with the camera); 8.65–8.85 it dissolves into the real UI.\n8.80–9.15 the kicker fades out. 8.85–9.30 hold on checkout/01-confirm-cash.png at Fcard.",
+  "transitionIn": "Continuous from s07: the order slip is on canvas; the 'View cart' tap starts the chapter.",
+  "transitionOut": "The ₹150 lands on the Confirm card; the camera holds at Fcard for s09.",
+  "handoffIn": {
+    "phone": "default",
+    "screen": "stall/05-coffee-two.png",
+    "rig": "identity",
+    "leftColumn": "1 × Masala Dosa ₹80 / 2 × Filter Coffee ₹60 (order slip; no kicker, no tag)",
+    "overlays": "Order slip #sNN-slip: two kit .dish-chip rows in one wrapper at left 140, top 340 (600×132), fully opaque, at rest: row 1 at top 340 '[veg] 1 × Masala Dosa ₹80', row 2 at top 412 '[veg] 2 × Filter Coffee ₹60' ('1 ×'/'2 ×' Space Mono 700 26 px #EC5A2A; names Plus Jakarta Sans 700 28 px white; prices Space Mono 700 26 px #B8C7FF; kit .dish-chip padding 16/24, radius 22, height 62).",
+    "notes": "Phone at identity on stall/05-coffee-two.png; the only canvas element is the order slip."
+  },
+  "handoffOut": {
+    "phone": "default",
+    "screen": "checkout/01-confirm-cash.png",
+    "rig": {
+      "s": 1.4,
+      "P": [
+        195,
+        142
+      ],
+      "T": [
+        1420,
+        300
+      ]
+    },
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Camera held at Fcard (dark amount card, HOW WILL YOU PAY?, Cash on delivery and Pay by QR in frame); number flight dissolved; math and kicker gone."
+  },
+  "soundCuesLocal": [
+    {
+      "at": 0.7,
+      "cue": "UI tap (View cart)"
+    },
+    {
+      "at": 1.05,
+      "cue": "Page push"
+    },
+    {
+      "at": 1.1,
+      "cue": "Soft whoosh (slip row 1 lands)"
+    },
+    {
+      "at": 1.45,
+      "cue": "Soft whoosh (slip row 2 lands)"
+    },
+    {
+      "at": 3.4,
+      "cue": "Number tick"
+    },
+    {
+      "at": 4.6,
+      "cue": "Number tick"
+    },
+    {
+      "at": 5.85,
+      "cue": "Soft resolve tone (= ₹150)"
+    },
+    {
+      "at": 7.4,
+      "cue": "UI tap (Review order)"
+    },
+    {
+      "at": 7.8,
+      "cue": "Number-flight swish"
+    },
+    {
+      "at": 8.65,
+      "cue": "Soft lock-in"
+    }
+  ],
+  "accuracyNotes": "- Cart values are exact: items ₹140, 'Seller delivery charge' ₹10 'Set by the seller, collected by the seller', 'Payable to seller' ₹150.\n- Each stall sets its own delivery charge (₹0–₹500; the row is hidden at ₹0) — 'the stall's delivery charge' and the label 'SET BY THE STALL' cover that. Never 'free', 'zero cost' or 'minimal'.\n- No platform fee or commission exists: payable = items + the stall's own charge.\n- One order goes to one stall (adding from another stall replaces the cart).\n- The slip rows and the ₹150 flight link real values and land exactly on the real UI, one object at a time; they never cover app text after landing.\n- checkout/03-scroll-summary/ and checkout/04-summary.png are not used (captured with Pay by QR selected; Aarav pays cash).",
+  "globalSystem": "STORY-FIRST ('Dinner at B-212'): one evening with Aarav (Nehru Hall of Residence, Room B-212). Tonight he signs in on a new phone with an emailed one-time code (DEMO-labelled; the password stays the main way in). A band wipe rewinds to his day one to show how a first-timer creates an account and runs the four onboarding steps — that is how his Home (Room B-212) was saved inside the campus boundary. A second band wipe returns to tonight: the new phone's Home first reads 'Set your delivery location' (the delivery choice is stored per device; the saved addresses belong to the account), so he picks his saved Home with three real taps (Deliver-to row → 'Home' under SAVED LOCATIONS → 'Confirm location'); then 1 × Masala Dosa + 2 × Filter Coffee from Southside Tiffins; items ₹140 + the stall's own delivery charge ₹10 = ₹150 payable to the seller. The QR route is a labelled side branch for stalls that offer it (the stall accepts first, then you pay, then it confirms). Aarav pays cash at the door, his six-digit handover code completes the order, he rates it five stars, and the Report path is pointed out. Nine numbered chapters (01 Sign in … 09 Rate & report) keep first-timers oriented, and captions name the exact button where it helps. Tone: warm, plain, lightly playful ('Tonight: dosa.', 'Dinner, sorted.'), never hype; 'students, faculty, staff' is said once. Motif: the real campus-boundary polygon opens the film, returns as the delivery-area check and closes the end card.\nGLOBAL SYSTEM (every scene):\n- Frame: 1920×1080, 60 fps, silent. One HyperFrames sub-composition per scene with one paused GSAP timeline; kit.js helpers plus plain GSAP only. Scene roots are transparent over the shared indigo background from index.html (it already carries a faint drifting campus outline; never paint a background).\n- Boundaries are HARD CUTS: frame 0 must equal handoffIn and the last frame must equal handoffOut. Unless a handoff says otherwise: phone at the default spec, rig identity, left column empty, no overlays, the named capture fully visible and settled.\n- Phone: kit .phone at phoneSpec {left:1150, top:70, k:1.08}; screen origin canvas (1164,84), 421.2×911.5. At identity a screen point (x,y) is canvas (1164 + 1.08·x, 84 + 1.08·y). The phone, its capture layers and every in-screen overlay (rings, taps, reveals, halos, masks) live inside the scene rig (.rig, transform-origin 0 0). Camera = K.focus(tl, rig, K.toCanvas(spec, P[0], P[1]), s, t, dur, {to:{x:T[0], y:T[1]}}), expo.inOut, 0.8–1.2 s; framings are given as {s, P (screen px), T (canvas px)} and K.unfocus returns to identity. Canvas-level type, labels, leader lines, chips and tags sit OUTSIDE the rig; every canvas position in a spec already accounts for the rig state at that moment.\n- Grid: text column x140–820 (kicker at (140,200), headline top 250, nothing below y 860); callout lane x840–1130 (label right edge ≤1120); right margin x1620–1880 (unused); one tag row at (140,112) for ONE tag at a time (DEMO badge, DAY ONE, TONIGHT, the sample-stalls note, TIME-LAPSE); caption zone x120–1140, y880–1050 stays empty (captions centred only in s01; s12 has none). A pushed phone's bezel never reaches left of x 1095, and left caption plates end at x ≈ 900. At most 4 floating labels/chips/tags at once, never overlapping the phone, each other, the text column or the caption zone. Never fly several objects into the phone at once: when chips travel into the phone they go one at a time.\n- Type: kicker = kit .kicker showing the scene's `chapter`, K.fadeUp at 0.10; its fade-out (0.3 s) ends at least 0.05 s before the scene's last frame, and its onScreenText end time is the end of that fade. Headline = .headline--md (Sora 800, 68 px), words only. Sora has no ₹ glyph: every string containing ₹ is set in Plus Jakarta Sans (names, amounts) or Space Mono (labels, prices, counts). Labels = short caps tags: .callout.callout--dark with font 700 18px/1 Space Mono, letter-spacing .08em, uppercase, padding 10px 16px (≈ 12.24 px × chars + 50 px wide, 38 px tall), plus a 2 px rgba(184,199,255,.7) straight leader from the label's right edge to the element; a label's right edge stays ≥8 px left of the phone's bezel for the framing in use (identity ≤1140; s 1.4 ≤1097; Ftotals ≤1095; Fhand ≤1090; Fconf ≤1087). Tag-row items: Space Mono 700 18 px caps, letter-spacing .16em, pill padding 10/16; the DEMO badge is kit .demo-badge with the text 'Demo environment'.\n- Overlays on real UI: K.tap at the centre of the named box, always 0.35 s before the screen change it causes (inside the 0.25–0.45 s rule). K.ring orange = look here; {blue:true} = the next tap target only (≥0.2 s before its tap; never on something that is not tapped); green = a kit ring with border-color #19B36B and a green glow, used only for 'inside the delivery area', 'cash confirmed' and 'payment confirmed'; pale = a kit ring with border-color #B8C7FF and box-shadow 0 0 0 6px rgba(184,199,255,.16), 0 0 22px rgba(184,199,255,.3): context that is never tapped (s03's code-box glow, s05's 'Use my current location' row). Boxes are CSS px of the 390×844 screen: named marks from marks.json written <group>/<shot>.<mark>, or explicit {x,y,w,h} measured on the final PNGs. Nothing opaque over app text; UI is never recoloured.\n- Screen changes: K.swapPush = forward navigation (0.55 s); K.swapSheet = sheets (sheetTop given); K.swapFade = in-place state change (0.15–0.35 s); circular reveal = a local state change caused by a tap (the 'after' capture as a new layer whose clip-path circle(r at x y) grows from 0 at the tap point, 0.25–0.35 s, power2.out); commit wipe = for 'Start ordering' and 'Place order · ₹150' a #0033DA circle grows from the button centre to cover the screen (0.45 s, power2.in), the next capture is set underneath, then the circle fades (0.3 s).\n- Clips: play inside a non-timed .layer in the screen (data-hf-media-start-basis=\"local\"); never animate the <video>; the next still sits underneath to hold the last frame; chained clips start exactly where the previous ends. clipSeconds = the length used (a speed variant is pre-rendered; each captured frame gets clipSeconds / frames). Where a clip's last frame differs from the still under it only by input focus, the cut is a deliberate focus-loss cut (named in the scene).\n- Shot windows: a shot starts when its layer first becomes visible and ends when it is fully covered or hidden, i.e. at the END of the transition that removes it.\n- Rhythm: tap → result → ≥0.6 s beat; text that matters is held ≥1.2 s; exits 0.3–0.5 s; nothing is visible before its entrance (fromTo with opacity 0); no drifting, spinning, particles or glitch.\n- Icons: Lucide line icons only (stroke 1.85–2.5); no emoji, food photos, clip-art or filled pins.\n- Honesty: only real captures for app screens; DEMO badge across the whole OTP portion (code request → Home); the sample-stalls note once (s07) plus the end-card fine print; the demo QR stays labelled; no 'SETU delivers', pickup, map or location tracking, delivery-time promise, free/zero-cost/minimal-charge wording or competitor names anywhere. Never ring, zoom on or caption the app's own 'SETU delivers inside…' lines, the location dialog's body sentences ('…to find nearby stalls…', 'It is only read when you ask for it.' — the code contradicts both), Step 4's licence and 'Recorded…' sub-lines, search rows' '20–20 min', the stall's '20 min', the prep time, the QR thread pill 'Order confirmed by …' (shown before payment), 33-home-set's hover-blue 'Orders' tab or the review note placeholder.",
+  "previousScene": {
+    "id": "s07-find-and-add",
+    "title": "Back to tonight — saved Home, then dosa from Southside Tiffins",
+    "transitionOut": "Holds on the stall with both items added and the order slip (two cart lines) in the left column — carried into s08.",
+    "handoffOut": {
+      "phone": "default",
+      "screen": "stall/05-coffee-two.png",
+      "rig": "identity",
+      "leftColumn": "1 × Masala Dosa ₹80 / 2 × Filter Coffee ₹60 (order slip; no kicker, no tag)",
+      "overlays": "Order slip #sNN-slip: two kit .dish-chip rows in one wrapper at left 140, top 340 (600×132), fully opaque, at rest: row 1 at top 340 '[veg] 1 × Masala Dosa ₹80', row 2 at top 412 '[veg] 2 × Filter Coffee ₹60' ('1 ×'/'2 ×' Space Mono 700 26 px #EC5A2A; names Plus Jakarta Sans 700 28 px white; prices Space Mono 700 26 px #B8C7FF; kit .dish-chip padding 16/24, radius 22, height 62).",
+      "notes": "Phone at identity on stall/05-coffee-two.png; the only canvas element is the order slip."
+    },
+    "lastShots": [
+      "stall/04-coffee.png",
+      "stall/05-coffee-two.png"
+    ]
+  },
+  "nextScene": {
+    "id": "s09-pay",
+    "title": "Pay the stall directly — cash, or the stall's QR",
+    "transitionIn": "Continuous from s08: the camera is already framing the amount card and the payment options (Fcard).",
+    "handoffIn": {
+      "phone": "default",
+      "screen": "checkout/01-confirm-cash.png",
+      "rig": {
+        "s": 1.4,
+        "P": [
+          195,
+          142
+        ],
+        "T": [
+          1420,
+          300
+        ]
+      },
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "Camera held at Fcard (dark amount card, HOW WILL YOU PAY?, Cash on delivery and Pay by QR in frame); number flight dissolved; math and kicker gone."
+    },
+    "firstShots": [
+      "checkout/01-confirm-cash.png",
+      "order-qr/02-pay-qr.png"
+    ]
+  }
+}

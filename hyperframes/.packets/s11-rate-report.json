@@ -1,0 +1,260 @@
+{
+  "sceneId": "s11-rate-report",
+  "file": "compositions/s11-rate-report.html",
+  "duration": 5.8,
+  "globalStart": 105.05,
+  "globalEnd": 110.85,
+  "title": "Delivered, rated — and reportable",
+  "chapter": "09 · Rate & report",
+  "phoneSpec": {
+    "left": 1150,
+    "top": 70,
+    "k": 1.08
+  },
+  "captionPlacement": "left (keep x 120-1140, y 880-1050 clear)",
+  "narration": "Delivered. Five stars for Southside Tiffins. Dinner, sorted. Something off? Tap “Report”.",
+  "captionsLocal": [
+    {
+      "start": 0.1,
+      "end": 2.5,
+      "text": "Delivered. Five stars\nfor Southside Tiffins."
+    },
+    {
+      "start": 2.6,
+      "end": 3.95,
+      "text": "Dinner, sorted."
+    },
+    {
+      "start": 4.05,
+      "end": 5.75,
+      "text": "Something off? Tap “Report”."
+    }
+  ],
+  "onScreenText": [
+    {
+      "text": "09 · Rate & report",
+      "start": 0.1,
+      "end": 5.7,
+      "role": "kicker (kit .kicker)"
+    },
+    {
+      "text": "TO SETU STAFF",
+      "start": 4.3,
+      "end": 5.7,
+      "role": "label (short caps, Space Mono 700 18 px, callout lane)"
+    }
+  ],
+  "shots": [
+    {
+      "file": "order-cash/09-delivered-review.png",
+      "start": 0,
+      "end": 1.3,
+      "treatment": "Frame 0: 'How was Southside Tiffins?'; tap the 5th star (0.60).",
+      "asset": {
+        "kind": "still",
+        "file": "order-cash/09-delivered-review.png",
+        "src": "assets/ui/order-cash/09-delivered-review.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 21.3
+          },
+          "sub": {
+            "x": 68,
+            "y": 37.3,
+            "w": 254,
+            "h": 17
+          },
+          "progress": {
+            "x": 334,
+            "y": 16.1,
+            "w": 38,
+            "h": 38
+          },
+          "stream": {
+            "x": 0,
+            "y": 66.3,
+            "w": 390,
+            "h": 581.8
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          },
+          "sheet": {
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844
+          },
+          "stars": {
+            "x": 18,
+            "y": 506,
+            "w": 354,
+            "h": 52
+          },
+          "submit": {
+            "x": 201,
+            "y": 782,
+            "w": 171,
+            "h": 48
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "order-cash/10-review-5.png",
+      "start": 0.95,
+      "end": 3.25,
+      "treatment": "Circular reveal from the 5th star: five stars, 'Excellent'; tap 'Submit review' (2.45).",
+      "asset": {
+        "kind": "still",
+        "file": "order-cash/10-review-5.png",
+        "src": "assets/ui/order-cash/10-review-5.png",
+        "marks": {
+          "stars": {
+            "x": 18,
+            "y": 506,
+            "w": 354,
+            "h": 52
+          },
+          "word": {
+            "x": 18,
+            "y": 564,
+            "w": 354,
+            "h": 20
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "order-cash/12-review-sent.png",
+      "start": 2.8,
+      "end": 5.8,
+      "treatment": "The sheet slides down: the thread ends 'Delivered · handover code verified · ₹150 paid in cash'; ring 'Report' + 'TO SETU STAFF'; holds to the cut.",
+      "asset": {
+        "kind": "still",
+        "file": "order-cash/12-review-sent.png",
+        "src": "assets/ui/order-cash/12-review-sent.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 21.3
+          },
+          "sub": {
+            "x": 68,
+            "y": 37.3,
+            "w": 254,
+            "h": 17
+          },
+          "progress": {
+            "x": 334,
+            "y": 16.1,
+            "w": 38,
+            "h": 38
+          },
+          "stream": {
+            "x": 0,
+            "y": 66.3,
+            "w": 390,
+            "h": 581.8
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    }
+  ],
+  "demoBadgeLocal": [],
+  "uiState": "Delivered order: review sheet 'How was Southside Tiffins?' (1 × Masala Dosa · 2 × Filter Coffee) → 5 stars 'Excellent' → 'Submit review' → the thread ends 'Delivered · handover code verified · ₹150 paid in cash' with 'Report' / 'Order again' in the bar.",
+  "animationLocal": "Local times. Frame 0 = order-cash/09-delivered-review.png at identity; the scene stays at identity (no push on the review sheet, so its note placeholder is never featured).\n0.10 kicker '09 · Rate & report' K.fadeUp at (140,200).\n0.35 ring--blue on the 5th star, measured box {x:292,y:514,w:36,h:36} (inside order-cash/09-delivered-review.stars). 0.60 K.tap the 5th star (centre (310,532)) → 0.95 circular reveal of order-cash/10-review-5.png from (310,532), r 0 → 330 (0.35 s): five stars fill and 'Excellent' appears (the farthest changed pixel, the Submit button's corner, is 317 px away); 1.30 set the full 10 layer visible.\n1.35–2.35 orange ring on order-cash/10-review-5.word ('Excellent').\n2.20 ring--blue on order-cash/09-delivered-review.submit. 2.45 K.tap submit ('Submit review') → 2.80 the sheet closes: order-cash/12-review-sent.png sits underneath; the 10 capture is split like K.swapSheet in reverse — its scrim part (clip-path inset(0 0 432px 0)) fades out (0.35 s) while its sheet part (clip-path inset(412px 0 0 0)) slides y 0 → +432 (expo.in 0.45 s, done 3.25).\n3.30–4.30 orange ring on the thread's last line 'Delivered · handover code verified · ₹150 paid in cash', measured box {x:14,y:484,w:362,h:32}, fading 4.30–4.65.\n4.25 orange ring on the 'Report' button, measured box {x:18,y:720,w:170,h:48} (canvas (1183.4,861.6)–(1367,913.4)) until 5.35 (fading 5.35–5.70) + label 'TO SETU STAFF' (≈209×38) at x 911–1120, y 795–833, in 4.30 (0.3 s), out 5.40–5.70; leader (1120,814)→(1183.4,880) — the label stays above the caption zone. Report is pointed at, not tapped (the caption names the button).\n5.40–5.70 the kicker fades out. 5.70–5.80 hold on order-cash/12-review-sent.png.",
+  "transitionIn": "Continuous: the review sheet is already up.",
+  "transitionOut": "The completed thread holds at identity with nothing on canvas; s12 opens by pulling the phone back.",
+  "handoffIn": {
+    "phone": "default",
+    "screen": "order-cash/09-delivered-review.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "'Delivered' with the review sheet up ('How was Southside Tiffins?') at identity; rail, tag, label and kicker gone."
+  },
+  "handoffOut": {
+    "phone": "default",
+    "screen": "order-cash/12-review-sent.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Thread ending 'Delivered · handover code verified · ₹150 paid in cash' with 'Report' / 'Order again', at identity; rings, label and kicker gone."
+  },
+  "soundCuesLocal": [
+    {
+      "at": 0.6,
+      "cue": "Star tap: rising five-note arpeggio"
+    },
+    {
+      "at": 2.45,
+      "cue": "UI tap (Submit review)"
+    },
+    {
+      "at": 2.8,
+      "cue": "Sheet slides down"
+    },
+    {
+      "at": 3.3,
+      "cue": "Soft confirm ping"
+    },
+    {
+      "at": 4.25,
+      "cue": "Ring swish (Report)"
+    }
+  ],
+  "accuracyNotes": "- Review copy: 'How was Southside Tiffins?'; five stars → 'Excellent'; 'Submit review'. The note is optional, 'Don't ask again' exists, and a rating can be given later from Orders.\n- 11-review-note.png is not used (its note says 'On time.'); the camera never features the note placeholder ('Hot, on time…'): the scene stays at identity.\n- 'Delivered · handover code verified · ₹150 paid in cash' is the app's own line.\n- 'Report' exists on ended orders; reports go to SETU campus staff as a record against the stall (not a refund claim against SETU). The label says 'TO SETU STAFF' — never just 'campus staff', which the film's audience line ('students, faculty, staff') could make read as general IIT staff.\n- The progress view (13-progress-delivered) is no longer shown: the beat was too short to read, and its time pays for the saved-Home pick in s07.\n- 'Dinner, sorted.' is story copy, not a product claim.",
+  "globalSystem": "STORY-FIRST ('Dinner at B-212'): one evening with Aarav (Nehru Hall of Residence, Room B-212). Tonight he signs in on a new phone with an emailed one-time code (DEMO-labelled; the password stays the main way in). A band wipe rewinds to his day one to show how a first-timer creates an account and runs the four onboarding steps — that is how his Home (Room B-212) was saved inside the campus boundary. A second band wipe returns to tonight: the new phone's Home first reads 'Set your delivery location' (the delivery choice is stored per device; the saved addresses belong to the account), so he picks his saved Home with three real taps (Deliver-to row → 'Home' under SAVED LOCATIONS → 'Confirm location'); then 1 × Masala Dosa + 2 × Filter Coffee from Southside Tiffins; items ₹140 + the stall's own delivery charge ₹10 = ₹150 payable to the seller. The QR route is a labelled side branch for stalls that offer it (the stall accepts first, then you pay, then it confirms). Aarav pays cash at the door, his six-digit handover code completes the order, he rates it five stars, and the Report path is pointed out. Nine numbered chapters (01 Sign in … 09 Rate & report) keep first-timers oriented, and captions name the exact button where it helps. Tone: warm, plain, lightly playful ('Tonight: dosa.', 'Dinner, sorted.'), never hype; 'students, faculty, staff' is said once. Motif: the real campus-boundary polygon opens the film, returns as the delivery-area check and closes the end card.\nGLOBAL SYSTEM (every scene):\n- Frame: 1920×1080, 60 fps, silent. One HyperFrames sub-composition per scene with one paused GSAP timeline; kit.js helpers plus plain GSAP only. Scene roots are transparent over the shared indigo background from index.html (it already carries a faint drifting campus outline; never paint a background).\n- Boundaries are HARD CUTS: frame 0 must equal handoffIn and the last frame must equal handoffOut. Unless a handoff says otherwise: phone at the default spec, rig identity, left column empty, no overlays, the named capture fully visible and settled.\n- Phone: kit .phone at phoneSpec {left:1150, top:70, k:1.08}; screen origin canvas (1164,84), 421.2×911.5. At identity a screen point (x,y) is canvas (1164 + 1.08·x, 84 + 1.08·y). The phone, its capture layers and every in-screen overlay (rings, taps, reveals, halos, masks) live inside the scene rig (.rig, transform-origin 0 0). Camera = K.focus(tl, rig, K.toCanvas(spec, P[0], P[1]), s, t, dur, {to:{x:T[0], y:T[1]}}), expo.inOut, 0.8–1.2 s; framings are given as {s, P (screen px), T (canvas px)} and K.unfocus returns to identity. Canvas-level type, labels, leader lines, chips and tags sit OUTSIDE the rig; every canvas position in a spec already accounts for the rig state at that moment.\n- Grid: text column x140–820 (kicker at (140,200), headline top 250, nothing below y 860); callout lane x840–1130 (label right edge ≤1120); right margin x1620–1880 (unused); one tag row at (140,112) for ONE tag at a time (DEMO badge, DAY ONE, TONIGHT, the sample-stalls note, TIME-LAPSE); caption zone x120–1140, y880–1050 stays empty (captions centred only in s01; s12 has none). A pushed phone's bezel never reaches left of x 1095, and left caption plates end at x ≈ 900. At most 4 floating labels/chips/tags at once, never overlapping the phone, each other, the text column or the caption zone. Never fly several objects into the phone at once: when chips travel into the phone they go one at a time.\n- Type: kicker = kit .kicker showing the scene's `chapter`, K.fadeUp at 0.10; its fade-out (0.3 s) ends at least 0.05 s before the scene's last frame, and its onScreenText end time is the end of that fade. Headline = .headline--md (Sora 800, 68 px), words only. Sora has no ₹ glyph: every string containing ₹ is set in Plus Jakarta Sans (names, amounts) or Space Mono (labels, prices, counts). Labels = short caps tags: .callout.callout--dark with font 700 18px/1 Space Mono, letter-spacing .08em, uppercase, padding 10px 16px (≈ 12.24 px × chars + 50 px wide, 38 px tall), plus a 2 px rgba(184,199,255,.7) straight leader from the label's right edge to the element; a label's right edge stays ≥8 px left of the phone's bezel for the framing in use (identity ≤1140; s 1.4 ≤1097; Ftotals ≤1095; Fhand ≤1090; Fconf ≤1087). Tag-row items: Space Mono 700 18 px caps, letter-spacing .16em, pill padding 10/16; the DEMO badge is kit .demo-badge with the text 'Demo environment'.\n- Overlays on real UI: K.tap at the centre of the named box, always 0.35 s before the screen change it causes (inside the 0.25–0.45 s rule). K.ring orange = look here; {blue:true} = the next tap target only (≥0.2 s before its tap; never on something that is not tapped); green = a kit ring with border-color #19B36B and a green glow, used only for 'inside the delivery area', 'cash confirmed' and 'payment confirmed'; pale = a kit ring with border-color #B8C7FF and box-shadow 0 0 0 6px rgba(184,199,255,.16), 0 0 22px rgba(184,199,255,.3): context that is never tapped (s03's code-box glow, s05's 'Use my current location' row). Boxes are CSS px of the 390×844 screen: named marks from marks.json written <group>/<shot>.<mark>, or explicit {x,y,w,h} measured on the final PNGs. Nothing opaque over app text; UI is never recoloured.\n- Screen changes: K.swapPush = forward navigation (0.55 s); K.swapSheet = sheets (sheetTop given); K.swapFade = in-place state change (0.15–0.35 s); circular reveal = a local state change caused by a tap (the 'after' capture as a new layer whose clip-path circle(r at x y) grows from 0 at the tap point, 0.25–0.35 s, power2.out); commit wipe = for 'Start ordering' and 'Place order · ₹150' a #0033DA circle grows from the button centre to cover the screen (0.45 s, power2.in), the next capture is set underneath, then the circle fades (0.3 s).\n- Clips: play inside a non-timed .layer in the screen (data-hf-media-start-basis=\"local\"); never animate the <video>; the next still sits underneath to hold the last frame; chained clips start exactly where the previous ends. clipSeconds = the length used (a speed variant is pre-rendered; each captured frame gets clipSeconds / frames). Where a clip's last frame differs from the still under it only by input focus, the cut is a deliberate focus-loss cut (named in the scene).\n- Shot windows: a shot starts when its layer first becomes visible and ends when it is fully covered or hidden, i.e. at the END of the transition that removes it.\n- Rhythm: tap → result → ≥0.6 s beat; text that matters is held ≥1.2 s; exits 0.3–0.5 s; nothing is visible before its entrance (fromTo with opacity 0); no drifting, spinning, particles or glitch.\n- Icons: Lucide line icons only (stroke 1.85–2.5); no emoji, food photos, clip-art or filled pins.\n- Honesty: only real captures for app screens; DEMO badge across the whole OTP portion (code request → Home); the sample-stalls note once (s07) plus the end-card fine print; the demo QR stays labelled; no 'SETU delivers', pickup, map or location tracking, delivery-time promise, free/zero-cost/minimal-charge wording or competitor names anywhere. Never ring, zoom on or caption the app's own 'SETU delivers inside…' lines, the location dialog's body sentences ('…to find nearby stalls…', 'It is only read when you ask for it.' — the code contradicts both), Step 4's licence and 'Recorded…' sub-lines, search rows' '20–20 min', the stall's '20 min', the prep time, the QR thread pill 'Order confirmed by …' (shown before payment), 33-home-set's hover-blue 'Orders' tab or the review note placeholder.",
+  "previousScene": {
+    "id": "s10-track-handover",
+    "title": "Track it, then hand over cash and the code",
+    "transitionOut": "The review sheet rises over 'Delivered'; settled at identity for the cut.",
+    "handoffOut": {
+      "phone": "default",
+      "screen": "order-cash/09-delivered-review.png",
+      "rig": "identity",
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "'Delivered' with the review sheet up ('How was Southside Tiffins?') at identity; rail, tag, label and kicker gone."
+    },
+    "lastShots": [
+      "order-cash/09-delivered-review.png",
+      "graphic:status rail (the app's six progress labels)"
+    ]
+  },
+  "nextScene": {
+    "id": "s12-end-card",
+    "title": "End card",
+    "transitionIn": "The phone recedes into the indigo as the campus outline redraws faintly.",
+    "handoffIn": {
+      "phone": "default",
+      "screen": "order-cash/12-review-sent.png",
+      "rig": "identity",
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "Thread ending 'Delivered · handover code verified · ₹150 paid in cash' with 'Report' / 'Order again', at identity; rings, label and kicker gone."
+    },
+    "firstShots": [
+      "order-cash/12-review-sent.png",
+      "graphic:real campus boundary outline, faint (assets/data/campus-boundary.json)"
+    ]
+  }
+}

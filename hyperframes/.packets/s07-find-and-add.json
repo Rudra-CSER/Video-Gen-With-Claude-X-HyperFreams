@@ -1,0 +1,579 @@
+{
+  "sceneId": "s07-find-and-add",
+  "file": "compositions/s07-find-and-add.html",
+  "duration": 13.55,
+  "globalStart": 58.2,
+  "globalEnd": 71.75,
+  "title": "Back to tonight — saved Home, then dosa from Southside Tiffins",
+  "chapter": "05 · Find & add",
+  "phoneSpec": {
+    "left": 1150,
+    "top": 70,
+    "k": 1.08
+  },
+  "captionPlacement": "left (keep x 120-1140, y 880-1050 clear)",
+  "narration": "New phone, same account: he picks his saved Home. Good evening, Aarav. Tonight: dosa. Southside Tiffins: approved by SETU. Tap ADD: one Masala Dosa, two filter coffees.",
+  "captionsLocal": [
+    {
+      "start": 0.2,
+      "end": 4.45,
+      "text": "New phone, same account:\nhe picks his saved Home."
+    },
+    {
+      "start": 4.55,
+      "end": 7.1,
+      "text": "Good evening, Aarav.\nTonight: dosa."
+    },
+    {
+      "start": 7.5,
+      "end": 9.8,
+      "text": "Southside Tiffins: approved by SETU."
+    },
+    {
+      "start": 9.9,
+      "end": 13,
+      "text": "Tap ADD: one Masala Dosa,\ntwo filter coffees."
+    }
+  ],
+  "onScreenText": [
+    {
+      "text": "TONIGHT",
+      "start": 0.4,
+      "end": 2,
+      "role": "tag (tag row at (140,112): Lucide moon + Space Mono 700 18 px caps)"
+    },
+    {
+      "text": "05 · Find & add",
+      "start": 0.45,
+      "end": 13.45,
+      "role": "kicker (kit .kicker)"
+    },
+    {
+      "text": "Demo environment · sample stalls",
+      "start": 2,
+      "end": 10.6,
+      "role": "honesty note (tag row; Space Mono 700 18 px caps, shown once in the body)"
+    },
+    {
+      "text": "Masala Dosa ₹80",
+      "start": 7.25,
+      "end": 11.15,
+      "role": "dish chip (kit .dish-chip: name Plus Jakarta Sans 700 28 px, price Space Mono 700 26 px #B8C7FF; exact menu line)"
+    },
+    {
+      "text": "Ghee Roast Dosa ₹110",
+      "start": 7.4,
+      "end": 9.8,
+      "role": "dish chip (kit .dish-chip: Plus Jakarta Sans name, Space Mono price; exact menu line)"
+    },
+    {
+      "text": "1 × Masala Dosa ₹80",
+      "start": 11.15,
+      "end": 13.55,
+      "role": "order-slip row (kit .dish-chip; '1 ×' Space Mono 700 26 px #EC5A2A, name Plus Jakarta Sans, price Space Mono; exact cart line)"
+    },
+    {
+      "text": "2 × Filter Coffee ₹60",
+      "start": 12.95,
+      "end": 13.55,
+      "role": "order-slip row (kit .dish-chip; '2 ×' Space Mono, name Plus Jakarta Sans, price Space Mono; exact cart line)"
+    }
+  ],
+  "shots": [
+    {
+      "file": "home/01-first-home.png",
+      "start": 0,
+      "end": 0.29,
+      "treatment": "Frame 0 (day one's Home, from s06) under the return band; hidden at 0.29 while the band covers the phone.",
+      "asset": {
+        "kind": "still",
+        "file": "home/01-first-home.png",
+        "src": "assets/ui/home/01-first-home.png",
+        "marks": {
+          "deliverTo": {
+            "x": 18,
+            "y": 18.1,
+            "w": 304,
+            "h": 41
+          },
+          "greeting": {
+            "x": 18,
+            "y": 78.6,
+            "w": 354,
+            "h": 27.6
+          },
+          "search": {
+            "x": 18,
+            "y": 129.1,
+            "w": 354,
+            "h": 46
+          },
+          "firstCard": {
+            "x": 18,
+            "y": 378.4,
+            "w": 354,
+            "h": 247
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "graphic:editorial return band (right → left)",
+      "start": 0,
+      "end": 0.7,
+      "treatment": "Marks the jump back to tonight; the phone switches to tonight's Home under it (0.29).",
+      "asset": {
+        "kind": "graphic",
+        "description": "editorial return band (right → left)"
+      }
+    },
+    {
+      "file": "location/30-home-unset.png",
+      "start": 0.29,
+      "end": 1.95,
+      "treatment": "Tonight, new phone: 'Set your delivery location' over 'Tap to pick it on the map'; ring--blue + tap the Deliver-to row (1.00); covered by the picker's scrim 1.35–1.95.",
+      "asset": {
+        "kind": "still",
+        "file": "location/30-home-unset.png",
+        "src": "assets/ui/location/30-home-unset.png",
+        "marks": {
+          "deliverTo": {
+            "x": 18,
+            "y": 18.1,
+            "w": 304,
+            "h": 41
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "location/31-picker-saved.png",
+      "start": 1.35,
+      "end": 3.15,
+      "treatment": "K.swapSheet (sheetTop 433): 'Select a location' with SAVED LOCATIONS · 'Home' over 'B-212 · Nehru Hall of Residence, Cricket Gro…'; identity only; ring--blue + tap the Home row (2.55); fades out 2.90–3.15.",
+      "asset": {
+        "kind": "still",
+        "file": "location/31-picker-saved.png",
+        "src": "assets/ui/location/31-picker-saved.png",
+        "marks": {
+          "saved": {
+            "x": 18,
+            "y": 740,
+            "w": 354,
+            "h": 12
+          },
+          "homeRow": {
+            "x": 18,
+            "y": 760,
+            "w": 354,
+            "h": 66
+          },
+          "gps": {
+            "x": 84,
+            "y": 605,
+            "w": 243,
+            "h": 18
+          },
+          "search": {
+            "x": 78,
+            "y": 543.5,
+            "w": 261,
+            "h": 23
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "location/32-confirm-saved.png",
+      "start": 2.9,
+      "end": 4.55,
+      "treatment": "swapFade: 'Confirm delivery location' (SAVED LOCATION, Home, B-212 filled); ring--blue + tap 'Confirm location' (3.75); the sheet closes 4.10–4.55.",
+      "asset": {
+        "kind": "still",
+        "file": "location/32-confirm-saved.png",
+        "src": "assets/ui/location/32-confirm-saved.png",
+        "marks": {
+          "zoneOk": {
+            "x": 55,
+            "y": 478,
+            "w": 292,
+            "h": 17
+          },
+          "confirm": {
+            "x": 181.6,
+            "y": 782,
+            "w": 190.4,
+            "h": 48
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "location/33-home-set.png",
+      "start": 4.1,
+      "end": 6.35,
+      "treatment": "Revealed as the sheet closes: 'Home' over 'Room B-212 · Nehru Hall of Residence'; ring; ring--blue + tap search (5.45); pushed out 5.80–6.35.",
+      "asset": {
+        "kind": "still",
+        "file": "location/33-home-set.png",
+        "src": "assets/ui/location/33-home-set.png",
+        "marks": {
+          "deliverTo": {
+            "x": 18,
+            "y": 18.1,
+            "w": 304,
+            "h": 41
+          },
+          "greeting": {
+            "x": 18,
+            "y": 78.6,
+            "w": 354,
+            "h": 27.6
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "search/01-search-empty.png",
+      "start": 5.8,
+      "end": 6.45,
+      "treatment": "swapPush in; the box is auto-focused.",
+      "asset": {
+        "kind": "still",
+        "file": "search/01-search-empty.png",
+        "src": "assets/ui/search/01-search-empty.png",
+        "marks": {
+          "field": {
+            "x": 116,
+            "y": 26.5,
+            "w": 236,
+            "h": 23
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "search/02-type-dosa/",
+      "start": 6.45,
+      "end": 6.95,
+      "treatment": "Typing clip, clipSeconds 0.5: 'dosa'.",
+      "clipSeconds": 0.5,
+      "asset": {
+        "kind": "clip",
+        "file": "search/02-type-dosa/",
+        "src": "assets/clips/search-02-type-dosa.500ms.mp4",
+        "baseSrc": "assets/clips/search-02-type-dosa.mp4",
+        "seconds": 0.5,
+        "info": {
+          "frames": 5,
+          "hold": 4,
+          "seconds": 0.333
+        },
+        "note": "Play it in a non-timed .layer inside the phone screen; put the matching still under it to hold the last frame."
+      }
+    },
+    {
+      "file": "search/03-results.png",
+      "start": 6.95,
+      "end": 9.4,
+      "treatment": "Southside Tiffins with 'Masala Dosa ₹80' / 'Ghee Roast Dosa ₹110'; dish chips rise out; tap the stall card (8.50); pushed out 8.85–9.40.",
+      "asset": {
+        "kind": "still",
+        "file": "search/03-results.png",
+        "src": "assets/ui/search/03-results.png",
+        "marks": {
+          "field": {
+            "x": 116,
+            "y": 26.5,
+            "w": 206,
+            "h": 23
+          },
+          "stall": {
+            "x": 18,
+            "y": 130,
+            "w": 354,
+            "h": 181
+          },
+          "hit": {
+            "x": 148,
+            "y": 260,
+            "w": 181.4,
+            "h": 17
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "stall/01-stall.png",
+      "start": 8.85,
+      "end": 11.45,
+      "treatment": "swapPush in; ring on 'Approved by SETU · you pay the seller directly'; tap Masala Dosa ADD (10.75); the base layer until the full 02 layer is set at 11.45.",
+      "asset": {
+        "kind": "still",
+        "file": "stall/01-stall.png",
+        "src": "assets/ui/stall/01-stall.png",
+        "marks": {
+          "back": {
+            "x": 18,
+            "y": 10,
+            "w": 38,
+            "h": 38
+          },
+          "name": {
+            "x": 86,
+            "y": 65.8,
+            "w": 189.8,
+            "h": 26.4
+          },
+          "facts": {
+            "x": 18,
+            "y": 130,
+            "w": 354,
+            "h": 22
+          },
+          "trust": {
+            "x": 18,
+            "y": 166,
+            "w": 354,
+            "h": 28
+          },
+          "tabs": {
+            "x": 0,
+            "y": 210,
+            "w": 390,
+            "h": 55
+          },
+          "dosa": {
+            "x": 18,
+            "y": 565,
+            "w": 354,
+            "h": 92
+          },
+          "dosaAdd": {
+            "x": 267.2,
+            "y": 594,
+            "w": 63.6,
+            "h": 34
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "stall/02-dosa-added.png",
+      "start": 11.1,
+      "end": 12.9,
+      "treatment": "Circular reveal at the ADD button (ADD → '− 1 +') + bottom wipe revealing 'View cart'; full layer from 11.45.",
+      "asset": {
+        "kind": "still",
+        "file": "stall/02-dosa-added.png",
+        "src": "assets/ui/stall/02-dosa-added.png",
+        "marks": {
+          "stepper": {
+            "x": 254,
+            "y": 594,
+            "w": 90,
+            "h": 34
+          },
+          "viewCart": {
+            "x": 132.9,
+            "y": 798,
+            "w": 124.2,
+            "h": 38
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "stall/04-coffee.png",
+      "start": 11.1,
+      "end": 12.9,
+      "treatment": "Pixel-identical to 02 (no swap needed): Filter Coffee ADD (11.95) then '+' (12.30) are tapped on this state.",
+      "asset": {
+        "kind": "still",
+        "file": "stall/04-coffee.png",
+        "src": "assets/ui/stall/04-coffee.png",
+        "marks": {
+          "coffee": {
+            "x": 18,
+            "y": 316,
+            "w": 354,
+            "h": 92
+          },
+          "coffeeAdd": {
+            "x": 267.2,
+            "y": 345,
+            "w": 63.6,
+            "h": 34
+          },
+          "viewCart": {
+            "x": 132.9,
+            "y": 798,
+            "w": 124.2,
+            "h": 38
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "stall/05-coffee-two.png",
+      "start": 12.65,
+      "end": 13.55,
+      "treatment": "Circular reveal at the coffee stepper: '− 2 +'; full layer from 12.90.",
+      "asset": {
+        "kind": "still",
+        "file": "stall/05-coffee-two.png",
+        "src": "assets/ui/stall/05-coffee-two.png",
+        "marks": {
+          "stepper": {
+            "x": 254,
+            "y": 345,
+            "w": 90,
+            "h": 34
+          },
+          "plus": {
+            "x": 310,
+            "y": 345,
+            "w": 34,
+            "h": 34
+          },
+          "viewCart": {
+            "x": 132.9,
+            "y": 798,
+            "w": 124.2,
+            "h": 38
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    }
+  ],
+  "demoBadgeLocal": [],
+  "uiState": "Back to tonight on the new phone: Home reads 'Set your delivery location' over 'Tap to pick it on the map' (the selected delivery location is stored per browser; the saved addresses belong to the account) → the Deliver-to row opens 'Select a location' with SAVED LOCATIONS · 'Home' over 'B-212 · Nehru Hall of Residence, Cricket Gro…' → 'Confirm delivery location' (SAVED LOCATION 'Nehru Hall of Residence, Cricket Ground', 'Location is within the IIT Kharagpur delivery area.', SAVE AS Home, ADDRESS DETAILS 'B-212') → 'Confirm location' → Home: 'Home' over 'Room B-212 · Nehru Hall of Residence', 'Good evening, Aarav', tabs All · Chinese · South Indian · Street Food · Amer…, 'Approved sellers', '13 open now' → Search 'dosa' → Southside Tiffins ('Masala Dosa ₹80', 'Ghee Roast Dosa ₹110') → stall page ('Approved by SETU · you pay the seller directly') → Masala Dosa 1, Filter Coffee 2, 'View cart'.",
+  "animationLocal": "Local times. Frame 0 = home/01-first-home.png (day one's Home) at identity; the whole scene stays at identity (never push in on the picker sheet: its subtitle 'SETU delivers inside the IIT Kharagpur campus boundary' sits at screen y≈475–500).\n0.00–0.70 return band: the s04 band style (760 px, linear-gradient(270deg,#151E4D,#22307A), 3 px orange leading edge on its LEFT side) sweeps right → left, x 1920 → −760 (power2.inOut 0.7 s), above the phone and the left column (the caption track stays on top). It fully covers the phone (x 1150–1599) only between ≈0.265 and 0.314 s, and the phone is fully uncovered again from ≈0.38.\n0.29 instant swap under the band: home/01-first-home.png → location/30-home-unset.png (set the new layer visible, hide the old one; verify the 0.27–0.31 frames in a snapshot). Tonight, on his new phone, Home reads 'Set your delivery location' over 'Tap to pick it on the map' — the same fresh-device state s03 ended on.\n0.40–0.70 tag 'TONIGHT' (Lucide moon 20 px + Space Mono 700 18 px caps) fades in at the tag row (140,112); 1.70–2.00 it fades out. 0.45 kicker '05 · Find & add' K.fadeUp at (140,200).\nPicking the saved Home takes three real taps, each 0.35 s before the change it causes. Readable windows (counting the sheets' expo entrances/exits): 30's header ≈0.38–1.6, 31's Home row ≈1.6–2.9, 32's confirm step ≈3.0–4.3, 33's header ≈4.4–5.9 — each ≥1.2 s:\n0.75 ring--blue on location/30-home-unset.deliverTo (canvas (1183.4,103.5)–(1511.8,147.8)). 1.00 K.tap deliverTo (centre (170,38.6)) → 1.35 K.swapSheet → location/31-picker-saved.png (sheetTop 433, 0.6 s; settled 1.95).\n1.95 ring--blue on location/31-picker-saved.homeRow (the 'Home' row under 'SAVED LOCATIONS'; canvas (1183.4,904.8)–(1565.8,976.1)). 2.55 K.tap homeRow (centre (195,793); 0.6 s after the sheet settled) → 2.90 K.swapFade (0.25 s) → location/32-confirm-saved.png: 'Confirm delivery location' with SAVED LOCATION 'Nehru Hall of Residence, Cricket Ground', 'Location is within the IIT Kharagpur delivery area.', SAVE AS Home and ADDRESS DETAILS 'B-212' already filled (settled 3.15). No ring on its zone line (s05 explained it).\n2.00–2.30 note 'Demo environment · sample stalls' (Space Mono 700 18 px caps, #B8C7FF at 80%, a 6 px orange dot first) fades in at the tag row as soon as TONIGHT has left — before any stall card is held on screen (33-home-set from 4.55); 10.30–10.60 it fades out.\n3.25 ring--blue on location/32-confirm-saved.confirm (canvas (1360.1,928.6)–(1565.8,980.4)). 3.75 K.tap confirm ('Confirm location', centre (276.8,806); 0.6 s after the step settled) → 4.10 the sheet closes: location/33-home-set.png sits underneath; the 32 capture is split like K.swapSheet in reverse — its scrim part (clip-path inset(0 0 592px 0)) fades out (0.35 s) while its sheet part (clip-path inset(252px 0 0 0)) slides y 0 → +592 (expo.in 0.45 s, done 4.55).\n4.55–5.30 orange ring on location/33-home-set.deliverTo ('Home' over 'Room B-212 · Nehru Hall of Residence'), fading 5.30–5.65; the header stays readable until the push (settled 4.55–5.80 = 1.25 s). Never ring or zoom on 33's tab bar ('Orders' shows a hover blue there, screen y 798–829).\n5.25 ring--blue on the search box, measured box {x:18,y:129.1,w:354,h:46} (33-home-set is pixel-identical to home/01-first-home.png above y 636, so home/01-first-home.search applies). 5.45 K.tap search (centre (195,152.1)) → 5.80 K.swapPush → search/01-search-empty.png (0.55 s; the box is auto-focused, no tap needed).\n6.45 clip layer search/02-type-dosa/ (clipSeconds 0.5; f0000 = 01-search-empty) types 'dosa' 6.45–6.95; 6.95 the clip ends: cut to search/03-results.png (set it visible under the clip layer at 6.95; the filtered results replace the clip's last frame).\n7.15–8.35 orange ring on the Southside Tiffins dish lines, measured box {x:128,y:256,w:236,h:46} ('Masala Dosa ₹80' / 'Ghee Roast Dosa ₹110').\n7.25 dish chip 'Masala Dosa ₹80' (kit .dish-chip with .veg mark; name Plus Jakarta Sans 700 28 px, price in <b> Space Mono 700 26 px #B8C7FF) rises at left 140, top 340: fromTo y +30/opacity 0 → 0/1 (expo.out 0.5 s). 7.40 'Ghee Roast Dosa ₹110' the same at left 140, top 412. They move OUT of the phone; nothing flies in.\n8.30 ring--blue on search/03-results.stall. 8.50 K.tap the stall card (centre (195,220.5)) → 8.85 K.swapPush → stall/01-stall.png (0.55 s).\n9.45–10.65 orange ring on stall/01-stall.trust ('Approved by SETU · you pay the seller directly'). 9.50–9.80 the 'Ghee Roast Dosa ₹110' chip fades out.\n10.50 ring--blue on stall/01-stall.dosaAdd. 10.75 K.tap dosaAdd ('ADD') → 11.10 circular reveal of a stall/02-dosa-added.png layer from (299,611), r 0 → 90 (0.25 s): ADD becomes '− 1 +' (stall/02-dosa-added.stepper); 11.10–11.40 a second 02 layer clipped to the bottom strip (screen y ≥ 790) wipes up from the bottom, revealing 'View cart'; 11.45 set one full 02 layer visible (stall/04-coffee.png is pixel-identical, so it stands for both). Accepted at 11.45: the 'Dosas' tab label (screen x 163–201, y 232–241) drops from 01's hover weight to regular — a capture artifact, too small to read as a change.\n11.15 the Masala Dosa chip gains an orange '1 ×' prefix (Space Mono 700 26 px #EC5A2A, slides in from the left 0.25 s): it now reads '1 × Masala Dosa ₹80', the cart's line.\n11.95 K.tap stall/04-coffee.coffeeAdd (Filter Coffee 'ADD', centre (299,362); 0.6 s after the dosa stepper settled); 12.30 K.tap stall/05-coffee-two.plus ('+', centre (327,362)); nothing changes between the two taps (there is no capture of the '1' state). 12.65 circular reveal of stall/05-coffee-two.png from (299,362), r 0 → 80 (0.25 s): '− 2 +' (the only change from 04); 12.90 set the full 05 layer visible.\n12.95 slip row 2 '2 × Filter Coffee ₹60' (same chip style) fromTo y +20/opacity 0 → 0/1 at left 140, top 412 (expo.out 0.4 s). The two chips now form the order slip: wrap them in one element #s07-slip (left 140, top 340, 600×132) so s08 can move them.\n13.15–13.45 the kicker fades out. 13.45–13.55 hold (slip visible, phone on 05-coffee-two at identity).",
+  "transitionIn": "Editorial return band (right → left) from day one back to tonight. Under it (0.29) the phone switches to tonight's Home on the new phone ('Set your delivery location'), because the delivery choice is stored per device; Aarav picks his saved Home with three taps.",
+  "transitionOut": "Holds on the stall with both items added and the order slip (two cart lines) in the left column — carried into s08.",
+  "handoffIn": {
+    "phone": "default",
+    "screen": "home/01-first-home.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Day one's Home ('Home' over 'Room B-212 · Nehru Hall of Residence') at identity; wipe circle, mask, list and kicker gone."
+  },
+  "handoffOut": {
+    "phone": "default",
+    "screen": "stall/05-coffee-two.png",
+    "rig": "identity",
+    "leftColumn": "1 × Masala Dosa ₹80 / 2 × Filter Coffee ₹60 (order slip; no kicker, no tag)",
+    "overlays": "Order slip #sNN-slip: two kit .dish-chip rows in one wrapper at left 140, top 340 (600×132), fully opaque, at rest: row 1 at top 340 '[veg] 1 × Masala Dosa ₹80', row 2 at top 412 '[veg] 2 × Filter Coffee ₹60' ('1 ×'/'2 ×' Space Mono 700 26 px #EC5A2A; names Plus Jakarta Sans 700 28 px white; prices Space Mono 700 26 px #B8C7FF; kit .dish-chip padding 16/24, radius 22, height 62).",
+    "notes": "Phone at identity on stall/05-coffee-two.png; the only canvas element is the order slip."
+  },
+  "soundCuesLocal": [
+    {
+      "at": 0,
+      "cue": "Band whoosh (back to tonight) + light evening swell"
+    },
+    {
+      "at": 1,
+      "cue": "UI tap (Deliver-to row)"
+    },
+    {
+      "at": 1.35,
+      "cue": "Sheet slide up"
+    },
+    {
+      "at": 2.55,
+      "cue": "UI tap (saved Home)"
+    },
+    {
+      "at": 3.75,
+      "cue": "UI tap (Confirm location)"
+    },
+    {
+      "at": 4.1,
+      "cue": "Sheet slides down + soft settle"
+    },
+    {
+      "at": 5.45,
+      "cue": "UI tap"
+    },
+    {
+      "at": 5.8,
+      "cue": "Page push"
+    },
+    {
+      "at": 6.45,
+      "cue": "Four keyboard ticks"
+    },
+    {
+      "at": 7.25,
+      "cue": "Two soft pops (dish chips)"
+    },
+    {
+      "at": 8.5,
+      "cue": "UI tap"
+    },
+    {
+      "at": 8.85,
+      "cue": "Page push"
+    },
+    {
+      "at": 10.75,
+      "cue": "ADD tap + soft pop"
+    },
+    {
+      "at": 11.95,
+      "cue": "UI tap"
+    },
+    {
+      "at": 12.3,
+      "cue": "UI tap + tick (× 2)"
+    }
+  ],
+  "accuracyNotes": "- Tonight's Home is location/30-home-unset.png ('Set your delivery location' over 'Tap to pick it on the map'): the selected delivery location is stored per browser (setu-svc-loc), so the new phone starts unset although the account holds the saved Home — exactly what the capture stack shows (signin/07-home.png ends s03 in the same state). It takes three real taps, in the capture's order: the Deliver-to row → the 'Home' row under SAVED LOCATIONS → 'Confirm location' (location/30 → 31 → 32 → 33). Never imply the saved address applies itself.\n- 31-picker-saved stays at identity and briefly on screen: its subtitle 'SETU delivers inside the IIT Kharagpur campus boundary' (screen y≈475–500) is never ringed, zoomed or captioned.\n- 33-home-set's tab bar shows 'Orders' in a hover blue next to the active 'Home' (a capture artifact, screen y 798–829); never ring or zoom on it. Above y 636 it is pixel-identical to home/01-first-home.png, so the search box {x:18,y:129.1,w:354,h:46} is the same.\n- 'Demo environment · sample stalls' appears here once (2.00, as soon as the TONIGHT tag leaves and before any stall card is held), and again in the end-card fine print.\n- The liked cuisines lead the Home tabs (capture order: All, Chinese, South Indian, Street Food…): visible, not featured.\n- Search 'dosa' → Southside Tiffins with 'Masala Dosa ₹80' and 'Ghee Roast Dosa ₹110' (exact). Never ring or zoom on the result rows' '20–20 min' or the stall's '20 min'; no delivery-time claim.\n- The stall line is quoted: 'Approved by SETU · you pay the seller directly'. The stall shows 'New' (fresh demo data).\n- Coffee: ADD, then '+', then the 2 appears (no capture of the '1' state). stall/04-coffee.png is pixel-identical to 02-dosa-added. stall/03-scroll-menu/ is not used (it snaps back).\n- Dish chips and slip rows quote the real menu and cart lines; prices are never set in Sora.",
+  "globalSystem": "STORY-FIRST ('Dinner at B-212'): one evening with Aarav (Nehru Hall of Residence, Room B-212). Tonight he signs in on a new phone with an emailed one-time code (DEMO-labelled; the password stays the main way in). A band wipe rewinds to his day one to show how a first-timer creates an account and runs the four onboarding steps — that is how his Home (Room B-212) was saved inside the campus boundary. A second band wipe returns to tonight: the new phone's Home first reads 'Set your delivery location' (the delivery choice is stored per device; the saved addresses belong to the account), so he picks his saved Home with three real taps (Deliver-to row → 'Home' under SAVED LOCATIONS → 'Confirm location'); then 1 × Masala Dosa + 2 × Filter Coffee from Southside Tiffins; items ₹140 + the stall's own delivery charge ₹10 = ₹150 payable to the seller. The QR route is a labelled side branch for stalls that offer it (the stall accepts first, then you pay, then it confirms). Aarav pays cash at the door, his six-digit handover code completes the order, he rates it five stars, and the Report path is pointed out. Nine numbered chapters (01 Sign in … 09 Rate & report) keep first-timers oriented, and captions name the exact button where it helps. Tone: warm, plain, lightly playful ('Tonight: dosa.', 'Dinner, sorted.'), never hype; 'students, faculty, staff' is said once. Motif: the real campus-boundary polygon opens the film, returns as the delivery-area check and closes the end card.\nGLOBAL SYSTEM (every scene):\n- Frame: 1920×1080, 60 fps, silent. One HyperFrames sub-composition per scene with one paused GSAP timeline; kit.js helpers plus plain GSAP only. Scene roots are transparent over the shared indigo background from index.html (it already carries a faint drifting campus outline; never paint a background).\n- Boundaries are HARD CUTS: frame 0 must equal handoffIn and the last frame must equal handoffOut. Unless a handoff says otherwise: phone at the default spec, rig identity, left column empty, no overlays, the named capture fully visible and settled.\n- Phone: kit .phone at phoneSpec {left:1150, top:70, k:1.08}; screen origin canvas (1164,84), 421.2×911.5. At identity a screen point (x,y) is canvas (1164 + 1.08·x, 84 + 1.08·y). The phone, its capture layers and every in-screen overlay (rings, taps, reveals, halos, masks) live inside the scene rig (.rig, transform-origin 0 0). Camera = K.focus(tl, rig, K.toCanvas(spec, P[0], P[1]), s, t, dur, {to:{x:T[0], y:T[1]}}), expo.inOut, 0.8–1.2 s; framings are given as {s, P (screen px), T (canvas px)} and K.unfocus returns to identity. Canvas-level type, labels, leader lines, chips and tags sit OUTSIDE the rig; every canvas position in a spec already accounts for the rig state at that moment.\n- Grid: text column x140–820 (kicker at (140,200), headline top 250, nothing below y 860); callout lane x840–1130 (label right edge ≤1120); right margin x1620–1880 (unused); one tag row at (140,112) for ONE tag at a time (DEMO badge, DAY ONE, TONIGHT, the sample-stalls note, TIME-LAPSE); caption zone x120–1140, y880–1050 stays empty (captions centred only in s01; s12 has none). A pushed phone's bezel never reaches left of x 1095, and left caption plates end at x ≈ 900. At most 4 floating labels/chips/tags at once, never overlapping the phone, each other, the text column or the caption zone. Never fly several objects into the phone at once: when chips travel into the phone they go one at a time.\n- Type: kicker = kit .kicker showing the scene's `chapter`, K.fadeUp at 0.10; its fade-out (0.3 s) ends at least 0.05 s before the scene's last frame, and its onScreenText end time is the end of that fade. Headline = .headline--md (Sora 800, 68 px), words only. Sora has no ₹ glyph: every string containing ₹ is set in Plus Jakarta Sans (names, amounts) or Space Mono (labels, prices, counts). Labels = short caps tags: .callout.callout--dark with font 700 18px/1 Space Mono, letter-spacing .08em, uppercase, padding 10px 16px (≈ 12.24 px × chars + 50 px wide, 38 px tall), plus a 2 px rgba(184,199,255,.7) straight leader from the label's right edge to the element; a label's right edge stays ≥8 px left of the phone's bezel for the framing in use (identity ≤1140; s 1.4 ≤1097; Ftotals ≤1095; Fhand ≤1090; Fconf ≤1087). Tag-row items: Space Mono 700 18 px caps, letter-spacing .16em, pill padding 10/16; the DEMO badge is kit .demo-badge with the text 'Demo environment'.\n- Overlays on real UI: K.tap at the centre of the named box, always 0.35 s before the screen change it causes (inside the 0.25–0.45 s rule). K.ring orange = look here; {blue:true} = the next tap target only (≥0.2 s before its tap; never on something that is not tapped); green = a kit ring with border-color #19B36B and a green glow, used only for 'inside the delivery area', 'cash confirmed' and 'payment confirmed'; pale = a kit ring with border-color #B8C7FF and box-shadow 0 0 0 6px rgba(184,199,255,.16), 0 0 22px rgba(184,199,255,.3): context that is never tapped (s03's code-box glow, s05's 'Use my current location' row). Boxes are CSS px of the 390×844 screen: named marks from marks.json written <group>/<shot>.<mark>, or explicit {x,y,w,h} measured on the final PNGs. Nothing opaque over app text; UI is never recoloured.\n- Screen changes: K.swapPush = forward navigation (0.55 s); K.swapSheet = sheets (sheetTop given); K.swapFade = in-place state change (0.15–0.35 s); circular reveal = a local state change caused by a tap (the 'after' capture as a new layer whose clip-path circle(r at x y) grows from 0 at the tap point, 0.25–0.35 s, power2.out); commit wipe = for 'Start ordering' and 'Place order · ₹150' a #0033DA circle grows from the button centre to cover the screen (0.45 s, power2.in), the next capture is set underneath, then the circle fades (0.3 s).\n- Clips: play inside a non-timed .layer in the screen (data-hf-media-start-basis=\"local\"); never animate the <video>; the next still sits underneath to hold the last frame; chained clips start exactly where the previous ends. clipSeconds = the length used (a speed variant is pre-rendered; each captured frame gets clipSeconds / frames). Where a clip's last frame differs from the still under it only by input focus, the cut is a deliberate focus-loss cut (named in the scene).\n- Shot windows: a shot starts when its layer first becomes visible and ends when it is fully covered or hidden, i.e. at the END of the transition that removes it.\n- Rhythm: tap → result → ≥0.6 s beat; text that matters is held ≥1.2 s; exits 0.3–0.5 s; nothing is visible before its entrance (fromTo with opacity 0); no drifting, spinning, particles or glitch.\n- Icons: Lucide line icons only (stroke 1.85–2.5); no emoji, food photos, clip-art or filled pins.\n- Honesty: only real captures for app screens; DEMO badge across the whole OTP portion (code request → Home); the sample-stalls note once (s07) plus the end-card fine print; the demo QR stays labelled; no 'SETU delivers', pickup, map or location tracking, delivery-time promise, free/zero-cost/minimal-charge wording or competitor names anywhere. Never ring, zoom on or caption the app's own 'SETU delivers inside…' lines, the location dialog's body sentences ('…to find nearby stalls…', 'It is only read when you ask for it.' — the code contradicts both), Step 4's licence and 'Recorded…' sub-lines, search rows' '20–20 min', the stall's '20 min', the prep time, the QR thread pill 'Order confirmed by …' (shown before payment), 33-home-set's hover-blue 'Orders' tab or the review note placeholder.",
+  "previousScene": {
+    "id": "s06-your-picks",
+    "title": "Your picks — and three things SETU does not do",
+    "transitionOut": "'Start ordering' → blue commit wipe → Home (day one, address set), settled at identity.",
+    "handoffOut": {
+      "phone": "default",
+      "screen": "home/01-first-home.png",
+      "rig": "identity",
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "Day one's Home ('Home' over 'Room B-212 · Nehru Hall of Residence') at identity; wipe circle, mask, list and kicker gone."
+    },
+    "lastShots": [
+      "home/01-first-home.png",
+      "graphic:commit wipe (#0033DA circle from the Start ordering button)"
+    ]
+  },
+  "nextScene": {
+    "id": "s08-cart",
+    "title": "Cart — ₹150, payable to the seller",
+    "transitionIn": "Continuous from s07: the order slip is on canvas; the 'View cart' tap starts the chapter.",
+    "handoffIn": {
+      "phone": "default",
+      "screen": "stall/05-coffee-two.png",
+      "rig": "identity",
+      "leftColumn": "1 × Masala Dosa ₹80 / 2 × Filter Coffee ₹60 (order slip; no kicker, no tag)",
+      "overlays": "Order slip #sNN-slip: two kit .dish-chip rows in one wrapper at left 140, top 340 (600×132), fully opaque, at rest: row 1 at top 340 '[veg] 1 × Masala Dosa ₹80', row 2 at top 412 '[veg] 2 × Filter Coffee ₹60' ('1 ×'/'2 ×' Space Mono 700 26 px #EC5A2A; names Plus Jakarta Sans 700 28 px white; prices Space Mono 700 26 px #B8C7FF; kit .dish-chip padding 16/24, radius 22, height 62).",
+      "notes": "Phone at identity on stall/05-coffee-two.png; the only canvas element is the order slip."
+    },
+    "firstShots": [
+      "stall/05-coffee-two.png",
+      "cart/01-cart.png"
+    ]
+  }
+}

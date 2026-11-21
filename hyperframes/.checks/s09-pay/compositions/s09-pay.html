@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /></head>
+<body>
+<template id="s09-pay-template">
+  <link rel="stylesheet" href="assets/css/kit.css" />
+  <style>
+    #root { position: absolute; inset: 0; }
+    #root .rig { position: absolute; inset: 0; transform-origin: 0 0; }
+    #s09-qrig { position: absolute; inset: 0; }
+    #s09-qfade { position: absolute; inset: 0; opacity: 0; }
+    #s09-kicker { position: absolute; left: 140px; top: 200px; opacity: 0; }
+    /* side branch (canvas level, middle column x 560-1110) */
+    #s09-bhead { position: absolute; left: 560px; top: 250px; white-space: nowrap; opacity: 0; }
+    #s09-tag {
+      position: absolute; left: 560px; top: 296px; box-sizing: border-box; height: 38px;
+      display: inline-flex; align-items: center; padding: 0 16px; border-radius: 999px;
+      border: 2px solid var(--orange); background: rgba(60, 14, 4, .45); color: #FFB199;
+      font: 700 18px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase;
+      white-space: nowrap; opacity: 0;
+    }
+    #s09-tag span { margin-right: -.08em; }
+    #root .s09-step {
+      position: absolute; left: 560px; height: 30px; display: flex; align-items: center; gap: 14px;
+      font: 700 22px/1 var(--font-mono); color: #fff; white-space: nowrap; opacity: 0;
+    }
+    #root .s09-step .s09-num { color: var(--orange); }
+    #root .s09-step .s09-check { width: 22px; height: 22px; flex: none; opacity: 0; }
+    #root .s09-step .s09-check path { fill: none; stroke: var(--ok); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    #s09-step1 { top: 390px; }
+    #s09-step2 { top: 450px; }
+    #s09-step3 { top: 510px; }
+    /* ring variants inside the screens (kit ring geometry) */
+    #root .ring.s09-ring-fine { border-width: 2px; }
+    #root .ring.s09-ring--ok { border-color: var(--ok); box-shadow: 0 0 0 6px rgba(25, 179, 107, .18), 0 0 26px rgba(25, 179, 107, .38); }
+    /* commit wipe ('Place order · ₹150') */
+    #s09-wipe { position: absolute; left: 0; top: 0; width: 390px; height: 844px; background: #0033DA; clip-path: circle(0px at 195px 806px); pointer-events: none; }
+  </style>
+  <div id="root" data-composition-id="s09-pay" data-width="1920" data-height="1080">
+    <!-- Aarav's phone: the camera rig -->
+    <div class="rig" id="s09-rig">
+      <div class="phone" id="s09-phone" data-layout-allow-overflow>
+        <div class="side-btn" style="top:190px;height:70px"></div>
+        <div class="side-btn" style="top:290px;height:120px"></div>
+        <div class="glass"><div class="screen" id="s09-screen"></div></div>
+      </div>
+    </div>
+    <!-- the QR side branch: a second phone above the main rig -->
+    <div id="s09-qrig"><div id="s09-qfade">
+      <div class="phone" id="s09-qphone" data-layout-allow-overflow>
+        <div class="side-btn" style="top:190px;height:70px"></div>
+        <div class="side-btn" style="top:290px;height:120px"></div>
+        <div class="glass"><div class="screen" id="s09-qscreen"></div></div>
+      </div>
+    </div></div>
+    <div class="kicker" id="s09-kicker">07 · Pay</div>
+    <div class="kicker" id="s09-bhead">If the stall offers QR</div>
+    <div id="s09-tag"><span>Demo QR · Not a real payment code</span></div>
+    <div class="s09-step" id="s09-step1"><svg class="s09-check" id="s09-check1" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span><span class="s09-num">1</span> · Stall accepts</span></div>
+    <div class="s09-step" id="s09-step2"><svg class="s09-check" id="s09-check2" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span><span class="s09-num">2</span> · You pay · five minutes</span></div>
+    <div class="s09-step" id="s09-step3"><svg class="s09-check" id="s09-check3" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span><span class="s09-num">3</span> · Stall confirms</span></div>
+  </div>
+  <script>
+    (function () {
+      const K = window.SetuKit;
+      const spec = { left: 1150, top: 70, k: 1.08 };
+      K.placePhone(document.getElementById('s09-phone'), spec);
+      K.placePhone(document.getElementById('s09-qphone'), spec);
+      const rig = document.getElementById('s09-rig');
+      const qrig = document.getElementById('s09-qrig');      // x (slide)
+      const qfade = document.getElementById('s09-qfade');    // opacity
+      const screen = document.getElementById('s09-screen');
+      const qscreen = document.getElementById('s09-qscreen');
+
+      // Aarav's phone: real captures in order (later on top), then the dim and the commit wipe.
+      const Lc = K.layer(screen, 'assets/ui/checkout/01-confirm-cash.png', 's09-lc', { visible: true });
+      const L00 = K.layer(screen, 'assets/ui/order-cash/00-confirm.png', 's09-l00');
+      const L01 = K.layer(screen, 'assets/ui/order-cash/01-placed.png', 's09-l01');
+      const dim = K.el('div', 'dim', screen); dim.id = 's09-dim';
+      const wipe = K.el('div', null, screen); wipe.id = 's09-wipe';
+
+      // The demo QR order (CE1013-VGKQ) on the second phone.
+      const Q2 = K.layer(qscreen, 'assets/ui/order-qr/02-pay-qr.png', 's09-q2', { visible: true });
+      const Q4 = K.layer(qscreen, 'assets/ui/order-qr/04-payment-review.png', 's09-q4');
+      const Q5 = K.layer(qscreen, 'assets/ui/order-qr/05-payment-confirmed.png', 's09-q5');
+
+      // Boxes in screen px (marks.json, or measured on the 3x PNGs).
+      const M = {
+        noCollect: { x: 33, y: 162, w: 270, h: 36 },      // 'SETU does not collect this. Southside Tiffins receives it directly.'
+        cash: { x: 18, y: 260, w: 354, h: 70 },           // checkout/01-confirm-cash.cash
+        qr: { x: 18, y: 340, w: 354, h: 102 },            // checkout/01-confirm-cash.qr
+        place: { x: 18, y: 782, w: 354, h: 48 },          // order-cash/00-confirm.place
+        payHead: { x: 62, y: 12, w: 144, h: 27 },         // 'Pay to continue' glyphs 69.3-198 x 19-35.3 (sub starts y 40.3)
+        timer: { x: 315.8, y: 131.3, w: 46.2, h: 23 },    // order-qr/02-pay-qr.timer
+        qrImg: { x: 85, y: 177.3, w: 220, h: 220 },       // order-qr/02-pay-qr.qrImg
+        paid: { x: 218.7, y: 488.3, w: 143.3, h: 40 },    // order-qr/02-pay-qr.paid
+        checkHead: { x: 62, y: 12, w: 203, h: 48 },       // 'Seller is checking your payment' glyphs 68.7-257.3 x 19-56.3 (sub y 62.3)
+        confirmed: { x: 14, y: 525.8, w: 362, h: 72 },    // order-qr/05-payment-confirmed.qrCard
+      };
+
+      // Camera framings -> rig transforms (same maths as K.focus).
+      const frame = (s, P, T) => {
+        const c = K.toCanvas(spec, P[0], P[1]);
+        return { x: T[0] - s * c.x, y: T[1] - s * c.y, scale: s };
+      };
+      const F_CARD = frame(1.4, [195, 142], [1420, 300]);
+      const F_SPLIT = frame(0.7407, [195, 422], [346.4, 497.9]);
+      const ID = { x: 0, y: 0, scale: 1 };
+
+      const tl = gsap.timeline({ paused: true });
+      const ringIn = (container, box, t, dur, o, cls) => {
+        const r = K.ring(tl, container, box, t, dur, o);
+        if (cls) cls.split(' ').forEach((c) => r.classList.add(c));
+        return r;
+      };
+      const show = (target, t) => tl.fromTo(target, { opacity: 0 }, { opacity: 1, duration: 0.01, ease: 'none', immediateRender: false }, t);
+
+      // Frame 0 = handoffIn: Fcard, checkout/01-confirm-cash fully visible, nothing else.
+      // 0.10 kicker.
+      const kicker = document.getElementById('s09-kicker');
+      K.fadeUp(tl, kicker, 0.10);
+
+      // 0.20-2.85 the payment options, one ring at a time.
+      ringIn(Lc, M.noCollect, 0.20, 0.80, { pad: 6, radius: 12 });
+      ringIn(Lc, M.cash, 0.85, 0.90, { pad: 5, radius: 22 });
+      ringIn(Lc, M.qr, 1.60, 0.90, { pad: 5, radius: 22 });
+
+      // 2.55-3.35 split: Aarav's phone shrinks left and dims; kicker out 2.75-3.05.
+      tl.fromTo(rig, { ...F_CARD }, { ...F_SPLIT, duration: 0.8, ease: 'expo.inOut' }, 2.55);
+      tl.fromTo(dim, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power1.inOut' }, 2.55);
+      tl.fromTo(kicker, { y: 0, opacity: 1 }, { y: -12, opacity: 0, duration: 0.3, ease: 'power2.in', immediateRender: false }, 2.75);
+
+      // 3.10-3.80 the QR phone slides in from the right (off-canvas until then), with its DEMO tag.
+      tl.fromTo(qfade, { opacity: 0 }, { opacity: 1, duration: 0.01, ease: 'none' }, 3.10);
+      tl.fromTo(qrig, { x: 900 }, { x: 0, duration: 0.7, ease: 'expo.out' }, 3.10);
+      tl.fromTo('#s09-tag', { opacity: 0 }, { opacity: 1, duration: 0.3, ease: 'power1.out' }, 3.10);
+      K.fadeUp(tl, '#s09-bhead', 3.25);
+
+      // Step list: a row fades up; its check pops when the step is reached.
+      const stepIn = (n, t) => K.fadeUp(tl, `#s09-step${n}`, t, { y: 18, dur: 0.6 });
+      const check = (n, t) => tl.fromTo(`#s09-check${n}`, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.35, ease: 'back.out(2)' }, t);
+
+      // 3.80 step 1: the stall accepted -> 'Pay to continue'.
+      stepIn(1, 3.80); check(1, 3.80);
+      ringIn(Q2, M.payHead, 3.80, 0.90, { pad: 0, radius: 10 }, 's09-ring-fine');
+
+      // 4.60 step 2: five-minute countdown and the stall's demo QR.
+      stepIn(2, 4.60);
+      ringIn(Q2, M.timer, 4.60, 0.90, { pad: 4, radius: 16 });
+      ringIn(Q2, M.qrImg, 4.80, 0.90, { pad: 6, radius: 14 });
+
+      // 5.60 next tap target; 5.85 tap "I've paid"; 6.20 -> 'Seller is checking your payment'.
+      ringIn(Q2, M.paid, 5.60, 0.70, { blue: true, pad: 5, radius: 25 });
+      K.tap(tl, qscreen, M.paid, 5.85);
+      K.swapFade(tl, Q2, Q4, 6.20, 0.25);
+      check(2, 6.20);
+      ringIn(Q4, M.checkHead, 6.50, 1.20, { pad: 0, radius: 10 }, 's09-ring-fine');
+
+      // 7.70 the stall confirms (no customer tap) -> 'Order confirmed'.
+      K.swapFade(tl, Q4, Q5, 7.70, 0.25);
+      stepIn(3, 7.80); check(3, 7.80);
+      ringIn(Q5, M.confirmed, 8.00, 1.00, { pad: 4, radius: 22 }, 's09-ring--ok');
+
+      // 9.20-9.60 the QR branch leaves together (phone, tag, heading, steps).
+      tl.fromTo(qrig, { x: 0 }, { x: 160, duration: 0.4, ease: 'power2.in', immediateRender: false }, 9.20);
+      tl.fromTo(qfade, { opacity: 1 }, { opacity: 0, duration: 0.4, ease: 'power2.in', immediateRender: false }, 9.20);
+      K.fadeOut(tl, ['#s09-tag', '#s09-bhead', '#s09-step1', '#s09-step2', '#s09-step3'], 9.20, { dur: 0.4 });
+
+      // 9.45-10.25 back on Aarav's phone: order-cash/00 under the dim, camera to identity, dim out.
+      show(L00, 9.45);
+      tl.fromTo(rig, { ...F_SPLIT }, { ...ID, duration: 0.8, ease: 'expo.inOut', immediateRender: false }, 9.45);
+      tl.fromTo(dim, { opacity: 1 }, { opacity: 0, duration: 0.5, ease: 'power1.inOut', immediateRender: false }, 9.45);
+      tl.fromTo(kicker, { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'expo.out', immediateRender: false }, 9.85);
+
+      // 10.20 Cash on delivery; 10.60 next tap target; 10.85 tap 'Place order · ₹150'.
+      ringIn(L00, M.cash, 10.20, 0.60, { pad: 5, radius: 22 });
+      ringIn(L00, M.place, 10.60, 0.60, { blue: true, pad: 5, radius: 29 });
+      K.tap(tl, L00, M.place, 10.85);
+
+      // 11.20 commit wipe from the button centre; 11.65 'Waiting for the seller' underneath, wipe fades.
+      tl.fromTo(wipe, { clipPath: 'circle(0px at 195px 806px)' }, { clipPath: 'circle(830px at 195px 806px)', duration: 0.45, ease: 'power2.in' }, 11.20);
+      show(L01, 11.65);
+      tl.fromTo(wipe, { opacity: 1 }, { opacity: 0, duration: 0.3, ease: 'power1.inOut', immediateRender: false }, 11.65);
+
+      // 11.60-11.90 kicker out; hold to 12.00 (handoffOut: identity, order-cash/01-placed, no overlays).
+      tl.fromTo(kicker, { y: 0, opacity: 1 }, { y: -12, opacity: 0, duration: 0.3, ease: 'power2.in', immediateRender: false }, 11.60);
+
+      window.__timelines['s09-pay'] = tl;
+    }());
+  </script>
+</template>
+</body>
+</html>

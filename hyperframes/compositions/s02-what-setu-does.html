@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /></head>
+<body>
+<template id="s02-what-setu-does-template">
+  <link rel="stylesheet" href="assets/css/kit.css" />
+  <style>
+    #root { position: absolute; inset: 0; }
+    #root .rig { position: absolute; inset: 0; transform-origin: 0 0; }
+    /* Laptop at rest: lid x 760-1804, y 150-824; screen x 778-1786, y 168-798; base y 824-846. */
+    #s02-laptop { left: 760px; top: 150px; --lk: .7; }
+    /* Overlay plane in the desktop capture's own CSS px (1440x900), scaled into the 1008x630 screen. */
+    #s02-dcss { position: absolute; left: 0; top: 0; width: 1440px; height: 900px; transform-origin: 0 0; transform: scale(.7); pointer-events: none; }
+    #s02-kicker { position: absolute; left: 140px; top: 200px; }
+    /* Rings drawn in desktop px: 3.5 px here reads like the kit's 3 px phone ring once the laptop is pushed in. */
+    .ring.s02-ring-desk { border-width: 3.5px; }
+    /* Pale-indigo lede ring: box {60,455,397,34} around 'Discover approved campus food providers,', 2.5 px stroke, radius 10, no fill; drawn on as two strokes. */
+    /* The glow is a wide faint under-stroke, not a CSS filter: a filtered SVG changes Chrome's layer
+       decisions and flips the kicker's text antialiasing while the ring is up. */
+    #s02-lede-ring { position: absolute; left: 0; top: 0; overflow: visible; }
+    #s02-lede-ring path { fill: none; stroke: #B8C7FF; stroke-width: 2.5; stroke-linecap: butt; stroke-linejoin: round; }
+    #s02-lede-ring path.s02-glow { stroke: rgba(184, 199, 255, .16); stroke-width: 8; }
+    /* Text-antialiasing anchor (invisible: black + screen blend is an exact identity). Chrome draws text
+       with grayscale AA once a blend-mode element is painted (the kit phone's glass highlight is one), so
+       without this the shared captions would switch from subpixel to grayscale AA mid-caption when the
+       phone settles, and where the switch lands would depend on seek order. With it, captions and kicker
+       are grayscale from frame 0, as in every phone scene, whatever order frames are rendered in. */
+    #s02-aa { position: absolute; left: 0; top: 0; width: 1px; height: 1px; background: #000; mix-blend-mode: screen; pointer-events: none; }
+  </style>
+  <div id="root" data-composition-id="s02-what-setu-does" data-width="1920" data-height="1080">
+    <div id="s02-aa" aria-hidden="true"></div>
+    <!-- The push-ins deliberately take the laptop past the canvas edge (camera framing, not layout). -->
+    <div class="rig" id="s02-rig-desk" data-layout-allow-overflow>
+      <div class="laptop" id="s02-laptop">
+        <div class="lid">
+          <div class="lscreen" id="s02-lscreen">
+            <img id="s02-desk-img" src="assets/ui/desktop/01-signin-wide.png" alt="" />
+            <div id="s02-dcss">
+              <!-- Stroke centred 1.25 px inside the box so its outer edge is exactly x 60-457, y 455-489. -->
+              <svg id="s02-lede-ring" width="1440" height="900" viewBox="0 0 1440 900" aria-hidden="true">
+                <path id="s02-lede-glow-top" class="s02-glow" d="M61.25 472 V465 A8.75 8.75 0 0 1 70 456.25 H447 A8.75 8.75 0 0 1 455.75 465 V472" />
+                <path id="s02-lede-glow-bot" class="s02-glow" d="M61.25 472 V479 A8.75 8.75 0 0 0 70 487.75 H447 A8.75 8.75 0 0 0 455.75 479 V472" />
+                <path id="s02-lede-top" d="M61.25 472 V465 A8.75 8.75 0 0 1 70 456.25 H447 A8.75 8.75 0 0 1 455.75 465 V472" />
+                <path id="s02-lede-bot" d="M61.25 472 V479 A8.75 8.75 0 0 0 70 487.75 H447 A8.75 8.75 0 0 0 455.75 479 V472" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="base"></div>
+      </div>
+    </div>
+    <div class="rig" id="s02-rig">
+      <div class="phone" id="s02-phone">
+        <div class="side-btn" style="top:190px;height:70px"></div>
+        <div class="side-btn" style="top:290px;height:120px"></div>
+        <div class="glass"><div class="screen" id="s02-screen"></div></div>
+      </div>
+    </div>
+    <div class="kicker" id="s02-kicker">What SETU does</div>
+  </div>
+  <script>
+    (function () {
+      const K = window.SetuKit;
+      const spec = { left: 1150, top: 70, k: 1.08 };
+      K.placePhone(document.getElementById('s02-phone'), spec);
+      const screen = document.getElementById('s02-screen');
+      K.layer(screen, 'assets/ui/signin/01-signin.png', 's02-signin', { visible: true });
+
+      const deskRig = document.getElementById('s02-rig-desk');
+      const dcss = document.getElementById('s02-dcss');
+      // Desktop CSS px (1440x900 capture) -> canvas px with the laptop at rest.
+      const D = (x, y) => ({ x: 778 + 0.7 * x, y: 168 + 0.7 * y });
+
+      const tl = gsap.timeline({ paused: true });
+
+      // 0.00-0.80 the laptop rises out of the empty background.
+      tl.fromTo('#s02-laptop', { y: 90, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'expo.out' }, 0);
+      // 0.15 chapter kicker.
+      K.fadeUp(tl, '#s02-kicker', 0.15);
+
+      // 0.70-1.70 camera: headline and lede fill the frame (lid bottom lands at y 845).
+      K.focus(tl, deskRig, D(392, 470), 1.3, 0.70, 1.0, { to: { x: 1110, y: 420 } });
+      // 0.90-2.30 pale-indigo ring around the lede's first phrase only: both halves sweep
+      // left -> right (the reading direction) and close on the right edge, then it fades.
+      tl.fromTo('#s02-lede-ring', { opacity: 0 }, { opacity: 1, duration: 0.1, ease: 'none' }, 0.90);
+      ['s02-lede-glow-top', 's02-lede-glow-bot', 's02-lede-top', 's02-lede-bot'].forEach((id) => {
+        K.drawPath(tl, document.getElementById(id), 0.90, 0.6, { ease: 'expo.out' });
+      });
+      tl.to('#s02-lede-ring', { opacity: 0, duration: 0.35, ease: 'power1.in' }, 2.30);
+
+      // 2.10-3.10 camera: the stats row (Delivery / Commission / Payment).
+      K.focus(tl, deskRig, D(355, 812), 1.35, 2.10, 1.0, { to: { x: 1080, y: 520 } });
+      // Orange rings on the three stats, each with one scale pulse; the UI itself is never recoloured.
+      [
+        [{ x: 58, y: 778, w: 216, h: 68 }, 2.60, 1.20, 3.15],   // DELIVERY · Campus only (pulse once the camera lands)
+        [{ x: 318, y: 778, w: 110, h: 68 }, 3.80, 1.20, 4.35],  // COMMISSION · None
+        [{ x: 543, y: 778, w: 110, h: 68 }, 4.10, 1.10, 4.65],  // PAYMENT · Direct
+      ].forEach(([box, t, dur, tp]) => {
+        const r = K.ring(tl, dcss, box, t, dur, { pad: 0 });
+        r.classList.add('s02-ring-desk');
+        tl.to(r, { scale: 1.04, duration: 0.2, ease: 'sine.inOut' }, tp);
+        tl.to(r, { scale: 1, duration: 0.25, ease: 'sine.inOut' }, tp + 0.2);
+      });
+
+      // 5.10-5.90 match move: the desktop heading 'Sign in with your User account' (two left-aligned lines,
+      // desktop box {x:895.8,y:138,w:440,h:80.6}) lands top-left on the phone's own heading (signin/01-signin
+      // .title {x:16,y:153.7} -> canvas 1181.3, 250.0). s 1.1 keeps the laptop's base above the caption zone.
+      K.focus(tl, deskRig, D(895.8, 138), 1.1, 5.10, 0.8, { to: { x: 1181.3, y: 250.0 } });
+      K.fadeOut(tl, '#s02-kicker', 5.10, { dur: 0.3 });
+
+      // 5.75-6.15 the phone resolves over the matched form; 5.85-6.20 the laptop dissolves away.
+      tl.fromTo('#s02-phone', { scale: 0.97, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: 'expo.out' }, 5.75);
+      tl.to('#s02-laptop', { opacity: 0, duration: 0.35, ease: 'power1.in' }, 5.85);
+      // 5.70-6.20 rack focus: the desktop form defocuses as the move settles, so the phone resolves crisp
+      // over a soft form (one form becoming the other) instead of text doubled over text. The set at 5.70
+      // gives the tween an explicit start and reverts to no filter on any backward seek; 6.20 drops the
+      // filter once the laptop is invisible, so the hold carries no filtered element.
+      tl.set('#s02-laptop', { filter: 'blur(0px)' }, 5.70);
+      tl.to('#s02-laptop', { filter: 'blur(5px)', duration: 0.5, ease: 'expo.out' }, 5.70);
+      tl.set('#s02-laptop', { filter: 'none' }, 6.2);
+      // 6.15: the phone tween has just landed on scale 1; drop GSAP's leftover identity transform so the
+      // hold renders bit-for-bit like s03's untouched phone. It sits exactly at the tween's end, so any
+      // seek order agrees: t >= 6.15 is always cleared, t < 6.15 is re-rendered by the fromTo itself.
+      tl.set('#s02-phone', { clearProps: 'transform' }, 6.15);
+      // 6.20: the laptop is invisible; park its camera rig back at identity (a reversible set).
+      tl.set(deskRig, { x: 0, y: 0, scale: 1 }, 6.2);
+
+      window.__timelines['s02-what-setu-does'] = tl;
+    }());
+  </script>
+</template>
+</body>
+</html>

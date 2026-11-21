@@ -1,0 +1,438 @@
+{
+  "sceneId": "s09-pay",
+  "file": "compositions/s09-pay.html",
+  "duration": 12,
+  "globalStart": 81.05,
+  "globalEnd": 93.05,
+  "title": "Pay the stall directly — cash, or the stall's QR",
+  "chapter": "07 · Pay",
+  "phoneSpec": {
+    "left": 1150,
+    "top": 70,
+    "k": 1.08
+  },
+  "captionPlacement": "left (keep x 120-1140, y 880-1050 clear)",
+  "narration": "Pay cash at your door, or scan the stall's QR. With QR, the stall accepts first, then you pay. Aarav picks cash: “Place order”.",
+  "captionsLocal": [
+    {
+      "start": 0.1,
+      "end": 3.95,
+      "text": "Pay cash at your door,\nor scan the stall's QR."
+    },
+    {
+      "start": 4.05,
+      "end": 7.55,
+      "text": "With QR, the stall accepts first,\nthen you pay."
+    },
+    {
+      "start": 9.75,
+      "end": 11.9,
+      "text": "Aarav picks cash: “Place order”."
+    }
+  ],
+  "onScreenText": [
+    {
+      "text": "07 · Pay",
+      "start": 0.1,
+      "end": 11.9,
+      "role": "kicker (kit .kicker; faded out 2.75–3.05 and back in from 9.85 while the QR branch is up)"
+    },
+    {
+      "text": "DEMO QR · NOT A REAL PAYMENT CODE",
+      "start": 3.1,
+      "end": 9.6,
+      "role": "demo tag (orange outline pill, Space Mono 700 18 px caps; enters and leaves with the QR phone)"
+    },
+    {
+      "text": "IF THE STALL OFFERS QR",
+      "start": 3.25,
+      "end": 9.6,
+      "role": "kicker-style heading for the side branch (Space Mono 700 22 px caps)"
+    },
+    {
+      "text": "1 · Stall accepts",
+      "start": 3.8,
+      "end": 9.6,
+      "role": "step list (Space Mono 700 22 px)"
+    },
+    {
+      "text": "2 · You pay · five minutes",
+      "start": 4.6,
+      "end": 9.6,
+      "role": "step list (Space Mono 700 22 px)"
+    },
+    {
+      "text": "3 · Stall confirms",
+      "start": 7.8,
+      "end": 9.6,
+      "role": "step list (Space Mono 700 22 px)"
+    }
+  ],
+  "shots": [
+    {
+      "file": "checkout/01-confirm-cash.png",
+      "start": 0,
+      "end": 9.45,
+      "treatment": "Main phone at Fcard: rings on 'SETU does not collect this…', Cash on delivery and Pay by QR; then it shrinks left and dims for the QR branch; swapped to order-cash/00-confirm under the dim at 9.45.",
+      "asset": {
+        "kind": "still",
+        "file": "checkout/01-confirm-cash.png",
+        "src": "assets/ui/checkout/01-confirm-cash.png",
+        "marks": {
+          "amount": {
+            "x": 33,
+            "y": 85,
+            "w": 324,
+            "h": 12
+          },
+          "cash": {
+            "x": 18,
+            "y": 260,
+            "w": 354,
+            "h": 70
+          },
+          "qr": {
+            "x": 18,
+            "y": 340,
+            "w": 354,
+            "h": 102
+          },
+          "place": {
+            "x": 18,
+            "y": 782,
+            "w": 354,
+            "h": 48
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "order-qr/02-pay-qr.png",
+      "start": 3.1,
+      "end": 6.45,
+      "treatment": "Second phone (default spec, above the main rig) slides in from the right 3.10–3.80: a separate demo QR order after the stall accepted — 'Pay to continue', countdown, the stall's labelled DEMO QR; tap 'I've paid' (5.85).",
+      "asset": {
+        "kind": "still",
+        "file": "order-qr/02-pay-qr.png",
+        "src": "assets/ui/order-qr/02-pay-qr.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 21.3
+          },
+          "sub": {
+            "x": 68,
+            "y": 37.3,
+            "w": 254,
+            "h": 17
+          },
+          "qrCard": {
+            "x": 14,
+            "y": 562.3,
+            "w": 362,
+            "h": 72
+          },
+          "qrImg": {
+            "x": 85,
+            "y": 177.3,
+            "w": 220,
+            "h": 220
+          },
+          "timer": {
+            "x": 315.8,
+            "y": 131.3,
+            "w": 46.2,
+            "h": 23
+          },
+          "paid": {
+            "x": 218.7,
+            "y": 488.3,
+            "w": 143.3,
+            "h": 40
+          },
+          "attach": {
+            "x": 28,
+            "y": 488.3,
+            "w": 180.7,
+            "h": 40
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "order-qr/04-payment-review.png",
+      "start": 6.2,
+      "end": 7.95,
+      "treatment": "swapFade: 'Seller is checking your payment' (settled 6.45–7.70 = 1.25 s).",
+      "asset": {
+        "kind": "still",
+        "file": "order-qr/04-payment-review.png",
+        "src": "assets/ui/order-qr/04-payment-review.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 42.5
+          },
+          "sub": {
+            "x": 68,
+            "y": 58.5,
+            "w": 254,
+            "h": 17
+          },
+          "qrCard": {
+            "x": 14,
+            "y": 503.5,
+            "w": 362,
+            "h": 72
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "order-qr/05-payment-confirmed.png",
+      "start": 7.7,
+      "end": 9.6,
+      "treatment": "swapFade (the stall's confirmation): 'Order confirmed', 'The stall confirmed your payment.' (settled 7.95–9.20 = 1.25 s); the second phone fades out to the right 9.20–9.60.",
+      "asset": {
+        "kind": "still",
+        "file": "order-qr/05-payment-confirmed.png",
+        "src": "assets/ui/order-qr/05-payment-confirmed.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 21.3
+          },
+          "sub": {
+            "x": 68,
+            "y": 37.3,
+            "w": 254,
+            "h": 17
+          },
+          "qrCard": {
+            "x": 14,
+            "y": 525.8,
+            "w": 362,
+            "h": 72
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "order-cash/00-confirm.png",
+      "start": 9.45,
+      "end": 11.65,
+      "treatment": "Main phone back at the default spec (identical to checkout/01 except the button shade); ring Cash; tap 'Place order · ₹150' (10.85).",
+      "asset": {
+        "kind": "still",
+        "file": "order-cash/00-confirm.png",
+        "src": "assets/ui/order-cash/00-confirm.png",
+        "marks": {
+          "place": {
+            "x": 18,
+            "y": 782,
+            "w": 354,
+            "h": 48
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "order-cash/01-placed.png",
+      "start": 11.65,
+      "end": 12,
+      "treatment": "Revealed by the 'Place order' commit wipe: 'Waiting for the seller'.",
+      "asset": {
+        "kind": "still",
+        "file": "order-cash/01-placed.png",
+        "src": "assets/ui/order-cash/01-placed.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 21.3
+          },
+          "sub": {
+            "x": 68,
+            "y": 37.3,
+            "w": 254,
+            "h": 17
+          },
+          "progress": {
+            "x": 334,
+            "y": 16.1,
+            "w": 38,
+            "h": 38
+          },
+          "stream": {
+            "x": 0,
+            "y": 66.3,
+            "w": 390,
+            "h": 581.8
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "graphic:commit wipe (#0033DA circle from the Place order button)",
+      "start": 11.2,
+      "end": 11.95,
+      "treatment": "Action → result transition.",
+      "asset": {
+        "kind": "graphic",
+        "description": "commit wipe (#0033DA circle from the Place order button)"
+      }
+    }
+  ],
+  "demoBadgeLocal": [],
+  "uiState": "'Confirm order': 'AMOUNT PAYABLE TO THE SELLER' ₹150 and 'SETU does not collect this. Southside Tiffins receives it directly.'; HOW WILL YOU PAY? Cash on delivery 'Hand ₹150 to the seller at your door.' / Pay by QR 'Southside Tiffins's QR appears here once they accept. You will have five minutes to pay…' (offered only because this stall has a QR on file). Side branch on a second phone (separate demo QR order CE1013-VGKQ): accepted → 'Pay to continue' with the stall's DEMO QR and countdown → 'Seller is checking your payment' → 'Order confirmed' / 'The stall confirmed your payment.'. Back on Aarav's phone: Cash on delivery → 'Place order · ₹150' → 'Waiting for the seller'.",
+  "animationLocal": "Local times. Frame 0 = checkout/01-confirm-cash.png with the main rig at Fcard = {s 1.4, P [195,142], T [1420,300]} (canvas of a screen point = (1125.16 + 1.512·x, 85.24 + 1.512·y)). Fsplit = {s 0.7407, P [195,422], T [346.4,497.9]} puts the main phone at x 180–513, y 150–846 (= spec {left:180, top:150, k:0.8}).\n0.10 kicker '07 · Pay' K.fadeUp at (140,200).\n0.20–1.00 orange ring on 'SETU does not collect this. Southside Tiffins receives it directly.', measured box {x:33,y:162,w:270,h:36} (canvas (1175.1,330.2)–(1583.3,384.7)).\n0.85–1.75 orange ring on checkout/01-confirm-cash.cash (canvas (1152.4,478.4)–(1687.6,584.3)).\n1.60–2.50 orange ring on checkout/01-confirm-cash.qr (canvas (1152.4,599.4)–(1687.6,753.6)), fading 2.50–2.85.\n2.55–3.35 split: K.focus main rig Fcard → Fsplit (0.8 s, expo.inOut); a kit .dim layer inside the main screen fades to opacity 1 (rgba(8,12,32,.55)) over 2.55–3.05. 2.75–3.05 the kicker fades out. The main phone's right edge is left of x 560 from 3.10 (sampled: 3.00 → 769, 3.10 → 558, 3.20 → 521, settled 513).\n3.10–3.80 the QR phone — a second kit .phone at the default spec {left:1150,top:70,k:1.08} with its own screen, OUTSIDE and ABOVE the main rig in z-order — fromTo x +900 → 0 (expo.out 0.7 s) showing order-qr/02-pay-qr.png; it is opacity 0 (tl.set) before 3.10 and starts at x +900 (left edge 2050, glow off-canvas). It starts only after the main phone has cleared its path: the closest approach is >900 px (3.20: QR left edge 1484 vs main right edge 521).\n3.10–3.40 tag 'DEMO QR · NOT A REAL PAYMENT CODE' (orange 2 px outline pill, Space Mono 700 18 px caps, ≈454×38) fades in at (560,296) together with the QR phone; it stays while any QR is on screen. 3.25 heading 'IF THE STALL OFFERS QR' (kit .kicker style, Space Mono 700 22 px caps) K.fadeUp at (560,250). Both sit in the middle column (x 560–1110, canvas-level), clear of the shrunken main phone.\nStep list (Space Mono 700 22 px white, numerals #EC5A2A; a Lucide check (#19B36B, 22 px) appears at a row's left when it is reached):\n- 3.80 '1 · Stall accepts' at (560,390), checked at once; orange ring on order-qr/02-pay-qr.headline ('Pay to continue' — the state the order enters once the stall accepts) 3.80–4.70. Never ring the thread pill 'Order confirmed by Southside Tiffins' here: it is the app's premature 'confirmed' wording before any payment.\n- 4.60 '2 · You pay · five minutes' at (560,450); orange rings on order-qr/02-pay-qr.timer 4.60–5.50 and order-qr/02-pay-qr.qrImg 4.80–5.70.\n5.60 ring--blue on order-qr/02-pay-qr.paid. 5.85 K.tap paid ('I've paid') → 6.20 K.swapFade → order-qr/04-payment-review.png (0.25 s, settled 6.45); row 2 gets its check at 6.20; 6.50–7.70 orange ring on order-qr/04-payment-review.headline ('Seller is checking your payment').\n7.70 K.swapFade → order-qr/05-payment-confirmed.png (0.25 s, settled 7.95; the stall's confirmation, no customer tap). 7.80 '3 · Stall confirms' at (560,510) with its check; 8.00–9.00 green ring on order-qr/05-payment-confirmed.qrCard ('The stall confirmed your payment.').\n9.20–9.60 the QR phone leaves: x 0 → +160 and opacity 1 → 0 (power2.in 0.4 s), then it stays hidden. 9.20–9.60 the heading, the DEMO QR tag and the step list fade out with it (the tag never outlives the QR, and the QR never shows without the tag after 3.40).\n9.45–10.25 K.focus main rig Fsplit → identity (0.8 s, expo.inOut); the dim fades out 9.45–9.95; at 9.45 the main screen's still is swapped to order-cash/00-confirm.png under the dim (identical layout; only the button shade differs). The growing phone reaches x 560 only at ≈9.71, after the branch type is gone. 9.85 the kicker fades back in.\n10.20–10.80 orange ring on the Cash on delivery card (same box as checkout/01-confirm-cash.cash; canvas at identity (1183.4,364.8)–(1565.8,440.4)).\n10.60 ring--blue on order-cash/00-confirm.place (canvas (1183.4,928.6)–(1565.8,980.4)). 10.85 K.tap place ('Place order · ₹150') → 11.20 commit wipe: a #0033DA circle grows from the button centre (195,806) to cover the screen (0.45 s, power2.in); 11.65 order-cash/01-placed.png is set underneath and the circle fades (0.3 s, done 11.95).\n11.60–11.90 the kicker fades out. 11.95–12.00 hold.",
+  "transitionIn": "Continuous from s08: the camera is already framing the amount card and the payment options (Fcard).",
+  "transitionOut": "'Place order · ₹150' → blue commit wipe → 'Waiting for the seller', settled at identity.",
+  "handoffIn": {
+    "phone": "default",
+    "screen": "checkout/01-confirm-cash.png",
+    "rig": {
+      "s": 1.4,
+      "P": [
+        195,
+        142
+      ],
+      "T": [
+        1420,
+        300
+      ]
+    },
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Camera held at Fcard (dark amount card, HOW WILL YOU PAY?, Cash on delivery and Pay by QR in frame); number flight dissolved; math and kicker gone."
+  },
+  "handoffOut": {
+    "phone": "default",
+    "screen": "order-cash/01-placed.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Order thread 'Waiting for the seller' at identity; the second phone, branch type, wipe and kicker are gone."
+  },
+  "soundCuesLocal": [
+    {
+      "at": 0.85,
+      "cue": "Ring swish (cash)"
+    },
+    {
+      "at": 1.6,
+      "cue": "Ring swish (QR)"
+    },
+    {
+      "at": 2.55,
+      "cue": "Dual-phone slide whoosh"
+    },
+    {
+      "at": 4.6,
+      "cue": "Soft timer tick"
+    },
+    {
+      "at": 5.85,
+      "cue": "UI tap (I've paid)"
+    },
+    {
+      "at": 7.7,
+      "cue": "Soft confirm ping (stall confirms)"
+    },
+    {
+      "at": 9.2,
+      "cue": "Whoosh out"
+    },
+    {
+      "at": 10.85,
+      "cue": "UI tap (Place order)"
+    },
+    {
+      "at": 11.2,
+      "cue": "Warm confirm swell into the order"
+    }
+  ],
+  "accuracyNotes": "- Cash copy is quoted ('Hand ₹150 to the seller at your door.'); the dark card line 'SETU does not collect this. Southside Tiffins receives it directly.' is the app's.\n- 'Pay by QR' appears only when the stall has a QR on file (cash on delivery is always offered; the seeded stalls have none, the prepared demo stall has one), so the branch heading says 'IF THE STALL OFFERS QR'.\n- QR order of events: the stall accepts first, then its own QR appears in the order thread with a five-minute window; 'I've paid' → 'Seller is checking your payment' → the stall confirms ('The stall confirmed your payment.'). Never 'pay first' or 'QR at checkout'. Order status and payment status stay separate: step 1 rings the headline 'Pay to continue', never the thread pill 'Order confirmed by Southside Tiffins' (the app's premature 'confirmed' wording, shown before payment); 'Order confirmed' is featured only at step 3.\n- The QR is the labelled demo QR (capture/make-demo-qr.mjs encodes a plain sentence, not a UPI address). Its in-capture 'DEMO QR' pill and 'Not a real payment code' line are too small to read at k 1.08 (≈7 px and ≈6.5 px lettering), so the overlay tag 'DEMO QR · NOT A REAL PAYMENT CODE' is the legible label: it enters with the QR phone (3.10) and leaves with it (9.20–9.60). Never trim it. Nothing implies money moved.\n- The QR phone is a separate demo order (CE1013-VGKQ), framed as 'if the stall offers QR'; Aarav's order (CE1013-BCQK) continues with cash.\n- Both QR states that carry text ('Seller is checking your payment', 'Order confirmed') are held settled for 1.25 s.\n- No pickup option exists and nothing suggests one.",
+  "globalSystem": "STORY-FIRST ('Dinner at B-212'): one evening with Aarav (Nehru Hall of Residence, Room B-212). Tonight he signs in on a new phone with an emailed one-time code (DEMO-labelled; the password stays the main way in). A band wipe rewinds to his day one to show how a first-timer creates an account and runs the four onboarding steps — that is how his Home (Room B-212) was saved inside the campus boundary. A second band wipe returns to tonight: the new phone's Home first reads 'Set your delivery location' (the delivery choice is stored per device; the saved addresses belong to the account), so he picks his saved Home with three real taps (Deliver-to row → 'Home' under SAVED LOCATIONS → 'Confirm location'); then 1 × Masala Dosa + 2 × Filter Coffee from Southside Tiffins; items ₹140 + the stall's own delivery charge ₹10 = ₹150 payable to the seller. The QR route is a labelled side branch for stalls that offer it (the stall accepts first, then you pay, then it confirms). Aarav pays cash at the door, his six-digit handover code completes the order, he rates it five stars, and the Report path is pointed out. Nine numbered chapters (01 Sign in … 09 Rate & report) keep first-timers oriented, and captions name the exact button where it helps. Tone: warm, plain, lightly playful ('Tonight: dosa.', 'Dinner, sorted.'), never hype; 'students, faculty, staff' is said once. Motif: the real campus-boundary polygon opens the film, returns as the delivery-area check and closes the end card.\nGLOBAL SYSTEM (every scene):\n- Frame: 1920×1080, 60 fps, silent. One HyperFrames sub-composition per scene with one paused GSAP timeline; kit.js helpers plus plain GSAP only. Scene roots are transparent over the shared indigo background from index.html (it already carries a faint drifting campus outline; never paint a background).\n- Boundaries are HARD CUTS: frame 0 must equal handoffIn and the last frame must equal handoffOut. Unless a handoff says otherwise: phone at the default spec, rig identity, left column empty, no overlays, the named capture fully visible and settled.\n- Phone: kit .phone at phoneSpec {left:1150, top:70, k:1.08}; screen origin canvas (1164,84), 421.2×911.5. At identity a screen point (x,y) is canvas (1164 + 1.08·x, 84 + 1.08·y). The phone, its capture layers and every in-screen overlay (rings, taps, reveals, halos, masks) live inside the scene rig (.rig, transform-origin 0 0). Camera = K.focus(tl, rig, K.toCanvas(spec, P[0], P[1]), s, t, dur, {to:{x:T[0], y:T[1]}}), expo.inOut, 0.8–1.2 s; framings are given as {s, P (screen px), T (canvas px)} and K.unfocus returns to identity. Canvas-level type, labels, leader lines, chips and tags sit OUTSIDE the rig; every canvas position in a spec already accounts for the rig state at that moment.\n- Grid: text column x140–820 (kicker at (140,200), headline top 250, nothing below y 860); callout lane x840–1130 (label right edge ≤1120); right margin x1620–1880 (unused); one tag row at (140,112) for ONE tag at a time (DEMO badge, DAY ONE, TONIGHT, the sample-stalls note, TIME-LAPSE); caption zone x120–1140, y880–1050 stays empty (captions centred only in s01; s12 has none). A pushed phone's bezel never reaches left of x 1095, and left caption plates end at x ≈ 900. At most 4 floating labels/chips/tags at once, never overlapping the phone, each other, the text column or the caption zone. Never fly several objects into the phone at once: when chips travel into the phone they go one at a time.\n- Type: kicker = kit .kicker showing the scene's `chapter`, K.fadeUp at 0.10; its fade-out (0.3 s) ends at least 0.05 s before the scene's last frame, and its onScreenText end time is the end of that fade. Headline = .headline--md (Sora 800, 68 px), words only. Sora has no ₹ glyph: every string containing ₹ is set in Plus Jakarta Sans (names, amounts) or Space Mono (labels, prices, counts). Labels = short caps tags: .callout.callout--dark with font 700 18px/1 Space Mono, letter-spacing .08em, uppercase, padding 10px 16px (≈ 12.24 px × chars + 50 px wide, 38 px tall), plus a 2 px rgba(184,199,255,.7) straight leader from the label's right edge to the element; a label's right edge stays ≥8 px left of the phone's bezel for the framing in use (identity ≤1140; s 1.4 ≤1097; Ftotals ≤1095; Fhand ≤1090; Fconf ≤1087). Tag-row items: Space Mono 700 18 px caps, letter-spacing .16em, pill padding 10/16; the DEMO badge is kit .demo-badge with the text 'Demo environment'.\n- Overlays on real UI: K.tap at the centre of the named box, always 0.35 s before the screen change it causes (inside the 0.25–0.45 s rule). K.ring orange = look here; {blue:true} = the next tap target only (≥0.2 s before its tap; never on something that is not tapped); green = a kit ring with border-color #19B36B and a green glow, used only for 'inside the delivery area', 'cash confirmed' and 'payment confirmed'; pale = a kit ring with border-color #B8C7FF and box-shadow 0 0 0 6px rgba(184,199,255,.16), 0 0 22px rgba(184,199,255,.3): context that is never tapped (s03's code-box glow, s05's 'Use my current location' row). Boxes are CSS px of the 390×844 screen: named marks from marks.json written <group>/<shot>.<mark>, or explicit {x,y,w,h} measured on the final PNGs. Nothing opaque over app text; UI is never recoloured.\n- Screen changes: K.swapPush = forward navigation (0.55 s); K.swapSheet = sheets (sheetTop given); K.swapFade = in-place state change (0.15–0.35 s); circular reveal = a local state change caused by a tap (the 'after' capture as a new layer whose clip-path circle(r at x y) grows from 0 at the tap point, 0.25–0.35 s, power2.out); commit wipe = for 'Start ordering' and 'Place order · ₹150' a #0033DA circle grows from the button centre to cover the screen (0.45 s, power2.in), the next capture is set underneath, then the circle fades (0.3 s).\n- Clips: play inside a non-timed .layer in the screen (data-hf-media-start-basis=\"local\"); never animate the <video>; the next still sits underneath to hold the last frame; chained clips start exactly where the previous ends. clipSeconds = the length used (a speed variant is pre-rendered; each captured frame gets clipSeconds / frames). Where a clip's last frame differs from the still under it only by input focus, the cut is a deliberate focus-loss cut (named in the scene).\n- Shot windows: a shot starts when its layer first becomes visible and ends when it is fully covered or hidden, i.e. at the END of the transition that removes it.\n- Rhythm: tap → result → ≥0.6 s beat; text that matters is held ≥1.2 s; exits 0.3–0.5 s; nothing is visible before its entrance (fromTo with opacity 0); no drifting, spinning, particles or glitch.\n- Icons: Lucide line icons only (stroke 1.85–2.5); no emoji, food photos, clip-art or filled pins.\n- Honesty: only real captures for app screens; DEMO badge across the whole OTP portion (code request → Home); the sample-stalls note once (s07) plus the end-card fine print; the demo QR stays labelled; no 'SETU delivers', pickup, map or location tracking, delivery-time promise, free/zero-cost/minimal-charge wording or competitor names anywhere. Never ring, zoom on or caption the app's own 'SETU delivers inside…' lines, the location dialog's body sentences ('…to find nearby stalls…', 'It is only read when you ask for it.' — the code contradicts both), Step 4's licence and 'Recorded…' sub-lines, search rows' '20–20 min', the stall's '20 min', the prep time, the QR thread pill 'Order confirmed by …' (shown before payment), 33-home-set's hover-blue 'Orders' tab or the review note placeholder.",
+  "previousScene": {
+    "id": "s08-cart",
+    "title": "Cart — ₹150, payable to the seller",
+    "transitionOut": "The ₹150 lands on the Confirm card; the camera holds at Fcard for s09.",
+    "handoffOut": {
+      "phone": "default",
+      "screen": "checkout/01-confirm-cash.png",
+      "rig": {
+        "s": 1.4,
+        "P": [
+          195,
+          142
+        ],
+        "T": [
+          1420,
+          300
+        ]
+      },
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "Camera held at Fcard (dark amount card, HOW WILL YOU PAY?, Cash on delivery and Pay by QR in frame); number flight dissolved; math and kicker gone."
+    },
+    "lastShots": [
+      "cart/01-cart.png",
+      "checkout/01-confirm-cash.png"
+    ]
+  },
+  "nextScene": {
+    "id": "s10-track-handover",
+    "title": "Track it, then hand over cash and the code",
+    "transitionIn": "Continuous from s09's commit wipe: 'Waiting for the seller' at identity.",
+    "handoffIn": {
+      "phone": "default",
+      "screen": "order-cash/01-placed.png",
+      "rig": "identity",
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "Order thread 'Waiting for the seller' at identity; the second phone, branch type, wipe and kicker are gone."
+    },
+    "firstShots": [
+      "order-cash/01-placed.png",
+      "order-cash/02-accepted.png"
+    ]
+  }
+}

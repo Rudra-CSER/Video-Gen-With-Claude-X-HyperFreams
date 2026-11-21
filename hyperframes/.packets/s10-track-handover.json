@@ -1,0 +1,534 @@
+{
+  "sceneId": "s10-track-handover",
+  "file": "compositions/s10-track-handover.html",
+  "duration": 12,
+  "globalStart": 93.05,
+  "globalEnd": 105.05,
+  "title": "Track it, then hand over cash and the code",
+  "chapter": "08 · Track & hand over",
+  "phoneSpec": {
+    "left": 1150,
+    "top": 70,
+    "k": 1.08
+  },
+  "captionPlacement": "left (keep x 120-1140, y 880-1050 clear)",
+  "narration": "Now follow along: confirmed, cooking, on the way. At the door, Aarav pays ₹150 in cash. Then he tells them his code. Order complete.",
+  "captionsLocal": [
+    {
+      "start": 0.2,
+      "end": 4.95,
+      "text": "Now follow along:\nconfirmed, cooking, on the way."
+    },
+    {
+      "start": 5.4,
+      "end": 8.6,
+      "text": "At the door, Aarav pays ₹150 in cash."
+    },
+    {
+      "start": 8.7,
+      "end": 11.8,
+      "text": "Then he tells them his code.\nOrder complete."
+    }
+  ],
+  "onScreenText": [
+    {
+      "text": "08 · Track & hand over",
+      "start": 0.1,
+      "end": 11.9,
+      "role": "kicker (kit .kicker)"
+    },
+    {
+      "text": "TIME-LAPSE",
+      "start": 0.2,
+      "end": 5.4,
+      "role": "tag (tag row at (140,112): Lucide fast-forward + Space Mono 700 18 px caps)"
+    },
+    {
+      "text": "STATUS TIMELINE · NOT A MAP",
+      "start": 0.2,
+      "end": 11.9,
+      "role": "rail header (Space Mono 700 18 px caps, #B8C7FF)"
+    },
+    {
+      "text": "Placed · Confirmed · Preparing · Ready · Out for delivery · Delivered",
+      "start": 0.2,
+      "end": 11.9,
+      "role": "status rail rows (Plus Jakarta Sans 600 28 px; the progress view's exact labels)"
+    },
+    {
+      "text": "HANDOVER CODE",
+      "start": 7.05,
+      "end": 8.25,
+      "role": "label (short caps, Space Mono 700 18 px, callout lane)"
+    }
+  ],
+  "shots": [
+    {
+      "file": "order-cash/01-placed.png",
+      "start": 0,
+      "end": 1.45,
+      "treatment": "Frame 0 ('Waiting for the seller').",
+      "asset": {
+        "kind": "still",
+        "file": "order-cash/01-placed.png",
+        "src": "assets/ui/order-cash/01-placed.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 21.3
+          },
+          "sub": {
+            "x": 68,
+            "y": 37.3,
+            "w": 254,
+            "h": 17
+          },
+          "progress": {
+            "x": 334,
+            "y": 16.1,
+            "w": 38,
+            "h": 38
+          },
+          "stream": {
+            "x": 0,
+            "y": 66.3,
+            "w": 390,
+            "h": 581.8
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "order-cash/02-accepted.png",
+      "start": 1.2,
+      "end": 2.65,
+      "treatment": "swapFade: 'Order confirmed' (the prep time is not featured).",
+      "asset": {
+        "kind": "still",
+        "file": "order-cash/02-accepted.png",
+        "src": "assets/ui/order-cash/02-accepted.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 21.3
+          },
+          "sub": {
+            "x": 68,
+            "y": 37.3,
+            "w": 254,
+            "h": 17
+          },
+          "progress": {
+            "x": 334,
+            "y": 16.1,
+            "w": 38,
+            "h": 38
+          },
+          "stream": {
+            "x": 0,
+            "y": 109.8,
+            "w": 390,
+            "h": 538.3
+          },
+          "prep": {
+            "x": 12,
+            "y": 66.3,
+            "w": 366,
+            "h": 35.5
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "order-cash/04-preparing.png",
+      "start": 2.4,
+      "end": 3.85,
+      "treatment": "swapFade: 'Being cooked now'.",
+      "asset": {
+        "kind": "still",
+        "file": "order-cash/04-preparing.png",
+        "src": "assets/ui/order-cash/04-preparing.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 21.3
+          },
+          "sub": {
+            "x": 68,
+            "y": 37.3,
+            "w": 254,
+            "h": 17
+          },
+          "progress": {
+            "x": 334,
+            "y": 16.1,
+            "w": 38,
+            "h": 38
+          },
+          "stream": {
+            "x": 0,
+            "y": 109.8,
+            "w": 390,
+            "h": 538.3
+          },
+          "prep": {
+            "x": 12,
+            "y": 66.3,
+            "w": 366,
+            "h": 35.5
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "order-cash/06-ready.png",
+      "start": 3.6,
+      "end": 5.05,
+      "treatment": "swapFade: 'Ready'.",
+      "asset": {
+        "kind": "still",
+        "file": "order-cash/06-ready.png",
+        "src": "assets/ui/order-cash/06-ready.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 21.3
+          },
+          "sub": {
+            "x": 68,
+            "y": 37.3,
+            "w": 254,
+            "h": 17
+          },
+          "progress": {
+            "x": 334,
+            "y": 16.1,
+            "w": 38,
+            "h": 38
+          },
+          "stream": {
+            "x": 0,
+            "y": 66.3,
+            "w": 390,
+            "h": 581.8
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "order-cash/07-on-the-way-code.png",
+      "start": 4.8,
+      "end": 8.55,
+      "treatment": "swapFade: 'On the way' + handover panel; camera Fhand; rings on 'Please pay ₹150 in cash' and the six-digit code.",
+      "asset": {
+        "kind": "still",
+        "file": "order-cash/07-on-the-way-code.png",
+        "src": "assets/ui/order-cash/07-on-the-way-code.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 21.3
+          },
+          "sub": {
+            "x": 68,
+            "y": 37.3,
+            "w": 254,
+            "h": 17
+          },
+          "progress": {
+            "x": 334,
+            "y": 16.1,
+            "w": 38,
+            "h": 38
+          },
+          "stream": {
+            "x": 0,
+            "y": 66.3,
+            "w": 390,
+            "h": 341.8
+          },
+          "handover": {
+            "x": 12,
+            "y": 417.1,
+            "w": 366,
+            "h": 230.9
+          },
+          "code": {
+            "x": 25,
+            "y": 498.8,
+            "w": 340,
+            "h": 48
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "order-cash/08-cash-confirmed.png",
+      "start": 8.3,
+      "end": 11.85,
+      "treatment": "swapFade (the stall confirmed the cash): green 'The stall has confirmed your ₹150 cash payment'; code + 'Now tell them this code — that completes your order.'",
+      "asset": {
+        "kind": "still",
+        "file": "order-cash/08-cash-confirmed.png",
+        "src": "assets/ui/order-cash/08-cash-confirmed.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 21.3
+          },
+          "sub": {
+            "x": 68,
+            "y": 37.3,
+            "w": 254,
+            "h": 17
+          },
+          "progress": {
+            "x": 334,
+            "y": 16.1,
+            "w": 38,
+            "h": 38
+          },
+          "stream": {
+            "x": 0,
+            "y": 66.3,
+            "w": 390,
+            "h": 360
+          },
+          "handover": {
+            "x": 12,
+            "y": 435.2,
+            "w": 366,
+            "h": 212.8
+          },
+          "code": {
+            "x": 25,
+            "y": 517,
+            "w": 340,
+            "h": 48
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "order-cash/09-delivered-review.png",
+      "start": 11.3,
+      "end": 12,
+      "treatment": "swapSheet (sheetTop 412): 'Delivered' with the review sheet rising; camera back to identity.",
+      "asset": {
+        "kind": "still",
+        "file": "order-cash/09-delivered-review.png",
+        "src": "assets/ui/order-cash/09-delivered-review.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 21.3
+          },
+          "sub": {
+            "x": 68,
+            "y": 37.3,
+            "w": 254,
+            "h": 17
+          },
+          "progress": {
+            "x": 334,
+            "y": 16.1,
+            "w": 38,
+            "h": 38
+          },
+          "stream": {
+            "x": 0,
+            "y": 66.3,
+            "w": 390,
+            "h": 581.8
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          },
+          "sheet": {
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 844
+          },
+          "stars": {
+            "x": 18,
+            "y": 506,
+            "w": 354,
+            "h": 52
+          },
+          "submit": {
+            "x": 201,
+            "y": 782,
+            "w": 171,
+            "h": 48
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "graphic:status rail (the app's six progress labels)",
+      "start": 0.2,
+      "end": 11.9,
+      "treatment": "Left-column motion graphic lit in sync with each status change.",
+      "asset": {
+        "kind": "graphic",
+        "description": "status rail (the app's six progress labels)"
+      }
+    }
+  ],
+  "demoBadgeLocal": [],
+  "uiState": "Aarav's cash order thread: 'Waiting for the seller' → 'Order confirmed' ('Being prepared · usually ready by 7:24 pm') → 'Being cooked now' → 'Ready' → 'On the way' with the handover panel ('Please pay ₹150 in cash', six-digit code, 'Then tell this code to the stall owner or the delivery partner — that completes your order. SETU staff will never ask for it.') → 'The stall has confirmed your ₹150 cash payment' / 'Now tell them this code — that completes your order.' → 'Delivered' (review sheet rises).",
+  "animationLocal": "Local times. Frame 0 = order-cash/01-placed.png at identity. Camera framing Fhand = {s 1.7, P [195,532], T [1480,500]} (canvas of a screen point = (1121.98 + 1.836·x, −476.75 + 1.836·y)).\n0.10 kicker '08 · Track & hand over' K.fadeUp at (140,200).\n0.20–0.50 tag 'TIME-LAPSE' (Lucide fast-forward 20 px + Space Mono 700 18 px caps, #B8C7FF pill) fades in at the tag row (140,112); 5.10–5.40 it fades out. It covers the whole status run (the real order spanned 7:02 → 7:25 pm).\n0.20–0.80 status rail (canvas-level, left column): header 'STATUS TIMELINE · NOT A MAP' (Space Mono 700 18 px caps, #B8C7FF) at (150,290); a 2 px rgba(255,255,255,.35) line from (162,352) to (162,667) drawn top → bottom (K.drawPath 0.6 s); six rows, 14 px dots at x 162 and labels (Plus Jakarta Sans 600 28 px) at x 192: Placed (y 352), Confirmed (415), Preparing (478), Ready (541), Out for delivery (604), Delivered (667). Future rows 35% white; the current row has an orange dot and a white label; done rows white with a filled pale dot.\nStatus run (in-place K.swapFade 0.25 s; each change is the stall's action, so no taps; every state is held 1.2 s), with a 0.6 s orange ring flash on that capture's .headline and the matching rail row lighting:\n- 0.40 'Placed' current (01-placed).\n- 1.20 → order-cash/02-accepted.png, 'Confirmed'.\n- 2.40 → order-cash/04-preparing.png, 'Preparing'.\n- 3.60 → order-cash/06-ready.png, 'Ready'.\n- 4.80 → order-cash/07-on-the-way-code.png, 'Out for delivery'.\n5.10–6.10 K.focus Fhand (1.0 s): the handover panel fills the frame.\n6.10–7.00 orange ring on 'Please pay ₹150 in cash', measured box {x:25,y:455,w:340,h:34} (canvas (1167.9,358.6)–(1792.1,421.1)), fading 7.00–7.35.\n7.00–7.95 orange ring (look here; the code is never tapped) on order-cash/07-on-the-way-code.code (canvas (1167.9,439)–(1792.1,527.2)), fading 7.95–8.30, + label 'HANDOVER CODE' (≈209×38) at x 880–1089, y 464–502, in 7.05 (0.3 s), out 7.95–8.25 (both gone before the 8.30 swap moves the code 18 px down); leader (1089,483)→(1167.9,483).\n8.30 K.swapFade → order-cash/08-cash-confirmed.png (0.25 s; the stall tapped 'Yes, cash received'; its panel sits 18 px lower, the camera stays).\n8.60–9.80 green ring on 'The stall has confirmed your ₹150 cash payment', measured box {x:25,y:473,w:340,h:34} (canvas (1167.9,391.7)–(1792.1,454.1)).\n9.60–11.10 orange ring on order-cash/08-cash-confirmed.code (canvas (1167.9,472.5)–(1792.1,560.6)) and on 'Now tell them this code — that completes your order.', measured box {x:25,y:576,w:310,h:18}. 9.80–11.10 three concentric 2 px pale (#B8C7FF) arcs ripple once each, 0.35 s apart — the code is said out loud: all centred at canvas (1080,516) (level with the code), radii 20/34/48 px, each spanning 140°–220° (the LEFT side of its circle, angles from +x), so they bulge left, away from the phone, like '(((' — they occupy x ≈ 1032–1065, y ≈ 485–547, clear of the Fhand bezel (x ≈ 1098).\n11.10–11.90 K.unfocus (0.8 s).\n11.30 K.swapSheet → order-cash/09-delivered-review.png (sheetTop 412, 0.55 s; the stall entered the right code — no customer tap); the rail's 'Delivered' row lights with a soft orange flash.\n11.55–11.90 the rail and the kicker fade out. 11.90–12.00 hold at identity.",
+  "transitionIn": "Continuous from s09's commit wipe: 'Waiting for the seller' at identity.",
+  "transitionOut": "The review sheet rises over 'Delivered'; settled at identity for the cut.",
+  "handoffIn": {
+    "phone": "default",
+    "screen": "order-cash/01-placed.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Order thread 'Waiting for the seller' at identity; the second phone, branch type, wipe and kicker are gone."
+  },
+  "handoffOut": {
+    "phone": "default",
+    "screen": "order-cash/09-delivered-review.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "'Delivered' with the review sheet up ('How was Southside Tiffins?') at identity; rail, tag, label and kicker gone."
+  },
+  "soundCuesLocal": [
+    {
+      "at": 0.4,
+      "cue": "Status tick (Placed)"
+    },
+    {
+      "at": 1.2,
+      "cue": "Tick + soft chime (Confirmed)"
+    },
+    {
+      "at": 2.4,
+      "cue": "Tick (Preparing)"
+    },
+    {
+      "at": 3.6,
+      "cue": "Tick (Ready)"
+    },
+    {
+      "at": 4.8,
+      "cue": "Tick (Out for delivery) + light whoosh"
+    },
+    {
+      "at": 7,
+      "cue": "Code shimmer"
+    },
+    {
+      "at": 8.3,
+      "cue": "Soft ping (cash confirmed)"
+    },
+    {
+      "at": 9.8,
+      "cue": "Two soft voice-arc pulses"
+    },
+    {
+      "at": 11.3,
+      "cue": "Sheet slide + gentle success chord (Delivered)"
+    }
+  ],
+  "accuracyNotes": "- Status headlines are the app's own ('Waiting for the seller', 'Order confirmed', 'Being cooked now', 'Ready', 'On the way'); the rail uses the progress view's labels (Placed, Confirmed, Preparing, Ready, Out for delivery, Delivered).\n- The TIME-LAPSE tag is on for the whole status run: the real order took 7:02 → 7:25 pm. 'Being prepared · usually ready by 7:24 pm' is a prep target — shown in the capture, never featured or narrated; no delivery-time promise.\n- Tracking is a status timeline in the order thread, not a map ('STATUS TIMELINE · NOT A MAP' paraphrases Step 4's 'You will see a status timeline, not a rider on a map.'). No live map or location tracking anywhere.\n- Handover order is real: cash first ('Please pay ₹150 in cash' → 'The stall has confirmed your ₹150 cash payment'), then the code completes it ('Now tell them this code — that completes your order.'). 'Them' = the stall owner or the delivery partner, as the app says.\n- The handover code in 07/08 is 806688 as captured; never type it into captions or overlays; don't alter the captured times.",
+  "globalSystem": "STORY-FIRST ('Dinner at B-212'): one evening with Aarav (Nehru Hall of Residence, Room B-212). Tonight he signs in on a new phone with an emailed one-time code (DEMO-labelled; the password stays the main way in). A band wipe rewinds to his day one to show how a first-timer creates an account and runs the four onboarding steps — that is how his Home (Room B-212) was saved inside the campus boundary. A second band wipe returns to tonight: the new phone's Home first reads 'Set your delivery location' (the delivery choice is stored per device; the saved addresses belong to the account), so he picks his saved Home with three real taps (Deliver-to row → 'Home' under SAVED LOCATIONS → 'Confirm location'); then 1 × Masala Dosa + 2 × Filter Coffee from Southside Tiffins; items ₹140 + the stall's own delivery charge ₹10 = ₹150 payable to the seller. The QR route is a labelled side branch for stalls that offer it (the stall accepts first, then you pay, then it confirms). Aarav pays cash at the door, his six-digit handover code completes the order, he rates it five stars, and the Report path is pointed out. Nine numbered chapters (01 Sign in … 09 Rate & report) keep first-timers oriented, and captions name the exact button where it helps. Tone: warm, plain, lightly playful ('Tonight: dosa.', 'Dinner, sorted.'), never hype; 'students, faculty, staff' is said once. Motif: the real campus-boundary polygon opens the film, returns as the delivery-area check and closes the end card.\nGLOBAL SYSTEM (every scene):\n- Frame: 1920×1080, 60 fps, silent. One HyperFrames sub-composition per scene with one paused GSAP timeline; kit.js helpers plus plain GSAP only. Scene roots are transparent over the shared indigo background from index.html (it already carries a faint drifting campus outline; never paint a background).\n- Boundaries are HARD CUTS: frame 0 must equal handoffIn and the last frame must equal handoffOut. Unless a handoff says otherwise: phone at the default spec, rig identity, left column empty, no overlays, the named capture fully visible and settled.\n- Phone: kit .phone at phoneSpec {left:1150, top:70, k:1.08}; screen origin canvas (1164,84), 421.2×911.5. At identity a screen point (x,y) is canvas (1164 + 1.08·x, 84 + 1.08·y). The phone, its capture layers and every in-screen overlay (rings, taps, reveals, halos, masks) live inside the scene rig (.rig, transform-origin 0 0). Camera = K.focus(tl, rig, K.toCanvas(spec, P[0], P[1]), s, t, dur, {to:{x:T[0], y:T[1]}}), expo.inOut, 0.8–1.2 s; framings are given as {s, P (screen px), T (canvas px)} and K.unfocus returns to identity. Canvas-level type, labels, leader lines, chips and tags sit OUTSIDE the rig; every canvas position in a spec already accounts for the rig state at that moment.\n- Grid: text column x140–820 (kicker at (140,200), headline top 250, nothing below y 860); callout lane x840–1130 (label right edge ≤1120); right margin x1620–1880 (unused); one tag row at (140,112) for ONE tag at a time (DEMO badge, DAY ONE, TONIGHT, the sample-stalls note, TIME-LAPSE); caption zone x120–1140, y880–1050 stays empty (captions centred only in s01; s12 has none). A pushed phone's bezel never reaches left of x 1095, and left caption plates end at x ≈ 900. At most 4 floating labels/chips/tags at once, never overlapping the phone, each other, the text column or the caption zone. Never fly several objects into the phone at once: when chips travel into the phone they go one at a time.\n- Type: kicker = kit .kicker showing the scene's `chapter`, K.fadeUp at 0.10; its fade-out (0.3 s) ends at least 0.05 s before the scene's last frame, and its onScreenText end time is the end of that fade. Headline = .headline--md (Sora 800, 68 px), words only. Sora has no ₹ glyph: every string containing ₹ is set in Plus Jakarta Sans (names, amounts) or Space Mono (labels, prices, counts). Labels = short caps tags: .callout.callout--dark with font 700 18px/1 Space Mono, letter-spacing .08em, uppercase, padding 10px 16px (≈ 12.24 px × chars + 50 px wide, 38 px tall), plus a 2 px rgba(184,199,255,.7) straight leader from the label's right edge to the element; a label's right edge stays ≥8 px left of the phone's bezel for the framing in use (identity ≤1140; s 1.4 ≤1097; Ftotals ≤1095; Fhand ≤1090; Fconf ≤1087). Tag-row items: Space Mono 700 18 px caps, letter-spacing .16em, pill padding 10/16; the DEMO badge is kit .demo-badge with the text 'Demo environment'.\n- Overlays on real UI: K.tap at the centre of the named box, always 0.35 s before the screen change it causes (inside the 0.25–0.45 s rule). K.ring orange = look here; {blue:true} = the next tap target only (≥0.2 s before its tap; never on something that is not tapped); green = a kit ring with border-color #19B36B and a green glow, used only for 'inside the delivery area', 'cash confirmed' and 'payment confirmed'; pale = a kit ring with border-color #B8C7FF and box-shadow 0 0 0 6px rgba(184,199,255,.16), 0 0 22px rgba(184,199,255,.3): context that is never tapped (s03's code-box glow, s05's 'Use my current location' row). Boxes are CSS px of the 390×844 screen: named marks from marks.json written <group>/<shot>.<mark>, or explicit {x,y,w,h} measured on the final PNGs. Nothing opaque over app text; UI is never recoloured.\n- Screen changes: K.swapPush = forward navigation (0.55 s); K.swapSheet = sheets (sheetTop given); K.swapFade = in-place state change (0.15–0.35 s); circular reveal = a local state change caused by a tap (the 'after' capture as a new layer whose clip-path circle(r at x y) grows from 0 at the tap point, 0.25–0.35 s, power2.out); commit wipe = for 'Start ordering' and 'Place order · ₹150' a #0033DA circle grows from the button centre to cover the screen (0.45 s, power2.in), the next capture is set underneath, then the circle fades (0.3 s).\n- Clips: play inside a non-timed .layer in the screen (data-hf-media-start-basis=\"local\"); never animate the <video>; the next still sits underneath to hold the last frame; chained clips start exactly where the previous ends. clipSeconds = the length used (a speed variant is pre-rendered; each captured frame gets clipSeconds / frames). Where a clip's last frame differs from the still under it only by input focus, the cut is a deliberate focus-loss cut (named in the scene).\n- Shot windows: a shot starts when its layer first becomes visible and ends when it is fully covered or hidden, i.e. at the END of the transition that removes it.\n- Rhythm: tap → result → ≥0.6 s beat; text that matters is held ≥1.2 s; exits 0.3–0.5 s; nothing is visible before its entrance (fromTo with opacity 0); no drifting, spinning, particles or glitch.\n- Icons: Lucide line icons only (stroke 1.85–2.5); no emoji, food photos, clip-art or filled pins.\n- Honesty: only real captures for app screens; DEMO badge across the whole OTP portion (code request → Home); the sample-stalls note once (s07) plus the end-card fine print; the demo QR stays labelled; no 'SETU delivers', pickup, map or location tracking, delivery-time promise, free/zero-cost/minimal-charge wording or competitor names anywhere. Never ring, zoom on or caption the app's own 'SETU delivers inside…' lines, the location dialog's body sentences ('…to find nearby stalls…', 'It is only read when you ask for it.' — the code contradicts both), Step 4's licence and 'Recorded…' sub-lines, search rows' '20–20 min', the stall's '20 min', the prep time, the QR thread pill 'Order confirmed by …' (shown before payment), 33-home-set's hover-blue 'Orders' tab or the review note placeholder.",
+  "previousScene": {
+    "id": "s09-pay",
+    "title": "Pay the stall directly — cash, or the stall's QR",
+    "transitionOut": "'Place order · ₹150' → blue commit wipe → 'Waiting for the seller', settled at identity.",
+    "handoffOut": {
+      "phone": "default",
+      "screen": "order-cash/01-placed.png",
+      "rig": "identity",
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "Order thread 'Waiting for the seller' at identity; the second phone, branch type, wipe and kicker are gone."
+    },
+    "lastShots": [
+      "order-cash/01-placed.png",
+      "graphic:commit wipe (#0033DA circle from the Place order button)"
+    ]
+  },
+  "nextScene": {
+    "id": "s11-rate-report",
+    "title": "Delivered, rated — and reportable",
+    "transitionIn": "Continuous: the review sheet is already up.",
+    "handoffIn": {
+      "phone": "default",
+      "screen": "order-cash/09-delivered-review.png",
+      "rig": "identity",
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "'Delivered' with the review sheet up ('How was Southside Tiffins?') at identity; rail, tag, label and kicker gone."
+    },
+    "firstShots": [
+      "order-cash/09-delivered-review.png",
+      "order-cash/10-review-5.png"
+    ]
+  }
+}

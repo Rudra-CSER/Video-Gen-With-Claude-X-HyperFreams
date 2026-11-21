@@ -1,0 +1,83 @@
+{
+ "scriptPath": "/home/rudra-cser/Setu-Food-PWA/video-production/.workflows/build-scenes.js",
+ "resumeFromRunId": "wf_8263fa56-2a3",
+ "args": {
+  "hf": "/home/rudra-cser/Setu-Food-PWA/video-production/hyperframes",
+  "vp": "/home/rudra-cser/Setu-Food-PWA/video-production",
+  "total": 117.65,
+  "specInFlux": true,
+  "maxFixRounds": 3,
+  "scenes": [
+   {
+    "n": "s01",
+    "id": "s01-hook",
+    "title": "Hook \u2014 your campus, your food",
+    "start": 0,
+    "end": 5.4,
+    "dur": 5.4,
+    "prev": null,
+    "next": "s02-what-setu-does"
+   },
+   {
+    "n": "s02",
+    "id": "s02-what-setu-does",
+    "title": "What SETU does",
+    "start": 5.4,
+    "end": 12,
+    "dur": 6.6,
+    "prev": "s01-hook",
+    "next": "s03-sign-in"
+   },
+   {
+    "n": "s03",
+    "id": "s03-sign-in",
+    "title": "Have an account? Sign in \u2014 password, or an emailed code",
+    "start": 12,
+    "end": 22.6,
+    "dur": 10.6,
+    "prev": "s02-what-setu-does",
+    "next": "s04-new-here"
+   },
+   {
+    "n": "s04",
+    "id": "s04-new-here",
+    "title": "New here? Create a customer account",
+    "start": 22.6,
+    "end": 32.6,
+    "dur": 10,
+    "prev": "s03-sign-in",
+    "next": "s05-delivery-spot"
+   },
+   {
+    "n": "s08",
+    "id": "s08-cart",
+    "title": "Cart \u2014 \u20b9150, payable to the seller",
+    "start": 69.1,
+    "end": 78.4,
+    "dur": 9.3,
+    "prev": "s07-find-and-add",
+    "next": "s09-pay"
+   },
+   {
+    "n": "s10",
+    "id": "s10-track-handover",
+    "title": "Track it, then hand over cash and the code",
+    "start": 90.35,
+    "end": 102.35,
+    "dur": 12,
+    "prev": "s09-pay",
+    "next": "s11-rate-report"
+   },
+   {
+    "n": "s11",
+    "id": "s11-rate-report",
+    "title": "Delivered, rated \u2014 and reportable",
+    "start": 102.35,
+    "end": 109.45,
+    "dur": 7.1,
+    "prev": "s10-track-handover",
+    "next": "s12-end-card"
+   }
+  ]
+ }
+}

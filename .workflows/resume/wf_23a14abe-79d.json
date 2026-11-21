@@ -1,0 +1,24 @@
+{
+ "scriptPath": "/home/rudra-cser/Setu-Food-PWA/video-production/.workflows/build-scenes.js",
+ "resumeFromRunId": "wf_23a14abe-79d",
+ "args": {
+  "hf": "/home/rudra-cser/Setu-Food-PWA/video-production/hyperframes",
+  "vp": "/home/rudra-cser/Setu-Food-PWA/video-production",
+  "total": 117.65,
+  "specInFlux": true,
+  "maxFixRounds": 3,
+  "scenes": [
+   {
+    "n": "s07",
+    "id": "s07-find-and-add",
+    "title": "Back to tonight \u2014 dosa from Southside Tiffins",
+    "start": 58.85,
+    "end": 69.1,
+    "dur": 10.25,
+    "prev": "s06-your-picks",
+    "next": "s08-cart",
+    "note": "A storyboard revision now in progress adds, at the START of this scene (right after the TONIGHT band), Aarav picking his saved Home on tonight's new phone with real taps placed before each change: Home reads 'Set your delivery location' (location/30-home-unset.png) -> tap the Deliver-to row -> the picker sheet opens with 'Saved locations' (location/31-picker-saved.png) -> tap the Home row -> the confirm step (location/32-confirm-saved.png) -> tap 'Confirm location' -> Home now reads Home / Room B-212 (location/33-home-set.png); then the search for 'dosa' continues as in the current packet. About 3.5 s are added to this scene and every later beat shifts. Build the scene so this opening can be slotted in (keep beats as timeline offsets you can shift), study those four captures and their marks now, and when the revised packet appears (.packets/s07-find-and-add.json changes; the storyboard file storyboard/scene-timing.json gets a newer timestamp) rebuild your timing to it exactly. Until then follow the current packet."
+   }
+  ]
+ }
+}

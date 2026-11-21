@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /></head>
+<body>
+<template id="s03-sign-in-template">
+  <link rel="stylesheet" href="assets/css/kit.css" />
+  <style>
+    #root { position: absolute; inset: 0; }
+    #root .rig { position: absolute; inset: 0; transform-origin: 0 0; }
+
+    /* stills that wait their turn (the clips are timed by the runtime) */
+    #s03-l03, #s03-l04, #s03-l06, #s03-l07 { opacity: 0; }
+
+    /* left column */
+    #s03-kicker { position: absolute; left: 140px; top: 200px; }
+    #s03-head { position: absolute; left: 140px; top: 250px; width: 680px; }
+    #s03-head .s03-hl { display: block; }
+
+    /* callout-lane labels: short caps tags, right edge at x 1092 (≤ 1097 at s 1.4) */
+    .s03-label.callout {
+      height: 38px; box-sizing: border-box; padding: 0 16px; gap: 10px;
+      font: 700 18px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase;
+    }
+    .s03-label.callout .dot { width: 10px; height: 10px; }
+    #s03-lab-otp { right: 828px; top: 646px; }
+    #s03-lab-otp .dot { background: var(--brand-bright); box-shadow: 0 0 8px rgba(46, 91, 238, .9); }
+
+    /* Mail card: the real sign-in email, cropped to its code and expiry lines, under a plain head strip
+       (no sender, time or app chrome; the crop leaves out the template's greeting line) */
+    #s03-mail.mailcard { left: 590px; top: 400px; width: 480px; }
+    #s03-mail .mail-head {
+      height: 52px; box-sizing: border-box; padding: 0 18px; gap: 12px;
+      background: #F3F4F8; color: #10142A;
+      font: 700 16px/1 var(--font-mono); letter-spacing: .02em;
+    }
+    #s03-mail .s03-mail-ico { width: 20px; height: 20px; flex: none; color: #2E5BEE; }
+    #s03-mail .s03-mail-sub { color: #5B6078; font-weight: 400; }
+    #s03-mail .s03-mail-body { position: relative; height: 283.28px; overflow: hidden; }
+    /* email CSS x 12–378, y 196–412 at 1.3115x (the PNG is 1170 px = 390 email CSS px wide) */
+    #s03-mail .s03-mail-body img {
+      position: absolute; left: -15.74px; top: -257.05px; width: 511.49px; height: auto; max-width: none;
+    }
+    /* glow ring around the email's code box (6 px outside it) */
+    #s03-codeglow {
+      position: absolute; left: 25.5px; top: 64.75px; width: 429px; height: 103.8px;
+      box-sizing: border-box; border-radius: 22px; border: 3px solid #7F9BFF;
+      box-shadow: 0 0 0 6px rgba(127, 155, 255, .22), 0 0 30px rgba(46, 91, 238, .45);
+      opacity: 0; pointer-events: none;
+    }
+    /* a digit lights up as its trail leaves: a soft highlight multiplied under the ink (the digit keeps its colour) */
+    .s03-dlit {
+      position: absolute; top: 88.2px; width: 40px; height: 56px; margin-left: -20px; border-radius: 16px;
+      background: radial-gradient(closest-side, rgba(150, 172, 255, .95), rgba(170, 188, 255, .75) 55%, rgba(190, 204, 255, 0));
+      mix-blend-mode: multiply; opacity: 0; pointer-events: none;
+    }
+    #s03-dl1 { left: 137.3px; } #s03-dl2 { left: 175.7px; } #s03-dl3 { left: 214.2px; }
+    #s03-dl4 { left: 252.2px; } #s03-dl5 { left: 291.2px; } #s03-dl6 { left: 329.6px; }
+
+    /* canvas-level vector overlay: leaders and light trails */
+    #s03-fx { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; pointer-events: none; }
+    #s03-fx .s03-lead { stroke: rgba(184, 199, 255, .7); stroke-width: 2; fill: none; }
+    #s03-fx .s03-trail { stroke-width: 1.5; stroke-linecap: butt; fill: none; }
+  </style>
+  <div id="root" data-composition-id="s03-sign-in" data-width="1920" data-height="1080">
+    <div class="rig" id="s03-rig">
+      <div class="phone" id="s03-phone" data-layout-allow-overflow>
+        <div class="side-btn" style="top:190px;height:70px"></div>
+        <div class="side-btn" style="top:290px;height:120px"></div>
+        <div class="glass"><div class="screen" id="s03-screen">
+          <div class="layer" id="s03-l01"><img src="assets/ui/signin/01-signin.png" alt="" /></div>
+          <div class="layer" id="s03-l03"><img src="assets/ui/signin/03-email-typed.png" alt="" /></div>
+          <div class="layer" id="s03-type-email"><video id="s03-v-email" class="clip" src="assets/clips/signin-02-type-email.1560ms.mp4" muted playsinline data-start="1.55" data-duration="1.56" data-hf-media-start-basis="local" data-track-index="3"></video></div>
+          <div class="layer" id="s03-l04" data-layout-allow-overflow><img src="assets/ui/signin/04-enter-code.png" alt="" /></div>
+          <div class="layer" id="s03-l06"><img src="assets/ui/signin/06-code-entered.png" alt="" /></div>
+          <div class="layer" id="s03-type-code"><video id="s03-v-code" class="clip" src="assets/clips/signin-05-type-code.1200ms.mp4" muted playsinline data-start="6.1" data-duration="1.2" data-hf-media-start-basis="local" data-track-index="3"></video></div>
+          <div class="layer" id="s03-l07"><img src="assets/ui/signin/07-home.png" alt="" /></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="kicker" id="s03-kicker">01 · Sign in</div>
+    <h2 class="headline headline--md" id="s03-head"><span class="s03-hl"><span class="word">Your</span> <span class="word">email,</span></span><span class="s03-hl accent"><span class="word">then</span> <span class="word">a</span> <span class="word">code.</span></span></h2>
+
+    <div class="callout callout--dark s03-label" id="s03-lab-otp"><span class="dot"></span>Email me a code</div>
+
+    <div class="mailcard" id="s03-mail">
+      <div class="mail-head" id="s03-mail-head"><svg class="s03-mail-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span id="s03-mail-inbox">Your sign-in code</span><span class="s03-mail-sub">by email</span></div>
+      <div class="s03-mail-body" id="s03-mail-body"><img src="assets/ui/signin/email-otp.png" alt="" data-layout-allow-overflow /></div>
+      <div id="s03-codeglow"></div>
+      <div class="s03-dlit" id="s03-dl1"></div>
+      <div class="s03-dlit" id="s03-dl2"></div>
+      <div class="s03-dlit" id="s03-dl3"></div>
+      <div class="s03-dlit" id="s03-dl4"></div>
+      <div class="s03-dlit" id="s03-dl5"></div>
+      <div class="s03-dlit" id="s03-dl6"></div>
+    </div>
+
+    <svg id="s03-fx" viewBox="0 0 1920 1080" aria-hidden="true">
+      <defs>
+        <filter id="s03-glow" filterUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="2.6" result="s03-b" />
+          <feFlood flood-color="#2E5BEE" flood-opacity="1" />
+          <feComposite in2="s03-b" operator="in" result="s03-g" />
+          <feMerge><feMergeNode in="s03-g" /><feMergeNode in="s03-g" /><feMergeNode in="SourceGraphic" /></feMerge>
+        </filter>
+        <!-- each trail is dim where it leaves the card and brightest where it lands on the phone -->
+        <linearGradient id="s03-tg1" gradientUnits="userSpaceOnUse" x1="727.3" y1="516.2" x2="1193.5" y2="310.4"><stop offset="0" stop-color="#B8C7FF" stop-opacity=".35" /><stop offset=".6" stop-color="#D6E0FF" stop-opacity=".85" /><stop offset="1" stop-color="#FFFFFF" /></linearGradient>
+        <linearGradient id="s03-tg2" gradientUnits="userSpaceOnUse" x1="765.7" y1="516.2" x2="1284.1" y2="310.4"><stop offset="0" stop-color="#B8C7FF" stop-opacity=".35" /><stop offset=".6" stop-color="#D6E0FF" stop-opacity=".85" /><stop offset="1" stop-color="#FFFFFF" /></linearGradient>
+        <linearGradient id="s03-tg3" gradientUnits="userSpaceOnUse" x1="804.2" y1="516.2" x2="1374.8" y2="310.4"><stop offset="0" stop-color="#B8C7FF" stop-opacity=".35" /><stop offset=".6" stop-color="#D6E0FF" stop-opacity=".85" /><stop offset="1" stop-color="#FFFFFF" /></linearGradient>
+        <linearGradient id="s03-tg4" gradientUnits="userSpaceOnUse" x1="842.2" y1="516.2" x2="1465.4" y2="310.4"><stop offset="0" stop-color="#B8C7FF" stop-opacity=".35" /><stop offset=".6" stop-color="#D6E0FF" stop-opacity=".85" /><stop offset="1" stop-color="#FFFFFF" /></linearGradient>
+        <linearGradient id="s03-tg5" gradientUnits="userSpaceOnUse" x1="881.2" y1="516.2" x2="1556.1" y2="310.4"><stop offset="0" stop-color="#B8C7FF" stop-opacity=".35" /><stop offset=".6" stop-color="#D6E0FF" stop-opacity=".85" /><stop offset="1" stop-color="#FFFFFF" /></linearGradient>
+        <linearGradient id="s03-tg6" gradientUnits="userSpaceOnUse" x1="919.6" y1="516.2" x2="1646.6" y2="310.4"><stop offset="0" stop-color="#B8C7FF" stop-opacity=".35" /><stop offset=".6" stop-color="#D6E0FF" stop-opacity=".85" /><stop offset="1" stop-color="#FFFFFF" /></linearGradient>
+      </defs>
+      <line class="s03-lead" id="s03-lead-otp" x1="1092" y1="665" x2="1140" y2="665" />
+      <g filter="url(#s03-glow)">
+        <line class="s03-trail" id="s03-tr1" stroke="url(#s03-tg1)" x1="727.3" y1="516.2" x2="1193.5" y2="310.4" />
+        <line class="s03-trail" id="s03-tr2" stroke="url(#s03-tg2)" x1="765.7" y1="516.2" x2="1284.1" y2="310.4" />
+        <line class="s03-trail" id="s03-tr3" stroke="url(#s03-tg3)" x1="804.2" y1="516.2" x2="1374.8" y2="310.4" />
+        <line class="s03-trail" id="s03-tr4" stroke="url(#s03-tg4)" x1="842.2" y1="516.2" x2="1465.4" y2="310.4" />
+        <line class="s03-trail" id="s03-tr5" stroke="url(#s03-tg5)" x1="881.2" y1="516.2" x2="1556.1" y2="310.4" />
+        <line class="s03-trail" id="s03-tr6" stroke="url(#s03-tg6)" x1="919.6" y1="516.2" x2="1646.6" y2="310.4" />
+      </g>
+    </svg>
+  </div>
+  <script>
+    (function () {
+      const K = window.SetuKit;
+      const $ = (id) => document.getElementById(id);
+      const spec = { left: 1150, top: 70, k: 1.08 };
+      K.placePhone($('s03-phone'), spec);
+      const screen = $('s03-screen');
+      const rig = $('s03-rig');
+      const L01 = $('s03-l01'); const L03 = $('s03-l03'); const L04 = $('s03-l04');
+      const L06 = $('s03-l06'); const L07 = $('s03-l07');
+
+      // Real capture boxes (CSS px of the 390x844 screen), from marks.json / measured in the page.
+      const M = {
+        userLine: { x: 9, y: 182, w: 174, h: 33 },           // 'User account' (2nd line of signin/01-signin.title, text x16–176.4, y182.6–213.6)
+        id: { x: 16, y: 276.6, w: 358, h: 48 },              // signin/01-signin.id
+        otpLink: { x: 16, y: 519.6, w: 358, h: 48 },         // signin/03-email-typed.otpLink ('Email me a one-time code instead')
+        sentTo: { x: 16, y: 211.1, w: 358, h: 40 },          // signin/04-enter-code.sentTo
+        verify: { x: 16, y: 369.1, w: 358, h: 56 },          // signin/06-code-entered.verify
+      };
+
+      const tl = gsap.timeline({ paused: true });
+
+      // Finger tap: same look and timing as K.tap, but the ripple stays hidden until it fires
+      // (K.tap's ripple fromTo starts at opacity .95, which immediateRender shows from frame 0).
+      function tap(box, t) {
+        const c = K.center(box);
+        const ripple = K.el('div', 'ripple', screen, { left: `${c.x}px`, top: `${c.y}px` });
+        const touch = K.el('div', 'touch', screen, { left: `${c.x}px`, top: `${c.y}px` });
+        tl.fromTo(touch, { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.18, ease: 'power2.out' }, t);
+        tl.to(touch, { scale: 0.82, duration: 0.09, ease: 'power2.in' }, t + 0.2);
+        tl.to(touch, { scale: 1, opacity: 0, duration: 0.3, ease: 'power2.out' }, t + 0.32);
+        tl.fromTo(ripple, { opacity: 0, scale: 0.35 }, { opacity: 0.95, scale: 0.35, duration: 0.02, ease: 'none' }, t + 0.2);
+        tl.to(ripple, { opacity: 0, scale: 2.3, duration: 0.7, ease: 'power2.out' }, t + 0.22);
+      }
+
+      // Draw a line from its start; it stays fully hidden until the draw begins (GSAP's rounded
+      // dash offset can otherwise leave a sub-pixel sliver at the start point).
+      function draw(line, t, dur) {
+        tl.fromTo(line, { opacity: 0 }, { opacity: 1, duration: 0.01, ease: 'none' }, t);
+        K.drawPath(tl, line, t, dur, { ease: 'power2.out' });
+      }
+
+      // ── copy + camera F1 {s 1.4, P [195,236], T [1420,200]} ─────────────
+      K.fadeUp(tl, '#s03-kicker', 0.10);
+      K.revealWords(tl, $('s03-head'), 0.30);
+      K.focus(tl, rig, K.toCanvas(spec, 195, 236), 1.4, 0.30, 1.0, { to: { x: 1420, y: 200 } });
+
+      // ── 'Sign in with your User account', then the identifier field ─────
+      K.ring(tl, screen, M.userLine, 0.60, 1.00, { radius: 12 });
+      tap(M.id, 1.20);
+      // typing clip plays 1.55–3.11; 03 waits underneath and holds from 3.11
+      tl.set(L03, { opacity: 1 }, 2.0);
+      tl.set(L01, { opacity: 0 }, 2.0);
+      // the last letter lands on clip frame 91 (3.067); the field then blurs (03 is the blurred capture):
+      // dissolve the clip's layer over its last frames instead of popping the focus border off
+      tl.to('#s03-type-email', { opacity: 0, duration: 0.04, ease: 'none' }, 3.07);
+
+      // ── 'Email me a one-time code instead' ─────────────────────────────
+      K.ring(tl, screen, M.otpLink, 3.25, 0.85, { blue: true, radius: 30 });
+      K.callout(tl, $('s03-lab-otp'), 3.30, 0);
+      draw($('s03-lead-otp'), 3.40, 0.30);
+      tl.to(['#s03-lab-otp', '#s03-lead-otp'], { opacity: 0, duration: 0.35, ease: 'power1.in' }, 4.35);
+      tap(M.otpLink, 4.10);
+      K.fadeOut(tl, '#s03-head', 4.20, { dur: 0.40 });
+      K.swapPush(tl, L03, L04, 4.45, 0.55);
+
+      // ── 'Enter the code' + the sign-in email ────────────────────────────
+      tl.fromTo('#s03-mail', { x: -40, opacity: 0, rotation: 1.5 }, { x: 0, opacity: 1, rotation: 0, duration: 0.6, ease: 'expo.out' }, 4.90);
+      K.ring(tl, screen, M.sentTo, 5.00, 1.10, { radius: 14 });
+      tl.fromTo('#s03-codeglow', { opacity: 0, scale: 1.05 }, { opacity: 1, scale: 1, duration: 0.4, ease: 'expo.out' }, 5.50);
+      tl.to('#s03-codeglow', { opacity: 0, duration: 0.3, ease: 'power1.in' }, 6.10);
+
+      // code clip plays 6.10–7.30; 06 waits underneath and holds from 7.30
+      tl.set(L06, { opacity: 1 }, 6.5);
+      tl.set(L04, { opacity: 0 }, 6.5);
+
+      // ── light trails: card digit → phone box, each finishing on the clip frame where that
+      //    digit really appears (frames 10, 22, 31, 41, 50, 62 of the 1.2 s variant)
+      const ON = [10, 22, 31, 41, 50, 62].map((f) => 6.1 + f / 60);
+      let prevEnd = 6.1;
+      ON.forEach((on, i) => {
+        const n = i + 1;
+        const t0 = Math.max(on - 0.16, prevEnd);      // never two drawing at once
+        const line = $(`s03-tr${n}`);
+        draw(line, t0, on - t0);
+        tl.to(line, { opacity: 0, duration: 0.2, ease: 'power1.out' }, on);
+        // the card digit lights as its trail leaves, then settles to a faint mark
+        tl.fromTo(`#s03-dl${n}`, { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.16, ease: 'power2.out' }, t0);
+        tl.to(`#s03-dl${n}`, { opacity: 0.5, duration: 0.4, ease: 'power1.out' }, on + 0.05);
+        prevEnd = on;
+      });
+
+      // ── verify → Home; camera returns to identity ───────────────────────
+      K.ring(tl, screen, M.verify, 7.40, 0.35, { blue: true, radius: 34 });
+      tap(M.verify, 7.75);
+      tl.to('#s03-mail', { x: -60, opacity: 0, duration: 0.4, ease: 'power2.in' }, 7.75);
+      K.swapFade(tl, L06, L07, 8.10, 0.30);
+      K.unfocus(tl, rig, 8.10, 0.90);
+      K.fadeOut(tl, '#s03-kicker', 8.50, { dur: 0.30 });
+
+      window.__timelines['s03-sign-in'] = tl;
+    }());
+  </script>
+</template>
+</body>
+</html>

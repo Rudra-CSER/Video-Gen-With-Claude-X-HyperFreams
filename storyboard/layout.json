@@ -1,0 +1,7 @@
+{
+  "captionCenter": [
+    "s01",
+    "s12"
+  ],
+  "notes": "Captions are drawn only by compositions/captions.html (generated from scene-timing.json). Default plate: bottom-left (kit .cap--left: x 140, bottom 74, width 880) — scene builders keep x 120–1140, y 880–1050 empty. Centred plate (kit .cap--center, bottom 64) in s01 (full-screen hook) and s12 (end card, which has no captions: the disclaimer must have the frame to itself); those scenes keep y 900–1050 empty across the whole width. A pushed phone's outer (bezel) left edge stays at x ≥ 1095 (F1/Fcreate/Fcard 1105.6, Ftotals 1103.1, Fhand 1098.2, Fconf 1095.7), and the widest left caption plate ends at x ≈ 900, so a pushed phone never sits under a caption. A \"\\n\" in a caption is the intended line break (one plate per line)."
+}

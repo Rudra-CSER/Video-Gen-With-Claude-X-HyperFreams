@@ -1,0 +1,53 @@
+{
+ "scriptPath": "/home/rudra-cser/Setu-Food-PWA/video-production/.workflows/build-scenes.js",
+ "resumeFromRunId": "wf_01904c7f-ad9",
+ "args": {
+  "hf": "/home/rudra-cser/Setu-Food-PWA/video-production/hyperframes",
+  "vp": "/home/rudra-cser/Setu-Food-PWA/video-production",
+  "total": 117.65,
+  "specInFlux": true,
+  "maxFixRounds": 3,
+  "scenes": [
+   {
+    "n": "s05",
+    "id": "s05-delivery-spot",
+    "title": "Where should orders arrive?",
+    "start": 32.6,
+    "end": 49,
+    "dur": 16.4,
+    "prev": "s04-new-here",
+    "next": "s06-your-picks"
+   },
+   {
+    "n": "s06",
+    "id": "s06-your-picks",
+    "title": "Your picks \u2014 and three things SETU does not do",
+    "start": 49,
+    "end": 58.85,
+    "dur": 9.85,
+    "prev": "s05-delivery-spot",
+    "next": "s07-find-and-add"
+   },
+   {
+    "n": "s09",
+    "id": "s09-pay",
+    "title": "Pay the stall directly \u2014 cash, or the stall's QR",
+    "start": 78.4,
+    "end": 90.35,
+    "dur": 11.95,
+    "prev": "s08-cart",
+    "next": "s10-track-handover"
+   },
+   {
+    "n": "s12",
+    "id": "s12-end-card",
+    "title": "End card",
+    "start": 109.45,
+    "end": 117.65,
+    "dur": 8.2,
+    "prev": "s11-rate-report",
+    "next": null
+   }
+  ]
+ }
+}

@@ -1,0 +1,386 @@
+{
+  "sceneId": "s04-new-here",
+  "file": "compositions/s04-new-here.html",
+  "duration": 10,
+  "globalStart": 22.6,
+  "globalEnd": 32.6,
+  "title": "New here? Create a customer account",
+  "chapter": "02 · New here?",
+  "phoneSpec": {
+    "left": 1150,
+    "top": 70,
+    "k": 1.08
+  },
+  "captionPlacement": "left (keep x 120-1140, y 880-1050 clear)",
+  "narration": "New here? Rewind to Aarav's day one. Create a Customer account: name, institute email, phone, password. Then four quick steps.",
+  "captionsLocal": [
+    {
+      "start": 0.1,
+      "end": 2.8,
+      "text": "New here? Rewind to Aarav's day one."
+    },
+    {
+      "start": 2.9,
+      "end": 6.85,
+      "text": "Create a Customer account:\nname, institute email, phone, password."
+    },
+    {
+      "start": 7.6,
+      "end": 9.55,
+      "text": "Then four quick steps."
+    }
+  ],
+  "onScreenText": [
+    {
+      "text": "DAY ONE",
+      "start": 0.4,
+      "end": 2.9,
+      "role": "tag (tag row at (140,112): Lucide rotate-ccw + Space Mono 700 18 px caps)"
+    },
+    {
+      "text": "02 · New here?",
+      "start": 0.45,
+      "end": 9.9,
+      "role": "kicker (kit .kicker)"
+    }
+  ],
+  "shots": [
+    {
+      "file": "signin/07-home.png",
+      "start": 0,
+      "end": 0.41,
+      "treatment": "Frame 0 (from s03), covered by the rewind band at 0.41.",
+      "asset": {
+        "kind": "still",
+        "file": "signin/07-home.png",
+        "src": "assets/ui/signin/07-home.png",
+        "marks": {
+          "deliverTo": {
+            "x": 18,
+            "y": 18.1,
+            "w": 304,
+            "h": 41
+          },
+          "greeting": {
+            "x": 18,
+            "y": 78.6,
+            "w": 354,
+            "h": 27.6
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "graphic:editorial rewind band (full-height indigo band, orange leading edge)",
+      "start": 0,
+      "end": 0.7,
+      "treatment": "Sweeps left → right; the screen changes under it.",
+      "asset": {
+        "kind": "graphic",
+        "description": "editorial rewind band (full-height indigo band, orange leading edge)"
+      }
+    },
+    {
+      "file": "onboarding/01-signin.png",
+      "start": 0.41,
+      "end": 2.2,
+      "treatment": "Swapped in under the band; ring--blue + tap 'Create a Customer account' (1.30) at identity.",
+      "asset": {
+        "kind": "still",
+        "file": "onboarding/01-signin.png",
+        "src": "assets/ui/onboarding/01-signin.png",
+        "marks": {
+          "createAccount": {
+            "x": 30,
+            "y": 709.8,
+            "w": 330,
+            "h": 48
+          },
+          "customerCard": {
+            "x": 16,
+            "y": 206.4,
+            "w": 358,
+            "h": 60
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "onboarding/02-signup-empty.png",
+      "start": 1.65,
+      "end": 3.15,
+      "treatment": "swapPush in ('Create your Customer account') while the camera moves to Fcreate; tap Name (2.80).",
+      "asset": {
+        "kind": "still",
+        "file": "onboarding/02-signup-empty.png",
+        "src": "assets/ui/onboarding/02-signup-empty.png",
+        "marks": {
+          "name": {
+            "x": 16,
+            "y": 333.5,
+            "w": 358,
+            "h": 48
+          },
+          "email": {
+            "x": 16,
+            "y": 413.5,
+            "w": 358,
+            "h": 48
+          },
+          "phone": {
+            "x": 16,
+            "y": 493.5,
+            "w": 358,
+            "h": 48
+          },
+          "password": {
+            "x": 16,
+            "y": 594.5,
+            "w": 358,
+            "h": 48
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "onboarding/03-type-name/",
+      "start": 3.15,
+      "end": 3.77,
+      "treatment": "Typing clip, clipSeconds 0.62: 'Aarav Mehta'.",
+      "clipSeconds": 0.62,
+      "asset": {
+        "kind": "clip",
+        "file": "onboarding/03-type-name/",
+        "src": "assets/clips/onboarding-03-type-name.620ms.mp4",
+        "baseSrc": "assets/clips/onboarding-03-type-name.mp4",
+        "seconds": 0.62,
+        "info": {
+          "frames": 12,
+          "hold": 4,
+          "seconds": 0.8
+        },
+        "note": "Play it in a non-timed .layer inside the phone screen; put the matching still under it to hold the last frame."
+      }
+    },
+    {
+      "file": "onboarding/04-type-email/",
+      "start": 3.77,
+      "end": 5.33,
+      "treatment": "Typing clip, clipSeconds 1.56: 'aarav.demo@kgpian.iitkgp.ac.in'.",
+      "clipSeconds": 1.56,
+      "asset": {
+        "kind": "clip",
+        "file": "onboarding/04-type-email/",
+        "src": "assets/clips/onboarding-04-type-email.1560ms.mp4",
+        "baseSrc": "assets/clips/onboarding-04-type-email.mp4",
+        "seconds": 1.56,
+        "info": {
+          "frames": 31,
+          "hold": 4,
+          "seconds": 2.067
+        },
+        "note": "Play it in a non-timed .layer inside the phone screen; put the matching still under it to hold the last frame."
+      }
+    },
+    {
+      "file": "onboarding/05-type-phone/",
+      "start": 5.33,
+      "end": 5.89,
+      "treatment": "Typing clip, clipSeconds 0.56: '9000012345'; ring on the helper line.",
+      "clipSeconds": 0.56,
+      "asset": {
+        "kind": "clip",
+        "file": "onboarding/05-type-phone/",
+        "src": "assets/clips/onboarding-05-type-phone.560ms.mp4",
+        "baseSrc": "assets/clips/onboarding-05-type-phone.mp4",
+        "seconds": 0.56,
+        "info": {
+          "frames": 11,
+          "hold": 4,
+          "seconds": 0.733
+        },
+        "note": "Play it in a non-timed .layer inside the phone screen; put the matching still under it to hold the last frame."
+      }
+    },
+    {
+      "file": "onboarding/06-type-password/",
+      "start": 5.89,
+      "end": 6.6,
+      "treatment": "Typing clip, clipSeconds 0.71: masked dots.",
+      "clipSeconds": 0.71,
+      "asset": {
+        "kind": "clip",
+        "file": "onboarding/06-type-password/",
+        "src": "assets/clips/onboarding-06-type-password.710ms.mp4",
+        "baseSrc": "assets/clips/onboarding-06-type-password.mp4",
+        "seconds": 0.71,
+        "info": {
+          "frames": 14,
+          "hold": 4,
+          "seconds": 0.933
+        },
+        "note": "Play it in a non-timed .layer inside the phone screen; put the matching still under it to hold the last frame."
+      }
+    },
+    {
+      "file": "onboarding/07-signup-filled.png",
+      "start": 6.6,
+      "end": 8.1,
+      "treatment": "Still under the clips ('Strong enough.'; deliberate focus-loss cut at 6.60); ring--blue + tap 'Create account' (7.20).",
+      "asset": {
+        "kind": "still",
+        "file": "onboarding/07-signup-filled.png",
+        "src": "assets/ui/onboarding/07-signup-filled.png",
+        "marks": {
+          "submit": {
+            "x": 16,
+            "y": 677.5,
+            "w": 358,
+            "h": 48
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "onboarding/10-step1-identity.png",
+      "start": 7.55,
+      "end": 9.95,
+      "treatment": "swapPush in (Step 1 of 4 'Confirm your campus identity'); ring the app's stepper; tap 'Continue' (9.05).",
+      "asset": {
+        "kind": "still",
+        "file": "onboarding/10-step1-identity.png",
+        "src": "assets/ui/onboarding/10-step1-identity.png",
+        "marks": {
+          "cont": {
+            "x": 16,
+            "y": 754.7,
+            "w": 358,
+            "h": 48
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "onboarding/21-step2-prompt.png",
+      "start": 9.4,
+      "end": 10,
+      "treatment": "swapPush in (Step 2 of 4 'Where should orders arrive?') and settle.",
+      "asset": {
+        "kind": "still",
+        "file": "onboarding/21-step2-prompt.png",
+        "src": "assets/ui/onboarding/21-step2-prompt.png",
+        "marks": {
+          "gps": {
+            "x": 16,
+            "y": 441.7,
+            "w": 358,
+            "h": 66
+          },
+          "box": {
+            "x": 16,
+            "y": 309.7,
+            "w": 358,
+            "h": 104
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    }
+  ],
+  "demoBadgeLocal": [],
+  "uiState": "Rewind to day one: sign-in page with the card 'New here? Create a customer account — it takes a moment…' → 'Create your Customer account' (empty → filled: Aarav Mehta, aarav.demo@kgpian.iitkgp.ac.in, 9000012345, masked password, 'Strong enough.') → onboarding Step 1 of 4 'Confirm your campus identity' → Step 2 of 4 'Where should orders arrive?'.",
+  "animationLocal": "Local times. Frame 0 = s03's last frame (signin/07-home.png at identity). Camera framing Fcreate = {s 1.4, P [195,734], T [1420,700]}: canvas of a screen point = (1125.16 + 1.512·x, −409.8 + 1.512·y); the header logos stay off-frame.\n0.00–0.70 rewind band: a full-height band 760 px wide (linear-gradient(90deg,#151E4D,#22307A)) with a 3 px #EC5A2A leading edge on its right side, x −760 → 1920 (power2.inOut 0.7 s), above the phone and the left column (the caption track stays on top). It fully covers the phone between ≈0.39 and 0.43 s.\n0.41 instant swap under the band: signin/07-home.png → onboarding/01-signin.png (set the new layer visible, hide the old one; verify the frame in a snapshot).\n0.40–0.70 tag 'DAY ONE' (Lucide rotate-ccw 20 px + Space Mono 700 18 px caps, #B8C7FF, pill padding 10/16) fades in at the tag row (140,112); 2.60–2.90 it fades out. 0.45 kicker '02 · New here?' K.fadeUp at (140,200).\n1.05 ring--blue on onboarding/01-signin.createAccount (at identity, canvas (1196.4,850.6)–(1552.8,902.4)) — the band has cleared at 0.70, so the sign-in page reads for 0.6 s first. 1.30 K.tap createAccount ('Create a Customer account') → 1.65 K.swapPush → onboarding/02-signup-empty.png (0.55 s).\n1.65–2.65 K.focus Fcreate (1.0 s), moving with the page push; the form fills the frame (name (1149.4,94.4)–(1690.6,167), submit (1149.4,614.6)–(1690.6,687.1)).\n2.80 K.tap onboarding/02-signup-empty.name → 3.15 the typing clips play back-to-back in one non-timed layer stack, each starting on the frame where the previous one ends (the field-to-field focus changes are in the captures, so no extra taps are drawn): onboarding/03-type-name/ 3.15–3.77 (0.62), onboarding/04-type-email/ 3.77–5.33 (1.56), onboarding/05-type-phone/ 5.33–5.89 (0.56), onboarding/06-type-password/ 5.89–6.60 (0.71); onboarding/07-signup-filled.png holds underneath from 6.60 — a deliberate focus-loss cut (the clip ends with the password field focused, the still has it unfocused; the next action, the 'Create account' ring, follows at 6.95).\n5.35–6.55 orange ring on the phone helper line, measured box {x:16,y:546,w:234,h:17} 'The seller calls this number at handover.' (canvas (1149.4,415.7)–(1503.2,441.4)).\n6.95 ring--blue on onboarding/07-signup-filled.submit. 7.20 K.tap submit ('Create account') → 7.55 K.swapPush → onboarding/10-step1-identity.png (0.55 s). 7.55–8.45 K.unfocus (0.9 s).\n8.10–9.30 orange ring (radius 15) on the app's own stepper, measured box {x:16,y:58,w:358,h:30} (canvas at identity (1181.3,146.6)–(1567.9,179)).\n8.80 ring--blue on onboarding/10-step1-identity.cont. 9.05 K.tap cont ('Continue') → 9.40 K.swapPush → onboarding/21-step2-prompt.png (0.55 s), settled at 9.95.\n9.50–9.90 the kicker fades out. 9.95–10.00 hold.",
+  "transitionIn": "Editorial rewind band (left → right) wipes from tonight's Home to the sign-in page of day one — a chapter wipe, not in-app navigation.",
+  "transitionOut": "Tap 'Continue' on Step 1; Step 2 pushes in and settles at identity before the cut.",
+  "handoffIn": {
+    "phone": "default",
+    "screen": "signin/07-home.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Camera back at identity; DEMO badge, mail card, kicker and labels gone. Home reads 'Set your delivery location' (fresh device)."
+  },
+  "handoffOut": {
+    "phone": "default",
+    "screen": "onboarding/21-step2-prompt.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Step 2 fully settled at identity; tag, kicker and rings gone."
+  },
+  "soundCuesLocal": [
+    {
+      "at": 0,
+      "cue": "Band wipe whoosh (rewind)"
+    },
+    {
+      "at": 1.3,
+      "cue": "UI tap"
+    },
+    {
+      "at": 1.65,
+      "cue": "Page push"
+    },
+    {
+      "at": 3.15,
+      "cue": "Fast keyboard ticks through 6.6 s"
+    },
+    {
+      "at": 7.2,
+      "cue": "UI tap (Create account)"
+    },
+    {
+      "at": 7.55,
+      "cue": "Page push + soft step chime"
+    },
+    {
+      "at": 9.05,
+      "cue": "UI tap (Continue)"
+    },
+    {
+      "at": 9.4,
+      "cue": "Page push"
+    }
+  ],
+  "accuracyNotes": "- The band is an editorial 'rewind' to the day Aarav set up his account (it makes the second path explicit), not an in-app back navigation.\n- The fields are exactly Name / Institute email / Phone / Password; the helper 'The seller calls this number at handover.' is the form's own copy. 'Create a Customer account' is the card's exact button text.\n- Onboarding has four steps ('Step N of 4'); the ring is on the app's own stepper.\n- The second caption describes the form ('Create a Customer account: name, institute email, phone, password.') rather than the tap, because the 'Create a Customer account' tap (1.30) happens under the first caption; the button itself is ringed blue before it is tapped.\n- Typing is real (four clips at ≈0.76× of their base length; no keyboard is added); the password shows masked dots only.\n- Step 1's line about what stakeholders see is visible but not featured (not in the verified facts).\n- Demo persona data only (Aarav Mehta, aarav.demo@kgpian.iitkgp.ac.in, 9000012345).",
+  "globalSystem": "STORY-FIRST ('Dinner at B-212'): one evening with Aarav (Nehru Hall of Residence, Room B-212). Tonight he signs in on a new phone with an emailed one-time code (DEMO-labelled; the password stays the main way in). A band wipe rewinds to his day one to show how a first-timer creates an account and runs the four onboarding steps — that is how his Home (Room B-212) was saved inside the campus boundary. A second band wipe returns to tonight: the new phone's Home first reads 'Set your delivery location' (the delivery choice is stored per device; the saved addresses belong to the account), so he picks his saved Home with three real taps (Deliver-to row → 'Home' under SAVED LOCATIONS → 'Confirm location'); then 1 × Masala Dosa + 2 × Filter Coffee from Southside Tiffins; items ₹140 + the stall's own delivery charge ₹10 = ₹150 payable to the seller. The QR route is a labelled side branch for stalls that offer it (the stall accepts first, then you pay, then it confirms). Aarav pays cash at the door, his six-digit handover code completes the order, he rates it five stars, and the Report path is pointed out. Nine numbered chapters (01 Sign in … 09 Rate & report) keep first-timers oriented, and captions name the exact button where it helps. Tone: warm, plain, lightly playful ('Tonight: dosa.', 'Dinner, sorted.'), never hype; 'students, faculty, staff' is said once. Motif: the real campus-boundary polygon opens the film, returns as the delivery-area check and closes the end card.\nGLOBAL SYSTEM (every scene):\n- Frame: 1920×1080, 60 fps, silent. One HyperFrames sub-composition per scene with one paused GSAP timeline; kit.js helpers plus plain GSAP only. Scene roots are transparent over the shared indigo background from index.html (it already carries a faint drifting campus outline; never paint a background).\n- Boundaries are HARD CUTS: frame 0 must equal handoffIn and the last frame must equal handoffOut. Unless a handoff says otherwise: phone at the default spec, rig identity, left column empty, no overlays, the named capture fully visible and settled.\n- Phone: kit .phone at phoneSpec {left:1150, top:70, k:1.08}; screen origin canvas (1164,84), 421.2×911.5. At identity a screen point (x,y) is canvas (1164 + 1.08·x, 84 + 1.08·y). The phone, its capture layers and every in-screen overlay (rings, taps, reveals, halos, masks) live inside the scene rig (.rig, transform-origin 0 0). Camera = K.focus(tl, rig, K.toCanvas(spec, P[0], P[1]), s, t, dur, {to:{x:T[0], y:T[1]}}), expo.inOut, 0.8–1.2 s; framings are given as {s, P (screen px), T (canvas px)} and K.unfocus returns to identity. Canvas-level type, labels, leader lines, chips and tags sit OUTSIDE the rig; every canvas position in a spec already accounts for the rig state at that moment.\n- Grid: text column x140–820 (kicker at (140,200), headline top 250, nothing below y 860); callout lane x840–1130 (label right edge ≤1120); right margin x1620–1880 (unused); one tag row at (140,112) for ONE tag at a time (DEMO badge, DAY ONE, TONIGHT, the sample-stalls note, TIME-LAPSE); caption zone x120–1140, y880–1050 stays empty (captions centred only in s01; s12 has none). A pushed phone's bezel never reaches left of x 1095, and left caption plates end at x ≈ 900. At most 4 floating labels/chips/tags at once, never overlapping the phone, each other, the text column or the caption zone. Never fly several objects into the phone at once: when chips travel into the phone they go one at a time.\n- Type: kicker = kit .kicker showing the scene's `chapter`, K.fadeUp at 0.10; its fade-out (0.3 s) ends at least 0.05 s before the scene's last frame, and its onScreenText end time is the end of that fade. Headline = .headline--md (Sora 800, 68 px), words only. Sora has no ₹ glyph: every string containing ₹ is set in Plus Jakarta Sans (names, amounts) or Space Mono (labels, prices, counts). Labels = short caps tags: .callout.callout--dark with font 700 18px/1 Space Mono, letter-spacing .08em, uppercase, padding 10px 16px (≈ 12.24 px × chars + 50 px wide, 38 px tall), plus a 2 px rgba(184,199,255,.7) straight leader from the label's right edge to the element; a label's right edge stays ≥8 px left of the phone's bezel for the framing in use (identity ≤1140; s 1.4 ≤1097; Ftotals ≤1095; Fhand ≤1090; Fconf ≤1087). Tag-row items: Space Mono 700 18 px caps, letter-spacing .16em, pill padding 10/16; the DEMO badge is kit .demo-badge with the text 'Demo environment'.\n- Overlays on real UI: K.tap at the centre of the named box, always 0.35 s before the screen change it causes (inside the 0.25–0.45 s rule). K.ring orange = look here; {blue:true} = the next tap target only (≥0.2 s before its tap; never on something that is not tapped); green = a kit ring with border-color #19B36B and a green glow, used only for 'inside the delivery area', 'cash confirmed' and 'payment confirmed'; pale = a kit ring with border-color #B8C7FF and box-shadow 0 0 0 6px rgba(184,199,255,.16), 0 0 22px rgba(184,199,255,.3): context that is never tapped (s03's code-box glow, s05's 'Use my current location' row). Boxes are CSS px of the 390×844 screen: named marks from marks.json written <group>/<shot>.<mark>, or explicit {x,y,w,h} measured on the final PNGs. Nothing opaque over app text; UI is never recoloured.\n- Screen changes: K.swapPush = forward navigation (0.55 s); K.swapSheet = sheets (sheetTop given); K.swapFade = in-place state change (0.15–0.35 s); circular reveal = a local state change caused by a tap (the 'after' capture as a new layer whose clip-path circle(r at x y) grows from 0 at the tap point, 0.25–0.35 s, power2.out); commit wipe = for 'Start ordering' and 'Place order · ₹150' a #0033DA circle grows from the button centre to cover the screen (0.45 s, power2.in), the next capture is set underneath, then the circle fades (0.3 s).\n- Clips: play inside a non-timed .layer in the screen (data-hf-media-start-basis=\"local\"); never animate the <video>; the next still sits underneath to hold the last frame; chained clips start exactly where the previous ends. clipSeconds = the length used (a speed variant is pre-rendered; each captured frame gets clipSeconds / frames). Where a clip's last frame differs from the still under it only by input focus, the cut is a deliberate focus-loss cut (named in the scene).\n- Shot windows: a shot starts when its layer first becomes visible and ends when it is fully covered or hidden, i.e. at the END of the transition that removes it.\n- Rhythm: tap → result → ≥0.6 s beat; text that matters is held ≥1.2 s; exits 0.3–0.5 s; nothing is visible before its entrance (fromTo with opacity 0); no drifting, spinning, particles or glitch.\n- Icons: Lucide line icons only (stroke 1.85–2.5); no emoji, food photos, clip-art or filled pins.\n- Honesty: only real captures for app screens; DEMO badge across the whole OTP portion (code request → Home); the sample-stalls note once (s07) plus the end-card fine print; the demo QR stays labelled; no 'SETU delivers', pickup, map or location tracking, delivery-time promise, free/zero-cost/minimal-charge wording or competitor names anywhere. Never ring, zoom on or caption the app's own 'SETU delivers inside…' lines, the location dialog's body sentences ('…to find nearby stalls…', 'It is only read when you ask for it.' — the code contradicts both), Step 4's licence and 'Recorded…' sub-lines, search rows' '20–20 min', the stall's '20 min', the prep time, the QR thread pill 'Order confirmed by …' (shown before payment), 33-home-set's hover-blue 'Orders' tab or the review note placeholder.",
+  "previousScene": {
+    "id": "s03-sign-in",
+    "title": "Have an account? Sign in — password, or an emailed code",
+    "transitionOut": "Settles on fresh-device Home at identity with the left column empty; s04's rewind band opens on this frame.",
+    "handoffOut": {
+      "phone": "default",
+      "screen": "signin/07-home.png",
+      "rig": "identity",
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "Camera back at identity; DEMO badge, mail card, kicker and labels gone. Home reads 'Set your delivery location' (fresh device)."
+    },
+    "lastShots": [
+      "signin/06-code-entered.png",
+      "signin/07-home.png"
+    ]
+  },
+  "nextScene": {
+    "id": "s05-delivery-spot",
+    "title": "Where should orders arrive?",
+    "transitionIn": "Continuous: Step 2 is already on screen at identity.",
+    "handoffIn": {
+      "phone": "default",
+      "screen": "onboarding/21-step2-prompt.png",
+      "rig": "identity",
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "Step 2 fully settled at identity; tag, kicker and rings gone."
+    },
+    "firstShots": [
+      "onboarding/21-step2-prompt.png",
+      "location/01-allow-dialog.png"
+    ]
+  }
+}

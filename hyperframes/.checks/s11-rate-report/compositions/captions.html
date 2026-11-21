@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /><!-- Generated (burned-in narration captions). Edit storyboard/scene-timing.json, then rebuild. --></head>
+<body>
+  <template id="captions-template">
+    <link rel="stylesheet" href="assets/css/kit.css" />
+    <style>
+      #root { position: absolute; inset: 0; pointer-events: none; }
+    </style>
+    <div id="root" data-composition-id="captions" data-width="1920" data-height="1080">
+    <div id="cap-001" class="clip" data-start="0.1" data-duration="2.4" data-track-index="5">
+      <div class="cap cap--left" id="cap-001-t"><span class="cap-line"><span class="cap-in">Delivered. Five stars</span></span><span class="cap-line"><span class="cap-in">for Southside Tiffins.</span></span></div>
+    </div>
+    <div id="cap-002" class="clip" data-start="2.6" data-duration="1.35" data-track-index="5">
+      <div class="cap cap--left" id="cap-002-t"><span class="cap-line"><span class="cap-in">Dinner, sorted.</span></span></div>
+    </div>
+    <div id="cap-003" class="clip" data-start="4.05" data-duration="1.7" data-track-index="5">
+      <div class="cap cap--left" id="cap-003-t"><span class="cap-line"><span class="cap-in">Something off? Tap “Report”.</span></span></div>
+    </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo('#cap-001-t', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.22, ease: 'power2.out' }, 0.1);
+      tl.to('#cap-001-t', { opacity: 0, duration: 0.18, ease: 'power1.in' }, 2.32);
+      tl.fromTo('#cap-002-t', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.22, ease: 'power2.out' }, 2.6);
+      tl.to('#cap-002-t', { opacity: 0, duration: 0.18, ease: 'power1.in' }, 3.77);
+      tl.fromTo('#cap-003-t', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.22, ease: 'power2.out' }, 4.05);
+      tl.to('#cap-003-t', { opacity: 0, duration: 0.18, ease: 'power1.in' }, 5.57);
+      window.__timelines['captions'] = tl;
+    </script>
+  </template>
+</body>
+</html>

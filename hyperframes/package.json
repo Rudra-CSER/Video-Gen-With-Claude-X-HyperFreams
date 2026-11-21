@@ -1,0 +1,18 @@
+{
+  "name": "setu-food-walkthrough",
+  "private": true,
+  "type": "module",
+  "description": "SETU Food user walkthrough video (HyperFrames composition)",
+  "scripts": {
+    "build": "node tools/build-docs.mjs && node tools/build-root.mjs && node tools/make-packets.mjs && node tools/clip-variant.mjs --from-storyboard && node tools/build-manifest.mjs",
+    "lint": "hyperframes lint .",
+    "check": "tools/hf-lock.sh hyperframes check .",
+    "boundaries": "node tools/boundaries.mjs",
+    "render": "tools/hf-lock.sh hyperframes render . -o ../renders/setu-food-user-walkthrough.mp4 --fps 60 --quality high --workers 4 --video-frame-format png --strict",
+    "qc": "tools/qc.sh ../renders/setu-food-user-walkthrough.mp4 ../reports/qc"
+  },
+  "dependencies": {
+    "gsap": "3.13.0",
+    "hyperframes": "0.8.143"
+  }
+}

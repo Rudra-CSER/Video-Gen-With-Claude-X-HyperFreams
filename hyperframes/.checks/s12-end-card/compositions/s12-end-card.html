@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /></head>
+<body>
+<template id="s12-end-card-template">
+  <link rel="stylesheet" href="assets/css/kit.css" />
+  <style>
+    #root { position: absolute; inset: 0; }
+    #root .rig { position: absolute; inset: 0; transform-origin: 0 0; }
+
+    /* Real 'Main Campus Boundary' (assets/data/campus-boundary.json), drawn 960 px wide:
+       viewBox 1000 x 516.4 -> x 480-1440, y 150-645.7 (scale .96). 2.0833 user units = 2 canvas px. */
+    #s12-map { position: absolute; left: 480px; top: 150px; width: 960px; height: 495.744px; overflow: visible; opacity: 0; }
+    #s12-edge { fill: none; stroke: #B8C7FF; stroke-width: 2.0833; stroke-linejoin: round; stroke-linecap: round; }
+
+    /* Nehru Hall: nehruHall (114.2, 98.8) -> canvas (589.6, 244.8): left of the tile, above the tagline. */
+    #s12-hall-glow { position: absolute; left: 567.6px; top: 222.8px; width: 44px; height: 44px; border-radius: 50%;
+      background: radial-gradient(closest-side, rgba(236, 90, 42, .6), rgba(236, 90, 42, .22) 55%, rgba(236, 90, 42, 0)); opacity: 0; }
+    #s12-hall { position: absolute; left: 585.6px; top: 240.8px; width: 8px; height: 8px; border-radius: 50%;
+      background: #EC5A2A; box-shadow: 0 0 8px rgba(236, 90, 42, .7); opacity: 0; }
+
+    /* Official SETU lockup on the kit white tile, 240 x 190 centred at (960, 215) */
+    #s12-tile.white-tile { left: 840px; top: 120px; width: 240px; height: 190px; border-radius: 32px;
+      display: flex; align-items: center; justify-content: center; opacity: 0; }
+    #s12-logo { display: block; width: 200px; height: auto; }
+
+    /* Box top 350 (spec); line-height 1.35 keeps the line clear of the CTA pill at top 460. */
+    #s12-tag { position: absolute; left: 0; top: 350px; width: 1920px; margin: 0; text-align: center; white-space: nowrap;
+      font: 800 64px/1.35 var(--font-display); letter-spacing: -.03em; color: #fff; visibility: hidden; }
+    #s12-tag .s12-acc { color: #B8C7FF; }
+
+    #s12-cta { position: absolute; left: 0; top: 460px; width: 1920px; display: flex; justify-content: center; }
+    #s12-cta-pill { display: inline-flex; align-items: center; gap: 14px; padding: 16px 30px; border-radius: 999px;
+      background: #fff; color: #0033DA; font: 700 30px/1 var(--font-ui); white-space: nowrap;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .35); opacity: 0; }
+    #s12-cta-ico { display: block; width: 26px; height: 26px; flex: none; }
+    #s12-cta-ico path { fill: none; stroke: currentColor; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Verbatim disclaimer: one sentence per line (block spans, no <br>), centred in x 360-1560 */
+    #s12-disc { position: absolute; left: 360px; top: 580px; width: 1200px; margin: 0; text-align: center;
+      font: 500 26px/1.45 var(--font-ui); color: rgba(255, 255, 255, .88); }
+    #s12-disc .s12-line { display: block; white-space: nowrap; opacity: 0; }
+
+    #s12-fine { position: absolute; left: 0; top: 760px; width: 1920px; margin: 0; text-align: center; white-space: nowrap;
+      font: 400 18px/1.4 var(--font-mono); letter-spacing: .02em; color: rgba(255, 255, 255, .6); opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="s12-end-card" data-width="1920" data-height="1080">
+    <svg id="s12-map" viewBox="0 0 1000 516.4" aria-hidden="true"><path id="s12-edge" d="M0 337 L4.7 354 L11.5 364.9 L22.2 377.7 L47.2 388.6 L104.6 443.5 L146.7 458.5 L187.9 459.8 L207.4 438.4 L225.3 417.3 L232.9 413.3 L257.9 410.4 L272.6 409.6 L284.5 412.6 L293.7 419.4 L307.2 433.8 L327.7 456.3 L364.6 484.5 L379.5 497.9 L389 504.3 L402.8 516.4 L429.6 500.7 L435.8 499.3 L453 502.8 L465.9 488.3 L491.9 485.8 L492.8 491.3 L499.3 486.6 L506.1 489.6 L520.6 502.2 L521 504.8 L592 503.5 L596.9 485.4 L609.7 489.6 L623.2 489.2 L640.6 488.6 L662.2 498.5 L696.2 486.9 L699.5 469.9 L714 463.7 L738.9 469.6 L788.7 446 L804.9 417 L830.9 400.7 L843.7 401 L848.5 399.7 L864.9 407.7 L890.2 397.2 L893.2 403.9 L983.5 366.2 L994.1 360.2 L1000 350.2 L996.8 333.9 L990 317 L876.2 221.3 L611.6 23.9 L479.7 10 L473.8 8.6 L466.3 21.4 L460.4 18 L421.6 6.4 L405 3.9 L382.1 3.2 L367.8 0 L340 1.6 L326.4 2.9 L325.5 4.6 L287.9 9.3 L238.9 17.7 L206.7 23.3 L131.3 37.2 L122 40.5 L109.9 52.2 L109.3 53.1 L71.9 109.2 L19.4 188.4 L8.4 227.6 L1 297.3 Z" /></svg>
+    <div id="s12-hall-glow"></div>
+    <div id="s12-hall"></div>
+
+    <div class="rig" id="s12-rig">
+      <div class="phone" id="s12-phone">
+        <div class="side-btn" style="top:190px;height:70px"></div>
+        <div class="side-btn" style="top:290px;height:120px"></div>
+        <div class="glass"><div class="screen" id="s12-screen"></div></div>
+      </div>
+    </div>
+
+    <div class="white-tile" id="s12-tile"><img id="s12-logo" src="assets/brand/setu-logo.png" alt="SETU" /></div>
+    <h1 id="s12-tag"><span class="word">Your</span> <span class="word">campus.</span> <span class="word">Your</span> <span class="word">food.</span> <span class="word s12-acc">Your</span> <span class="word s12-acc">SETU.</span></h1>
+    <div id="s12-cta"><div id="s12-cta-pill">Explore SETU Food<svg id="s12-cta-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></div></div>
+    <p id="s12-disc"><span class="s12-line">SETU connects customers with approved campus food providers.</span> <span class="s12-line">Food preparation, delivery and payment are handled by the respective provider.</span> <span class="s12-line">SETU does not collect payments or independently guarantee food hygiene.</span></p>
+    <p id="s12-fine">Demo environment · sample stalls · demo QR, not a real payment code</p>
+  </div>
+  <script>
+    (function () {
+      const K = window.SetuKit;
+      const $ = (id) => document.getElementById(id);
+      const spec = { left: 1150, top: 70, k: 1.08 };
+      const phone = $('s12-phone');
+      K.placePhone(phone, spec);
+      K.layer($('s12-screen'), 'assets/ui/order-cash/12-review-sent.png', 's12-sent', { visible: true });
+
+      const tl = gsap.timeline({ paused: true });
+
+      // 0.00-0.80 the phone recedes into the indigo (origin = its centre, canvas (1374.6, 539.8)); rig stays identity.
+      // The tween starts one frame in (expo.in barely moves there) and stays 2D, so frame 0 carries no transform
+      // and rasterizes exactly like s11's last frame (a transformed phone resamples the capture's text differently).
+      tl.fromTo(phone, { scale: 1, y: 0, opacity: 1, transformOrigin: '50% 50%' },
+        { scale: 0.72, y: 60, opacity: 0, duration: 0.8 - 1 / 60, ease: 'expo.in', force3D: false, immediateRender: false }, 1 / 60);
+
+      // 0.20-1.20 the real campus outline redraws, faint (18 %). Hidden until the draw starts: a fully
+      // "undrawn" closed path can still leave a cap at its closing vertex. Undashed once complete, so the
+      // closing vertex gets a proper join.
+      const edge = $('s12-edge');
+      K.drawPath(tl, edge, 0.20, 1.0);
+      tl.fromTo('#s12-map', { opacity: 0 }, { opacity: 0.18, duration: 0.12, ease: 'power1.out' }, 0.20);
+      tl.set(edge, { strokeDasharray: 'none' }, 1.20);
+
+      // 0.40-1.00 the official lockup tile.
+      tl.fromTo('#s12-tile', { scale: 0.94, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: 'expo.out' }, 0.40);
+
+      // 0.80 tagline (words already split; kept visibility:hidden until its reveal so the blurred
+      // from-state adds no render surface at the cut).
+      tl.set('#s12-tag', { visibility: 'visible' }, 0.80);
+      K.revealWords(tl, $('s12-tag'), 0.80, { stagger: 0.06 });
+
+      // 1.00-1.60 the Nehru Hall point glows once and settles at 60 %.
+      tl.fromTo('#s12-hall', { opacity: 0 }, { opacity: 1, duration: 0.25, ease: 'power2.out' }, 1.00);
+      tl.to('#s12-hall', { opacity: 0.6, duration: 0.30, ease: 'power1.inOut' }, 1.30);
+      tl.fromTo('#s12-hall-glow', { opacity: 0, scale: 0.4 }, { opacity: 0.85, scale: 1, duration: 0.25, ease: 'power2.out' }, 1.00);
+      tl.to('#s12-hall-glow', { opacity: 0, scale: 1.5, duration: 0.35, ease: 'power1.in' }, 1.25);
+
+      // 1.20 CTA pill pops; its arrow settles.
+      tl.fromTo('#s12-cta-pill', { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(1.6)' }, 1.20);
+      tl.fromTo('#s12-cta-ico', { x: -8 }, { x: 0, duration: 0.5, ease: 'expo.out' }, 1.30);
+
+      // 1.50-1.95 the verbatim disclaimer fades up, line by line.
+      tl.fromTo('#s12-disc .s12-line', { y: 16, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.33, ease: 'expo.out', stagger: 0.06 }, 1.50);
+
+      // 1.70-2.00 fine print.
+      tl.fromTo('#s12-fine', { y: 8, opacity: 0 }, { y: 0, opacity: 1, duration: 0.30, ease: 'power2.out' }, 1.70);
+
+      // After 2.00 nothing moves: hold the complete card to the last frame (no fade).
+      tl.set({}, {}, 8.0);
+
+      window.__timelines['s12-end-card'] = tl;
+    }());
+  </script>
+</template>
+</body>
+</html>

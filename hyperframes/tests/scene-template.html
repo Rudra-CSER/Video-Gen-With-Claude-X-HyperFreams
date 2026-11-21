@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /></head>
+<body>
+<template id="s99-template-template">
+  <link rel="stylesheet" href="assets/css/kit.css" />
+  <style>
+    #root { position: absolute; inset: 0; }
+    #root .rig { position: absolute; inset: 0; transform-origin: 0 0; }
+    #s99-copy { position: absolute; left: 140px; top: 260px; width: 680px; display: flex; flex-direction: column; gap: 26px; }
+    #s99-badge { left: 140px; top: 120px; }
+    #s99-call { left: 860px; top: 560px; }
+  </style>
+  <div id="root" data-composition-id="s99-template" data-width="1920" data-height="1080">
+    <div class="rig" id="s99-rig">
+      <div class="phone" id="s99-phone">
+        <div class="side-btn" style="top:190px;height:70px"></div>
+        <div class="side-btn" style="top:290px;height:120px"></div>
+        <div class="glass"><div class="screen" id="s99-screen">
+          <div class="layer" id="s99-typing"><video id="s99-v1" class="clip" src="assets/clips/signin-02-type-email.mp4" muted playsinline data-start="1.0" data-duration="2.067" data-hf-media-start-basis="local" data-track-index="3"></video></div>
+        </div></div>
+      </div>
+    </div>
+    <div id="s99-copy">
+      <div class="kicker" id="s99-kicker">Step 1 · Sign in</div>
+      <h2 class="headline" id="s99-head">Sign in with <span class="accent">your</span> account</h2>
+      <p class="subline" id="s99-sub">Password first, or a one-time code by email.</p>
+    </div>
+    <div class="demo-badge" id="s99-badge">Demo environment</div>
+    <div class="callout callout--dark" id="s99-call"><span class="dot"></span>Pay ₹150 to the stall</div>
+  </div>
+  <script>
+    (function () {
+      const K = window.SetuKit;
+      const spec = { left: 1150, top: 70, k: 1.08 };
+      K.placePhone(document.getElementById('s99-phone'), spec);
+      const screen = document.getElementById('s99-screen');
+      const a = K.layer(screen, 'assets/ui/signin/01-signin.png', 's99-a', { visible: true });
+      const typing = document.getElementById('s99-typing');
+      screen.insertBefore(a, typing);           // stills under the clip layer
+      const b = K.layer(screen, 'assets/ui/signin/03-email-typed.png', 's99-b');
+      const tl = gsap.timeline({ paused: true });
+      K.fadeUp(tl, '#s99-kicker', 0.2);
+      K.revealWords(tl, document.getElementById('s99-head'), 0.3);
+      K.fadeUp(tl, '#s99-sub', 0.8);
+      tl.fromTo('#s99-badge', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'expo.out' }, 0.5);
+      K.tap(tl, screen, { x: 18, y: 300, w: 354, h: 48 }, 0.55);
+      tl.fromTo(typing, { opacity: 0 }, { opacity: 1, duration: 0.15 }, 0.95);
+      K.swapFade(tl, null, b, 3.05, 0.12);
+      tl.to(typing, { opacity: 0, duration: 0.1 }, 3.15);
+      K.callout(tl, '#s99-call', 3.3, 1.2);
+      K.focus(tl, document.getElementById('s99-rig'), K.toCanvas(spec, 195, 320), 1.6, 3.4, 0.9, { to: { x: 1375, y: 520 } });
+      K.unfocus(tl, document.getElementById('s99-rig'), 4.6, 0.8);
+      window.__timelines['s99-template'] = tl;
+    }());
+  </script>
+</template>
+</body>
+</html>

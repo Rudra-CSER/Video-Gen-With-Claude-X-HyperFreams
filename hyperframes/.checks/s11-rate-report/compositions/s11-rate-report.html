@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /></head>
+<body>
+<template id="s11-rate-report-template">
+  <link rel="stylesheet" href="assets/css/kit.css" />
+  <style>
+    #root { position: absolute; inset: 0; }
+    #root .rig { position: absolute; inset: 0; transform-origin: 0 0; }
+    #s11-kicker { position: absolute; left: 140px; top: 200px; opacity: 0; }
+    /* Short caps label in the callout lane; right edge pinned at x 1120 (leader start). */
+    #s11-label.callout {
+      right: 800px; top: 795px; padding: 10px 16px;
+      font: 700 18px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase;
+    }
+    #s11-leader { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; pointer-events: none; opacity: 0; }
+    #s11-leader-path { fill: none; stroke: rgba(184, 199, 255, .7); stroke-width: 2; stroke-linecap: butt; }
+  </style>
+  <div id="root" data-composition-id="s11-rate-report" data-width="1920" data-height="1080">
+    <div class="rig" id="s11-rig">
+      <div class="phone" id="s11-phone">
+        <div class="side-btn" style="top:190px;height:70px"></div>
+        <div class="side-btn" style="top:290px;height:120px"></div>
+        <div class="glass"><div class="screen" id="s11-screen"></div></div>
+      </div>
+    </div>
+    <div class="kicker" id="s11-kicker">09 · Rate &amp; report</div>
+    <!-- Leader: label right edge (1120,814) to the Report ring's outer edge (stadium, left
+         semicircle centre (1209.4,887.5), r 32.4), so the line meets the ring instead of piercing it. -->
+    <svg id="s11-leader" viewBox="0 0 1920 1080" aria-hidden="true"><path id="s11-leader-path" d="M1120 814 L1179 875.5" /></svg>
+    <div class="callout callout--dark" id="s11-label">TO SETU STAFF</div>
+  </div>
+  <script>
+    (function () {
+      const K = window.SetuKit;
+      const spec = { left: 1150, top: 70, k: 1.08 };
+      K.placePhone(document.getElementById('s11-phone'), spec);
+      const screen = document.getElementById('s11-screen');
+      const SRC = {
+        review: 'assets/ui/order-cash/09-delivered-review.png',
+        five: 'assets/ui/order-cash/10-review-5.png',
+        sent: 'assets/ui/order-cash/12-review-sent.png',
+      };
+
+      // Capture layers, bottom to top. 12 waits underneath (fully covered by 09 until the sheet closes).
+      const sent = K.layer(screen, SRC.sent, 's11-sent', { visible: true });
+      // Sheet close = K.swapSheet in reverse, split along the sheet's real rounded top edge
+      // (top y 411, corner radius 28, measured on the capture). The scrim part is the exact
+      // complement (1 px overlap), so no grey corner "ears" ride down with the sheet. It waits
+      // under the opaque 09 layer, so frame 0 is one clean 09 still (as s10 ends).
+      const scrim = K.layer(screen, SRC.five, 's11-scrim', { visible: true });
+      scrim.style.clipPath = "path('M0 0 H390 V440 A28 28 0 0 0 362 412 H28 A28 28 0 0 0 0 440 Z')";
+      const review = K.layer(screen, SRC.review, 's11-review', { visible: true });
+      // Five stars: circular reveal from the 5th star (09 and 10 differ only within r 311 of it).
+      const five = K.layer(screen, SRC.five, 's11-five', { visible: true });
+      five.style.clipPath = 'circle(0px at 310px 532px)';
+      const sheet = K.layer(screen, SRC.five, 's11-sheet');
+      sheet.style.clipPath = 'inset(411px 0 0 0 round 28px 28px 0 0)';
+      // The Submit press marks (blue ring, touch dot, ripple) live on this transparent layer,
+      // which drops with the sheet at 2.80, so they leave with the button instead of hanging
+      // over the sheet content as it slides past.
+      const press = K.el('div', 'layer', screen);
+      press.id = 's11-press';
+
+      // Boxes (390x844 screen px).
+      const B = {
+        star5: { x: 292, y: 514, w: 36, h: 36 },          // measured, 5th star (inside 09.stars)
+        word: { x: 156, y: 563, w: 78, h: 20 },           // 'Excellent' ink x 165.7-224.7, y 567.7-578.3 (in 10.word)
+        submit: { x: 201, y: 782, w: 171, h: 48 },        // 09.submit
+        deliveredRow: { x: 14, y: 484, w: 362, h: 32 },   // measured, 'Delivered · handover code verified · ₹150 paid in cash'
+        report: { x: 18, y: 720, w: 170, h: 48 },         // measured, 'Report'
+      };
+
+      const tl = gsap.timeline({ paused: true });
+
+      // Finger tap: same look and timing as K.tap, but the ripple stays hidden until it fires.
+      // (K.tap's ripple fromTo starts at opacity .95, and fromTo renders its start state at build
+      // time, so every ripple would show as a blue dot from frame 0.)
+      function tap(box, t, parent = screen) {
+        const c = K.center(box);
+        const ripple = K.el('div', 'ripple', parent, { left: `${c.x}px`, top: `${c.y}px` });
+        const touch = K.el('div', 'touch', parent, { left: `${c.x}px`, top: `${c.y}px` });
+        tl.fromTo(touch, { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.18, ease: 'power2.out' }, t);
+        tl.to(touch, { scale: 0.82, duration: 0.09, ease: 'power2.in' }, t + 0.2);
+        tl.to(touch, { scale: 1, opacity: 0, duration: 0.3, ease: 'power2.out' }, t + 0.32);
+        tl.fromTo(ripple, { opacity: 0, scale: 0.35 }, { opacity: 0.95, duration: 0.02, ease: 'none' }, t + 0.2);
+        tl.to(ripple, { opacity: 0, scale: 2.3, duration: 0.7, ease: 'power2.out' }, t + 0.22);
+      }
+
+      // Kicker.
+      K.fadeUp(tl, '#s11-kicker', 0.10);
+
+      // One highlight at a time: a packet ring window 'a–b' is read as visible from a until it
+      // is gone at b (as the packet times the label and the kicker), so each ring has faded
+      // (K.ring fade = 0.35 s after `dur`) by the time the next highlight takes over.
+
+      // Rate: blue ring on the 5th star, tap, five stars fill from the tap point.
+      K.ring(tl, screen, B.star5, 0.35, 0.60, { blue: true, radius: 24 });
+      tl.fromTo(five, { clipPath: 'circle(0px at 310px 532px)' },
+        { clipPath: 'circle(330px at 310px 532px)', duration: 0.35, ease: 'power2.out' }, 0.95);
+      tl.set(five, { clipPath: 'none' }, 1.30);                                // full 10 layer
+      K.ring(tl, screen, B.word, 1.35, 0.65);                                  // 'Excellent' 1.35–2.35
+
+      // Submit review: blue ring, tap, the sheet closes over the updated thread (12).
+      K.ring(tl, press, B.submit, 2.20, 0.45, { blue: true, radius: 30 });
+      tl.set([review, five], { opacity: 0 }, 2.80);
+      tl.set(sheet, { opacity: 1 }, 2.80);
+      tl.fromTo(scrim, { opacity: 1 }, { opacity: 0, duration: 0.35, ease: 'power1.inOut' }, 2.80);
+      tl.fromTo([sheet, press], { y: 0 }, { y: 433, duration: 0.45, ease: 'expo.in' }, 2.80);
+      // 3.30 the spent sheet layers leave the render tree, so the held thread (12) rasterizes like s12's frame 0.
+      tl.set([scrim, review, five, sheet, press], { display: 'none' }, 3.30);
+
+      // The app's own closing line 3.30–4.30 (fading 4.30–4.65), then Report: ring 4.25–5.35
+      // (fading 5.35–5.70), label 'TO SETU STAFF' in 4.30 (0.3 s) and out 5.40–5.70 with its leader.
+      // Report is pointed at, not tapped (the caption names the button).
+      K.ring(tl, screen, B.deliveredRow, 3.30, 1.00, { radius: 22 });
+      K.ring(tl, screen, B.report, 4.25, 1.10, { radius: 30 });
+      tl.fromTo('#s11-label', { opacity: 0, y: 14, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: 'back.out(1.6)' }, 4.30);
+      tl.to('#s11-label', { opacity: 0, y: -8, duration: 0.3, ease: 'power1.in' }, 5.40);
+      tl.fromTo('#s11-leader', { opacity: 0 }, { opacity: 1, duration: 0.12, ease: 'power1.out' }, 4.40);
+      K.drawPath(tl, document.getElementById('s11-leader-path'), 4.40, 0.40, { ease: 'expo.out' });
+      tl.to('#s11-leader', { opacity: 0, duration: 0.3, ease: 'power1.in' }, 5.40);
+
+      // Taps last, so the touch dot sits above the rings.
+      tap(B.star5, 0.60);
+      tap(B.submit, 2.45, press);
+
+      // 5.40–5.70 kicker out; 5.70–5.80 hold the completed thread (12) at identity to the cut.
+      K.fadeOut(tl, '#s11-kicker', 5.40, { dur: 0.30 });
+      tl.set({}, {}, 5.8);
+
+      window.__timelines['s11-rate-report'] = tl;
+    }());
+  </script>
+</template>
+</body>
+</html>

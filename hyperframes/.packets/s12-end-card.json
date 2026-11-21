@@ -1,0 +1,178 @@
+{
+  "sceneId": "s12-end-card",
+  "file": "compositions/s12-end-card.html",
+  "duration": 8,
+  "globalStart": 110.85,
+  "globalEnd": 118.85,
+  "title": "End card",
+  "chapter": null,
+  "phoneSpec": {
+    "left": 1150,
+    "top": 70,
+    "k": 1.08
+  },
+  "captionPlacement": "center (keep y 880-1050 clear across the whole width)",
+  "narration": "",
+  "captionsLocal": [],
+  "onScreenText": [
+    {
+      "text": "Your campus. Your food. Your SETU.",
+      "start": 0.8,
+      "end": 8,
+      "role": "tagline (Sora 800 64 px, centred; 'Your SETU.' in #B8C7FF; no rupee sign)"
+    },
+    {
+      "text": "Explore SETU Food",
+      "start": 1.2,
+      "end": 8,
+      "role": "CTA pill (Plus Jakarta Sans 700 30 px #0033DA on white, Lucide arrow-right)"
+    },
+    {
+      "text": "SETU connects customers with approved campus food providers. Food preparation, delivery and payment are handled by the respective provider. SETU does not collect payments or independently guarantee food hygiene.",
+      "start": 1.5,
+      "end": 8,
+      "role": "disclaimer (verbatim; Plus Jakarta Sans 500 26 px; fully legible 1.95–8.00 = 6.05 s)"
+    },
+    {
+      "text": "Demo environment · sample stalls · demo QR, not a real payment code",
+      "start": 1.7,
+      "end": 8,
+      "role": "fine print (Space Mono 400 18 px, 60% white)"
+    }
+  ],
+  "shots": [
+    {
+      "file": "order-cash/12-review-sent.png",
+      "start": 0,
+      "end": 0.8,
+      "treatment": "The phone pulls back (scale 1 → 0.72, sinks 60 px) and fades out.",
+      "asset": {
+        "kind": "still",
+        "file": "order-cash/12-review-sent.png",
+        "src": "assets/ui/order-cash/12-review-sent.png",
+        "marks": {
+          "headline": {
+            "x": 68,
+            "y": 16,
+            "w": 254,
+            "h": 21.3
+          },
+          "sub": {
+            "x": 68,
+            "y": 37.3,
+            "w": 254,
+            "h": 17
+          },
+          "progress": {
+            "x": 334,
+            "y": 16.1,
+            "w": 38,
+            "h": 38
+          },
+          "stream": {
+            "x": 0,
+            "y": 66.3,
+            "w": 390,
+            "h": 581.8
+          },
+          "bar": {
+            "x": 0,
+            "y": 707,
+            "w": 390,
+            "h": 75
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "graphic:real campus boundary outline, faint (assets/data/campus-boundary.json)",
+      "start": 0.2,
+      "end": 8,
+      "treatment": "Redraws at 18% opacity behind the type (x 480–1440, y 150–646); the Nehru Hall point glows once at (589.6,244.8), clear of all type.",
+      "asset": {
+        "kind": "graphic",
+        "description": "real campus boundary outline, faint (assets/data/campus-boundary.json)"
+      }
+    },
+    {
+      "file": "graphic:official SETU lockup on a white rounded tile (assets/brand/setu-logo.png)",
+      "start": 0.4,
+      "end": 8,
+      "treatment": "Tile 240×190 centred at (960,215); lockup 200 px wide, never recoloured.",
+      "asset": {
+        "kind": "graphic",
+        "description": "official SETU lockup on a white rounded tile (assets/brand/setu-logo.png)"
+      }
+    },
+    {
+      "file": "graphic:end-card type (tagline, CTA, disclaimer, fine print)",
+      "start": 0.8,
+      "end": 8,
+      "treatment": "Kinetic type only.",
+      "asset": {
+        "kind": "graphic",
+        "description": "end-card type (tagline, CTA, disclaimer, fine print)"
+      }
+    }
+  ],
+  "demoBadgeLocal": [],
+  "uiState": "No app UI after 0.80 s: end-card motion graphics.",
+  "animationLocal": "Local times. Frame 0 = order-cash/12-review-sent.png at identity. No captions in this scene (layout.json lists it as centred anyway); keep y 880–1050 empty.\n0.00–0.80 the phone recedes: fromTo scale 1 → 0.72 (transform-origin its centre, canvas (1374.6,539.8)), y 0 → +60, opacity 1 → 0 (expo.in 0.8 s).\n0.20–1.20 the real campus outline (assets/data/campus-boundary.json path) redraws centred, 960 px wide (scale 0.96): left 480, top 150 → x 480–1440, y 150–645.7; stroke #B8C7FF 2 px at 18% opacity (K.drawPath 1.0 s). 1.00–1.60 the Nehru Hall point (file (114.2,98.8) → canvas (589.6,244.8): left of the logo tile and above the tagline, clear of all type) glows once (8 px orange dot, opacity 0 → 1 → 0.6) and stays at 0.6.\n0.40–1.00 white tile (kit .white-tile, 240×190, radius 32) centred at (960,215) → x 840–1080, y 120–310, with assets/brand/setu-logo.png at 200 px wide, centred: fromTo scale 0.94/opacity 0 → 1/1 (expo.out 0.6 s).\n0.80 tagline 'Your campus. Your food. Your SETU.' (Sora 800 64 px, white, centred, top 350; 'Your SETU.' in #B8C7FF) K.revealWords (stagger 0.06).\n1.20 CTA pill 'Explore SETU Food' (white, radius 999, padding 16/30, Plus Jakarta Sans 700 30 px #0033DA, Lucide arrow-right 26 px) centred, top 460: fromTo scale 0.9/opacity 0 → 1/1 (back.out(1.6) 0.5 s).\n1.50–1.95 the disclaimer (verbatim) fades up: Plus Jakarta Sans 500 26 px / 1.45, rgba(255,255,255,.88), centred, max-width 1200 px (3 lines), top 580 (≈ y 580–693).\n1.70–2.00 fine print 'Demo environment · sample stalls · demo QR, not a real payment code' (Space Mono 400 18 px, rgba(255,255,255,.6), centred, top 760) fades in.\nAfter 2.00 nothing moves. Hold the complete card to 8.00 (no fade to black).",
+  "transitionIn": "The phone recedes into the indigo as the campus outline redraws faintly.",
+  "transitionOut": "Hold to the last frame (no fade) so the owner can add sound or an outro.",
+  "handoffIn": {
+    "phone": "default",
+    "screen": "order-cash/12-review-sent.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Thread ending 'Delivered · handover code verified · ₹150 paid in cash' with 'Report' / 'Order again', at identity; rings, label and kicker gone."
+  },
+  "handoffOut": {
+    "phone": "none",
+    "screen": null,
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "End card (final frame): faint campus outline with the Nehru Hall dot, lockup tile, tagline, CTA pill, disclaimer and fine print.",
+    "notes": "Last frame of the film."
+  },
+  "soundCuesLocal": [
+    {
+      "at": 0,
+      "cue": "Pad swell resolves"
+    },
+    {
+      "at": 0.4,
+      "cue": "Brand sting placeholder (owner's choice)"
+    },
+    {
+      "at": 1.2,
+      "cue": "Soft pop (CTA)"
+    },
+    {
+      "at": 7.8,
+      "cue": "Pad tail out"
+    }
+  ],
+  "accuracyNotes": "- The disclaimer is verbatim: 'SETU connects customers with approved campus food providers. Food preparation, delivery and payment are handled by the respective provider. SETU does not collect payments or independently guarantee food hygiene.' It is fully legible from 1.95 s to the end (6.05 s), with no caption competing.\n- Tagline 'Your campus. Your food. Your SETU.' and CTA 'Explore SETU Food' are exactly as briefed; the CTA is type in a pill, not a store badge or link.\n- The lockup is the official raster on a white rounded tile, downscaled only, never recoloured; the 75-years mark is not used.\n- The fine print repeats the demo-environment note (shown once in the body, s07) and the demo-QR note.\n- No 'free', no claims about other platforms.",
+  "globalSystem": "STORY-FIRST ('Dinner at B-212'): one evening with Aarav (Nehru Hall of Residence, Room B-212). Tonight he signs in on a new phone with an emailed one-time code (DEMO-labelled; the password stays the main way in). A band wipe rewinds to his day one to show how a first-timer creates an account and runs the four onboarding steps — that is how his Home (Room B-212) was saved inside the campus boundary. A second band wipe returns to tonight: the new phone's Home first reads 'Set your delivery location' (the delivery choice is stored per device; the saved addresses belong to the account), so he picks his saved Home with three real taps (Deliver-to row → 'Home' under SAVED LOCATIONS → 'Confirm location'); then 1 × Masala Dosa + 2 × Filter Coffee from Southside Tiffins; items ₹140 + the stall's own delivery charge ₹10 = ₹150 payable to the seller. The QR route is a labelled side branch for stalls that offer it (the stall accepts first, then you pay, then it confirms). Aarav pays cash at the door, his six-digit handover code completes the order, he rates it five stars, and the Report path is pointed out. Nine numbered chapters (01 Sign in … 09 Rate & report) keep first-timers oriented, and captions name the exact button where it helps. Tone: warm, plain, lightly playful ('Tonight: dosa.', 'Dinner, sorted.'), never hype; 'students, faculty, staff' is said once. Motif: the real campus-boundary polygon opens the film, returns as the delivery-area check and closes the end card.\nGLOBAL SYSTEM (every scene):\n- Frame: 1920×1080, 60 fps, silent. One HyperFrames sub-composition per scene with one paused GSAP timeline; kit.js helpers plus plain GSAP only. Scene roots are transparent over the shared indigo background from index.html (it already carries a faint drifting campus outline; never paint a background).\n- Boundaries are HARD CUTS: frame 0 must equal handoffIn and the last frame must equal handoffOut. Unless a handoff says otherwise: phone at the default spec, rig identity, left column empty, no overlays, the named capture fully visible and settled.\n- Phone: kit .phone at phoneSpec {left:1150, top:70, k:1.08}; screen origin canvas (1164,84), 421.2×911.5. At identity a screen point (x,y) is canvas (1164 + 1.08·x, 84 + 1.08·y). The phone, its capture layers and every in-screen overlay (rings, taps, reveals, halos, masks) live inside the scene rig (.rig, transform-origin 0 0). Camera = K.focus(tl, rig, K.toCanvas(spec, P[0], P[1]), s, t, dur, {to:{x:T[0], y:T[1]}}), expo.inOut, 0.8–1.2 s; framings are given as {s, P (screen px), T (canvas px)} and K.unfocus returns to identity. Canvas-level type, labels, leader lines, chips and tags sit OUTSIDE the rig; every canvas position in a spec already accounts for the rig state at that moment.\n- Grid: text column x140–820 (kicker at (140,200), headline top 250, nothing below y 860); callout lane x840–1130 (label right edge ≤1120); right margin x1620–1880 (unused); one tag row at (140,112) for ONE tag at a time (DEMO badge, DAY ONE, TONIGHT, the sample-stalls note, TIME-LAPSE); caption zone x120–1140, y880–1050 stays empty (captions centred only in s01; s12 has none). A pushed phone's bezel never reaches left of x 1095, and left caption plates end at x ≈ 900. At most 4 floating labels/chips/tags at once, never overlapping the phone, each other, the text column or the caption zone. Never fly several objects into the phone at once: when chips travel into the phone they go one at a time.\n- Type: kicker = kit .kicker showing the scene's `chapter`, K.fadeUp at 0.10; its fade-out (0.3 s) ends at least 0.05 s before the scene's last frame, and its onScreenText end time is the end of that fade. Headline = .headline--md (Sora 800, 68 px), words only. Sora has no ₹ glyph: every string containing ₹ is set in Plus Jakarta Sans (names, amounts) or Space Mono (labels, prices, counts). Labels = short caps tags: .callout.callout--dark with font 700 18px/1 Space Mono, letter-spacing .08em, uppercase, padding 10px 16px (≈ 12.24 px × chars + 50 px wide, 38 px tall), plus a 2 px rgba(184,199,255,.7) straight leader from the label's right edge to the element; a label's right edge stays ≥8 px left of the phone's bezel for the framing in use (identity ≤1140; s 1.4 ≤1097; Ftotals ≤1095; Fhand ≤1090; Fconf ≤1087). Tag-row items: Space Mono 700 18 px caps, letter-spacing .16em, pill padding 10/16; the DEMO badge is kit .demo-badge with the text 'Demo environment'.\n- Overlays on real UI: K.tap at the centre of the named box, always 0.35 s before the screen change it causes (inside the 0.25–0.45 s rule). K.ring orange = look here; {blue:true} = the next tap target only (≥0.2 s before its tap; never on something that is not tapped); green = a kit ring with border-color #19B36B and a green glow, used only for 'inside the delivery area', 'cash confirmed' and 'payment confirmed'; pale = a kit ring with border-color #B8C7FF and box-shadow 0 0 0 6px rgba(184,199,255,.16), 0 0 22px rgba(184,199,255,.3): context that is never tapped (s03's code-box glow, s05's 'Use my current location' row). Boxes are CSS px of the 390×844 screen: named marks from marks.json written <group>/<shot>.<mark>, or explicit {x,y,w,h} measured on the final PNGs. Nothing opaque over app text; UI is never recoloured.\n- Screen changes: K.swapPush = forward navigation (0.55 s); K.swapSheet = sheets (sheetTop given); K.swapFade = in-place state change (0.15–0.35 s); circular reveal = a local state change caused by a tap (the 'after' capture as a new layer whose clip-path circle(r at x y) grows from 0 at the tap point, 0.25–0.35 s, power2.out); commit wipe = for 'Start ordering' and 'Place order · ₹150' a #0033DA circle grows from the button centre to cover the screen (0.45 s, power2.in), the next capture is set underneath, then the circle fades (0.3 s).\n- Clips: play inside a non-timed .layer in the screen (data-hf-media-start-basis=\"local\"); never animate the <video>; the next still sits underneath to hold the last frame; chained clips start exactly where the previous ends. clipSeconds = the length used (a speed variant is pre-rendered; each captured frame gets clipSeconds / frames). Where a clip's last frame differs from the still under it only by input focus, the cut is a deliberate focus-loss cut (named in the scene).\n- Shot windows: a shot starts when its layer first becomes visible and ends when it is fully covered or hidden, i.e. at the END of the transition that removes it.\n- Rhythm: tap → result → ≥0.6 s beat; text that matters is held ≥1.2 s; exits 0.3–0.5 s; nothing is visible before its entrance (fromTo with opacity 0); no drifting, spinning, particles or glitch.\n- Icons: Lucide line icons only (stroke 1.85–2.5); no emoji, food photos, clip-art or filled pins.\n- Honesty: only real captures for app screens; DEMO badge across the whole OTP portion (code request → Home); the sample-stalls note once (s07) plus the end-card fine print; the demo QR stays labelled; no 'SETU delivers', pickup, map or location tracking, delivery-time promise, free/zero-cost/minimal-charge wording or competitor names anywhere. Never ring, zoom on or caption the app's own 'SETU delivers inside…' lines, the location dialog's body sentences ('…to find nearby stalls…', 'It is only read when you ask for it.' — the code contradicts both), Step 4's licence and 'Recorded…' sub-lines, search rows' '20–20 min', the stall's '20 min', the prep time, the QR thread pill 'Order confirmed by …' (shown before payment), 33-home-set's hover-blue 'Orders' tab or the review note placeholder.",
+  "previousScene": {
+    "id": "s11-rate-report",
+    "title": "Delivered, rated — and reportable",
+    "transitionOut": "The completed thread holds at identity with nothing on canvas; s12 opens by pulling the phone back.",
+    "handoffOut": {
+      "phone": "default",
+      "screen": "order-cash/12-review-sent.png",
+      "rig": "identity",
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "Thread ending 'Delivered · handover code verified · ₹150 paid in cash' with 'Report' / 'Order again', at identity; rings, label and kicker gone."
+    },
+    "lastShots": [
+      "order-cash/10-review-5.png",
+      "order-cash/12-review-sent.png"
+    ]
+  },
+  "nextScene": null
+}

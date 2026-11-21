@@ -1,0 +1,370 @@
+{
+  "sceneId": "s06-your-picks",
+  "file": "compositions/s06-your-picks.html",
+  "duration": 9.55,
+  "globalStart": 48.65,
+  "globalEnd": 58.2,
+  "title": "Your picks — and three things SETU does not do",
+  "chapter": "04 · Your picks",
+  "phoneSpec": {
+    "left": 1150,
+    "top": 70,
+    "k": 1.08
+  },
+  "captionPlacement": "left (keep x 120-1140, y 880-1050 clear)",
+  "narration": "Pick cuisines you like. They show up first. Then three things SETU does not do. Confirm, then “Start ordering”.",
+  "captionsLocal": [
+    {
+      "start": 0.45,
+      "end": 3.55,
+      "text": "Pick cuisines you like.\nThey show up first."
+    },
+    {
+      "start": 4.3,
+      "end": 7,
+      "text": "Then three things SETU does not do."
+    },
+    {
+      "start": 7.1,
+      "end": 8.85,
+      "text": "Confirm, then “Start ordering”."
+    }
+  ],
+  "onScreenText": [
+    {
+      "text": "04 · Your picks",
+      "start": 0.1,
+      "end": 9.45,
+      "role": "kicker (kit .kicker)"
+    },
+    {
+      "text": "SETU never takes your money",
+      "start": 4.95,
+      "end": 7.25,
+      "role": "kinetic list line (Sora 700 40 px; exact app title; no rupee sign)"
+    },
+    {
+      "text": "SETU does not deliver",
+      "start": 5.35,
+      "end": 7.25,
+      "role": "kinetic list line (Sora 700 40 px; exact app title)"
+    },
+    {
+      "text": "SETU approves and records",
+      "start": 5.75,
+      "end": 7.25,
+      "role": "kinetic list line (Sora 700 40 px; exact app title)"
+    }
+  ],
+  "shots": [
+    {
+      "file": "onboarding/23-step2-done.png",
+      "start": 0,
+      "end": 1.3,
+      "treatment": "Frame 0; ring--blue + tap 'Continue' (0.40); pushed out 0.75–1.30.",
+      "asset": {
+        "kind": "still",
+        "file": "onboarding/23-step2-done.png",
+        "src": "assets/ui/onboarding/23-step2-done.png",
+        "marks": {
+          "box": {
+            "x": 16,
+            "y": 309.7,
+            "w": 358,
+            "h": 104
+          },
+          "room": {
+            "x": 16,
+            "y": 548.7,
+            "w": 358,
+            "h": 56
+          },
+          "cont": {
+            "x": 137.6,
+            "y": 733.7,
+            "w": 236.4,
+            "h": 48
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "onboarding/30-step3.png",
+      "start": 0.75,
+      "end": 3.7,
+      "treatment": "swapPush in: Step 3 of 4 'What should we show first?'; the base layer until the full 31 layer is set at 3.70.",
+      "asset": {
+        "kind": "still",
+        "file": "onboarding/30-step3.png",
+        "src": "assets/ui/onboarding/30-step3.png",
+        "marks": {
+          "cont": {
+            "x": 137.6,
+            "y": 916.7,
+            "w": 236.4,
+            "h": 48
+          },
+          "veg": {
+            "x": 83,
+            "y": 682.7,
+            "w": 216,
+            "h": 17
+          },
+          "notify": {
+            "x": 83,
+            "y": 780.7,
+            "w": 216,
+            "h": 17
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "onboarding/31-step3-picked.png",
+      "start": 2.25,
+      "end": 4.85,
+      "treatment": "Pixel-aligned; revealed through a circle (r 0 → 56) at each tapped chip (only those three chips differ from 30); full layer from 3.70; pushed out 4.30–4.85.",
+      "asset": {
+        "kind": "still",
+        "file": "onboarding/31-step3-picked.png",
+        "src": "assets/ui/onboarding/31-step3-picked.png",
+        "marks": {
+          "southIndian": {
+            "x": 96.8,
+            "y": 567.7,
+            "w": 103.2,
+            "h": 34
+          },
+          "cont": {
+            "x": 137.6,
+            "y": 916.7,
+            "w": 236.4,
+            "h": 48
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "onboarding/40-step4.png",
+      "start": 4.3,
+      "end": 7.8,
+      "treatment": "swapPush in (no tap: Step 3's Continue sits below the captured viewport); focus mask on the three titles; rings; kinetic list; the base layer until the full 41 layer is set at 7.80.",
+      "asset": {
+        "kind": "still",
+        "file": "onboarding/40-step4.png",
+        "src": "assets/ui/onboarding/40-step4.png",
+        "marks": {
+          "fact1": {
+            "x": 83,
+            "y": 271.7,
+            "w": 276,
+            "h": 17
+          },
+          "fact2": {
+            "x": 83,
+            "y": 386.7,
+            "w": 276,
+            "h": 17
+          },
+          "fact3": {
+            "x": 83,
+            "y": 484.7,
+            "w": 276,
+            "h": 17
+          },
+          "ack": {
+            "x": 83,
+            "y": 599.7,
+            "w": 216,
+            "h": 34
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "onboarding/41-step4-ack.png",
+      "start": 7.45,
+      "end": 9.2,
+      "treatment": "Circular reveal from the tapped switch (r 0 → 340, then the full layer): toggle on, 'Start ordering' enabled; ring--blue + tap 'Start ordering' (8.40).",
+      "asset": {
+        "kind": "still",
+        "file": "onboarding/41-step4-ack.png",
+        "src": "assets/ui/onboarding/41-step4-ack.png",
+        "marks": {
+          "ack": {
+            "x": 83,
+            "y": 599.7,
+            "w": 216,
+            "h": 34
+          },
+          "start": {
+            "x": 137.6,
+            "y": 718.7,
+            "w": 236.4,
+            "h": 48
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "home/01-first-home.png",
+      "start": 9.2,
+      "end": 9.55,
+      "treatment": "Revealed by the 'Start ordering' commit wipe: Home with 'Home' over 'Room B-212 · Nehru Hall of Residence'.",
+      "asset": {
+        "kind": "still",
+        "file": "home/01-first-home.png",
+        "src": "assets/ui/home/01-first-home.png",
+        "marks": {
+          "deliverTo": {
+            "x": 18,
+            "y": 18.1,
+            "w": 304,
+            "h": 41
+          },
+          "greeting": {
+            "x": 18,
+            "y": 78.6,
+            "w": 354,
+            "h": 27.6
+          },
+          "search": {
+            "x": 18,
+            "y": 129.1,
+            "w": 354,
+            "h": 46
+          },
+          "firstCard": {
+            "x": 18,
+            "y": 378.4,
+            "w": 354,
+            "h": 247
+          }
+        },
+        "size": "390x844 CSS px (3x PNG)"
+      }
+    },
+    {
+      "file": "graphic:commit wipe (#0033DA circle from the Start ordering button)",
+      "start": 8.75,
+      "end": 9.5,
+      "treatment": "Action → result transition.",
+      "asset": {
+        "kind": "graphic",
+        "description": "commit wipe (#0033DA circle from the Start ordering button)"
+      }
+    }
+  ],
+  "demoBadgeLocal": [],
+  "uiState": "Onboarding Step 3 of 4 'What should we show first?' (South Indian, Street Food, Chinese selected) → Step 4 of 4 'Three things SETU does not do' → switch 'I understand SETU is a directory and approval gate' on → 'Start ordering' → Home ('Home' over 'Room B-212 · Nehru Hall of Residence'; 'Good evening, Aarav').",
+  "animationLocal": "Local times. Frame 0 = onboarding/23-step2-done.png at identity; the whole scene stays at identity.\n0.10 kicker '04 · Your picks' K.fadeUp at (140,200).\n0.15 ring--blue on onboarding/23-step2-done.cont. 0.40 K.tap cont ('Continue') → 0.75 K.swapPush → onboarding/30-step3.png (0.55 s).\nChip taps in the capture's order; each 'result' is a layer of onboarding/31-step3-picked.png revealed by clip-path circle(r at x y) growing 0 → 56 px (0.25 s, power2.out) around the tapped chip. 56 px covers the tapped chip's far corners (≤54.3 px) and stops short of every other tapped chip (South Indian's circle ends at x 204.4; Street Food starts at x 209), so no chip looks selected before its own tap:\n- 1.90 K.tap onboarding/31-step3-picked.southIndian (centre (148.4,584.7)) → 2.25 reveal (Step 3 has read for 0.6 s since its push ended at 1.30).\n- 2.50 K.tap 'Street Food', measured box {x:209,y:568,w:100,h:34} (centre (259,585)) → 2.85 reveal.\n- 3.10 K.tap 'Chinese', measured box {x:90,y:396,w:77,h:34} (centre (128.5,413)) → 3.45 reveal.\n3.70 set the 31 layer fully visible (clip-path none; no visible change: only those three chips differ).\n4.30 K.swapPush → onboarding/40-step4.png (0.55 s; no tap is drawn because Step 3's Continue is below the captured viewport; the last chip settled 0.6 s earlier).\n4.90–5.25 focus mask fades in: an SVG (390×844, inside the screen) filled rgba(8,12,32,.55) with three feathered rounded holes around onboarding/40-step4.fact1, .fact2 and .fact3 (each padded 8 px). It keeps every card's sub-line — including fact 3's licence sentence — and the switch's 'Required. Recorded…' line dim. 6.60–6.90 it fades out, before the switch is ringed or tapped.\nKinetic list in the left column (Sora 700 40 px white, each line led by a Lucide icon 34 px stroke 2 #B8C7FF: wallet / bike / shield-check; fromTo y 24/opacity 0 → 0/1, expo.out 0.5 s), each with an orange ring on its title in the phone (all three rings start fading at 6.60, gone by 6.95):\n- 4.95 'SETU never takes your money' at (140,330); ring onboarding/40-step4.fact1 4.95–6.60.\n- 5.35 'SETU does not deliver' at (140,400); ring .fact2 5.35–6.60.\n- 5.75 'SETU approves and records' at (140,470); ring .fact3 5.75–6.60.\n6.95–7.25 the three lines fade out (each held ≥1.2 s from its entrance).\n6.90 ring--blue on the switch, measured box {x:313,y:622,w:46,h:27} (mask and fact rings are gone). 7.10 K.tap the switch (centre (336,635)) → 7.45 circular reveal of onboarding/41-step4-ack.png from (336,635), r 0 → 340 (0.35 s; the farthest changed pixel, the ack card's left border at (16,584)/(16,686), is 324 px away); 7.80 set the 41 layer's clip-path to none. The switch turns on and 'Start ordering' becomes active.\n7.85 ring--blue on onboarding/41-step4-ack.start. 8.40 K.tap start ('Start ordering'; 0.6 s after the reveal settled) → 8.75 commit wipe: a #0033DA circle (inside the screen) grows from the button centre (255.8,742.7) to cover the whole screen (0.45 s, power2.in); 9.20 home/01-first-home.png is set underneath and the circle fades (0.3 s, done 9.50).\n9.15–9.45 the kicker fades out. 9.50–9.55 hold on Home.",
+  "transitionIn": "Continuous: Step 2 (filled) is on screen at identity.",
+  "transitionOut": "'Start ordering' → blue commit wipe → Home (day one, address set), settled at identity.",
+  "handoffIn": {
+    "phone": "default",
+    "screen": "onboarding/23-step2-done.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Step 2 filled (Nehru Hall of Residence, Room B-212, Home) at identity; card, trail, rings and kicker gone."
+  },
+  "handoffOut": {
+    "phone": "default",
+    "screen": "home/01-first-home.png",
+    "rig": "identity",
+    "leftColumn": "empty",
+    "overlays": "none",
+    "notes": "Day one's Home ('Home' over 'Room B-212 · Nehru Hall of Residence') at identity; wipe circle, mask, list and kicker gone."
+  },
+  "soundCuesLocal": [
+    {
+      "at": 0.4,
+      "cue": "UI tap"
+    },
+    {
+      "at": 0.75,
+      "cue": "Page push"
+    },
+    {
+      "at": 1.9,
+      "cue": "Chip tap (pitch 1)"
+    },
+    {
+      "at": 2.5,
+      "cue": "Chip tap (pitch 2)"
+    },
+    {
+      "at": 3.1,
+      "cue": "Chip tap (pitch 3)"
+    },
+    {
+      "at": 4.3,
+      "cue": "Page push"
+    },
+    {
+      "at": 4.95,
+      "cue": "Low tick"
+    },
+    {
+      "at": 5.35,
+      "cue": "Low tick"
+    },
+    {
+      "at": 5.75,
+      "cue": "Low tick"
+    },
+    {
+      "at": 7.1,
+      "cue": "Toggle click"
+    },
+    {
+      "at": 8.4,
+      "cue": "UI tap (Start ordering)"
+    },
+    {
+      "at": 8.75,
+      "cue": "Blue wipe swoosh into Home"
+    }
+  ],
+  "accuracyNotes": "- Chips are tapped in the capture's order (South Indian, Street Food, Chinese); 30-step3 and 31-step3-picked differ only in those three chips, so the circular reveals (r ≤ 56, each confined to its own chip) composite two real captures and never pre-select a chip. The taps are a quick multi-select (0.6 s apart); the beat after the last chip is 0.6 s.\n- Step 4's three titles are quoted exactly. The focus mask keeps 'Every seller listed here cleared a licence check…' and 'Required. Recorded against your account with today's date.' dim; never ring, zoom on or caption them (the acknowledgement is not stored; not every stall is licence-gated). Fact 1's body ('no checkout … UPI to the seller's own handle') is likewise never featured. The mask and rings are gone before the switch is ringed and tapped.\n- The ack reveal grows to r 340 (the farthest changed pixel is 324 px from the switch) and the full 41 layer is then set, so no half-changed card border is ever shown.\n- 'They show up first' = 'Stalls serving these move to the top of the home page'; the liked cuisines also lead the Home tabs (visible in s07, not featured).\n- No tap is drawn on Step 3's Continue: it is below the captured viewport.",
+  "globalSystem": "STORY-FIRST ('Dinner at B-212'): one evening with Aarav (Nehru Hall of Residence, Room B-212). Tonight he signs in on a new phone with an emailed one-time code (DEMO-labelled; the password stays the main way in). A band wipe rewinds to his day one to show how a first-timer creates an account and runs the four onboarding steps — that is how his Home (Room B-212) was saved inside the campus boundary. A second band wipe returns to tonight: the new phone's Home first reads 'Set your delivery location' (the delivery choice is stored per device; the saved addresses belong to the account), so he picks his saved Home with three real taps (Deliver-to row → 'Home' under SAVED LOCATIONS → 'Confirm location'); then 1 × Masala Dosa + 2 × Filter Coffee from Southside Tiffins; items ₹140 + the stall's own delivery charge ₹10 = ₹150 payable to the seller. The QR route is a labelled side branch for stalls that offer it (the stall accepts first, then you pay, then it confirms). Aarav pays cash at the door, his six-digit handover code completes the order, he rates it five stars, and the Report path is pointed out. Nine numbered chapters (01 Sign in … 09 Rate & report) keep first-timers oriented, and captions name the exact button where it helps. Tone: warm, plain, lightly playful ('Tonight: dosa.', 'Dinner, sorted.'), never hype; 'students, faculty, staff' is said once. Motif: the real campus-boundary polygon opens the film, returns as the delivery-area check and closes the end card.\nGLOBAL SYSTEM (every scene):\n- Frame: 1920×1080, 60 fps, silent. One HyperFrames sub-composition per scene with one paused GSAP timeline; kit.js helpers plus plain GSAP only. Scene roots are transparent over the shared indigo background from index.html (it already carries a faint drifting campus outline; never paint a background).\n- Boundaries are HARD CUTS: frame 0 must equal handoffIn and the last frame must equal handoffOut. Unless a handoff says otherwise: phone at the default spec, rig identity, left column empty, no overlays, the named capture fully visible and settled.\n- Phone: kit .phone at phoneSpec {left:1150, top:70, k:1.08}; screen origin canvas (1164,84), 421.2×911.5. At identity a screen point (x,y) is canvas (1164 + 1.08·x, 84 + 1.08·y). The phone, its capture layers and every in-screen overlay (rings, taps, reveals, halos, masks) live inside the scene rig (.rig, transform-origin 0 0). Camera = K.focus(tl, rig, K.toCanvas(spec, P[0], P[1]), s, t, dur, {to:{x:T[0], y:T[1]}}), expo.inOut, 0.8–1.2 s; framings are given as {s, P (screen px), T (canvas px)} and K.unfocus returns to identity. Canvas-level type, labels, leader lines, chips and tags sit OUTSIDE the rig; every canvas position in a spec already accounts for the rig state at that moment.\n- Grid: text column x140–820 (kicker at (140,200), headline top 250, nothing below y 860); callout lane x840–1130 (label right edge ≤1120); right margin x1620–1880 (unused); one tag row at (140,112) for ONE tag at a time (DEMO badge, DAY ONE, TONIGHT, the sample-stalls note, TIME-LAPSE); caption zone x120–1140, y880–1050 stays empty (captions centred only in s01; s12 has none). A pushed phone's bezel never reaches left of x 1095, and left caption plates end at x ≈ 900. At most 4 floating labels/chips/tags at once, never overlapping the phone, each other, the text column or the caption zone. Never fly several objects into the phone at once: when chips travel into the phone they go one at a time.\n- Type: kicker = kit .kicker showing the scene's `chapter`, K.fadeUp at 0.10; its fade-out (0.3 s) ends at least 0.05 s before the scene's last frame, and its onScreenText end time is the end of that fade. Headline = .headline--md (Sora 800, 68 px), words only. Sora has no ₹ glyph: every string containing ₹ is set in Plus Jakarta Sans (names, amounts) or Space Mono (labels, prices, counts). Labels = short caps tags: .callout.callout--dark with font 700 18px/1 Space Mono, letter-spacing .08em, uppercase, padding 10px 16px (≈ 12.24 px × chars + 50 px wide, 38 px tall), plus a 2 px rgba(184,199,255,.7) straight leader from the label's right edge to the element; a label's right edge stays ≥8 px left of the phone's bezel for the framing in use (identity ≤1140; s 1.4 ≤1097; Ftotals ≤1095; Fhand ≤1090; Fconf ≤1087). Tag-row items: Space Mono 700 18 px caps, letter-spacing .16em, pill padding 10/16; the DEMO badge is kit .demo-badge with the text 'Demo environment'.\n- Overlays on real UI: K.tap at the centre of the named box, always 0.35 s before the screen change it causes (inside the 0.25–0.45 s rule). K.ring orange = look here; {blue:true} = the next tap target only (≥0.2 s before its tap; never on something that is not tapped); green = a kit ring with border-color #19B36B and a green glow, used only for 'inside the delivery area', 'cash confirmed' and 'payment confirmed'; pale = a kit ring with border-color #B8C7FF and box-shadow 0 0 0 6px rgba(184,199,255,.16), 0 0 22px rgba(184,199,255,.3): context that is never tapped (s03's code-box glow, s05's 'Use my current location' row). Boxes are CSS px of the 390×844 screen: named marks from marks.json written <group>/<shot>.<mark>, or explicit {x,y,w,h} measured on the final PNGs. Nothing opaque over app text; UI is never recoloured.\n- Screen changes: K.swapPush = forward navigation (0.55 s); K.swapSheet = sheets (sheetTop given); K.swapFade = in-place state change (0.15–0.35 s); circular reveal = a local state change caused by a tap (the 'after' capture as a new layer whose clip-path circle(r at x y) grows from 0 at the tap point, 0.25–0.35 s, power2.out); commit wipe = for 'Start ordering' and 'Place order · ₹150' a #0033DA circle grows from the button centre to cover the screen (0.45 s, power2.in), the next capture is set underneath, then the circle fades (0.3 s).\n- Clips: play inside a non-timed .layer in the screen (data-hf-media-start-basis=\"local\"); never animate the <video>; the next still sits underneath to hold the last frame; chained clips start exactly where the previous ends. clipSeconds = the length used (a speed variant is pre-rendered; each captured frame gets clipSeconds / frames). Where a clip's last frame differs from the still under it only by input focus, the cut is a deliberate focus-loss cut (named in the scene).\n- Shot windows: a shot starts when its layer first becomes visible and ends when it is fully covered or hidden, i.e. at the END of the transition that removes it.\n- Rhythm: tap → result → ≥0.6 s beat; text that matters is held ≥1.2 s; exits 0.3–0.5 s; nothing is visible before its entrance (fromTo with opacity 0); no drifting, spinning, particles or glitch.\n- Icons: Lucide line icons only (stroke 1.85–2.5); no emoji, food photos, clip-art or filled pins.\n- Honesty: only real captures for app screens; DEMO badge across the whole OTP portion (code request → Home); the sample-stalls note once (s07) plus the end-card fine print; the demo QR stays labelled; no 'SETU delivers', pickup, map or location tracking, delivery-time promise, free/zero-cost/minimal-charge wording or competitor names anywhere. Never ring, zoom on or caption the app's own 'SETU delivers inside…' lines, the location dialog's body sentences ('…to find nearby stalls…', 'It is only read when you ask for it.' — the code contradicts both), Step 4's licence and 'Recorded…' sub-lines, search rows' '20–20 min', the stall's '20 min', the prep time, the QR thread pill 'Order confirmed by …' (shown before payment), 33-home-set's hover-blue 'Orders' tab or the review note placeholder.",
+  "previousScene": {
+    "id": "s05-delivery-spot",
+    "title": "Where should orders arrive?",
+    "transitionOut": "The saved address becomes a card in the left column, the camera returns to identity, then everything clears; Step 2 (filled) holds at identity for the cut.",
+    "handoffOut": {
+      "phone": "default",
+      "screen": "onboarding/23-step2-done.png",
+      "rig": "identity",
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "Step 2 filled (Nehru Hall of Residence, Room B-212, Home) at identity; card, trail, rings and kicker gone."
+    },
+    "lastShots": [
+      "onboarding/23-step2-done.png",
+      "graphic:pin → address card (Lucide outline map-pin, dotted trail left of the bezel, glass card)"
+    ]
+  },
+  "nextScene": {
+    "id": "s07-find-and-add",
+    "title": "Back to tonight — saved Home, then dosa from Southside Tiffins",
+    "transitionIn": "Editorial return band (right → left) from day one back to tonight. Under it (0.29) the phone switches to tonight's Home on the new phone ('Set your delivery location'), because the delivery choice is stored per device; Aarav picks his saved Home with three taps.",
+    "handoffIn": {
+      "phone": "default",
+      "screen": "home/01-first-home.png",
+      "rig": "identity",
+      "leftColumn": "empty",
+      "overlays": "none",
+      "notes": "Day one's Home ('Home' over 'Room B-212 · Nehru Hall of Residence') at identity; wipe circle, mask, list and kicker gone."
+    },
+    "firstShots": [
+      "home/01-first-home.png",
+      "graphic:editorial return band (right → left)"
+    ]
+  }
+}

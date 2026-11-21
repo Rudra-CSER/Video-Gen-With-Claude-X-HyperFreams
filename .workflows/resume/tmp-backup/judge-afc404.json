@@ -1,0 +1,97 @@
+{
+ "scores": [
+  {
+   "draft": "A-tutorial",
+   "accuracy": 9,
+   "clarity": 8.5,
+   "pacing": 6.5,
+   "motion": 8.5,
+   "audience": 7.5,
+   "compliance": 9,
+   "total": 49,
+   "violations": [
+    "Too many callouts. There are 20 callouts quoting app text, and 18 callouts are on screen for under 1.3 s, e.g. “Create a Customer account” (26.5–27.4), “Hand ₹150 to the seller at your door.” (78.45–79.5) and “Delivered · handover code verified · ₹150 paid in cash” (100.5–101.5). 22 callouts need 3.6–8 words/s while a caption is running at the same time. A silent first-time viewer cannot read them, so they only add noise.",
+    "Captions stay at 2.45–2.50 words/s for about 85% of the runtime, with gaps of 0.45 s or less. That is inside the 2.6 limit but leaves no breathing room. Peak load is 35 words on screen at 72.2 s.",
+    "Jargon callout: “SETU does not process this payment and is not the merchant of record.” is up for 1.7 s at 73.5. That is 13 words at about 7.6 words/s.",
+    "In s06 the headline 'Three things SETU does not do' is followed by only two kinetic lines. The third is only ringed on the phone, so it reads as a miscount.",
+    "In s07 the Pure veg filter tap (58.2) is never captioned. It is a detour in a 12.5 s scene that already has about 10 screen states.",
+    "At the default phone scale of 0.92 (about 359 px of screen width), app body text is about 12–14 px, too small to read without a push-in. The frequent push-ins (1.5–1.8×) then put the phone under the centred caption band, which needs the scrim.",
+    "The dimmed background of location/10-picker-select shows a GPS reading (22.316000, 87.303500) that never appeared in A's flow, because 21-step2-prompt has no reading. Small continuity glitch.",
+    "There is no literal pin-to-saved-address transition, only a label and rings. This is the weakest of the three on the brief's own action-to-result example."
+   ],
+   "bestIdeas": [
+    "Numbered chapter tags (01/08 … 08/08) with a progress rail, so a first-time viewer always knows where they are in the flow.",
+    "Captions that name the exact button in the app's own words: “Email me a one-time code instead”, “Verify and continue”, “View cart”, “Review order”, “Place order”.",
+    "The DEMO tag turns on exactly when the code screen lands (18.70) and drops right after Verify (24.30). A TIME-LAPSE tag sits on the status run, which really took about 20 minutes.",
+    "The map push is framed at focus y 575 and 1.8× so the app's 'SETU delivers inside…' subtitle stays out of frame.",
+    "Where no capture of the in-between state exists (coffee '+', the Home chip), it uses a ring instead of a staged tap, so cause and effect stay honest.",
+    "The location-permission explainer appears as an 'OPTIONAL' inset with no tap, so the picker visibly opens from a tap on the Delivery location box.",
+    "Light-trails run from each email digit to its code box in sync with the typing frames. The 'View cart' pill expands into the cart, and the cart's ₹150 docks onto the checkout amount card.",
+    "The end card has no caption, and the disclaimer holds for 7.7 s."
+   ]
+  },
+  {
+   "draft": "B-story",
+   "accuracy": 8,
+   "clarity": 8.5,
+   "pacing": 7.5,
+   "motion": 9,
+   "audience": 8.5,
+   "compliance": 8.5,
+   "total": 50,
+   "violations": [
+    "Busiest opening of the three: by 4.0 s there are 8 text blocks plus the caption (SETU Services, CAMPUS, the data label, three service pills, the Nehru Hall chip, the Aarav chip). The hero wordmark is 'SETU Services', and 'SETU Food' is never named in the hook or in any caption.",
+    "The disclaimer is fully legible only from 107.3 to 112.0, about 4.7 s for 29 words. That passes the 4 s minimum but is the tightest of the three.",
+    "Story wrinkle: right after 'Six digits, and Aarav's in.', the 'New here?' scene creates Aarav's own account (Aarav Mehta is typed), with no on-screen cue that this is a separate path.",
+    "Result shown before its action. The Home-chip tap at 45.7 is drawn on 14-type-room/f0000, where Home is already selected. The coffee '+' tap at 66.35 comes after the screen has already switched to '2' at 66.2.",
+    "Push-ins on the picker (1.2× at (195,690)), the search sheet (1.25× at (195,200)) and the map (1.35×) enlarge the app's 'SETU delivers inside the IIT Kharagpur campus boundary' subtitle. B's own notes say it avoids this.",
+    "Some labels are too short to read: 'Your cuisines first' 0.7 s, 'Live on Home' 0.8 s, 'Or a one-time code by email' 1.0 s.",
+    "Gap in cause and effect: the tap on 'Use my current location' opens the explainer, then the picker appears with no button tapped (an editorial wipe), and the picker background already shows a GPS reading.",
+    "The DEMO label starts at 22.1, but the code screen is up from 21.5, leaving 0.6 s unlabelled.",
+    "The 'Home · B-212' chip docked at (140,860) can touch the top of a two-line caption plate (about y 896) during s06."
+   ],
+   "bestIdeas": [
+    "One caption names the audience: 'For IIT Kharagpur campus accounts: students, faculty, staff.'",
+    "The status rail carries the app's own line 'You will see a status timeline, not a rider on a map.', which sets the right expectation for a first-time customer.",
+    "A step list between the two phones: '1 · Stall accepts / 2 · You pay · five minutes / 3 · Stall confirms'. It is the clearest explanation of the QR flow in any draft.",
+    "A match-cut from desktop to phone on the shared 'SIGNING IN AS Customer' form.",
+    "The map pin becomes an address card, then a docked chip that flies into the real Home header. Cuisine chips fly into the tabs, and dish chips become order lines that dock into the cart. These visibly connect each action to its result.",
+    "'Something off? Report it from the order.' with the 'Food quality or hygiene' category, plus the live order card on Home.",
+    "The bottom-left caption plate never sits over the phone, and the phone at k 1.08 keeps the app's text legible.",
+    "It skips 11-review-note ('On time.') and keeps the review placeholder ('Hot, on time…') out of focus, so nothing hints at a delivery-time promise.",
+    "A warm close, 'Dinner, sorted.', and the status rail dissolves into the app's real progress card."
+   ]
+  },
+  {
+   "draft": "C-value",
+   "accuracy": 7.5,
+   "clarity": 7.5,
+   "pacing": 7,
+   "motion": 8.5,
+   "audience": 7,
+   "compliance": 7.5,
+   "total": 45,
+   "violations": [
+    "The 'PROVEN · …' stamps are hype and overclaim. The cart cannot prove 'COMMISSION: NONE', which is a seller-side fact, and one location inside the zone does not prove 'CAMPUS ONLY'. 'PROVEN · SELLERS: APPROVED' can read as the quality guarantee that the disclaimer says SETU does not give.",
+    "The 'Demo environment · sample stalls' note stays on screen from 15.0 to 105.2 s. The brief asks for one small note.",
+    "Too fast for first-timers. From 40.7 to 45.2 it runs seven location screens at about 0.5–0.7 s each (GPS tap, explainer, Allow, reading, picker, typing, results). Step 1 'Confirm your campus identity' passes in 0.9 s with no caption. The QR labels 'STALL ACCEPTS FIRST' and '5 MINUTES TO PAY' last only 0.9 s and 1.0 s.",
+    "The 4-dot promise indicator is an abstract layer a new viewer has to decode. 'Choose what to see first.' never says cuisines, and the QR caption leaves out 'I've paid' and the stall confirming.",
+    "Runtime is 113.8 s: inside 105–120, but 1.8 s over the 112 s target.",
+    "The hook stretches the 55-frame Home scroll over 2.6 s at 21 fps. That is slow motion with visible judder, not the real-speed motion the brief asks for.",
+    "The 1.5× map push on the pin keeps the app's 'SETU delivers inside…' subtitle in frame, enlarged."
+   ],
+   "bestIdeas": [
+    "Short caps labels in its own words ('STALL ACCEPTS FIRST', 'SET BY THE STALL', 'HANDOVER CODE') instead of long callouts quoting the app. It has no quote callouts and the calmest reading load (2.31 words/s).",
+    "Local state changes (ADD, chips, toggle, stars) are revealed with a circle from the tap point, never a full-screen crossfade.",
+    "'Have an account? … / New here? …' phrasing that makes the two sign-in paths explicit.",
+    "The real Home scroll plays inside the phone during the hook, so the product is on screen within the first 3 s.",
+    "Promise chips lift off the real web stats row (Campus only / None / Direct), so the value line uses the app's own words.",
+    "The GPS route follows the true capture order (explainer, then the reading, then the picker), so the picker's background matches.",
+    "A 'STATUS TIMELINE' rail header (the app's own phrase), and end-card fine print that adds 'Demo QR is not a real payment code'.",
+    "A price equation built in step with the real cart rows (₹140 + ₹10 = ₹150), and no narration over the end card, giving the disclaimer 6 s."
+   ]
+  }
+ ],
+ "winner": "B-story",
+ "rationale": "I judged for a first-time viewer watching silently. I checked each draft against the final captures in video-production/assets/screens. They confirm the following: the OTP digits match between email-otp.png and 06-code-entered.png (686713); Home shows '13 open now' and, with Pure veg on, '5 open now'; the Step 3 Continue button sits at y 916.7, below the 844 viewport; the 10-picker-select background shows a GPS reading; and the 20-map and 11-type-search sheets carry the 'SETU delivers…' subtitle. The sample-menu prices are confirmed in server/src/seed/seed.js.\n\nAll three meet the caption rules:\n- Longest line: A 41, B 39, C 41 characters (limit 42).\n- Shortest caption: A 1.6 s, B 1.8 s, C 1.8 s (limit 1.3 s).\n- Fastest caption: A 2.50, B 2.57, C 2.35 words/s (limit 2.6).\n- Word counts: A 234, B 223, C 212.\n- Disclaimer hold: A 7.7 s, B about 4.7–5.2 s, C 6.0 s (minimum 4 s).\n\nThe differences are in reading load and in how well a newcomer can follow the flow. A's captions are the best manual: they name every button, and the 01–08 chapter rail keeps viewers oriented. But A buries those captions under 20 quote callouts, 18 of them under 1.3 s, with captions running near 2.5 words/s almost nonstop. C is the calmest to read, but its 'PROVEN' stamps overclaim, its location sequence is too fast, and its dot system is abstract.\n\nB balances the two best. It reads at 2.34 words/s with real pauses and has fewer flashing labels. It answers the most first-time questions on screen: who can use it (students, faculty, staff), that location is optional, that there is a status timeline but no rider on a map, that with QR the stall accepts first, and how to report a problem. It also has the strongest connections between actions and their results.\n\nB narrowly beats A (50 to 49). To improve B:\n- From A: add the numbered chapter tags, a button name in key captions, the TIME-LAPSE tag and the exact DEMO timing.\n- From C: replace long quote callouts with short caps labels, use the circular reveals, and use the 'Have an account? / New here?' phrasing.\n- Fixes to B itself: name SETU Food in a simpler hook, start the disclaimer by about 105.5 s, and draw the taps before their results."
+}

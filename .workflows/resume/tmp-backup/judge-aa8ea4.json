@@ -1,0 +1,94 @@
+{
+ "scores": [
+  {
+   "draft": "A-tutorial",
+   "accuracy": 8,
+   "clarity": 9,
+   "pacing": 7.5,
+   "motion": 8,
+   "audience": 6.5,
+   "compliance": 7.5,
+   "total": 46.5,
+   "violations": [
+    "S06 54.35: the acknowledgement RING (CSS y598-652, plus 8 px pad) encloses the first line of 'Required. Recorded against your account with today's date.', which sits at about y640-652 in onboarding/41-step4-ack.png. That puts a highlight on the exact claim the brief forbids implying, and it contradicts A's own accuracy note. Fix: ring only the ack mark (83,599.7,216x34).",
+    "S07 64.30-64.70: the tap on Filter Coffee 'ADD' cuts straight to 05-coffee-two, which shows '2'. The '+' only gets a ring while the caption says 'Tap plus', so one ADD tap appears to add two coffees.",
+    "Prices are set in Sora: the hook's kinetic menu, the S07 'Masala Dosa ₹80' and 'Ghee Roast Dosa ₹110', and the flying ₹150 in S08. Sora-Variable.ttf has no U+20B9 (cmap checked), and kit.css falls back to system-ui, so the ₹ renders in a different font. That works against the brief's 'prices typeset beautifully'.",
+    "S05 35.30-36.80: the 'Allow location for SETU?' explainer appears as a cropped inset floating outside the phone frame, and no tap triggers it (the picker opens from the box instead).",
+    "S04 26.00: a 'back' push from the signed-in Home to the sign-in screen stages a navigation the app does not have. The chapter tag softens this.",
+    "Captions run at 2.42-2.50 words/s almost the whole way (limit 2.6) and lean heavily on button names. That is within the limit, but the voice reads like a manual: little Gen Z warmth and no line that includes faculty or staff.",
+    "The end-card disclaimer is 22 px, the smallest of the three drafts, which is marginal on phone screens. It does stay up 7.7 s.",
+    "The pin-to-confirmed-address link is only rings and labels. Nothing turns the pin into the address card."
+   ],
+   "bestIdeas": [
+    "A DEMO corner tag from the moment 'Enter the code' appears (18.70) until after Verify (24.30), plus the DEMO pill on the email card. This is the cleanest match to 'DEMO label while the OTP part is on screen'.",
+    "A 'TIME-LAPSE' tag over the status run, because the real wait was about 20 minutes.",
+    "The map push framed at s 1.8, focus (195,575): the pin, 'Use my location' and the Google attribution stay in frame, and the app's 'SETU delivers inside...' subtitle stays out.",
+    "A light-trail from each digit in the email to its code box, synced to the 7-frame 05-type-code sequence.",
+    "The 'View cart' pill grows into the cart screen, and the payable ₹150 arcs into the Confirm order amount card.",
+    "The hook's kinetic menu of real sample dishes and prices inside the real campus outline, which gives food appeal without photos.",
+    "An 8-segment chapter progress rail. The Password field gets a ring but is left empty, labelled 'MAIN WAY: PASSWORD'. The pre-selected Home chip gets a ring only, and there is no fake tap on Step 3's off-screen Continue."
+   ]
+  },
+  {
+   "draft": "B-story",
+   "accuracy": 8.5,
+   "clarity": 8,
+   "pacing": 8.5,
+   "motion": 9,
+   "audience": 9,
+   "compliance": 8,
+   "total": 51,
+   "violations": [
+    "s08: the cart-math numerals (Sora 800 96 px) and the '₹150' number flight (Sora 800) render the ₹ in a fallback font, because Sora has no ₹ glyph. This hits the hero numbers of the scene.",
+    "s05 45.6-45.7: the Home-chip tap lands while 14-type-room/f0000, where Home is already selected, is cross-fading in. The result shows before the cause.",
+    "s07 66.2-66.35: 05-coffee-two, which shows '2', is swapped in before the plus tap.",
+    "s05 39.3-41.05: the push-ins on the picker and search (rig 1.2-1.25x on k 1.08) put the app's subtitle 'SETU delivers inside the IIT Kharagpur campus boundary' right above the subject at 1.3-1.35x. That contradicts B's own 'never zoom on those lines' note.",
+    "s05: the 'Campus boundary' leader ends at (105,333), but the faint blue line in 20-map.png actually runs from about (167,330) to (18,550). The leader misses it by about 60 CSS px.",
+    "s03: the DEMO label arrives with the email card at 22.1, which is 0.6 s after the code screen appears (21.5). The label sits on the card only.",
+    "s01 uses a filled map-pin, which breaks the Lucide line-icon style. Several chips also fly into the phone at once (cuisine chips into the tabs, line chips into the cart), which STYLE.md warns against.",
+    "The disclaimer has 4.7 s of clean reading time: it meets the 4 s minimum, but with little margin. The 'Dinner, sorted.' caption also overlaps the tagline's entrance from 105.2 to 105.9."
+   ],
+   "bestIdeas": [
+    "Say 'students, faculty, staff' once, on the 'IIT KHARAGPUR CAMPUS ACCOUNTS ONLY' beat. The facts allow it, and it keeps faculty and staff in the audience.",
+    "A match-cut from the desktop to the phone on the shared 'SIGNING IN AS Customer' form.",
+    "One motif through the whole film: the campus outline with the Nehru Hall pin opens the hook, returns as the map check, becomes the 'Home · B-212' address card, docks as a chip, flies into the real Home header, and closes the end card.",
+    "The cuisine chips picked in Step 3 park on the canvas and later fly into Home's tabs ('Your cuisines first'). The dish chips become '1 × / 2 ×' order lines that dock into the cart.",
+    "Quote 'You will see a status timeline, not a rider on a map.' under the status rail. Also show the real Home live card ('Live on Home') and the Report button with 'Food quality or hygiene'.",
+    "Use the app's own footers as kickers (STEP 2 OF 4 · WHERE YOU LIVE, STEP 4 OF 4 · HOW THIS WORKS), and give the QR side branch a step list: 1 · Stall accepts / 2 · You pay · five minutes / 3 · Stall confirms.",
+    "Careful asset choices: skip 11-review-note (its note says 'On time.'), checkout/03-04 (captured with QR selected) and stall/03-scroll-menu (it snaps back). Use the final-run IDs CE1013-BCQK and CE1013-VGKQ."
+   ]
+  },
+  {
+   "draft": "C-value",
+   "accuracy": 7.5,
+   "clarity": 7.5,
+   "pacing": 7,
+   "motion": 8.5,
+   "audience": 7,
+   "compliance": 7,
+   "total": 44.5,
+   "violations": [
+    "The 'PROVEN · ...' stamps overclaim. A customer's cart cannot prove 'COMMISSION: NONE', because commission would be a cut taken from the seller, and the app's own 'Approved by SETU' label is not proof of anything. The device also reads as hype, against 'no hype words'.",
+    "The note 'DEMO ENVIRONMENT · SAMPLE STALLS' stays on screen about 90 s (15.0-105.2). The brief asks for one small note plus the end-card fine print, and here it doubles up with the OTP DEMO label.",
+    "The narration line 'No middle layer.' is the app's copy, but as a standalone claim it sits awkwardly next to the disclaimer's 'SETU connects customers with approved campus food providers'.",
+    "S04 rings the Step 1 privacy sentence ('Stakeholders see your first name, your delivery location and your phone number — nothing else.'). It is real app copy, but it is not in the verified facts.",
+    "S05: the map push to 1.5x on the pin ((195,433) placed at canvas y470) keeps the map subtitle 'SETU delivers inside the IIT Kharagpur campus boundary' (y about 228-256) in the magnified frame.",
+    "S05 leads with a GPS fix (a ring on '22.316000, 87.303500 · ±14m'), which nudges toward 'detection works'. The narration never says aloud that location access is optional.",
+    "The runtime is 113.8 s against a 112 s target. On top of that, the value intro runs 11.4 s, and the location montage packs about 10 taps into 12 s with screens held only 0.5-0.7 s.",
+    "There is no time-lapse cue, although about 23 real minutes collapse into roughly 3 s of status changes.",
+    "The chip taps start with Chinese, which does not match the capture order (South Indian, Street Food, Chinese). This is cosmetic."
+   ],
+   "bestIdeas": [
+    "Set every ₹ in Plus Jakarta Sans. Sora-Variable.ttf has no ₹ glyph (verified), and C is the only draft that handles this.",
+    "Put taps before results for states that were never captured. Show the ADD tap and the plus tap first, then reveal the '2' stepper. Tap Home on 13-confirm-search, then cross-fade to 14-type-room/f0000; the 25 px shift is the helper line disappearing, so this is accurate.",
+    "Use local circular reveals for local state changes (ADD to stepper, chips, toggle) instead of full-screen crossfades.",
+    "On Step 4, a focus mask keeps fact 3's body text and the 'Required. Recorded...' line dark while the titles are ringed.",
+    "Make the price equation (₹140 + ₹10 = ₹150) the hero, building in step with the real rows, then match-cut the ₹150 into the checkout amount.",
+    "After the 'Start ordering' tap, the button's blue fills the screen and wipes to Home. Lift the three real stats off the web panel as chips, but drop the PROVEN stamps.",
+    "An end card with no narration: 6 s of disclaimer reading time, plus fine print stating 'Demo QR is not a real payment code'."
+   ]
+  }
+ ],
+ "winner": "B-story",
+ "rationale": "I checked all three drafts against the final captures (assets/screens PNGs and their mark JSONs), the capture scripts and the campus-boundary data. None of them makes a forbidden claim in narration or misquotes UI copy. Every mark I spot-checked matches the JSONs, and every caption passes the mechanics, checked by script: no line over 41 characters, at most 2.57 words/s, no caption under 1.6 s, and 234, 223 and 212 words respectively. So the ranking comes down to subtler compliance problems and craft.\n\nB-story wins. Its accuracy is the most thorough: it uses the final-run order IDs and the 7:24 pm prep time, quotes the app's own step footers, steers away from risky captures, and quotes the 'status timeline, not a rider on a map' line. It is also the only draft that names students, faculty and staff, which the facts allow, and its motion ties actions to results best: the address card docks into the Home header, the cuisine chips fly into the tabs, and the order lines dock into the cart. Its defects are small and easy to fix: two taps land after their results, the ₹ in the s08 hero numbers is set in Sora, and the picker push-ins magnify the app's 'SETU delivers inside...' subtitle.\n\nA-tutorial is the best on honesty mechanics: a DEMO tag across the whole OTP portion, a TIME-LAPSE tag, and map framing that keeps the 'SETU delivers' subtitle out of frame. But its acknowledgement ring encloses 'Required. Recorded against your...' (I confirmed this on a crop of 41-step4-ack.png), one ADD tap jumps straight to '2', the ₹ is set in Sora in three scenes, and the copy reads like a manual right at the reading-speed limit.\n\nC-value handles the ₹ glyph correctly and orders taps before results most faithfully. It loses ground on the 'PROVEN' stamps (a customer's cart cannot prove there is no commission), a demo note left on screen for about 90 s instead of once, and a 113.8 s runtime.\n\nWhat to carry into B: from A, the DEMO tag across the whole OTP portion, the TIME-LAPSE tag, and the s 1.8 / focus y575 map framing (applied to B's picker shots as well). From C, ₹ set in Plus Jakarta Sans, taps placed before their results, and the Step 4 focus mask.\n\nOne build note: the default phone placement differs from STYLE.md ({left:1150, top:70, k:1.08}) in all three drafts, so it needs reconciling at build time."
+}

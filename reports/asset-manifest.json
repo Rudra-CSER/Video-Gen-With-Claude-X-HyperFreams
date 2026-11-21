@@ -1,0 +1,1194 @@
+{
+ "title": "Dinner at B-212 — a SETU Food walkthrough",
+ "totalSeconds": 118.85,
+ "compositions": [
+  {
+   "scene": "s01",
+   "file": "compositions/s01-hook.html",
+   "start": 0,
+   "end": 5.4,
+   "title": "Hook — your campus, your food",
+   "present": true
+  },
+  {
+   "scene": "s02",
+   "file": "compositions/s02-what-setu-does.html",
+   "start": 5.4,
+   "end": 12,
+   "title": "What SETU does",
+   "present": true
+  },
+  {
+   "scene": "s03",
+   "file": "compositions/s03-sign-in.html",
+   "start": 12,
+   "end": 21.1,
+   "title": "Have an account? Sign in with your email and a code",
+   "present": true
+  },
+  {
+   "scene": "s04",
+   "file": "compositions/s04-new-here.html",
+   "start": 21.1,
+   "end": 31.1,
+   "title": "New here? Create a User account",
+   "present": true
+  },
+  {
+   "scene": "s05",
+   "file": "compositions/s05-delivery-spot.html",
+   "start": 31.1,
+   "end": 47.15,
+   "title": "Where should orders arrive?",
+   "present": true
+  },
+  {
+   "scene": "s06",
+   "file": "compositions/s06-your-picks.html",
+   "start": 47.15,
+   "end": 56.7,
+   "title": "Your picks — and three things SETU does not do",
+   "present": true
+  },
+  {
+   "scene": "s07",
+   "file": "compositions/s07-find-and-add.html",
+   "start": 56.7,
+   "end": 70.25,
+   "title": "Back to tonight — saved Home, then dosa from Southside Tiffins",
+   "present": true
+  },
+  {
+   "scene": "s08",
+   "file": "compositions/s08-cart.html",
+   "start": 70.25,
+   "end": 79.55,
+   "title": "Cart — ₹150, payable to the seller",
+   "present": true
+  },
+  {
+   "scene": "s09",
+   "file": "compositions/s09-pay.html",
+   "start": 79.55,
+   "end": 93.05,
+   "title": "Pay the stall directly — cash, or online via UPI",
+   "present": true
+  },
+  {
+   "scene": "s10",
+   "file": "compositions/s10-track-handover.html",
+   "start": 93.05,
+   "end": 105.05,
+   "title": "Track it, then hand over cash and the code",
+   "present": true
+  },
+  {
+   "scene": "s11",
+   "file": "compositions/s11-rate-report.html",
+   "start": 105.05,
+   "end": 110.85,
+   "title": "Delivered, rated — and reportable",
+   "present": true
+  },
+  {
+   "scene": "s12",
+   "file": "compositions/s12-end-card.html",
+   "start": 110.85,
+   "end": 118.85,
+   "title": "End card",
+   "present": true
+  }
+ ],
+ "assets": [
+  {
+   "key": "cart/01-cart.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/cart/01-cart.png",
+   "source": "assets/screens/cart/01-cart.png",
+   "sizeKB": 195,
+   "present": true,
+   "scenes": [
+    "s08-cart"
+   ],
+   "treatments": [
+    "s08-cart: swapPush in; the two slip rows fly in one after the other, each onto its own cart line, and dissolve; camera Ftotals; rings on the three total rows; tap 'Review order' (7.40)."
+   ]
+  },
+  {
+   "key": "checkout/01-confirm-cash.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/checkout/01-confirm-cash.png",
+   "source": "assets/screens/checkout/01-confirm-cash.png",
+   "sizeKB": 368,
+   "present": true,
+   "scenes": [
+    "s08-cart",
+    "s09-pay"
+   ],
+   "treatments": [
+    "s08-cart: swapPush in ('Confirm order'); camera Ftotals → Fcard; the ₹150 number flight lands on 'AMOUNT PAYABLE TO THE SELLER ₹150'.",
+    "s09-pay: Main phone at Fcard: rings on 'SETU does not collect this…', Cash on delivery and Pay online via UPI; then it shrinks left and dims for the UPI branch; swapped to order-cash/00-confirm under the dim at 10.95."
+   ]
+  },
+  {
+   "key": "clip:location/11-type-search",
+   "kind": "real capture: typing/scroll frame sequence encoded as 60 fps clip",
+   "file": "assets/clips/location-11-type-search.800ms.mp4",
+   "source": "assets/screens/location/11-type-search/ (11 captured frames)",
+   "sizeKB": 118,
+   "present": true,
+   "scenes": [
+    "s05-delivery-spot"
+   ],
+   "treatments": [
+    "s05-delivery-spot: Typing clip, clipSeconds 0.8: the expanded sheet, 'Nehru Hall' typed."
+   ]
+  },
+  {
+   "key": "clip:location/14-type-room",
+   "kind": "real capture: typing/scroll frame sequence encoded as 60 fps clip",
+   "file": "assets/clips/location-14-type-room.800ms.mp4",
+   "source": "assets/screens/location/14-type-room/ (6 captured frames)",
+   "sizeKB": 153,
+   "present": true,
+   "scenes": [
+    "s05-delivery-spot"
+   ],
+   "treatments": [
+    "s05-delivery-spot: Typing clip, clipSeconds 0.8: f0000 has Home selected (sheet 25 px lower), then 'B-212' into Address details."
+   ]
+  },
+  {
+   "key": "clip:onboarding/03-type-name",
+   "kind": "real capture: typing/scroll frame sequence encoded as 60 fps clip",
+   "file": "assets/clips/onboarding-03-type-name.620ms.mp4",
+   "source": "assets/screens/onboarding/03-type-name/ (12 captured frames)",
+   "sizeKB": 174,
+   "present": true,
+   "scenes": [
+    "s04-new-here"
+   ],
+   "treatments": [
+    "s04-new-here: Typing clip, clipSeconds 0.62: 'Aarav Mehta'."
+   ]
+  },
+  {
+   "key": "clip:onboarding/04-type-email",
+   "kind": "real capture: typing/scroll frame sequence encoded as 60 fps clip",
+   "file": "assets/clips/onboarding-04-type-email.1560ms.mp4",
+   "source": "assets/screens/onboarding/04-type-email/ (31 captured frames)",
+   "sizeKB": 196,
+   "present": true,
+   "scenes": [
+    "s04-new-here"
+   ],
+   "treatments": [
+    "s04-new-here: Typing clip, clipSeconds 1.56: 'aarav.demo@kgpian.iitkgp.ac.in'."
+   ]
+  },
+  {
+   "key": "clip:onboarding/05-type-phone",
+   "kind": "real capture: typing/scroll frame sequence encoded as 60 fps clip",
+   "file": "assets/clips/onboarding-05-type-phone.560ms.mp4",
+   "source": "assets/screens/onboarding/05-type-phone/ (11 captured frames)",
+   "sizeKB": 186,
+   "present": true,
+   "scenes": [
+    "s04-new-here"
+   ],
+   "treatments": [
+    "s04-new-here: Typing clip, clipSeconds 0.56: '9000012345'; ring on the helper line."
+   ]
+  },
+  {
+   "key": "clip:onboarding/06-type-password",
+   "kind": "real capture: typing/scroll frame sequence encoded as 60 fps clip",
+   "file": "assets/clips/onboarding-06-type-password.710ms.mp4",
+   "source": "assets/screens/onboarding/06-type-password/ (14 captured frames)",
+   "sizeKB": 215,
+   "present": true,
+   "scenes": [
+    "s04-new-here"
+   ],
+   "treatments": [
+    "s04-new-here: Typing clip, clipSeconds 0.71: masked dots."
+   ]
+  },
+  {
+   "key": "clip:search/02-type-dosa",
+   "kind": "real capture: typing/scroll frame sequence encoded as 60 fps clip",
+   "file": "assets/clips/search-02-type-dosa.500ms.mp4",
+   "source": "assets/screens/search/02-type-dosa/ (5 captured frames)",
+   "sizeKB": 227,
+   "present": true,
+   "scenes": [
+    "s07-find-and-add"
+   ],
+   "treatments": [
+    "s07-find-and-add: Typing clip, clipSeconds 0.5: 'dosa'."
+   ]
+  },
+  {
+   "key": "clip:signin/02-type-email",
+   "kind": "real capture: typing/scroll frame sequence encoded as 60 fps clip",
+   "file": "assets/clips/signin-02-type-email.1560ms.mp4",
+   "source": "assets/screens/signin/02-type-email/ (31 captured frames)",
+   "sizeKB": 228,
+   "present": true,
+   "scenes": [
+    "s03-sign-in"
+   ],
+   "treatments": [
+    "s03-sign-in: Typing clip, clipSeconds 1.56: 'aarav.demo@kgpian.iitkgp.ac.in' into the id field."
+   ]
+  },
+  {
+   "key": "clip:signin/05-type-code",
+   "kind": "real capture: typing/scroll frame sequence encoded as 60 fps clip",
+   "file": "assets/clips/signin-05-type-code.1200ms.mp4",
+   "source": "assets/screens/signin/05-type-code/ (7 captured frames)",
+   "sizeKB": 190,
+   "present": true,
+   "scenes": [
+    "s03-sign-in"
+   ],
+   "treatments": [
+    "s03-sign-in: Typing clip, clipSeconds 1.2 (7 frames × 0.1714 s): the six digits, synced to the light trails."
+   ]
+  },
+  {
+   "key": "desktop/01-signin-wide.png",
+   "kind": "real capture: desktop web page (1440x900 CSS at 2x)",
+   "file": "assets/ui/desktop/01-signin-wide.png",
+   "source": "assets/screens/desktop/01-signin-wide.png",
+   "sizeKB": 1295,
+   "present": true,
+   "scenes": [
+    "s02-what-setu-does"
+   ],
+   "treatments": [
+    "s02-what-setu-does: Kit .laptop frame (--lk .7, no browser/OS chrome) at left 760, top 150. Camera on the laptop rig: lede, then the stats row; rings; then a move that lands the desktop heading 'Sign in with your User account' on the phone's own heading for the dissolve."
+   ]
+  },
+  {
+   "key": "graphic:commit wipe (#0033DA circle from the Place order button)",
+   "kind": "motion graphic (built in HTML/CSS/SVG, not an app screen)",
+   "file": "(built in the scene)",
+   "source": "",
+   "sizeKB": null,
+   "present": true,
+   "scenes": [
+    "s09-pay"
+   ],
+   "treatments": []
+  },
+  {
+   "key": "graphic:commit wipe (#0033DA circle from the Start ordering button)",
+   "kind": "motion graphic (built in HTML/CSS/SVG, not an app screen)",
+   "file": "(built in the scene)",
+   "source": "",
+   "sizeKB": null,
+   "present": true,
+   "scenes": [
+    "s06-your-picks"
+   ],
+   "treatments": []
+  },
+  {
+   "key": "graphic:editorial return band (right → left)",
+   "kind": "motion graphic (built in HTML/CSS/SVG, not an app screen)",
+   "file": "(built in the scene)",
+   "source": "",
+   "sizeKB": null,
+   "present": true,
+   "scenes": [
+    "s07-find-and-add"
+   ],
+   "treatments": []
+  },
+  {
+   "key": "graphic:editorial rewind band (full-height indigo band, orange leading edge)",
+   "kind": "motion graphic (built in HTML/CSS/SVG, not an app screen)",
+   "file": "(built in the scene)",
+   "source": "",
+   "sizeKB": null,
+   "present": true,
+   "scenes": [
+    "s04-new-here"
+   ],
+   "treatments": []
+  },
+  {
+   "key": "graphic:end-card type (tagline, CTA, disclaimer, fine print)",
+   "kind": "motion graphic (built in HTML/CSS/SVG, not an app screen)",
+   "file": "(built in the scene)",
+   "source": "",
+   "sizeKB": null,
+   "present": true,
+   "scenes": [
+    "s12-end-card"
+   ],
+   "treatments": []
+  },
+  {
+   "key": "graphic:hand-off callout 'YOUR UPI APP OPENS · ₹150 FILLED IN' + leader, and a dark dim over the UPI phone's screen",
+   "kind": "motion graphic (built in HTML/CSS/SVG, not an app screen)",
+   "file": "(built in the scene)",
+   "source": "",
+   "sizeKB": null,
+   "present": true,
+   "scenes": [
+    "s09-pay"
+   ],
+   "treatments": []
+  },
+  {
+   "key": "graphic:hook type (SETU Food title, subline, persona chip)",
+   "kind": "motion graphic (built in HTML/CSS/SVG, not an app screen)",
+   "file": "(built in the scene)",
+   "source": "",
+   "sizeKB": null,
+   "present": true,
+   "scenes": [
+    "s01-hook"
+   ],
+   "treatments": []
+  },
+  {
+   "key": "graphic:official SETU lockup on a white rounded tile (assets/brand/setu-logo.png)",
+   "kind": "motion graphic (built in HTML/CSS/SVG, not an app screen)",
+   "file": "(built in the scene)",
+   "source": "",
+   "sizeKB": null,
+   "present": true,
+   "scenes": [
+    "s01-hook",
+    "s12-end-card"
+   ],
+   "treatments": []
+  },
+  {
+   "key": "graphic:pin → address card (Lucide outline map-pin, dotted trail left of the bezel, glass card)",
+   "kind": "motion graphic (built in HTML/CSS/SVG, not an app screen)",
+   "file": "(built in the scene)",
+   "source": "",
+   "sizeKB": null,
+   "present": true,
+   "scenes": [
+    "s05-delivery-spot"
+   ],
+   "treatments": []
+  },
+  {
+   "key": "graphic:real campus boundary outline (assets/data/campus-boundary.json) with the Nehru Hall pin",
+   "kind": "motion graphic (built in HTML/CSS/SVG, not an app screen)",
+   "file": "(built in the scene)",
+   "source": "",
+   "sizeKB": null,
+   "present": true,
+   "scenes": [
+    "s01-hook"
+   ],
+   "treatments": []
+  },
+  {
+   "key": "graphic:real campus boundary outline, faint (assets/data/campus-boundary.json)",
+   "kind": "motion graphic (built in HTML/CSS/SVG, not an app screen)",
+   "file": "(built in the scene)",
+   "source": "",
+   "sizeKB": null,
+   "present": true,
+   "scenes": [
+    "s12-end-card"
+   ],
+   "treatments": []
+  },
+  {
+   "key": "graphic:status rail (the app's six progress labels)",
+   "kind": "motion graphic (built in HTML/CSS/SVG, not an app screen)",
+   "file": "(built in the scene)",
+   "source": "",
+   "sizeKB": null,
+   "present": true,
+   "scenes": [
+    "s10-track-handover"
+   ],
+   "treatments": []
+  },
+  {
+   "key": "home/01-first-home.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/home/01-first-home.png",
+   "source": "assets/screens/home/01-first-home.png",
+   "sizeKB": 181,
+   "present": true,
+   "scenes": [
+    "s06-your-picks",
+    "s07-find-and-add"
+   ],
+   "treatments": [
+    "s06-your-picks: Revealed by the 'Start ordering' commit wipe: Home with 'Home' over 'Room B-212 · Nehru Hall of Residence'.",
+    "s07-find-and-add: Frame 0 (day one's Home, from s06) under the return band; hidden at 0.29 while the band covers the phone."
+   ]
+  },
+  {
+   "key": "location/01-allow-dialog.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/location/01-allow-dialog.png",
+   "source": "assets/screens/location/01-allow-dialog.png",
+   "sizeKB": 395,
+   "present": true,
+   "scenes": [
+    "s05-delivery-spot"
+   ],
+   "treatments": [
+    "s05-delivery-spot: INSET outside the phone: crop CSS {x:20,y:276,w:350,h:293} (SETU's own 'Allow location for SETU?' explainer) at the phone's own scale 1.08× (378×316) in a white card at x 420–798, y 300–616; labelled OPTIONAL; orange ring on 'Not now' only; no tap; dashed leader to the GPS row."
+   ]
+  },
+  {
+   "key": "location/10-picker-select.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/location/10-picker-select.png",
+   "source": "assets/screens/location/10-picker-select.png",
+   "sizeKB": 388,
+   "present": true,
+   "scenes": [
+    "s05-delivery-spot"
+   ],
+   "treatments": [
+    "s05-delivery-spot: swapSheet (sheetTop 537) — 'Select a location'; identity framing keeps the sheet subtitle tiny; tap search (3.50); the clip layer fades in over it 3.85–4.05."
+   ]
+  },
+  {
+   "key": "location/12-search-results.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/location/12-search-results.png",
+   "source": "assets/screens/location/12-search-results.png",
+   "sizeKB": 109,
+   "present": true,
+   "scenes": [
+    "s05-delivery-spot"
+   ],
+   "treatments": [
+    "s05-delivery-spot: Results ('Nehru Hall of Residence' over 'Pan Loop, IIT Kharagpur…' first); ring--blue + tap the first result (5.60); fades out 5.95–6.25."
+   ]
+  },
+  {
+   "key": "location/13-confirm-search.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/location/13-confirm-search.png",
+   "source": "assets/screens/location/13-confirm-search.png",
+   "sizeKB": 327,
+   "present": true,
+   "scenes": [
+    "s05-delivery-spot"
+   ],
+   "treatments": [
+    "s05-delivery-spot: 'Confirm delivery location'; camera Fconf; green ring on 'Location is within the IIT Kharagpur delivery area.'; tap 'Adjust on the map' (7.95); the map fades in over it 8.30–8.65.",
+    "s05-delivery-spot: Back on Confirm (the map hands the same pin back); ring--blue + tap the 'Home' chip (10.65); the clip layer fades in over it 11.00–11.20."
+   ]
+  },
+  {
+   "key": "location/15-confirm-home.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/location/15-confirm-home.png",
+   "source": "assets/screens/location/15-confirm-home.png",
+   "sizeKB": 343,
+   "present": true,
+   "scenes": [
+    "s05-delivery-spot"
+   ],
+   "treatments": [
+    "s05-delivery-spot: Still under the clip (identical to its last frame); rings; tap 'Confirm location' (12.70); the sheet closes 13.05–13.50."
+   ]
+  },
+  {
+   "key": "location/20-map.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/location/20-map.png",
+   "source": "assets/screens/location/20-map.png",
+   "sizeKB": 500,
+   "present": true,
+   "scenes": [
+    "s05-delivery-spot"
+   ],
+   "treatments": [
+    "s05-delivery-spot: 'Select delivery location' map at Fconf (s 1.8 at screen y 575, raised 32 px): the sheet subtitle is off-frame; pin halo; boundary label; tap 'Use this location' (9.35)."
+   ]
+  },
+  {
+   "key": "location/30-home-unset.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/location/30-home-unset.png",
+   "source": "assets/screens/location/30-home-unset.png",
+   "sizeKB": 186,
+   "present": true,
+   "scenes": [
+    "s07-find-and-add"
+   ],
+   "treatments": [
+    "s07-find-and-add: Tonight, new phone: 'Set your delivery location' over 'Tap to pick it on the map'; ring--blue + tap the Deliver-to row (1.00); covered by the picker's scrim 1.35–1.95."
+   ]
+  },
+  {
+   "key": "location/31-picker-saved.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/location/31-picker-saved.png",
+   "source": "assets/screens/location/31-picker-saved.png",
+   "sizeKB": 394,
+   "present": true,
+   "scenes": [
+    "s07-find-and-add"
+   ],
+   "treatments": [
+    "s07-find-and-add: K.swapSheet (sheetTop 433): 'Select a location' with SAVED LOCATIONS · 'Home' over 'B-212 · Nehru Hall of Residence, Cricket Gro…'; identity only; ring--blue + tap the Home row (2.55); fades out 2.90–3.15."
+   ]
+  },
+  {
+   "key": "location/32-confirm-saved.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/location/32-confirm-saved.png",
+   "source": "assets/screens/location/32-confirm-saved.png",
+   "sizeKB": 356,
+   "present": true,
+   "scenes": [
+    "s07-find-and-add"
+   ],
+   "treatments": [
+    "s07-find-and-add: swapFade: 'Confirm delivery location' (SAVED LOCATION, Home, B-212 filled); ring--blue + tap 'Confirm location' (3.75); the sheet closes 4.10–4.55."
+   ]
+  },
+  {
+   "key": "location/33-home-set.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/location/33-home-set.png",
+   "source": "assets/screens/location/33-home-set.png",
+   "sizeKB": 181,
+   "present": true,
+   "scenes": [
+    "s07-find-and-add"
+   ],
+   "treatments": [
+    "s07-find-and-add: Revealed as the sheet closes: 'Home' over 'Room B-212 · Nehru Hall of Residence'; ring; ring--blue + tap search (5.45); pushed out 5.80–6.35."
+   ]
+  },
+  {
+   "key": "onboarding/01-signin.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/onboarding/01-signin.png",
+   "source": "assets/screens/onboarding/01-signin.png",
+   "sizeKB": 325,
+   "present": true,
+   "scenes": [
+    "s04-new-here"
+   ],
+   "treatments": [
+    "s04-new-here: Swapped in under the band; ring--blue + tap 'Create a User account' (1.30) at identity."
+   ]
+  },
+  {
+   "key": "onboarding/02-signup-empty.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/onboarding/02-signup-empty.png",
+   "source": "assets/screens/onboarding/02-signup-empty.png",
+   "sizeKB": 304,
+   "present": true,
+   "scenes": [
+    "s04-new-here"
+   ],
+   "treatments": [
+    "s04-new-here: swapPush in ('Create your User account') while the camera moves to Fcreate; tap Name (2.80)."
+   ]
+  },
+  {
+   "key": "onboarding/07-signup-filled.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/onboarding/07-signup-filled.png",
+   "source": "assets/screens/onboarding/07-signup-filled.png",
+   "sizeKB": 320,
+   "present": true,
+   "scenes": [
+    "s04-new-here"
+   ],
+   "treatments": [
+    "s04-new-here: Still under the clips ('Strong enough.'; deliberate focus-loss cut at 6.60); ring--blue + tap 'Create account' (7.20)."
+   ]
+  },
+  {
+   "key": "onboarding/10-step1-identity.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/onboarding/10-step1-identity.png",
+   "source": "assets/screens/onboarding/10-step1-identity.png",
+   "sizeKB": 180,
+   "present": true,
+   "scenes": [
+    "s04-new-here"
+   ],
+   "treatments": [
+    "s04-new-here: swapPush in (Step 1 of 4 'Confirm your campus identity'); ring the app's stepper; tap 'Continue' (9.05)."
+   ]
+  },
+  {
+   "key": "onboarding/21-step2-prompt.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/onboarding/21-step2-prompt.png",
+   "source": "assets/screens/onboarding/21-step2-prompt.png",
+   "sizeKB": 203,
+   "present": true,
+   "scenes": [
+    "s04-new-here",
+    "s05-delivery-spot"
+   ],
+   "treatments": [
+    "s04-new-here: swapPush in (Step 2 of 4 'Where should orders arrive?') and settle.",
+    "s05-delivery-spot: Identity; pale ring on 'Use my current location' (never tapped) beside the explainer inset; ring--blue + tap the Delivery location box (2.05); covered by the picker sheet 2.40–2.90."
+   ]
+  },
+  {
+   "key": "onboarding/23-step2-done.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/onboarding/23-step2-done.png",
+   "source": "assets/screens/onboarding/23-step2-done.png",
+   "sizeKB": 195,
+   "present": true,
+   "scenes": [
+    "s05-delivery-spot",
+    "s06-your-picks"
+   ],
+   "treatments": [
+    "s05-delivery-spot: Revealed as the sheet closes; pin → address card; ring on the filled box; camera back to identity.",
+    "s06-your-picks: Frame 0; ring--blue + tap 'Continue' (0.40); pushed out 0.75–1.30."
+   ]
+  },
+  {
+   "key": "onboarding/30-step3.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/onboarding/30-step3.png",
+   "source": "assets/screens/onboarding/30-step3.png",
+   "sizeKB": 255,
+   "present": true,
+   "scenes": [
+    "s06-your-picks"
+   ],
+   "treatments": [
+    "s06-your-picks: swapPush in: Step 3 of 4 'What should we show first?'; the base layer until the full 31 layer is set at 3.70."
+   ]
+  },
+  {
+   "key": "onboarding/31-step3-picked.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/onboarding/31-step3-picked.png",
+   "source": "assets/screens/onboarding/31-step3-picked.png",
+   "sizeKB": 261,
+   "present": true,
+   "scenes": [
+    "s06-your-picks"
+   ],
+   "treatments": [
+    "s06-your-picks: Pixel-aligned; revealed through a circle (r 0 → 56) at each tapped chip (only those three chips differ from 30); full layer from 3.70; pushed out 4.30–4.85."
+   ]
+  },
+  {
+   "key": "onboarding/40-step4.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/onboarding/40-step4.png",
+   "source": "assets/screens/onboarding/40-step4.png",
+   "sizeKB": 245,
+   "present": true,
+   "scenes": [
+    "s06-your-picks"
+   ],
+   "treatments": [
+    "s06-your-picks: swapPush in (no tap: Step 3's Continue sits below the captured viewport); focus mask on the three titles; rings; kinetic list; the base layer until the full 41 layer is set at 7.80."
+   ]
+  },
+  {
+   "key": "onboarding/41-step4-ack.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/onboarding/41-step4-ack.png",
+   "source": "assets/screens/onboarding/41-step4-ack.png",
+   "sizeKB": 246,
+   "present": true,
+   "scenes": [
+    "s06-your-picks"
+   ],
+   "treatments": [
+    "s06-your-picks: Circular reveal from the tapped switch (r 0 → 340, then the full layer): toggle on, 'Start ordering' enabled; ring--blue + tap 'Start ordering' (8.40)."
+   ]
+  },
+  {
+   "key": "order-cash/00-confirm.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-cash/00-confirm.png",
+   "source": "assets/screens/order-cash/00-confirm.png",
+   "sizeKB": 368,
+   "present": true,
+   "scenes": [
+    "s09-pay"
+   ],
+   "treatments": [
+    "s09-pay: Main phone back at the default spec (identical to checkout/01 except the button shade); ring Cash; tap 'Place order · ₹150' (12.35)."
+   ]
+  },
+  {
+   "key": "order-cash/01-placed.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-cash/01-placed.png",
+   "source": "assets/screens/order-cash/01-placed.png",
+   "sizeKB": 132,
+   "present": true,
+   "scenes": [
+    "s09-pay",
+    "s10-track-handover"
+   ],
+   "treatments": [
+    "s09-pay: Revealed by the 'Place order' commit wipe: 'Waiting for the seller'.",
+    "s10-track-handover: Frame 0 ('Waiting for the seller')."
+   ]
+  },
+  {
+   "key": "order-cash/02-accepted.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-cash/02-accepted.png",
+   "source": "assets/screens/order-cash/02-accepted.png",
+   "sizeKB": 157,
+   "present": true,
+   "scenes": [
+    "s10-track-handover"
+   ],
+   "treatments": [
+    "s10-track-handover: swapFade: 'Order confirmed' (the prep time is not featured)."
+   ]
+  },
+  {
+   "key": "order-cash/04-preparing.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-cash/04-preparing.png",
+   "source": "assets/screens/order-cash/04-preparing.png",
+   "sizeKB": 172,
+   "present": true,
+   "scenes": [
+    "s10-track-handover"
+   ],
+   "treatments": [
+    "s10-track-handover: swapFade: 'Being cooked now'."
+   ]
+  },
+  {
+   "key": "order-cash/06-ready.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-cash/06-ready.png",
+   "source": "assets/screens/order-cash/06-ready.png",
+   "sizeKB": 163,
+   "present": true,
+   "scenes": [
+    "s10-track-handover"
+   ],
+   "treatments": [
+    "s10-track-handover: swapFade: 'Ready'."
+   ]
+  },
+  {
+   "key": "order-cash/07-on-the-way-code.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-cash/07-on-the-way-code.png",
+   "source": "assets/screens/order-cash/07-on-the-way-code.png",
+   "sizeKB": 273,
+   "present": true,
+   "scenes": [
+    "s10-track-handover"
+   ],
+   "treatments": [
+    "s10-track-handover: swapFade: 'On the way' + handover panel; camera Fhand; rings on 'Please pay ₹150 in cash' and the six-digit code."
+   ]
+  },
+  {
+   "key": "order-cash/08-cash-confirmed.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-cash/08-cash-confirmed.png",
+   "source": "assets/screens/order-cash/08-cash-confirmed.png",
+   "sizeKB": 287,
+   "present": true,
+   "scenes": [
+    "s10-track-handover"
+   ],
+   "treatments": [
+    "s10-track-handover: swapFade (the stall confirmed the cash): green 'The stall has confirmed your ₹150 cash payment'; code + 'Now tell them this code — that completes your order.'"
+   ]
+  },
+  {
+   "key": "order-cash/09-delivered-review.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-cash/09-delivered-review.png",
+   "source": "assets/screens/order-cash/09-delivered-review.png",
+   "sizeKB": 257,
+   "present": true,
+   "scenes": [
+    "s10-track-handover",
+    "s11-rate-report"
+   ],
+   "treatments": [
+    "s10-track-handover: swapSheet (sheetTop 412): 'Delivered' with the review sheet rising; camera back to identity.",
+    "s11-rate-report: Frame 0: 'How was Southside Tiffins?'; tap the 5th star (0.60)."
+   ]
+  },
+  {
+   "key": "order-cash/10-review-5.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-cash/10-review-5.png",
+   "source": "assets/screens/order-cash/10-review-5.png",
+   "sizeKB": 253,
+   "present": true,
+   "scenes": [
+    "s11-rate-report"
+   ],
+   "treatments": [
+    "s11-rate-report: Circular reveal from the 5th star: five stars, 'Excellent'; tap 'Submit review' (2.45)."
+   ]
+  },
+  {
+   "key": "order-cash/12-review-sent.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-cash/12-review-sent.png",
+   "source": "assets/screens/order-cash/12-review-sent.png",
+   "sizeKB": 268,
+   "present": true,
+   "scenes": [
+    "s11-rate-report",
+    "s12-end-card"
+   ],
+   "treatments": [
+    "s11-rate-report: The sheet slides down: the thread ends 'Delivered · handover code verified · ₹150 paid in cash'; ring 'Report' + 'TO SETU STAFF'; holds to the cut.",
+    "s12-end-card: The phone pulls back (scale 1 → 0.72, sinks 60 px) and fades out."
+   ]
+  },
+  {
+   "key": "order-qr/02-pay-upi.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-qr/02-pay-upi.png",
+   "source": "assets/screens/order-qr/02-pay-upi.png",
+   "sizeKB": 215,
+   "present": true,
+   "scenes": [
+    "s09-pay"
+   ],
+   "treatments": [
+    "s09-pay: Second phone (default spec, above the main rig) slides in from the right 3.10–3.80: a separate demo order after the stall accepted — 'Pay to continue', the countdown, 'Pay ₹150 in your UPI app', the demo UPI ID and the stall's labelled DEMO QR; tap the UPI button (4.95)."
+   ]
+  },
+  {
+   "key": "order-qr/03-upi-opening.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-qr/03-upi-opening.png",
+   "source": "assets/screens/order-qr/03-upi-opening.png",
+   "sizeKB": 214,
+   "present": true,
+   "scenes": [
+    "s09-pay"
+   ],
+   "treatments": [
+    "s09-pay: swapFade (0.12 s): 'Opening your UPI app…'; ring on 'Opens Google Pay, PhonePe, Paytm or any UPI app with ₹150 and the note … filled in.'; the screen dims 5.80–6.10 while the user is in their UPI app."
+   ]
+  },
+  {
+   "key": "order-qr/04-upi-back.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-qr/04-upi-back.png",
+   "source": "assets/screens/order-qr/04-upi-back.png",
+   "sizeKB": 218,
+   "present": true,
+   "scenes": [
+    "s09-pay"
+   ],
+   "treatments": [
+    "s09-pay: Back from the app (set under the dim at 6.50, undimmed 6.55–6.90): 'Paid? Tap “I’ve paid” below so Southside Tiffins can check…'; tap 'I've paid' (7.75)."
+   ]
+  },
+  {
+   "key": "order-qr/05-payment-review.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-qr/05-payment-review.png",
+   "source": "assets/screens/order-qr/05-payment-review.png",
+   "sizeKB": 215,
+   "present": true,
+   "scenes": [
+    "s09-pay"
+   ],
+   "treatments": [
+    "s09-pay: swapFade: 'Seller is checking your payment'."
+   ]
+  },
+  {
+   "key": "order-qr/06-payment-confirmed.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/order-qr/06-payment-confirmed.png",
+   "source": "assets/screens/order-qr/06-payment-confirmed.png",
+   "sizeKB": 229,
+   "present": true,
+   "scenes": [
+    "s09-pay"
+   ],
+   "treatments": [
+    "s09-pay: swapFade (the stall's confirmation): 'Order confirmed', 'The stall confirmed your payment.'; the second phone fades out to the right 10.70–11.10."
+   ]
+  },
+  {
+   "key": "search/01-search-empty.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/search/01-search-empty.png",
+   "source": "assets/screens/search/01-search-empty.png",
+   "sizeKB": 189,
+   "present": true,
+   "scenes": [
+    "s07-find-and-add"
+   ],
+   "treatments": [
+    "s07-find-and-add: swapPush in; the box is auto-focused."
+   ]
+  },
+  {
+   "key": "search/03-results.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/search/03-results.png",
+   "source": "assets/screens/search/03-results.png",
+   "sizeKB": 170,
+   "present": true,
+   "scenes": [
+    "s07-find-and-add"
+   ],
+   "treatments": [
+    "s07-find-and-add: Southside Tiffins with 'Masala Dosa ₹80' / 'Ghee Roast Dosa ₹110'; dish chips rise out; tap the stall card (8.50); pushed out 8.85–9.40."
+   ]
+  },
+  {
+   "key": "signin/01-signin.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/signin/01-signin.png",
+   "source": "assets/screens/signin/01-signin.png",
+   "sizeKB": 325,
+   "present": true,
+   "scenes": [
+    "s02-what-setu-does",
+    "s03-sign-in"
+   ],
+   "treatments": [
+    "s02-what-setu-does: Phone at the default spec fades in over the aligned desktop form (web → phone dissolve) and holds.",
+    "s03-sign-in: Phone at the default spec; camera F1 from 0.30; ring on 'User account' (the heading's second line) 0.60; tap id at 1.20."
+   ]
+  },
+  {
+   "key": "signin/03-email-typed.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/signin/03-email-typed.png",
+   "source": "assets/screens/signin/03-email-typed.png",
+   "sizeKB": 329,
+   "present": true,
+   "scenes": [
+    "s03-sign-in"
+   ],
+   "treatments": [
+    "s03-sign-in: Still under the clip, then held (deliberate focus-loss cut at 3.11); ring--blue + label 'EMAIL ME A CODE' on otpLink 3.25; tap 4.10; pushes out 4.45–5.00."
+   ]
+  },
+  {
+   "key": "signin/04-enter-code.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/signin/04-enter-code.png",
+   "source": "assets/screens/signin/04-enter-code.png",
+   "sizeKB": 254,
+   "present": true,
+   "scenes": [
+    "s03-sign-in"
+   ],
+   "treatments": [
+    "s03-sign-in: swapPush in; ring sentTo ('We emailed a six-digit code to aa***@kgpian.iitkgp.ac.in. It expires in 10 minutes.') 5.00."
+   ]
+  },
+  {
+   "key": "signin/06-code-entered.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/signin/06-code-entered.png",
+   "source": "assets/screens/signin/06-code-entered.png",
+   "sizeKB": 263,
+   "present": true,
+   "scenes": [
+    "s03-sign-in"
+   ],
+   "treatments": [
+    "s03-sign-in: Still under the clip, then held; ring--blue + tap 'Verify and continue' (7.75)."
+   ]
+  },
+  {
+   "key": "signin/07-home.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/signin/07-home.png",
+   "source": "assets/screens/signin/07-home.png",
+   "sizeKB": 189,
+   "present": true,
+   "scenes": [
+    "s03-sign-in",
+    "s04-new-here"
+   ],
+   "treatments": [
+    "s03-sign-in: swapFade in 8.10–8.40; camera back to identity by 9.00; fresh-device Home ('Set your delivery location').",
+    "s04-new-here: Frame 0 (from s03), covered by the rewind band at 0.41."
+   ]
+  },
+  {
+   "key": "signin/email-otp.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/signin/email-otp.png",
+   "source": "assets/screens/signin/email-otp.png",
+   "sizeKB": 132,
+   "present": true,
+   "scenes": [
+    "s03-sign-in"
+   ],
+   "treatments": [
+    "s03-sign-in: Mail card in the left column (left 590, top 400, width 480): the real sign-in email cropped to email CSS x12–378, y196–412 (the code box, the expiry line and 'Never share this code…'; the template's greeting line is left out) under a plain head strip; code-box glow; light trails to the phone."
+   ]
+  },
+  {
+   "key": "stall/01-stall.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/stall/01-stall.png",
+   "source": "assets/screens/stall/01-stall.png",
+   "sizeKB": 165,
+   "present": true,
+   "scenes": [
+    "s07-find-and-add"
+   ],
+   "treatments": [
+    "s07-find-and-add: swapPush in; ring on 'Approved by SETU · you pay the seller directly'; tap Masala Dosa ADD (10.75); the base layer until the full 02 layer is set at 11.45."
+   ]
+  },
+  {
+   "key": "stall/02-dosa-added.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/stall/02-dosa-added.png",
+   "source": "assets/screens/stall/02-dosa-added.png",
+   "sizeKB": 166,
+   "present": true,
+   "scenes": [
+    "s07-find-and-add"
+   ],
+   "treatments": [
+    "s07-find-and-add: Circular reveal at the ADD button (ADD → '− 1 +') + bottom wipe revealing 'View cart'; full layer from 11.45."
+   ]
+  },
+  {
+   "key": "stall/04-coffee.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/stall/04-coffee.png",
+   "source": "assets/screens/stall/04-coffee.png",
+   "sizeKB": 166,
+   "present": true,
+   "scenes": [
+    "s07-find-and-add"
+   ],
+   "treatments": [
+    "s07-find-and-add: Pixel-identical to 02 (no swap needed): Filter Coffee ADD (11.95) then '+' (12.30) are tapped on this state."
+   ]
+  },
+  {
+   "key": "stall/05-coffee-two.png",
+   "kind": "real capture: phone screen (390x844 CSS at 3x)",
+   "file": "assets/ui/stall/05-coffee-two.png",
+   "source": "assets/screens/stall/05-coffee-two.png",
+   "sizeKB": 166,
+   "present": true,
+   "scenes": [
+    "s07-find-and-add",
+    "s08-cart"
+   ],
+   "treatments": [
+    "s07-find-and-add: Circular reveal at the coffee stepper: '− 2 +'; full layer from 12.90.",
+    "s08-cart: Frame 0 with the order slip; ring--blue + tap 'View cart' (0.70)."
+   ]
+  }
+ ],
+ "shared": [
+  {
+   "file": "assets/brand/setu-logo.png",
+   "what": "official SETU lockup (shown on a white rounded tile, never recoloured)",
+   "sizeKB": 47,
+   "present": true
+  },
+  {
+   "file": "assets/brand/setu-mark.svg",
+   "what": "the app's vector mark",
+   "sizeKB": 0,
+   "present": true
+  },
+  {
+   "file": "assets/data/campus-boundary.json",
+   "what": "IIT Kharagpur campus boundary polygon from server/src/config/campus-zone.js (78 points), drawn as SVG",
+   "sizeKB": 2,
+   "present": true
+  },
+  {
+   "file": "assets/data/marks.json",
+   "what": "CSS-px boxes of UI elements per capture (for taps, rings, camera framing)",
+   "sizeKB": 18,
+   "present": true
+  },
+  {
+   "file": "assets/fonts/Sora-Variable.ttf",
+   "what": "the app's display font (OFL, licence alongside)",
+   "sizeKB": 109,
+   "present": true
+  },
+  {
+   "file": "assets/fonts/PlusJakartaSans-Variable.ttf",
+   "what": "the app's UI font (OFL)",
+   "sizeKB": 172,
+   "present": true
+  },
+  {
+   "file": "assets/fonts/SpaceMono-Regular.ttf",
+   "what": "the app's data font (OFL)",
+   "sizeKB": 97,
+   "present": true
+  },
+  {
+   "file": "assets/fonts/SpaceMono-Bold.ttf",
+   "what": "the app's data font, bold (OFL)",
+   "sizeKB": 96,
+   "present": true
+  },
+  {
+   "file": "assets/vendor/gsap.min.js",
+   "what": "GSAP 3.13.0 (animation engine; standard GSAP licence)",
+   "sizeKB": 71,
+   "present": true
+  },
+  {
+   "file": "assets/css/kit.css",
+   "what": "shared visual kit: tokens, phone frame, overlays, captions",
+   "sizeKB": 10,
+   "present": true
+  },
+  {
+   "file": "assets/js/kit.js",
+   "what": "shared motion helpers (window.SetuKit)",
+   "sizeKB": 8,
+   "present": true
+  }
+ ],
+ "capturedButUnused": [
+  "checkout/02-confirm-qr.png",
+  "checkout/04-summary.png",
+  "desktop/02-home-web.png",
+  "home/02-home.png",
+  "home/04-scrolled.png",
+  "home/05-pure-veg.png",
+  "onboarding/20-step2-empty.png",
+  "onboarding/22-step2-gps.png",
+  "order-cash/03-progress-accepted.png",
+  "order-cash/05-home-live-card.png",
+  "order-cash/11-review-note.png",
+  "order-cash/13-progress-delivered.png",
+  "order-qr/00-confirm-qr.png",
+  "order-qr/01-placed.png"
+ ]
+}

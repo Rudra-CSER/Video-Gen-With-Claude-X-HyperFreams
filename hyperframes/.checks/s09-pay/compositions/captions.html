@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /><!-- Generated (burned-in narration captions). Edit storyboard/scene-timing.json, then rebuild. --></head>
+<body>
+  <template id="captions-template">
+    <link rel="stylesheet" href="assets/css/kit.css" />
+    <style>
+      #root { position: absolute; inset: 0; pointer-events: none; }
+    </style>
+    <div id="root" data-composition-id="captions" data-width="1920" data-height="1080">
+    <div id="cap-001" class="clip" data-start="0.1" data-duration="3.85" data-track-index="5">
+      <div class="cap cap--left" id="cap-001-t"><span class="cap-line"><span class="cap-in">Pay cash at your door,</span></span><span class="cap-line"><span class="cap-in">or scan the stall's QR.</span></span></div>
+    </div>
+    <div id="cap-002" class="clip" data-start="4.05" data-duration="3.5" data-track-index="5">
+      <div class="cap cap--left" id="cap-002-t"><span class="cap-line"><span class="cap-in">With QR, the stall accepts first,</span></span><span class="cap-line"><span class="cap-in">then you pay.</span></span></div>
+    </div>
+    <div id="cap-003" class="clip" data-start="9.75" data-duration="2.15" data-track-index="5">
+      <div class="cap cap--left" id="cap-003-t"><span class="cap-line"><span class="cap-in">Aarav picks cash: “Place order”.</span></span></div>
+    </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo('#cap-001-t', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.22, ease: 'power2.out' }, 0.1);
+      tl.to('#cap-001-t', { opacity: 0, duration: 0.18, ease: 'power1.in' }, 3.77);
+      tl.fromTo('#cap-002-t', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.22, ease: 'power2.out' }, 4.05);
+      tl.to('#cap-002-t', { opacity: 0, duration: 0.18, ease: 'power1.in' }, 7.37);
+      tl.fromTo('#cap-003-t', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.22, ease: 'power2.out' }, 9.75);
+      tl.to('#cap-003-t', { opacity: 0, duration: 0.18, ease: 'power1.in' }, 11.72);
+      window.__timelines['captions'] = tl;
+    </script>
+  </template>
+</body>
+</html>

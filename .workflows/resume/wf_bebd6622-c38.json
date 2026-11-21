@@ -1,0 +1,20 @@
+{
+ "scriptPath": "/home/rudra-cser/Setu-Food-PWA/video-production/.workflows/storyboard-final.js",
+ "resumeFromRunId": "wf_bebd6622-c38",
+ "args": {
+  "repo": "/home/rudra-cser/Setu-Food-PWA",
+  "vp": "/home/rudra-cser/Setu-Food-PWA/video-production",
+  "hf": "/home/rudra-cser/Setu-Food-PWA/video-production/hyperframes",
+  "brief": "/home/rudra-cser/Setu-Food-PWA/SETU_Food_Customer_Walkthrough_Master_Prompt.md",
+  "draftB": "/tmp/claude-1000/-home-rudra-cser-Setu-Food-PWA-video-production/87fcaf0f-a15f-4d84-bc56-c041985a7db8/scratchpad/draft-B-story.json",
+  "draftA": "/tmp/claude-1000/-home-rudra-cser-Setu-Food-PWA-video-production/87fcaf0f-a15f-4d84-bc56-c041985a7db8/scratchpad/draft-A-tutorial.json",
+  "draftC": "/tmp/claude-1000/-home-rudra-cser-Setu-Food-PWA-video-production/87fcaf0f-a15f-4d84-bc56-c041985a7db8/scratchpad/draft-C-value.json",
+  "judges": [
+   "/tmp/claude-1000/-home-rudra-cser-Setu-Food-PWA-video-production/87fcaf0f-a15f-4d84-bc56-c041985a7db8/scratchpad/judge-a20d42.json",
+   "/tmp/claude-1000/-home-rudra-cser-Setu-Food-PWA-video-production/87fcaf0f-a15f-4d84-bc56-c041985a7db8/scratchpad/judge-aa8ea4.json",
+   "/tmp/claude-1000/-home-rudra-cser-Setu-Food-PWA-video-production/87fcaf0f-a15f-4d84-bc56-c041985a7db8/scratchpad/judge-afc404.json"
+  ],
+  "capcheck": "/tmp/claude-1000/-home-rudra-cser/d93c49d3-da82-43c1-804b-ba06a91d8ca9/scratchpad/capcheck.py",
+  "gen": "/tmp/claude-1000/-home-rudra-cser-Setu-Food-PWA-video-production/87fcaf0f-a15f-4d84-bc56-c041985a7db8/scratchpad/sb/gen.py"
+ }
+}

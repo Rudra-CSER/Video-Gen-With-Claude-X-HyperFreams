@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /></head>
+<body>
+<template id="s01-hook-template">
+  <link rel="stylesheet" href="assets/css/kit.css" />
+  <style>
+    #root { position: absolute; inset: 0; }
+
+    /* real 'Main Campus Boundary' (assets/data/campus-boundary.json), 1 viewBox unit = 1 canvas px */
+    #s01-map { position: absolute; left: 460px; top: 150px; width: 1000px; height: 516.4px; opacity: 0; }
+    #s01-map-svg { position: absolute; left: 0; top: 0; width: 1000px; height: 516.4px; overflow: visible;
+      filter: drop-shadow(0 0 10px rgba(130, 160, 255, .55)); }
+    #s01-edge { fill: rgba(46, 91, 238, .06); fill-opacity: 0; stroke: #B8C7FF; stroke-width: 3; stroke-linejoin: round; }
+    /* glowing head that rides the drawing tip of the outline */
+    #s01-pen { position: absolute; left: -4px; top: -4px; width: 8px; height: 8px; border-radius: 50%; background: #fff;
+      box-shadow: 0 0 8px 3px rgba(184, 199, 255, .9), 0 0 26px 9px rgba(130, 160, 255, .45); opacity: 0; }
+
+    /* Nehru Hall marker: nehruHall (114.2, 98.8) -> canvas (574.2, 248.8) */
+    #s01-ping { position: absolute; left: 534.2px; top: 208.8px; width: 80px; height: 80px; opacity: 0; }
+    #s01-ping-ring { position: absolute; inset: 0; box-sizing: border-box; border: 2px solid #EC5A2A; border-radius: 50%; }
+    #s01-pin { position: absolute; left: 550.2px; top: 204.8px; width: 48px; height: 48px; overflow: visible; opacity: 0;
+      filter: drop-shadow(0 0 6px rgba(236, 90, 42, .5)); }
+    #s01-pin path, #s01-pin circle { fill: none; stroke: #EC5A2A; stroke-width: 1.25; stroke-linejoin: round; stroke-linecap: round; }
+    #s01-dot { position: absolute; left: 570.2px; top: 244.8px; width: 8px; height: 8px; border-radius: 50%;
+      background: #EC5A2A; box-shadow: 0 0 10px rgba(236, 90, 42, .65); opacity: 0; }
+
+    /* persona chip, right of the pin head */
+    #s01-chip { position: absolute; left: 604px; top: 196px; padding: 10px 16px; border-radius: 12px;
+      background: rgba(12, 18, 51, .88); border: 1px solid rgba(255, 255, 255, .18); color: #fff;
+      font: 700 20px/1 var(--font-mono); letter-spacing: .04em; white-space: nowrap; opacity: 0; }
+
+    /* official SETU lockup on a white rounded tile, centred at (960, 360) */
+    #s01-tile { left: 830px; top: 257px; width: 260px; height: 206px; border-radius: 32px;
+      display: flex; align-items: center; justify-content: center; opacity: 0; }
+    #s01-logo { display: block; width: 216px; height: auto; }
+
+    #s01-title { position: absolute; left: 0; right: 0; top: 492px; margin: 0; text-align: center; white-space: nowrap;
+      font: 800 84px/1 var(--font-display); letter-spacing: -.03em; color: #fff; visibility: hidden; }
+    #s01-sub { position: absolute; left: 0; right: 0; top: 600px; margin: 0; padding-left: .2em; text-align: center; white-space: nowrap;
+      font: 700 18px/1 var(--font-mono); letter-spacing: .2em; text-transform: uppercase; color: #B8C7FF; opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="s01-hook" data-width="1920" data-height="1080">
+    <div id="s01-map">
+      <svg id="s01-map-svg" viewBox="0 0 1000 516.4" aria-hidden="true"><path id="s01-edge" d="M0 337 L4.7 354 L11.5 364.9 L22.2 377.7 L47.2 388.6 L104.6 443.5 L146.7 458.5 L187.9 459.8 L207.4 438.4 L225.3 417.3 L232.9 413.3 L257.9 410.4 L272.6 409.6 L284.5 412.6 L293.7 419.4 L307.2 433.8 L327.7 456.3 L364.6 484.5 L379.5 497.9 L389 504.3 L402.8 516.4 L429.6 500.7 L435.8 499.3 L453 502.8 L465.9 488.3 L491.9 485.8 L492.8 491.3 L499.3 486.6 L506.1 489.6 L520.6 502.2 L521 504.8 L592 503.5 L596.9 485.4 L609.7 489.6 L623.2 489.2 L640.6 488.6 L662.2 498.5 L696.2 486.9 L699.5 469.9 L714 463.7 L738.9 469.6 L788.7 446 L804.9 417 L830.9 400.7 L843.7 401 L848.5 399.7 L864.9 407.7 L890.2 397.2 L893.2 403.9 L983.5 366.2 L994.1 360.2 L1000 350.2 L996.8 333.9 L990 317 L876.2 221.3 L611.6 23.9 L479.7 10 L473.8 8.6 L466.3 21.4 L460.4 18 L421.6 6.4 L405 3.9 L382.1 3.2 L367.8 0 L340 1.6 L326.4 2.9 L325.5 4.6 L287.9 9.3 L238.9 17.7 L206.7 23.3 L131.3 37.2 L122 40.5 L109.9 52.2 L109.3 53.1 L71.9 109.2 L19.4 188.4 L8.4 227.6 L1 297.3 Z" /></svg>
+      <div id="s01-pen"></div>
+    </div>
+    <div id="s01-ping"><div id="s01-ping-ring"></div></div>
+    <!-- the app's own Lucide-style map-pin glyph (client/src/ui/Icon.jsx `mapPin`), outline only; tip (12,22) sits on the point -->
+    <svg id="s01-pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10.5c0 5.5-8 11.5-8 11.5s-8-6-8-11.5a8 8 0 0 1 16 0z" /><circle cx="12" cy="10.5" r="2.8" /></svg>
+    <div id="s01-dot"></div>
+    <div id="s01-chip">Aarav · Room B-212</div>
+    <div class="white-tile" id="s01-tile"><img id="s01-logo" src="assets/brand/setu-logo.png" alt="SETU" /></div>
+    <h1 id="s01-title">SETU Food</h1>
+    <p id="s01-sub">ON SETU SERVICES · IIT KHARAGPUR</p>
+  </div>
+  <script>
+    (function () {
+      const K = window.SetuKit;
+      const $ = (id) => document.getElementById(id);
+      const edge = $('s01-edge');
+      const pen = $('s01-pen');
+
+      // Arc-length keyframes for the pen: one key per boundary vertex at (cumulative length / total).
+      // With easeEach 'none' and the same power2.inOut over the same 2.0 s, the pen sits exactly on the
+      // dash front that K.drawPath reveals (both are linear in arc length). Measured once, at build time.
+      const n = edge.getAttribute('d').match(/-?\d+(?:\.\d+)?/g).map(Number);
+      const pts = [];
+      for (let i = 0; i + 1 < n.length; i += 2) pts.push([n[i], n[i + 1]]);
+      pts.push(pts[0]);
+      const cum = [0];
+      for (let i = 1; i < pts.length; i += 1) {
+        cum.push(cum[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+      }
+      const total = cum[cum.length - 1];
+      const keys = { easeEach: 'none' };
+      pts.forEach((p, i) => { keys[`${((cum[i] / total) * 100).toFixed(5)}%`] = { x: p[0], y: p[1] }; });
+      gsap.set(pen, { x: pts[0][0], y: pts[0][1] });
+
+      const tl = gsap.timeline({ paused: true });
+
+      // 0.10-2.10 the real campus boundary draws itself; the fill comes up 1.60-2.30
+      K.drawPath(tl, edge, 0.10, 2.0, { ease: 'power2.inOut' });
+      // Fully "undrawn", the closed path still leaves its round join at the closing vertex (a dash boundary sits
+      // exactly at s = 0), so the outline group stays hidden until the draw starts; the pen covers that point then.
+      tl.fromTo('#s01-map', { opacity: 0 }, { opacity: 1, duration: 0.12, ease: 'power1.out' }, 0.10);
+      // as the draw lands (< 1.5 px left, under the pen), stroke it undashed so the closing vertex gets a proper
+      // round join instead of two butt ends meeting at 17 degrees
+      tl.set(edge, { strokeDasharray: 'none' }, 2.06);
+      tl.to(pen, { keyframes: keys, ease: 'power2.inOut', duration: 2.0 }, 0.10);
+      tl.fromTo(pen, { opacity: 0 }, { opacity: 1, duration: 0.18, ease: 'power1.out' }, 0.10);
+      tl.to(pen, { opacity: 0, duration: 0.18, ease: 'power1.in' }, 1.92);
+      tl.fromTo(edge, { fillOpacity: 0 }, { fillOpacity: 1, duration: 0.7, ease: 'power1.inOut' }, 1.60);
+
+      // 1.70 Nehru Hall: pin drops onto the point, dot pops, one ripple
+      tl.fromTo('#s01-pin', { y: -60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: 'expo.out' }, 1.70);
+      tl.fromTo('#s01-dot', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: 'back.out(2.2)' }, 1.76);
+      tl.fromTo('#s01-ping-ring', { scale: 0 }, { scale: 1, duration: 0.7, ease: 'power2.out' }, 1.95);
+      tl.fromTo('#s01-ping', { opacity: 0 }, { opacity: 1, duration: 0.06, ease: 'none' }, 1.95);
+      tl.to('#s01-ping', { opacity: 0, duration: 0.5, ease: 'power1.in' }, 2.15);
+
+      // 2.20 the outline steps back; the SETU lockup tile lands
+      tl.to('#s01-map', { opacity: 0.30, duration: 0.7, ease: 'power2.out' }, 2.20);
+      tl.fromTo('#s01-tile', { scale: 0.94, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: 'expo.out' }, 2.20);
+
+      // 2.60 title, 3.00 subline, 3.85 persona chip. The title stays visibility:hidden until its reveal starts (its
+      // words are still at opacity 0 then): the blur(10px) from-state otherwise adds a render surface over the shared
+      // background outline and shifts its pixels by one level at t = 0.
+      tl.set('#s01-title', { visibility: 'visible' }, 2.60);
+      K.revealWords(tl, $('s01-title'), 2.60, { stagger: 0.08 });
+      K.fadeUp(tl, '#s01-sub', 3.00, { y: 16 });
+      tl.fromTo('#s01-chip', { x: -16, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: 'expo.out' }, 3.85);
+
+      // 4.95-5.35 exit: type and tile rise and fade; outline, pin and dot fade. 5.35-5.40 is the empty background.
+      K.fadeOut(tl, ['#s01-tile', '#s01-title', '#s01-sub', '#s01-chip'], 4.95, { y: -16, dur: 0.4, ease: 'power2.in' });
+      tl.to(['#s01-map', '#s01-pin', '#s01-dot'], { opacity: 0, duration: 0.4, ease: 'power2.in' }, 4.95);
+
+      window.__timelines['s01-hook'] = tl;
+    }());
+  </script>
+</template>
+</body>
+</html>

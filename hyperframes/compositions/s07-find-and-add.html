@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /></head>
+<body>
+<template id="s07-find-and-add-template">
+  <link rel="stylesheet" href="assets/css/kit.css" />
+  <style>
+    #root { position: absolute; inset: 0; }
+    #root .rig { position: absolute; inset: 0; transform-origin: 0 0; }
+    .s07-off { opacity: 0; }
+    #s07-kicker { position: absolute; left: 140px; top: 200px; }
+
+    /* Tag row (140,112): one pill at a time (TONIGHT, then the sample-stalls note). */
+    .s07-pill {
+      position: absolute; left: 140px; top: 112px; box-sizing: border-box;
+      display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px;
+      border: 2px solid rgba(184, 199, 255, .5); background: rgba(12, 18, 51, .62); color: #B8C7FF;
+      font: 700 18px/1 var(--font-mono); letter-spacing: .16em; text-transform: uppercase; white-space: nowrap;
+      opacity: 0;
+    }
+    #s07-tag svg { width: 20px; height: 20px; flex: none; display: block; }
+    .s07-pill .s07-pill-t { margin-right: -.16em; }
+    #s07-note { color: rgba(184, 199, 255, .8); }
+    #s07-note .s07-ndot { width: 6px; height: 6px; border-radius: 50%; background: #EC5A2A; flex: none; }
+
+    /* Return band (right → left): orange leading edge on its LEFT side. */
+    #s07-band {
+      position: absolute; left: 1920px; top: 0; width: 760px; height: 1080px;
+      background: linear-gradient(270deg, #151E4D, #22307A);
+    }
+    #s07-band-edge { position: absolute; left: 0; top: 0; width: 3px; height: 1080px; background: #EC5A2A; }
+    #s07-band-glow {
+      position: absolute; left: -64px; top: 0; width: 64px; height: 1080px; opacity: 0;
+      background: linear-gradient(270deg, rgba(236, 90, 42, .30), rgba(236, 90, 42, 0));
+    }
+
+
+    /* Dish chips + the order slip carried into s08 (wrapper 600x132 at (140,340); rows at 340 / 412). */
+    #s07-slip { position: absolute; left: 140px; top: 340px; width: 600px; height: 132px; }
+    #s07-row1, #s07-row2 { left: 0; }
+    #s07-row1 { top: 0; }
+    #s07-row2 { top: 72px; }
+    #s07-dosa { left: 140px; top: 340px; }
+    #s07-ghee { left: 140px; top: 412px; }
+    .s07-qty { font: 700 26px/1 var(--font-mono); color: #EC5A2A; }
+    #s07-qty1 { opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="s07-find-and-add" data-width="1920" data-height="1080">
+    <div class="rig" id="s07-rig">
+      <div class="phone" id="s07-phone">
+        <div class="side-btn" style="top:190px;height:70px"></div>
+        <div class="side-btn" style="top:290px;height:120px"></div>
+        <div class="glass"><div class="screen" id="s07-screen">
+          <div class="layer" id="s07-lhome"><img src="assets/ui/home/01-first-home.png" alt="" /></div>
+          <div class="layer s07-off" id="s07-l30"><img src="assets/ui/location/30-home-unset.png" alt="" /></div>
+          <div class="layer s07-off" id="s07-l31"><img src="assets/ui/location/31-picker-saved.png" alt="" /></div>
+          <div class="layer s07-off" id="s07-l33"><img src="assets/ui/location/33-home-set.png" alt="" /></div>
+          <div class="layer s07-off" id="s07-l32"><img src="assets/ui/location/32-confirm-saved.png" alt="" /></div>
+          <div class="layer" id="s07-l32ov"></div>
+          <div class="layer s07-off" id="s07-ls01"><img src="assets/ui/search/01-search-empty.png" alt="" /></div>
+          <div class="layer s07-off" id="s07-ls03"><img src="assets/ui/search/03-results.png" alt="" /></div>
+          <div class="layer s07-off" id="s07-typing"><video id="s07-v-dosa" class="clip" src="assets/clips/search-02-type-dosa.500ms.mp4" muted playsinline data-start="6.45" data-duration="0.5" data-hf-media-start-basis="local" data-track-index="3"></video></div>
+          <div class="layer s07-off" id="s07-lst01"><img src="assets/ui/stall/01-stall.png" alt="" /></div>
+          <div class="layer s07-off" id="s07-l02"><img src="assets/ui/stall/02-dosa-added.png" alt="" /></div>
+          <div class="layer s07-off" id="s07-l05"><img src="assets/ui/stall/05-coffee-two.png" alt="" /></div>
+          <div class="layer" id="s07-ovl"></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="kicker s07-off" id="s07-kicker">05 · Find &amp; add</div>
+    <div class="s07-pill" id="s07-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg><span class="s07-pill-t">Tonight</span></div>
+    <div class="s07-pill" id="s07-note"><span class="s07-ndot"></span><span class="s07-pill-t">Demo environment · sample stalls</span></div>
+
+    <div class="dish-chip" id="s07-dosa"><span class="veg"></span><span class="s07-nm">Masala Dosa</span><b>₹80</b></div>
+    <div class="dish-chip" id="s07-ghee"><span class="veg"></span><span class="s07-nm">Ghee Roast Dosa</span><b>₹110</b></div>
+    <div id="s07-slip">
+      <div class="dish-chip" id="s07-row1"><span class="veg"></span><span class="s07-qty" id="s07-qty1">1 ×</span><span class="s07-nm" id="s07-r1nm">Masala Dosa</span><b id="s07-r1pr">₹80</b></div>
+      <div class="dish-chip" id="s07-row2"><span class="veg"></span><span class="s07-qty">2 ×</span><span class="s07-nm">Filter Coffee</span><b>₹60</b></div>
+    </div>
+
+    <div id="s07-band" data-layout-allow-overflow><div id="s07-band-glow"></div><div id="s07-band-edge"></div></div>
+  </div>
+  <script>
+    (function () {
+      const K = window.SetuKit;
+      const spec = { left: 1150, top: 70, k: 1.08 };
+      const $ = (id) => document.getElementById(id);
+      K.placePhone($('s07-phone'), spec);
+      const tl = gsap.timeline({ paused: true });
+
+      const screen = $('s07-screen');
+      // Extra copies of a capture (sheet parts, reveal layers) are built here, under the full layer.
+      const part = (src, below, id, clip) => {
+        const L = K.layer(screen, src, id);
+        screen.insertBefore(L, below);
+        if (clip) L.style.clipPath = clip;
+        return L;
+      };
+      const HOME = $('s07-lhome'); const L30 = $('s07-l30'); const L31 = $('s07-l31');
+      const L31S = part('assets/ui/location/31-picker-saved.png', L31, 's07-l31scrim', 'inset(0 0 411px 0)');
+      const L31H = part('assets/ui/location/31-picker-saved.png', L31, 's07-l31sheet', 'inset(433px 0 0 0)');
+      const L33 = $('s07-l33'); const L32 = $('s07-l32'); const L32OV = $('s07-l32ov');
+      const L32S = part('assets/ui/location/32-confirm-saved.png', L32, 's07-l32scrim', 'inset(0 0 592px 0)');
+      const L32H = part('assets/ui/location/32-confirm-saved.png', L32, 's07-l32sheet', 'inset(252px 0 0 0)');
+      const S01 = $('s07-ls01'); const S03 = $('s07-ls03'); const TYPING = $('s07-typing');
+      const ST01 = $('s07-lst01'); const L02 = $('s07-l02');
+      const R02 = part('assets/ui/stall/02-dosa-added.png', L02, 's07-l02rev');
+      const BAR02 = part('assets/ui/stall/02-dosa-added.png', L02, 's07-l02bar', 'inset(790px 0 0 0)');
+      const L05 = $('s07-l05');
+      const R05 = part('assets/ui/stall/05-coffee-two.png', L05, 's07-l05rev');
+      const OVL = $('s07-ovl');
+
+      // K.tap's look and timing; the ripple stays hidden until the press (the kit's ripple fromTo
+      // renders opacity .95 at build time, which would show a ghost dot from frame 0).
+      const tap = (parent, x, y, t) => {
+        const at = { left: `${x}px`, top: `${y}px` };
+        const ripple = K.el('div', 'ripple', parent, at);
+        const touch = K.el('div', 'touch', parent, at);
+        tl.fromTo(touch, { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.18, ease: 'power2.out' }, t);
+        tl.to(touch, { scale: 0.82, duration: 0.09, ease: 'power2.in' }, t + 0.2);
+        tl.to(touch, { scale: 1, opacity: 0, duration: 0.3, ease: 'power2.out' }, t + 0.32);
+        tl.fromTo(ripple, { opacity: 0, scale: 0.35 }, { opacity: 0.95, scale: 0.35, duration: 0.02, ease: 'none' }, t + 0.2);
+        tl.to(ripple, { opacity: 0, scale: 2.3, duration: 0.7, ease: 'power2.out' }, t + 0.22);
+      };
+      // K.ring's look and entrance; it leaves at tOut over `out` seconds.
+      const ring = (parent, box, t, tOut, o = {}) => {
+        const pad = o.pad ?? 6;
+        const r = K.el('div', `ring${o.blue ? ' ring--blue' : ''}`, parent, {
+          left: `${box.x - pad}px`, top: `${box.y - pad}px`,
+          width: `${box.w + pad * 2}px`, height: `${box.h + pad * 2}px`, borderRadius: `${o.radius ?? 16}px`,
+        });
+        tl.fromTo(r, { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(2)' }, t);
+        tl.to(r, { opacity: 0, duration: o.out ?? 0.35, ease: 'power1.in' }, tOut);
+      };
+      // K.swapPush's look and timing; the incoming capture is parked at x 390 only from t.
+      const push = (from, to, t, dur) => {
+        tl.set(to, { opacity: 1, x: 390 }, t);
+        tl.to(to, { x: 0, duration: dur, ease: 'expo.inOut' }, t);
+        tl.to(from, { x: -110, opacity: 0.35, duration: dur, ease: 'expo.inOut' }, t);
+        tl.set(from, { opacity: 0 }, t + dur);
+      };
+      // Circular reveal of an 'after' capture layer from a tap point.
+      const reveal = (el, x, y, r, t, dur) => {
+        tl.set(el, { opacity: 1 }, t);
+        tl.fromTo(el, { clipPath: `circle(0px at ${x}px ${y}px)` },
+          { clipPath: `circle(${r}px at ${x}px ${y}px)`, duration: dur, ease: 'power2.out', immediateRender: false }, t);
+      };
+
+      // 0.00–0.70 editorial return band (x 1920 → −760); the phone switches to tonight's Home under it at 0.29.
+      tl.fromTo('#s07-band', { x: 0 }, { x: -2680, duration: 0.7, ease: 'power2.inOut' }, 0);
+      tl.fromTo('#s07-band-glow', { opacity: 0 }, { opacity: 1, duration: 0.12, ease: 'power1.out' }, 0.02);
+      tl.set(L30, { opacity: 1 }, 0.29);
+      tl.set(HOME, { opacity: 0 }, 0.29);
+
+      // Tag row + kicker.
+      tl.fromTo('#s07-tag', { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.3, ease: 'expo.out' }, 0.4);
+      tl.to('#s07-tag', { opacity: 0, x: 10, duration: 0.3, ease: 'power2.in' }, 1.7);
+      K.fadeUp(tl, '#s07-kicker', 0.45);
+      tl.fromTo('#s07-note', { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.3, ease: 'expo.out' }, 2.0);
+      tl.to('#s07-note', { opacity: 0, x: 10, duration: 0.3, ease: 'power2.in' }, 10.3);
+
+      // 0.75–1.95 the Deliver-to row opens the location picker (sheet top 433).
+      ring(L30, { x: 18, y: 18.1, w: 304, h: 41 }, 0.75, 1.3, { blue: true, radius: 14, out: 0.3 });
+      tap(L30, 170, 38.6, 1.0);
+      tl.set(L31H, { opacity: 1 }, 1.35);
+      tl.fromTo(L31S, { opacity: 0 }, { opacity: 1, duration: 0.48, ease: 'power1.out', immediateRender: false }, 1.35);
+      tl.fromTo(L31H, { y: 411 }, { y: 0, duration: 0.6, ease: 'expo.out', immediateRender: false }, 1.35);
+      tl.set(L31, { opacity: 1 }, 1.95);
+      tl.set([L31S, L31H], { opacity: 0 }, 1.95);
+
+      // 1.95–3.15 saved Home → 'Confirm delivery location'.
+      ring(L31, { x: 18, y: 760, w: 354, h: 66 }, 1.95, 2.9, { blue: true, radius: 18, out: 0.25 });
+      tap(L31, 195, 793, 2.55);
+      tl.to(L32, { opacity: 1, duration: 0.25, ease: 'power1.inOut' }, 2.9);
+      tl.to(L31, { opacity: 0, duration: 0.15, ease: 'power1.in' }, 3.0);
+      tl.set(L33, { opacity: 1 }, 3.15);
+      tl.set(L30, { opacity: 0 }, 3.15);
+
+      // 3.25–4.55 'Confirm location'; the sheet closes onto tonight's Home (Room B-212).
+      ring(L32OV, { x: 181.6, y: 782, w: 190.4, h: 48 }, 3.25, 4.1, { blue: true, radius: 30, out: 0.2 });
+      tap(L32OV, 276.8, 806, 3.75);
+      tl.set([L32S, L32H], { opacity: 1 }, 4.1);
+      tl.set(L32, { opacity: 0 }, 4.1);
+      tl.to(L32S, { opacity: 0, duration: 0.35, ease: 'power1.in' }, 4.1);
+      tl.fromTo([L32H, L32OV], { y: 0 }, { y: 592, duration: 0.45, ease: 'expo.in', immediateRender: false }, 4.1);
+      tl.set([L32H, L32OV], { opacity: 0, y: 0 }, 4.6);
+
+      // 4.55–6.35 Home is set; tap the search box.
+      ring(L33, { x: 18, y: 18.1, w: 304, h: 41 }, 4.55, 5.3, { radius: 14 });
+      ring(L33, { x: 18, y: 129.1, w: 354, h: 46 }, 5.25, 5.8, { blue: true, radius: 29 });
+      tap(L33, 195, 152.1, 5.45);
+      push(L33, S01, 5.8, 0.55);
+
+      // 6.45–6.95 typing 'dosa' (clip), then the filtered results.
+      tl.set(TYPING, { opacity: 1 }, 6.45);
+      tl.set(S03, { opacity: 1 }, 6.95);
+      tl.set([TYPING, S01], { opacity: 0 }, 6.95);
+      ring(S03, { x: 128, y: 256, w: 236, h: 46 }, 7.15, 8.0, { pad: 4, radius: 10 });
+      tl.fromTo('#s07-dosa', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'expo.out' }, 7.25);
+      tl.fromTo('#s07-ghee', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'expo.out' }, 7.4);
+      ring(S03, { x: 18, y: 130, w: 354, h: 181 }, 8.3, 8.85, { blue: true, radius: 22 });
+      tap(S03, 195, 220.5, 8.5);
+      push(S03, ST01, 8.85, 0.55);
+
+      // 9.45–10.65 the stall's trust line; the Ghee Roast chip steps aside.
+      ring(OVL, { x: 18, y: 166, w: 354, h: 28 }, 9.45, 10.3, { radius: 14 });
+      tl.to('#s07-ghee', { opacity: 0, y: -10, duration: 0.3, ease: 'power1.in' }, 9.5);
+
+      // 10.50–11.45 ADD → '− 1 +' and the 'View cart' bar.
+      ring(OVL, { x: 267.2, y: 594, w: 63.6, h: 34 }, 10.5, 10.9, { blue: true, pad: 5, radius: 22, out: 0.2 });
+      tap(OVL, 299, 611, 10.75);
+      reveal(R02, 299, 611, 90, 11.1, 0.25);
+      tl.set(BAR02, { opacity: 1 }, 11.1);
+      tl.fromTo(BAR02, { y: 54 }, { y: 0, duration: 0.3, ease: 'power2.out', immediateRender: false }, 11.1);
+      tl.set(L02, { opacity: 1 }, 11.45);
+      // The row is laid out with the prefix; name and price start where the plain chip had them
+      // (61.736 px = the '1 ×' slot + one gap) and the chip's right edge opens with a clip.
+      tl.set('#s07-dosa', { opacity: 0 }, 11.15);
+      tl.set('#s07-row1', { opacity: 1 }, 11.15);
+      tl.fromTo('#s07-row1', { clipPath: 'inset(0px 61.736px 0px 0px round 22px)' },
+        { clipPath: 'inset(0px 0px 0px 0px round 22px)', duration: 0.25, ease: 'expo.out', immediateRender: false }, 11.15);
+      tl.set('#s07-row1', { clipPath: 'none' }, 11.4);
+      tl.fromTo(['#s07-r1nm', '#s07-r1pr'], { x: -61.736 }, { x: 0, duration: 0.25, ease: 'expo.out', immediateRender: false }, 11.15);
+      tl.fromTo('#s07-qty1', { x: -14 }, { x: 0, duration: 0.25, ease: 'expo.out', immediateRender: false }, 11.15);
+      tl.fromTo('#s07-qty1', { opacity: 0 }, { opacity: 1, duration: 0.21, ease: 'power1.out', immediateRender: false }, 11.19);
+
+      // 11.95–12.90 Filter Coffee: ADD, then '+', then '− 2 +'.
+      tap(OVL, 299, 362, 11.95);
+      tap(OVL, 327, 362, 12.3);
+      reveal(R05, 299, 362, 80, 12.65, 0.25);
+      tl.set(L05, { opacity: 1 }, 12.9);
+      tl.fromTo('#s07-row2', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: 'expo.out' }, 12.95);
+
+      // 13.15–13.45 kicker out; hold on the slip (handoffOut).
+      tl.to('#s07-kicker', { opacity: 0, y: -12, duration: 0.3, ease: 'power2.in' }, 13.15);
+
+      window.__timelines['s07-find-and-add'] = tl;
+    }());
+  </script>
+</template>
+</body>
+</html>

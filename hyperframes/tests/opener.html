@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1920, height=1080" />
+<title>Opener prototype</title>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/js/kit.js"></script>
+<link rel="stylesheet" href="assets/css/kit.css" />
+<style>
+  body { margin: 0; background: #0C1233; }
+  #root { position: relative; width: 100%; height: 100%; overflow: hidden; }
+  #op-bg { position: absolute; inset: 0; background:
+    radial-gradient(1100px 760px at 62% 46%, rgba(46,91,238,.34), rgba(46,91,238,0) 70%),
+    radial-gradient(800px 600px at 8% 92%, rgba(236,90,42,.13), rgba(236,90,42,0) 70%),
+    linear-gradient(140deg, #0C1233 0%, #151E4D 55%, #1B2766 100%); }
+  #op-map { position: absolute; left: 310px; top: 230px; width: 1300px; height: 671.3px; overflow: visible; }
+  #op-map path.edge { fill: rgba(46,91,238,.06); stroke: #B8C7FF; stroke-width: 3; stroke-linejoin: round; filter: drop-shadow(0 0 10px rgba(130,160,255,.55)); }
+  #op-map circle { fill: #EC5A2A; }
+  #op-maplabel { position: absolute; left: 310px; top: 200px; }
+  #op-tile { position: absolute; left: 810px; top: 300px; width: 300px; height: 300px; display: grid; place-items: center; }
+  #op-tile img { width: 236px; }
+  #op-brand { position: absolute; left: 0; right: 0; top: 640px; text-align: center; }
+  #op-brand .name { font: 800 54px/1 var(--font-display); color: #fff; letter-spacing: -.02em; }
+  #op-brand .pill { display: inline-block; margin-top: 18px; padding: 10px 22px; border-radius: 999px; background: #fff; color: #0033DA; font: 800 24px/1 var(--font-display); letter-spacing: .02em; }
+  #op-head { position: absolute; left: 140px; top: 330px; width: 860px; }
+  .rig { position: absolute; inset: 0; transform-origin: 0 0; }
+</style></head>
+<body>
+<div id="root" data-composition-id="opener" data-start="0" data-width="1920" data-height="1080" data-duration="8">
+  <div id="op-bg"></div>
+  <div id="op-scene" class="clip" data-start="0" data-duration="8">
+    <svg id="op-map" viewBox="0 0 1000 516.4"><path class="edge" id="op-edge" d="M0 337 L4.7 354 L11.5 364.9 L22.2 377.7 L47.2 388.6 L104.6 443.5 L146.7 458.5 L187.9 459.8 L207.4 438.4 L225.3 417.3 L232.9 413.3 L257.9 410.4 L272.6 409.6 L284.5 412.6 L293.7 419.4 L307.2 433.8 L327.7 456.3 L364.6 484.5 L379.5 497.9 L389 504.3 L402.8 516.4 L429.6 500.7 L435.8 499.3 L453 502.8 L465.9 488.3 L491.9 485.8 L492.8 491.3 L499.3 486.6 L506.1 489.6 L520.6 502.2 L521 504.8 L592 503.5 L596.9 485.4 L609.7 489.6 L623.2 489.2 L640.6 488.6 L662.2 498.5 L696.2 486.9 L699.5 469.9 L714 463.7 L738.9 469.6 L788.7 446 L804.9 417 L830.9 400.7 L843.7 401 L848.5 399.7 L864.9 407.7 L890.2 397.2 L893.2 403.9 L983.5 366.2 L994.1 360.2 L1000 350.2 L996.8 333.9 L990 317 L876.2 221.3 L611.6 23.9 L479.7 10 L473.8 8.6 L466.3 21.4 L460.4 18 L421.6 6.4 L405 3.9 L382.1 3.2 L367.8 0 L340 1.6 L326.4 2.9 L325.5 4.6 L287.9 9.3 L238.9 17.7 L206.7 23.3 L131.3 37.2 L122 40.5 L109.9 52.2 L109.3 53.1 L71.9 109.2 L19.4 188.4 L8.4 227.6 L1 297.3 Z" /><circle id="op-pin" cx="114.2" cy="98.8" r="9" /></svg>
+    <div class="kicker" id="op-maplabel">IIT Kharagpur · campus boundary</div>
+    <div class="white-tile" id="op-tile"><img src="assets/brand/setu-logo.png" alt="SETU" /></div>
+    <div id="op-brand"><div class="name" id="op-name">SETU Services</div><div class="pill" id="op-pill">Food</div></div>
+    <div id="op-head"><h1 class="headline headline--xl" id="op-h1">Your campus. <span class="accent">Your food.</span></h1>
+      <p class="subline" id="op-h2" style="margin-top:22px;font-size:40px">A simpler way to order.</p></div>
+    <div class="rig" id="op-rig"><div class="phone" id="op-phone"><div class="side-btn" style="top:190px;height:70px"></div><div class="glass"><div class="screen" id="op-screen"></div></div></div></div>
+    <div class="dish-chip" id="op-c1"><span class="veg"></span>Masala Dosa <b>₹80</b></div>
+    <div class="dish-chip" id="op-c2"><span class="veg"></span>Filter Coffee <b>₹30</b></div>
+    <div class="dish-chip" id="op-c3">Chicken Momos (Steamed) <b>₹120</b></div>
+    <div class="dish-chip" id="op-c4"><span class="veg"></span>Pav Bhaji <b>₹90</b></div>
+    <div class="dish-chip" id="op-c5"><span class="veg"></span>Kulhad Masala Chai <b>₹20</b></div>
+    <div class="dish-chip" id="op-c6"><span class="veg"></span>Veg Hakka Noodles <b>₹110</b></div>
+  </div>
+</div>
+<script>
+  const K = window.SetuKit;
+  const spec = { left: 1150, top: 70, k: 1.08 };
+  K.placePhone(document.getElementById('op-phone'), spec);
+  const screen = document.getElementById('op-screen');
+  K.layer(screen, 'assets/ui/home/02-home.png', 'op-home', { visible: true });
+  const tl = gsap.timeline({ paused: true });
+  // 1. the real campus boundary draws itself
+  K.drawPath(tl, document.getElementById('op-edge'), 0.1, 1.7, { ease: 'power2.inOut' });
+  tl.fromTo('#op-map', { scale: .92, opacity: 0, transformOrigin: '50% 50%' }, { scale: 1, opacity: 1, duration: 2.2, ease: 'expo.out' }, 0);
+  K.fadeUp(tl, '#op-maplabel', 0.5, { y: 12 });
+  tl.fromTo('#op-pin', { scale: 0, transformOrigin: '50% 50%' }, { scale: 1, duration: .5, ease: 'back.out(3)' }, 1.5);
+  // 2. SETU lockup rises from the map
+  tl.fromTo('#op-tile', { scale: .55, opacity: 0, y: 40 }, { scale: 1, opacity: 1, y: 0, duration: 1.0, ease: 'expo.out' }, 1.9);
+  tl.to('#op-map', { opacity: .22, scale: 1.08, duration: 1.2, ease: 'power2.out' }, 1.9);
+  K.fadeOut(tl, '#op-maplabel', 1.9);
+  K.fadeUp(tl, '#op-name', 2.3, { y: 18 });
+  tl.fromTo('#op-pill', { scale: .6, opacity: 0 }, { scale: 1, opacity: 1, duration: .55, ease: 'back.out(2.2)' }, 2.55);
+  // 3. brand steps aside; headline lands; the phone rises with the real Home
+  tl.to(['#op-tile', '#op-brand'], { opacity: 0, y: -30, duration: .5, ease: 'power2.in' }, 3.6);
+  tl.to('#op-map', { opacity: .12, x: 330, duration: 1.2, ease: 'expo.inOut' }, 3.6);
+  K.revealWords(tl, document.getElementById('op-h1'), 3.9, { stagger: .09 });
+  K.fadeUp(tl, '#op-h2', 4.6);
+  tl.fromTo('#op-phone', { y: 700, rotate: 6, opacity: 1 }, { y: 0, rotate: 0, duration: 1.3, ease: 'expo.out' }, 4.4);
+  // 4. real dishes (seed menu items) drift toward the phone and settle around it
+  const chips = [['#op-c1', 980, 160], ['#op-c2', 1630, 250], ['#op-c3', 1660, 560], ['#op-c4', 960, 610], ['#op-c5', 1010, 820], ['#op-c6', 1640, 860]];
+  chips.forEach(([id, x, y], i) => {
+    gsap.set(id, { left: x, top: y });
+    tl.fromTo(id, { opacity: 0, x: (i % 2 ? 160 : -160), y: 40, scale: .9 }, { opacity: 1, x: 0, y: 0, scale: 1, duration: .9, ease: 'expo.out' }, 5.0 + i * .12);
+    tl.to(id, { x: (1375 - x) * .55, y: (520 - y) * .55, opacity: 0, scale: .7, duration: .8, ease: 'power2.in' }, 7.0 + i * .05);
+  });
+  window.__timelines['opener'] = tl;
+</script>
+</body></html>

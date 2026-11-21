@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8" /></head>
+<body>
+<template id="s04-new-here-template">
+  <link rel="stylesheet" href="assets/css/kit.css" />
+  <style>
+    #root { position: absolute; inset: 0; }
+    #root .rig { position: absolute; inset: 0; transform-origin: 0 0; }
+    #s04-kicker { position: absolute; left: 140px; top: 200px; }
+    #s04-tag {
+      position: absolute; left: 140px; top: 112px; box-sizing: border-box;
+      display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px;
+      border: 2px solid rgba(184, 199, 255, .5); background: rgba(12, 18, 51, .62); color: #B8C7FF;
+      font: 700 18px/1 var(--font-mono); letter-spacing: .16em; text-transform: uppercase; white-space: nowrap;
+      opacity: 0;
+    }
+    #s04-tag svg { width: 20px; height: 20px; flex: none; display: block; }
+    #s04-tag .s04-tag-t { margin-right: -.16em; }
+    #s04-band {
+      position: absolute; left: -760px; top: 0; width: 760px; height: 1080px;
+      background: linear-gradient(90deg, #151E4D, #22307A);
+    }
+    #s04-band-edge { position: absolute; right: 0; top: 0; width: 3px; height: 1080px; background: #EC5A2A; }
+    #s04-band-glow {
+      position: absolute; left: 760px; top: 0; width: 64px; height: 1080px; opacity: 0;
+      background: linear-gradient(90deg, rgba(236, 90, 42, .30), rgba(236, 90, 42, 0));
+    }
+  </style>
+  <div id="root" data-composition-id="s04-new-here" data-width="1920" data-height="1080">
+    <div class="rig" id="s04-rig" data-layout-allow-overflow>
+      <div class="phone" id="s04-phone">
+        <div class="side-btn" style="top:190px;height:70px"></div>
+        <div class="side-btn" style="top:290px;height:120px"></div>
+        <div class="glass"><div class="screen" id="s04-screen">
+          <div class="layer" id="s04-typing">
+            <video id="s04-v-name" class="clip" src="assets/clips/onboarding-03-type-name.620ms.mp4" muted playsinline data-start="3.15" data-duration="0.62" data-hf-media-start-basis="local" data-track-index="3"></video>
+            <video id="s04-v-email" class="clip" src="assets/clips/onboarding-04-type-email.1560ms.mp4" muted playsinline data-start="3.77" data-duration="1.56" data-hf-media-start-basis="local" data-track-index="3"></video>
+            <video id="s04-v-phone" class="clip" src="assets/clips/onboarding-05-type-phone.560ms.mp4" muted playsinline data-start="5.33" data-duration="0.56" data-hf-media-start-basis="local" data-track-index="3"></video>
+            <video id="s04-v-pass" class="clip" src="assets/clips/onboarding-06-type-password.710ms.mp4" muted playsinline data-start="5.89" data-duration="0.71" data-hf-media-start-basis="local" data-track-index="3"></video>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <div class="kicker" id="s04-kicker">02 · New here?</div>
+    <div id="s04-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" /></svg><span class="s04-tag-t">Day one</span></div>
+    <div id="s04-band" data-layout-allow-overflow><div id="s04-band-glow"></div><div id="s04-band-edge"></div></div>
+  </div>
+  <script>
+    (function () {
+      const K = window.SetuKit;
+      const spec = { left: 1150, top: 70, k: 1.08 };
+      K.placePhone(document.getElementById('s04-phone'), spec);
+      const screen = document.getElementById('s04-screen');
+      const typing = document.getElementById('s04-typing');
+      const rig = document.getElementById('s04-rig');
+      // Real captures. Stills that the typing clips start from / end on sit UNDER the clip layer.
+      const under = (src, id, o) => screen.insertBefore(K.layer(screen, src, id, o), typing);
+      const home = under('assets/ui/signin/07-home.png', 's04-home', { visible: true });
+      const signin = under('assets/ui/onboarding/01-signin.png', 's04-signin');
+      const empty = under('assets/ui/onboarding/02-signup-empty.png', 's04-empty');
+      const filled = under('assets/ui/onboarding/07-signup-filled.png', 's04-filled');
+      const step1 = K.layer(screen, 'assets/ui/onboarding/10-step1-identity.png', 's04-step1');
+      const step2 = K.layer(screen, 'assets/ui/onboarding/21-step2-prompt.png', 's04-step2');
+      // Boxes in screen CSS px (marks.json, or measured on the final PNGs).
+      const M = {
+        createAccount: { x: 30, y: 657.6, w: 330, h: 48 },  // onboarding/01-signin.createAccount ('Create a User account')
+        name: { x: 16, y: 308.3, w: 358, h: 48 },           // onboarding/02-signup-empty.name
+        helper: { x: 10, y: 519, w: 254, h: 20.5 },         // 'The seller calls this number at handover.' (text x16–257.4, y521.3–536.3; field above ends 516.3)
+        submit: { x: 16, y: 652.3, w: 358, h: 48 },         // onboarding/07-signup-filled.submit
+        stepper: { x: 16, y: 58, w: 358, h: 30 },           // the app's own 1-2-3-4 stepper
+        cont: { x: 16, y: 771.7, w: 358, h: 48 },           // onboarding/10-step1-identity.cont
+      };
+      const tl = gsap.timeline({ paused: true });
+      // K.tap's look and timing, but the ripple stays hidden until the press (kit's fromTo shows it from t=0).
+      const tap = (box, t) => {
+        const c = K.center(box); const at = { left: `${c.x}px`, top: `${c.y}px` };
+        const ripple = K.el('div', 'ripple', screen, at); const touch = K.el('div', 'touch', screen, at);
+        tl.fromTo(touch, { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.18, ease: 'power2.out' }, t);
+        tl.to(touch, { scale: 0.82, duration: 0.09, ease: 'power2.in' }, t + 0.2);
+        tl.to(touch, { scale: 1, opacity: 0, duration: 0.3, ease: 'power2.out' }, t + 0.32);
+        tl.fromTo(ripple, { opacity: 0, scale: 0.35 }, { opacity: 0.95, scale: 0.35, duration: 0.02, ease: 'none' }, t + 0.2);
+        tl.to(ripple, { opacity: 0, scale: 2.3, duration: 0.7, ease: 'power2.out' }, t + 0.22);
+      };
+
+      // 0.00–0.70 editorial rewind band (x −760 → 1920); the screen swaps under it at 0.41.
+      tl.fromTo('#s04-band', { x: 0 }, { x: 2680, duration: 0.7, ease: 'power2.inOut' }, 0);
+      tl.fromTo('#s04-band-glow', { opacity: 0 }, { opacity: 1, duration: 0.12, ease: 'power1.out' }, 0.02);
+      tl.set(signin, { opacity: 1 }, 0.41);
+      tl.set(home, { opacity: 0 }, 0.41);
+      // Tag row + kicker.
+      tl.fromTo('#s04-tag', { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.3, ease: 'expo.out' }, 0.4);
+      tl.to('#s04-tag', { opacity: 0, x: 10, duration: 0.3, ease: 'power2.in' }, 2.6);
+      K.fadeUp(tl, '#s04-kicker', 0.45);
+      K.fadeOut(tl, '#s04-kicker', 9.5, { dur: 0.4 });
+
+      // Sign-in page of day one → 'Create a User account'.
+      K.ring(tl, signin, M.createAccount, 1.05, 0.45, { blue: true, radius: 30 });
+      tap(M.createAccount, 1.3);
+      K.swapPush(tl, signin, empty, 1.65, 0.55);
+      K.focus(tl, rig, K.toCanvas(spec, 195, 709), 1.4, 1.65, 1.0, { to: { x: 1420, y: 700 } }); // the form sits 25 px higher than before
+
+      // Name tap, then the four real typing clips (3.15–6.60); 07 holds underneath from 6.60.
+      tap(M.name, 2.8);
+      K.ring(tl, screen, M.helper, 5.35, 0.85, { pad: 0, radius: 10 });
+      tl.set(filled, { opacity: 1 }, 6.5);
+      tl.set(empty, { opacity: 0 }, 6.5);
+
+      // 'Create account' → Step 1 of 4, camera back to identity.
+      K.ring(tl, filled, M.submit, 6.95, 0.45, { blue: true, radius: 30 });
+      tap(M.submit, 7.2);
+      K.swapPush(tl, filled, step1, 7.55, 0.55);
+      K.unfocus(tl, rig, 7.55, 0.9);
+      K.ring(tl, screen, M.stepper, 8.1, 0.85, { radius: 15 });
+
+      // 'Continue' → Step 2 of 4 settles at identity (handoffOut).
+      K.ring(tl, step1, M.cont, 8.8, 0.45, { blue: true, radius: 30 });
+      tap(M.cont, 9.05);
+      K.swapPush(tl, step1, step2, 9.4, 0.55);
+
+      window.__timelines['s04-new-here'] = tl;
+    }());
+  </script>
+</template>
+</body>
+</html>

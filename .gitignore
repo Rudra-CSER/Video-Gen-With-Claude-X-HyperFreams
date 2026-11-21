@@ -1,0 +1,19 @@
+# Hyperframes preview cache and dependencies
+hyperframes/.preview/
+**/node_modules/
+
+# Heavy output and raw video folders
+renders/
+community-video/
+admin-video/
+audio/
+assets/
+capture/
+
+# Any individual files over GitHub's limits
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.zip
